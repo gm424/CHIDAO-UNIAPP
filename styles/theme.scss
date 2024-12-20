@@ -1,0 +1,36 @@
+// 主色调
+$theme-color: #ffb200; // 修改为金色主题
+$theme-color-light: #ffce5e;
+$theme-color-dark: #ff9c2d;
+
+// 渐变色
+$theme-gradient: linear-gradient(90deg, $theme-color 0%, $theme-color-light 100%);
+$theme-gradient-vertical: linear-gradient(180deg, #ffdfc8 20%, #ffffff 100%);
+
+// 辅助色
+$success-color: #07c160;
+$warning-color: #ff9900;
+$error-color: #ff4d4f;
+$info-color: #909399;
+
+// 文字颜色
+$text-color-primary: #333333;
+$text-color-regular: #666666;
+$text-color-secondary: #999999;
+
+// 边框颜色
+$border-color: #ebedf0;
+$border-color-light: #f5f5f5;
+
+// 背景色
+$background-color: #f5f5f5;
+$background-color-light: #fafafa;
+
+// 特殊颜色
+$price-color: #ff6b6b;
+$tag-color: #46c254;
+
+// 进度条相关颜色
+$progress-bg: linear-gradient(90deg, $theme-color 0%, $theme-color-light 100%);
+$progress-stripe-color: rgba(255, 255, 255, 0.2);
+$progress-marker-color: $theme-color-dark;

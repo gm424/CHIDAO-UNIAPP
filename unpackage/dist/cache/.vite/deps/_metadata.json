@@ -1,0 +1,58 @@
+{
+  "hash": "da6d5b75",
+  "configHash": "f1be905e",
+  "lockfileHash": "11d2cdd9",
+  "browserHash": "d257a8fc",
+  "optimized": {
+    "@qiun/ucharts": {
+      "src": "../../../../../node_modules/@qiun/ucharts/u-charts.js",
+      "file": "@qiun_ucharts.js",
+      "fileHash": "5be09975",
+      "needsInterop": false
+    },
+    "uview-plus": {
+      "src": "../../../../../node_modules/uview-plus/index.js",
+      "file": "uview-plus.js",
+      "fileHash": "10169447",
+      "needsInterop": false
+    },
+    "echarts": {
+      "src": "../../../../../node_modules/echarts/index.js",
+      "file": "echarts.js",
+      "fileHash": "12eec1df",
+      "needsInterop": false
+    },
+    "dayjs": {
+      "src": "../../../../../node_modules/dayjs/dayjs.min.js",
+      "file": "dayjs.js",
+      "fileHash": "66e8dfb4",
+      "needsInterop": true
+    },
+    "uview-plus/libs/function/test": {
+      "src": "../../../../../node_modules/uview-plus/libs/function/test.js",
+      "file": "uview-plus_libs_function_test.js",
+      "fileHash": "c0c8626b",
+      "needsInterop": false
+    },
+    "@fingerprintjs/fingerprintjs": {
+      "src": "../../../../../node_modules/@fingerprintjs/fingerprintjs/dist/fp.esm.js",
+      "file": "@fingerprintjs_fingerprintjs.js",
+      "fileHash": "c1b3243c",
+      "needsInterop": false
+    },
+    "md5": {
+      "src": "../../../../../node_modules/md5/md5.js",
+      "file": "md5.js",
+      "fileHash": "73ea635f",
+      "needsInterop": true
+    }
+  },
+  "chunks": {
+    "chunk-I623X2OF": {
+      "file": "chunk-I623X2OF.js"
+    },
+    "chunk-P2LSHJDD": {
+      "file": "chunk-P2LSHJDD.js"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "@dcloudio/uni-ui": "^1.5.7",
+    "@fingerprintjs/fingerprintjs": "^4.5.1",
+    "@qiun/ucharts": "^2.5.0-20230101",
+    "echarts": "^5.5.1",
+    "md5": "^2.3.0",
+    "uview-plus": "^3.3.54"
+  }
+}

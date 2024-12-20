@@ -1,0 +1,402 @@
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.route-card[data-v-89cfe9c9] {
+  background: #fff;
+  border-radius: 0.5rem;
+  padding: 0.625rem;
+  margin-bottom: 1.09375rem;
+  position: relative;
+  box-sizing: border-box;
+}
+.route-card .route-number[data-v-89cfe9c9] {
+  font-size: 0.875rem;
+  color: #b3b1b1;
+  margin: 0.625rem 0;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+}
+.route-card .route-number .number[data-v-89cfe9c9] {
+  font-weight: bold;
+  font-size: 0.8125rem;
+}
+.route-card .route-number .tags-container[data-v-89cfe9c9] {
+  display: flex;
+  gap: 0.3125rem;
+}
+.route-card .route-number .tags-container .channel-tag[data-v-89cfe9c9] {
+  background: #46c254;
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.25rem;
+  align-items: center;
+  display: flex;
+}
+.route-card .route-number .tags-container .channel-tag uni-text[data-v-89cfe9c9] {
+  color: #fff;
+  font-size: 0.6875rem;
+  font-weight: bold;
+}
+.route-card .route-number .tags-container .door-tag[data-v-89cfe9c9] {
+  background: #ffb200;
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.25rem;
+  align-items: center;
+  display: flex;
+}
+.route-card .route-number .tags-container .door-tag uni-text[data-v-89cfe9c9] {
+  color: #fff;
+  font-size: 0.6875rem;
+  font-weight: bold;
+}
+.route-card .route-main[data-v-89cfe9c9] {
+  margin-top: 0.625rem;
+}
+.route-card .route-main .route-locations[data-v-89cfe9c9] {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.625rem;
+  padding: 0 0.625rem;
+}
+.route-card .route-main .route-locations .location[data-v-89cfe9c9] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+.route-card .route-main .route-locations .location .city[data-v-89cfe9c9] {
+  font-size: 18px;
+  font-weight: bold;
+}
+.route-card .route-main .route-locations .location .country-code[data-v-89cfe9c9] {
+  font-size: 0.75rem;
+  color: #666;
+}
+.route-card .route-main .route-locations .route-arrow[data-v-89cfe9c9] {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0.625rem;
+  width: 14.0625rem;
+}
+.route-card .route-main .route-locations .route-arrow .arrow-icon[data-v-89cfe9c9] {
+  width: 3.125rem;
+  height: 1.625rem;
+}
+.route-card .route-main .route-locations .route-arrow .arrow-time[data-v-89cfe9c9] {
+  font-size: 0.6875rem;
+}
+.route-card .route-main .route-times[data-v-89cfe9c9] {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 0.625rem;
+  flex-direction: row;
+}
+.route-card .route-main .route-times .time-item[data-v-89cfe9c9] {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 0.3125rem;
+}
+.route-card .route-main .route-times .time-item .time-label[data-v-89cfe9c9] {
+  color: #9c9b9b;
+  font-size: 0.8125rem;
+}
+.route-card .route-main .route-times .time-item .time-value[data-v-89cfe9c9] {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 0.8125rem;
+  margin-left: 0.3125rem;
+}
+.route-card .route-main .route-times .price[data-v-89cfe9c9] {
+  color: #ff4d4f;
+  font-size: 1.125rem;
+  font-weight: bold;
+  margin-top: 1.5625rem;
+}
+.route-card .route-footer[data-v-89cfe9c9] {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.625rem;
+  padding: 0.625rem 0;
+  border-top: 1px solid #f5f5f5;
+}
+.route-card .actions[data-v-89cfe9c9] {
+  margin-top: 0.625rem;
+  display: flex;
+  justify-content: flex-end;
+}
+.route-card .actions .btn-order[data-v-89cfe9c9] {
+  font-size: 0.75rem;
+  padding: 0.3125rem 0.9375rem;
+  border-radius: 0.9375rem;
+  background: #007aff;
+  color: #fff;
+}
+.route-card .hot-tag[data-v-89cfe9c9] {
+  position: absolute;
+  top: -0.78125rem;
+  right: 0.15625rem;
+  background: linear-gradient(45deg, #ff4d4f, #ff7875);
+  padding: 0.1875rem 0.5rem;
+  border-radius: 0.625rem;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0.0625rem 0.25rem rgba(255, 77, 79, 0.3);
+  z-index: 3;
+  animation: pulse-89cfe9c9 2s infinite;
+}
+.route-card .hot-tag[data-v-89cfe9c9]::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  right: 0.75rem;
+  border-left: 0.25rem solid transparent;
+  border-right: 0.25rem solid transparent;
+  border-top: 0.25rem solid #ff7875;
+}
+.route-card .hot-tag .hot-icon[data-v-89cfe9c9] {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.125rem;
+  filter: brightness(0) invert(1);
+  animation: shake-89cfe9c9 2s infinite;
+}
+.route-card .hot-tag uni-text[data-v-89cfe9c9] {
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+@keyframes pulse-89cfe9c9 {
+0% {
+    transform: scale(1);
+}
+50% {
+    transform: scale(1.05);
+}
+100% {
+    transform: scale(1);
+}
+}
+@keyframes shake-89cfe9c9 {
+0%, 100% {
+    transform: rotate(-5deg);
+}
+50% {
+    transform: rotate(5deg);
+}
+}
+.capacity-progress[data-v-89cfe9c9] {
+  margin-top: 0.625rem;
+  padding: 0.625rem 0;
+}
+.capacity-progress .progress-info[data-v-89cfe9c9] {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.3125rem;
+}
+.capacity-progress .progress-info .label[data-v-89cfe9c9] {
+  font-size: 0.75rem;
+  color: #666;
+}
+.capacity-progress .progress-info .value[data-v-89cfe9c9] {
+  font-size: 0.75rem;
+  color: #333;
+  font-weight: 500;
+}
+.capacity-progress .progress-bar[data-v-89cfe9c9] {
+  position: relative;
+  height: 0.9375rem;
+}
+.capacity-progress .progress-bar .progress-track[data-v-89cfe9c9] {
+  height: 100%;
+  background: #f5f5f5;
+  border-radius: 0.46875rem;
+  overflow: hidden;
+}
+.capacity-progress .progress-bar .progress-fill[data-v-89cfe9c9] {
+  height: 100%;
+  background: linear-gradient(90deg, #ffb200 0%, #ffce5e 100%);
+  border-radius: 0.46875rem;
+  position: relative;
+  transition: width 0.3s ease;
+  overflow: hidden;
+}
+.capacity-progress .progress-bar .progress-fill .stripes[data-v-89cfe9c9] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
+  background-size: 0.9375rem 0.9375rem;
+  animation: move-89cfe9c9 1s linear infinite;
+}
+.capacity-progress .progress-bar .progress-marker[data-v-89cfe9c9] {
+  position: absolute;
+  top: -0.5rem;
+  transform: translateX(-50%);
+}
+.capacity-progress .progress-bar .progress-marker .marker-arrow[data-v-89cfe9c9] {
+  width: 0;
+  height: 0;
+  border-left: 0.3125rem solid transparent;
+  border-right: 0.3125rem solid transparent;
+  border-top: 0.3125rem solid #ffb200;
+  margin: 0 auto;
+}
+.capacity-progress .progress-bar .progress-marker .marker-text[data-v-89cfe9c9] {
+  position: absolute;
+  top: -2.03125rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.625rem;
+  color: #fff;
+  background-image: url("http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/圆_1734424137913.png");
+  background-size: cover;
+  /* 背景图片填充整个容器，可能会裁剪部分内容 */
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 1.875rem;
+  height: 1.875rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.join-dynamics[data-v-89cfe9c9] {
+  background: linear-gradient(180deg, #ffdfc8 20%, #ffffff 100%);
+  border-radius: 0.5rem;
+  padding: 0.3125rem;
+}
+.join-dynamics .dynamics-header[data-v-89cfe9c9] {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+.join-dynamics .dynamics-header .title[data-v-89cfe9c9] {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #333;
+}
+.join-dynamics .dynamics-header .count[data-v-89cfe9c9] {
+  font-size: 0.75rem;
+  color: #666;
+}
+.join-dynamics .dynamics-swiper[data-v-89cfe9c9] {
+  height: 2rem;
+}
+.join-dynamics .dynamics-swiper .dynamic-item[data-v-89cfe9c9] {
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  padding: 0 0.5rem;
+}
+.join-dynamics .dynamics-swiper .dynamic-item .user-avatar[data-v-89cfe9c9] {
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+.join-dynamics .dynamics-swiper .dynamic-item .dynamic-content[data-v-89cfe9c9] {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.join-dynamics .dynamics-swiper .dynamic-item .dynamic-content .username[data-v-89cfe9c9] {
+  font-size: 0.75rem;
+  color: #333;
+  margin-right: 0.25rem;
+}
+.join-dynamics .dynamics-swiper .dynamic-item .dynamic-content .action-text[data-v-89cfe9c9] {
+  font-size: 0.75rem;
+  color: #666;
+}
+.join-dynamics .dynamics-swiper .dynamic-item .time_item[data-v-89cfe9c9] {
+  display: flex;
+  flex-direction: column;
+}
+.join-dynamics .dynamics-swiper .dynamic-item .time_item .time[data-v-89cfe9c9] {
+  font-size: 0.6875rem;
+  color: #999;
+  margin-left: 0.5rem;
+}
+.dynamic-item[data-v-89cfe9c9] {
+  animation: fadeIn-89cfe9c9 0.3s ease-in-out;
+}
+@keyframes fadeIn-89cfe9c9 {
+from {
+    opacity: 0;
+    transform: translateY(0.3125rem);
+}
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
+}
+@keyframes move-89cfe9c9 {
+0% {
+    background-position: 0 0;
+}
+100% {
+    background-position: 0.9375rem 0.9375rem;
+}
+}
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.container[data-v-eb410b6b] {
+  padding: 0.625rem;
+}
+.route-list .route-card[data-v-eb410b6b] {
+  margin-bottom: 0.625rem;
+}

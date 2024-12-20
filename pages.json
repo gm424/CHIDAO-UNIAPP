@@ -1,0 +1,327 @@
+{
+  "pages": [
+    {
+      "path": "pages/index/index",
+      "style": {
+        "navigationBarTitleText": "首页",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/index/webview",
+      "style": {
+        "navigationBarTitleText": "链接"
+      }
+    },
+    {
+      "path": "pages/finance/index",
+      "style": {
+        "navigationBarTitleText": "金融",
+        "enablePullDownRefresh": true
+      }
+    },
+    {
+      "path": "pages/data/index",
+      "style": {
+        "navigationBarTitleText": "数据",
+        "navigationStyle": "custom",
+        "usingComponents": {
+          "ec-canvas": "/components/ec-canvas/index"
+        }
+      }
+    },
+    {
+      "path": "pages/profile/index",
+      "style": {
+        "navigationBarTitleText": "我的",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/search/result",
+      "style": {
+        "navigationBarTitleText": "搜索结果",
+        "navigationStyle": "custom",
+        "usingComponents": {
+          "view": "@/uni_modules/uview-plus/components/u-view/u-view"
+        }
+      }
+    },
+    {
+      "path": "pages/finance/purchase-detail-info",
+      "style": {
+        "navigationBarTitleText": "采购详情"
+      }
+    },
+    {
+      "path": "pages/finance/redeem-detail-info",
+      "style": {
+        "navigationBarTitleText": "赎货详情"
+      }
+    },
+    {
+      "path": "pages/routes/hot",
+      "style": {
+        "navigationBarTitleText": "热门路线"
+      }
+    },
+    {
+      "path": "pages/routes/detail",
+      "style": {
+        "navigationBarTitleText": "路线详情",
+        "usingComponents": {
+          "view": "@/uni_modules/uview-plus/components/u-view/u-view"
+        }
+      }
+    },
+    {
+      "path": "pages/order/create",
+      "style": {
+        "navigationBarTitleText": "立即下单"
+      }
+    },
+    {
+      "path": "pages/order/detail",
+      "style": {
+        "navigationBarTitleText": "订单详情"
+      }
+    },
+    {
+      "path": "pages/address/list",
+      "style": {
+        "navigationBarTitleText": "地址管理"
+      }
+    },
+    {
+      "path": "pages/address/add",
+      "style": {
+        "navigationBarTitleText": "添加地址"
+      }
+    },
+    {
+      "path": "pages/goods/add",
+      "style": {
+        "navigationBarTitleText": "添加商品"
+      }
+    },
+    {
+      "path": "pages/order/list",
+      "style": {
+        "navigationBarTitleText": "我的订单"
+      }
+    },
+    {
+      "path": "pages/profile/edit",
+      "style": {
+        "navigationBarTitleText": "编辑资料"
+      }
+    },
+    {
+      "path": "pages/settings/account",
+      "style": {
+        "navigationBarTitleText": "账户设置"
+      }
+    },
+    {
+      "path": "pages/about/index",
+      "style": {
+        "navigationBarTitleText": "关于我们"
+      }
+    },
+    {
+      "path": "pages/invoice/list",
+      "style": {
+        "navigationBarTitleText": "发票管理"
+      }
+    },
+    {
+      "path": "pages/coupon/list",
+      "style": {
+        "navigationBarTitleText": "优惠券"
+      }
+    },
+    {
+      "path": "pages/service/index",
+      "style": {
+        "navigationBarTitleText": "在线客服"
+      }
+    },
+    {
+      "path": "pages/login/index",
+      "style": {
+        "navigationBarTitleText": "登录",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/login/register",
+      "style": {
+        "navigationBarTitleText": "注册账号"
+      }
+    },
+    {
+      "path": "pages/login/forgot",
+      "style": {
+        "navigationBarTitleText": "忘记密码"
+      }
+    },
+    {
+      "path": "pages/agreement/user",
+      "style": {
+        "navigationBarTitleText": "用户协议"
+      }
+    },
+    {
+      "path": "pages/agreement/privacy",
+      "style": {
+        "navigationBarTitleText": "隐私政策"
+      }
+    },
+    {
+      "path": "pages/cargo/add",
+      "style": {
+        "navigationBarTitleText": "添加货箱",
+        "usingComponents": {
+          "view": "@/uni_modules/uview-plus/components/u-view/u-view"
+        }
+      }
+    },
+    {
+      "path": "pages/goods/list",
+      "style": {
+        "navigationBarTitleText": "选择商品",
+        "enablePullDownRefresh": true,
+        "onReachBottomDistance": 50
+      }
+    },
+    {
+      "path": "pages/goods/manage",
+      "style": {
+        "navigationBarTitleText": "商品管理"
+      }
+    },
+    {
+      "path": "pages/goods/edit",
+      "style": {
+        "navigationBarTitleText": "商品编辑",
+        "navigationBarBackgroundColor": "#ffffff",
+        "navigationBarTextStyle": "black"
+      }
+    },
+    {
+      "path": "pages/finance/apply",
+      "style": {
+        "navigationBarTitleText": "金融申请"
+      }
+    },
+    {
+      "path": "pages/finance/loan-detail",
+      "style": {
+        "navigationBarTitleText": "借贷流水"
+      }
+    },
+    {
+      "path": "pages/finance/purchase-detail",
+      "style": {
+        "navigationBarTitleText": "我的采购"
+      }
+    },
+    {
+      "path": "pages/finance/redeem-detail",
+      "style": {
+        "navigationBarTitleText": "我的赎货"
+      }
+    },
+    {
+      "path": "pages/company/select",
+      "style": {
+        "navigationBarTitleText": "选择企业",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/address/edit",
+      "style": {
+        "navigationBarTitleText": "编辑地址"
+      }
+    },
+    {
+      "path": "pages/profile/company-info",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "企业信息"
+      }
+    },
+    {
+      "path": "pages/order/logistics",
+      "style": {
+        "navigationBarTitleText": "物流轨迹"
+      }
+    },
+    {
+      "path": "pages/inventory/list",
+      "style": {
+        "navigationBarTitleText": "库存明细",
+        "enablePullDownRefresh": true
+      }
+    },
+    {
+      "path": "pages/inventory/detail",
+      "style": {
+        "navigationBarTitleText": "库存详情"
+      }
+    },
+    {
+      "path": "pages/inventory/flow",
+      "style": {
+        "navigationBarTitleText": "库存流水",
+        "enablePullDownRefresh": true
+      }
+    }
+  ],
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#ffb60e",
+    "backgroundColor": "#FFFFFF",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "static/icons/home.png",
+        "selectedIconPath": "static/icons/home-active.png"
+      },
+      {
+        "pagePath": "pages/finance/index",
+        "text": "金融",
+        "iconPath": "static/icons/fms.png",
+        "selectedIconPath": "static/icons/fms-active.png"
+      },
+      {
+        "pagePath": "pages/data/index",
+        "text": "数据",
+        "iconPath": "static/icons/data.png",
+        "selectedIconPath": "static/icons/data-active.png"
+      },
+      {
+        "pagePath": "pages/profile/index",
+        "text": "我的",
+        "iconPath": "static/icons/me.png",
+        "selectedIconPath": "static/icons/me-active.png"
+      }
+    ]
+  },
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "供应链服务平台",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "backgroundColor": "#F8F8F8"
+  },
+  "uniIdRouter": {},
+  "easycom": {
+    "autoscan": true,
+    "custom": {
+      "^u-(.*)": "uview-plus/components/u-$1/u-$1.vue"
+    },
+    "^qiun-data-charts": "@qiun/ucharts"
+  }
+}
