@@ -41,7 +41,7 @@
       <view class="title">
         <image
           src="http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/大数据科技数据流转_1734521664475.png"
-          style="width: 40rpx; height: 40rpx"
+          style="width: 40rpx; height: 40rpx; margin-right: 10rpx"
         ></image>
         <view>渠道数据</view>
       </view>
@@ -58,10 +58,10 @@
           </view>
           <view class="card-content">
             <view class="card-value">
-              <text class="number">{{ item.value }}</text>
-              <text class="unit">{{ item.unit }}</text>
+              <text class="number">{{ item.value.toLocaleString() }}</text>
+              <!-- <text class="unit">{{ item.unit }}</text> -->
             </view>
-            <view class="card-compare">
+            <!-- <view class="card-compare">
               <text class="compare-item">
                 同比<image
                   :src="
@@ -73,10 +73,10 @@
                 ></image
                 ><text style="font-weight: 600">{{ item.yearOnYear }}%</text>
               </text>
-              <!-- <text class="compare-item" :class="{ up: item.monthOnMonth > 0, down: item.monthOnMonth < 0 }">
+              <text class="compare-item" :class="{ up: item.monthOnMonth > 0, down: item.monthOnMonth < 0 }">
               环比{{ item.monthOnMonth > 0 ? '+' : '' }}{{ item.monthOnMonth }}%
-            </text> -->
-            </view>
+            </text>
+            </view> -->
           </view>
         </view>
       </view>
@@ -85,8 +85,8 @@
     <view class="chart-card">
       <view class="title">
         <image
-          src="http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/大数据科技数据流转_1734521664475.png"
-          style="width: 40rpx; height: 40rpx"
+          src="http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/下降趋势_1734664718481.png"
+          style="width: 40rpx; height: 40rpx; margin-right: 10rpx"
         ></image>
         <view>物流单量趋势</view>
       </view>
@@ -109,10 +109,10 @@
     <view class="chart-card">
       <view class="title">
         <image
-          src="http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/大数据科技数据流转_1734521664475.png"
-          style="width: 40rpx; height: 40rpx"
+          src="http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/查库存_1734664689455.png"
+          style="width: 40rpx; height: 40rpx; margin-right: 10rpx"
         ></image>
-        <view>产品货值分布</view>
+        <view>物流产品分析</view>
       </view>
       <view class="card-header">
         <view class="switch-group">
@@ -141,8 +141,8 @@
     <view class="chart-card">
       <view class="title">
         <image
-          src="http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/大数据科技数据流转_1734521664475.png"
-          style="width: 40rpx; height: 40rpx"
+          src="http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/排行榜_1734664705135.png"
+          style="width: 40rpx; height: 40rpx; margin-right: 10rpx"
         ></image>
         <view>排行榜</view>
         <text class="sub-title">TOP 10</text>
@@ -164,9 +164,8 @@
           <text class="col rank">排名</text>
           <text class="col name">{{ rankType === 'country' ? '收货国家' : '品名' }}</text>
           <text class="col count1">{{ rankType === 'country' ? '物流单量' : '产品货值' }}</text>
-          <text class="col amount">{{ rankType === 'country' ? '发货数量' : '发货数量' }}</text>
+
           <text class="col percent">占比</text>
-          <text class="col trend">同比</text>
         </view>
 
         <!-- 列表内容 -->
@@ -179,18 +178,10 @@
           </text>
           <text class="col name">{{ item.name }}</text>
           <text class="col count">{{ item.count }}</text>
-          <text class="col amount">{{ item.amount }}</text>
+
           <text class="col percent">
             <text class="percent-value">{{ item.percent }}</text>
             <text class="percent-symbol">%</text>
-          </text>
-          <text class="col trend" :class="item.trend >= 0 ? 'up' : 'down'">
-            <!-- <u-icon
-              :name="item.trend >= 0 ? 'arrow-up' : 'arrow-down'"
-              :color="item.trend >= 0 ? '#ff4d4f' : '#52c41a'"
-              size="12"
-            ></u-icon> -->
-            {{ item.trend > 0 ? '+' : '' }}{{ item.trend }}%
           </text>
         </view>
       </view>
@@ -208,11 +199,11 @@ const chartDataWms = ref({})
 const chartType = ref('total')
 
 const chartOpts = ref({
-  color: ['#ffa438', '#4cd575', '#FAC858', '#EE6666', '#73C0DE', '#3CA272'],
+  color: ['#ffb918', '#4cd575', '#FAC858', '#EE6666', '#73C0DE', '#3CA272'],
   padding: [15, 15, 0, 15],
   enableScroll: false,
   legend: {
-    show: true,
+    show: false,
     position: 'top',
     float: 'right',
     itemWidth: 15,
@@ -233,10 +224,10 @@ const chartOpts = ref({
   extra: {
     area: {
       type: 'straight',
-      opacity: 0.15,
+      opacity: 0.45,
       addLine: true,
       width: 2,
-      gradient: false,
+      gradient: true,
       activeType: 'none',
     },
     line: {
@@ -287,35 +278,35 @@ const statCards = ref([
   {
     icon: 'http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/0605-ship2-filled_1734597000934.png',
     title: '海运',
-    value: formatNumber(13),
+    value: formatNumber(9999),
     unit: '单',
     yearOnYear: -10.11,
   },
   {
     icon: 'http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/出差_1734597027658.png',
     title: '空运',
-    value: formatNumber(21),
+    value: formatNumber(8998),
     unit: '单',
     yearOnYear: 30.29,
   },
   {
     icon: 'http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/卡车运输货物_1734597056487.png',
     title: '卡航',
-    value: formatNumber(31),
+    value: formatNumber(9999),
     unit: '单',
     yearOnYear: 6.29,
   },
   {
     icon: 'http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/铁路_1734597041942.png',
     title: '铁路',
-    value: formatNumber(20),
+    value: formatNumber(8999),
     unit: '单',
     yearOnYear: 12.62,
   },
   {
     icon: 'http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/冰箱_1734597073488.png',
     title: '到门',
-    value: formatNumber(32),
+    value: formatNumber(3774),
     unit: '单',
     yearOnYear: -6.89,
   },
@@ -323,7 +314,7 @@ const statCards = ref([
   {
     icon: 'http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/整柜出口_1734597090776.png',
     title: '到港',
-    value: formatNumber(89),
+    value: formatNumber(8349),
     unit: '单',
     yearOnYear: 1.04,
   },
@@ -598,6 +589,7 @@ onMounted(() => {
 
 .stat-grid {
   display: grid;
+  margin-top: 20rpx;
   grid-template-columns: repeat(2, 1fr);
   gap: 25rpx;
 
@@ -627,14 +619,14 @@ onMounted(() => {
 
     .card-content {
       flex: 1;
-      margin-top: 10rpx;
+      margin-top: 20rpx;
       .card-value {
         padding: 12rpx 0;
         display: flex;
         align-items: baseline;
-        border-bottom: 2rpx solid #f9f9f9;
+        // border-bottom: 2rpx solid #f9f9f9;
         .number {
-          font-size: 36rpx;
+          font-size: 40rpx;
           font-weight: 400;
           color: #333;
         }
@@ -715,6 +707,7 @@ onMounted(() => {
     padding: 20rpx 20rpx;
     border-bottom: 1px dashed #e7e6e6;
     font-size: 30rpx;
+    margin-left: 30rpx;
   }
   .header {
     display: flex;
@@ -727,7 +720,7 @@ onMounted(() => {
     .header-order {
       color: #000;
       font-size: 52rpx;
-      margin-left: 25rpx;
+      margin-left: 30rpx;
       font-weight: 600;
       flex: 1;
     }
@@ -739,8 +732,9 @@ onMounted(() => {
     margin-bottom: 10rpx;
     .content-item {
       flex: 1;
-      text-align: center;
+      text-align: left;
       margin: 20rpx 0rpx;
+      padding-left: 30rpx;
       border-right: #eeebeb;
       .content-title {
         color: #aaa8a8;

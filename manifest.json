@@ -2,8 +2,8 @@
     "name" : "赤道数智链",
     "appid" : "__UNI__B00B6F2",
     "description" : "",
-    "versionName" : "1.0.0",
-    "versionCode" : 101,
+    "versionName" : "1.0.2",
+    "versionCode" : 103,
     "transformPx" : false,
     /* 5+App特有相关 */
     "app-plus" : {

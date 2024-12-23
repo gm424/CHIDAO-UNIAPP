@@ -137,7 +137,7 @@ const services = [
   {
     id: 4,
     name: '库存流水',
-    icon: 'file-text',
+    icon: 'http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/库存流水_1734924302208.png',
     path: '/pages/inventory/flow',
     bgColor: '#fff',
     iconColor: '#373737',
@@ -202,7 +202,7 @@ const orderTypes = [
   {
     id: 4,
     name: '已签收',
-    icon: 'http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/形状(2)_1734588763684.png',
+    icon: 'http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/已完成_1734924416506.png',
     path: '/pages/order/list?status=5',
   },
 ]

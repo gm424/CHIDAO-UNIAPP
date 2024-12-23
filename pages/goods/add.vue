@@ -56,7 +56,10 @@
           </u-form-item>
 
           <u-form-item label="海关编码" prop="hsCode" borderBottom>
-            <u--input v-model="formData.hsCode" placeholder="请输入海关编码" border="none" />
+            <div @click="showHsCodePicker = true">
+              <text v-if="hsCode">{{ hsCode }}</text>
+              <text v-else style="color: #c0c4cc">请输入海关编码</text>
+            </div>
           </u-form-item>
 
           <u-form-item label="销售链接" prop="saleLink" borderBottom>
@@ -105,13 +108,10 @@
             <u--input v-model="formData.price" type="number" placeholder="价格" border="none" />
           </u-form-item>
           <u-form-item label="申报币种" required borderBottom>
-            <u--input
-              v-model="formData.declareCurrency"
-              type="number"
-              placeholder="请输入申报币种"
-              border="none"
-              @click="showCurrencyPicker = true"
-            />
+            <div @click="showCurrencyPicker = true">
+              <text v-if="declareCurrency">{{ declareCurrency }}</text>
+              <text v-else style="color: #c0c4cc">请输入申报币种</text>
+            </div>
           </u-form-item>
           <u-form-item label="申报价值" required borderBottom>
             <u--input v-model="formData.declareValue" type="number" placeholder="请输入申报价值" border="none" />
@@ -133,7 +133,16 @@
         </view>
       </u--form>
     </view>
-
+    <!-- 海关编码选择器 -->
+    <u-picker
+      ref="uPickerRef"
+      keyName="label"
+      :show="showHsCodePicker"
+      :columns="[hsCodeOptions]"
+      @confirm="onHsCodeConfirm"
+      @cancel="showHsCodePicker = false"
+      @change="changeHandler"
+    ></u-picker>
     <!-- 币种选择器 -->
     <u-picker
       :show="showCurrencyPicker"
@@ -153,16 +162,25 @@
 <script setup>
 import { ref, computed } from 'vue'
 import { postAction } from '@/common/store/manage'
-
+import hsCodeArr from '@/utils/hscode.js'
 const uForm = ref(null)
 const showCurrencyPicker = ref(false)
-
+const showHsCodePicker = ref(false)
 const currencyOptions = [
-  { text: '人民币', value: '1' },
-  { text: '美元', value: '2' },
-  { text: '欧元', value: '3' },
+  { text: 'CNY', value: '1' },
+  { text: 'HKD', value: '2' },
+  { text: 'USD', value: '3' },
+  { text: 'EUR', value: '4' },
+  { text: 'GBP', value: '5' },
+  { text: 'THB', value: '6' },
 ]
-
+const hsCodeOptions = computed(() => {
+  return hsCodeArr.map((item) => {
+    return item.group
+  })
+})
+const hsCode = ref(null)
+const declareCurrency = ref('')
 const formData = ref({
   jsin: '',
   sku: '',
@@ -202,18 +220,30 @@ const formData = ref({
   declareValue: '',
   remark: '',
 })
+const preventKeyboard = (event) => {
+  event.preventDefault() // 阻止默认行为，防止键盘弹出
+}
 
-// 计算当前选中的币种标签
-const currencyLabel = computed(() => {
-  const currency = currencyOptions.find((item) => item.value === formData.value.declareCurrency)
-  return currency ? currency.text : ''
-})
+const uPickerRef = ref(null)
+const changeHandler = (e) => {
+  const { columnIndex, value, values, index } = e
 
+  if (columnIndex === 0) {
+    uPickerRef.value.setColumnValues(1, hsCodeArr[index].children)
+  }
+}
 // 币种选择确认
 const onCurrencyConfirm = (e) => {
   const [{ value, text }] = e.value
   formData.value.declareCurrency = value
+  declareCurrency.value = text
   showCurrencyPicker.value = false
+}
+
+const onHsCodeConfirm = (e) => {
+  formData.value.hsCode = e.value[1].value
+  hsCode.value = e.value[0] + '/' + e.value[1].label
+  showHsCodePicker.value = false
 }
 
 const rules = {
@@ -242,6 +272,10 @@ const handleSubmit = async () => {
       setTimeout(() => {
         goBack()
       }, 1500)
+    } else {
+      uni.showToast({
+        title: res.message,
+      })
     }
   })
 }

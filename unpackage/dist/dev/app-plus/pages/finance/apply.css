@@ -1028,6 +1028,19 @@ to {
   font-size: 0.625rem;
   color: #ccc;
 }
+[data-v-8a0d966c] .u-form-item {
+  padding: 0.625rem 0;
+}
+[data-v-8a0d966c] .u-form-item .u-form-item__body {
+  padding: 0;
+}
+[data-v-8a0d966c] .u-form-item .u-form-item__body__left {
+  font-size: 0.875rem;
+  color: #666;
+}
+[data-v-8a0d966c] .u-form-item .u-form-item__body__right {
+  flex: 1;
+}
 .step-buttons[data-v-8a0d966c] {
   display: flex;
   gap: 0.625rem;

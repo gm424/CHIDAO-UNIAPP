@@ -45,6 +45,10 @@
       </view>
 
       <button class="submit-btn" @tap="handlePhoneLogin">注册</button>
+
+      <view class="action-links">
+        <text class="link" @tap="goToLogin">返回登录</text>
+      </view>
     </view>
 
     <!-- 区号选择器 -->
@@ -109,6 +113,12 @@ const refreshCaptcha = () => {
     fail(error) {
       console.log('error', error)
     },
+  })
+}
+// 去登录
+const goToLogin = () => {
+  uni.navigateTo({
+    url: '/pages/login/index',
   })
 }
 
@@ -242,7 +252,7 @@ const handlePhoneLogin = async () => {
     } else {
       uni.hideLoading()
       uni.showToast({
-        title: '注册失败，请重试',
+        title: res.message,
         icon: 'none',
       })
     }

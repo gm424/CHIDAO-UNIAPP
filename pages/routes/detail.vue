@@ -36,8 +36,24 @@
       </view>
       <view class="pinning-details">
         <!-- 容量图表 -->
-        <view class="capacity-chart">
-          <img src="http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/剩余容量切图_1734088136643.png" mode="aspectFit" />
+        <view class="capacity-chart" style="position: relative; width: 90%; margin: 20rpx auto">
+          <img
+            src="http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/编组10_1734664443312.png"
+            mode="aspectFit"
+            style="width: 550rpx; height: 180rpx"
+          />
+          <img
+            v-for="(i, index) in percent"
+            src="http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/黄_1734663675042.png"
+            style="position: absolute; bottom: 10rpx; width: 50rpx; height: 120rpx"
+            :style="{ left: index * 50 + 50 + 'rpx' }"
+          />
+          <img
+            v-for="(i, index) in 10 - percent"
+            src="http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/灰_1734663695058.png"
+            style="position: absolute; bottom: 10rpx; width: 50rpx; height: 120rpx"
+            :style="{ left: (percent + index) * 50 + 50 + 'rpx' }"
+          />
         </view>
 
         <!-- 拼柜动态 -->
@@ -111,20 +127,12 @@
     </view>
 
     <!-- 价格说明 -->
-    <view class="section">
-      <view class="section-title">价格说明</view>
+    <view class="section" v-if="priceInfo.length > 0">
+      <view class="section-title">附加费说明</view>
       <view class="price-list">
-        <view class="price-item">
-          <text class="label">基础运费</text>
-          <text class="value">¥{{ priceInfo.basePrice }}/KG</text>
-        </view>
-        <view class="price-item">
-          <text class="label">燃油附加费</text>
-          <text class="value">¥{{ priceInfo.fuelSurcharge }}/KG</text>
-        </view>
-        <view class="price-item" v-for="fee in priceInfo.otherFees" :key="fee.name">
-          <text class="label">{{ fee.name }}</text>
-          <text class="value">¥{{ fee.price }}/KG</text>
+        <view class="price-item" v-for="(item, index) in priceInfo" :key="index">
+          <text class="label">{{ item.feeItem_dictText }}</text>
+          <text class="value">¥{{ item.unitPrice }}/KG</text>
         </view>
       </view>
     </view>
@@ -175,52 +183,14 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
+import { getAction } from '../../common/store/manage'
 
 const dataSource = ref([])
 const route = ref({
   routeInfo: {},
 })
-// 价格说明
-const priceInfo = {
-  basePrice: '45.00', // 基础运费
-  fuelSurcharge: '5.00', // 燃油附加费
-  insuranceFee: '2.00', // 保险费
-  handlingFee: '3.00', // 操作费
-  // 阶梯价格
-  ladderPrices: [
-    {
-      weight: '0-45',
-      price: '45.00',
-    },
-    {
-      weight: '45-100',
-      price: '42.50',
-    },
-    {
-      weight: '100-300',
-      price: '40.00',
-    },
-    {
-      weight: '300-500',
-      price: '38.50',
-    },
-    {
-      weight: '500+',
-      price: '36.00',
-    },
-  ],
-  otherFees: [
-    // 其他费用
-    {
-      name: '提货费',
-      price: '2.00',
-    },
-    {
-      name: '包装费',
-      price: '1.50',
-    },
-  ],
-}
+
+const priceInfo = ref([])
 
 // 服务信息
 const services = [
@@ -283,6 +253,7 @@ const avatarStyles = [
   'pixel-art',
 ]
 // 定义 updateTimer
+const percent = ref(4)
 const updateTimer = ref(null)
 const scrollIndex = ref(null)
 // 生成随机头像URL
@@ -356,6 +327,16 @@ const updateDynamicData = () => {
   }
 }
 
+const getFeeData = () => {
+  getAction('/oms/transQuoteScheme/queryAdditinalList', { schemeId: route.value.routeInfo.quoteSchemeId }).then(
+    (res) => {
+      if (res.success) {
+        priceInfo.value = res.result
+      }
+    }
+  )
+}
+
 // 添加轮播切换事件处理
 const onSwiperChange = (e) => {
   scrollIndex.value = e.detail.current
@@ -373,6 +354,13 @@ onMounted(() => {
   updateTimer.value = setInterval(updateDynamicData, 30000)
   route.value = uni.getStorageSync('routeInfo')
   console.log('routeInfo', route.value)
+
+  percent.value = Math.round(
+    ((route.value.containers[0] ? route.value.containers[0].containerVolume - route.value.containers[0].volume : 0) /
+      route.value.containers[0].containerVolume) *
+      10
+  )
+
   if (!route.value.id) {
     // 获取路线详情
     uni.showToast({
@@ -414,6 +402,7 @@ onMounted(() => {
       }
     }
   }
+  getFeeData()
 })
 const handleColumns = () => {
   const allKeys = new Set()
@@ -615,7 +604,7 @@ const createOrder = () => {
 }
 .section-volumn {
   background-image: url('http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/编组22备份3(1)_1734578211054.png');
-  padding: 0 10rpx 0 30rpx;
+  // padding: 20rpx 0rpx 20rpx 0rpx;
   background-size: cover; /* 背景图片填充整个容器，可能会裁剪部分内容 */
   background-repeat: no-repeat;
   background-position: center;
@@ -625,7 +614,7 @@ const createOrder = () => {
   border-top-right-radius: 40rpx;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.05);
+  // box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.05);
 
   &::before {
     content: '';
@@ -634,13 +623,13 @@ const createOrder = () => {
     left: 0;
     width: 200rpx;
     height: 200rpx;
-    background: radial-gradient(
-      circle at 0 0,
-      rgba(238, 199, 27, 0.12) 0%,
-      rgba(238, 199, 27, 0.05) 35%,
-      rgba(238, 199, 27, 0.02) 60%,
-      rgba(238, 199, 27, 0) 100%
-    );
+    // background: radial-gradient(
+    //   circle at 0 0,
+    //   rgba(238, 199, 27, 0.12) 0%,
+    //   rgba(238, 199, 27, 0.05) 35%,
+    //   rgba(238, 199, 27, 0.02) 60%,
+    //   rgba(238, 199, 27, 0) 100%
+    // );
     pointer-events: none;
     z-index: 1;
   }
@@ -661,6 +650,7 @@ const createOrder = () => {
     border-radius: 16rpx;
     padding: 20rpx;
     position: relative;
+    margin: 0 auto;
     .capacity-chart {
       width: 100%;
       display: flex;
@@ -674,9 +664,11 @@ const createOrder = () => {
     }
     .percent {
       position: absolute;
-      top: 100rpx;
+      top: 120rpx;
       right: 100rpx;
-      color: #a2f7a2;
+      color: #8dd394;
+      font-weight: 600;
+      font-size: 30rpx;
     }
   }
   .section-title {
@@ -684,9 +676,10 @@ const createOrder = () => {
     position: relative;
     z-index: 2;
     font-weight: bold;
-    margin-bottom: 20rpx;
+    margin-top: 25rpx;
     font-family: YouSheBiaoTiHei;
     font-size: 36rpx;
+
     color: $theme-color;
     line-height: 62rpx;
     text-align: left;
@@ -944,12 +937,10 @@ const createOrder = () => {
 
   .btn-order {
     width: 40%;
-    background: linear-gradient(
-      to right,
-      rgba(255, 184, 19, 0.4),
-      rgba(255, 184, 19, 0.6) 30%,
-      rgba(255, 184, 19, 0.9)
-    );
+
+    background: linear-gradient(90deg, #ffce5e 0%, #ffb200 100%);
+    border-radius: 48px;
+
     // background: $theme-color;
     color: #fff;
     right: -200rpx;

@@ -1,25 +1,13 @@
 <template>
   <view>
     <view class="card">
-      <view class="title">库存总数</view>
+      <view class="title">
+        <view style="flex: 1; margin-left: 30rpx">库存总数</view>
+        <view style="flex: 1; margin-left: 30rpx">库存总货值</view>
+      </view>
       <view class="header">
-        <view class="header-order">36.75万</view>
-        <view class="count">
-          <text>同比: </text>
-          <image
-            src="http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/上升_1734596204748.png"
-            style="width: 28rpx; height: 28rpx"
-          ></image>
-          <text style="color: #333">1.29%</text>
-        </view>
-        <view class="count">
-          <text>环比: </text>
-          <image
-            src="http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/上升_1734596204748.png"
-            style="width: 28rpx; height: 28rpx"
-          ></image>
-          <text style="color: #333">6.29%</text>
-        </view>
+        <view class="header-order">9999</view>
+        <view class="header-order">9999</view>
       </view>
       <view class="content">
         <view class="content-item" style="border-right: 1px #e2e2e2 solid">
@@ -68,10 +56,10 @@
     <view class="chart-card">
       <view class="title">
         <image
-          src="http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/大数据科技数据流转_1734521664475.png"
-          style="width: 40rpx; height: 40rpx"
+          src="http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/40组织绩效结果分析_1734664675688.png"
+          style="width: 40rpx; height: 40rpx; margin-right: 10rpx"
         ></image>
-        <view>产品货值分布</view>
+        <view>库存产品分析</view>
       </view>
       <view class="card-header">
         <view class="switch-group">
@@ -100,7 +88,7 @@
       <view class="title">
         <image
           src="http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/下降趋势_1734664718481.png"
-          style="width: 40rpx; height: 40rpx"
+          style="width: 40rpx; height: 40rpx; margin-right: 10rpx"
         ></image>
         <view>库存单量趋势</view>
       </view>
@@ -118,14 +106,14 @@
       </view>
 
       <view class="status-cardlist">
-        <view class="status-card" style="border-right: 3rpx solid #e9e7e7">
+        <view class="status-card" style="border-right: 2rpx solid #f6f6f6">
           <view class="status-icon new"> </view>
           <view class="status-content">
             <text class="status-label">新订单</text>
             <text class="status-value">{{ formatNumber(newCreatedCount) }}</text>
           </view>
         </view>
-        <view class="status-card" style="border-right: 3rpx solid #e9e7e7">
+        <view class="status-card" style="border-right: 2rpx solid #f6f6f6">
           <view class="status-icon processing"> </view>
           <view class="status-content">
             <text class="status-label">执行中</text>
@@ -172,14 +160,14 @@
         <view class="title">
           <image
             src="http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/排行榜_1734664705135.png"
-            style="width: 40rpx; height: 40rpx"
+            style="width: 40rpx; height: 40rpx; margin-right: 10rpx"
           ></image>
-          <view>库存排行TOP 10</view>
+          <view>库存数量排行</view>
         </view>
         <view class="warehouse-select" @tap="showSelect">
           <view class="selected-warehouse">
-            <text>{{ selectedWarehouseLabel }}</text>
-            <u-icon :name="showWarehouseSelect ? 'arrow-up' : 'arrow-down'" size="14" color="#666"></u-icon>
+            <text style="margin-right: 20rpx">{{ selectedWarehouseLabel }}</text>
+            <u-icon :name="showWarehouseSelect ? 'arrow-up' : 'arrow-down'" size="14" color="#ffba1b"></u-icon>
           </view>
           <!-- 下拉选项 -->
           <view class="warehouse-options" v-if="showWarehouseSelect">
@@ -233,7 +221,7 @@ import { onReady } from '@dcloudio/uni-app'
 const chartDataWms = ref({})
 
 const chartOpts = ref({
-  color: ['#FAC858', '#91CB74', '#EE6666', '#73C0DE', '#3CA272'],
+  color: ['#ffb918', '#91CB74', '#EE6666', '#73C0DE', '#3CA272'],
   padding: [15, 15, 0, 15],
   enableScroll: false,
   legend: {
@@ -256,10 +244,10 @@ const chartOpts = ref({
   extra: {
     area: {
       type: 'straight',
-      opacity: 0.15,
+      opacity: 0.45,
       addLine: true,
       width: 2,
-      gradient: false,
+      gradient: true,
       activeType: 'none',
     },
     line: {
@@ -705,6 +693,8 @@ onMounted(() => {
   left: 2%;
   height: 25vh;
   .title {
+    display: flex;
+    flex-direction: row;
     color: #949191;
     padding: 20rpx 20rpx;
     border-bottom: 1px dashed #e7e6e6;
@@ -723,6 +713,7 @@ onMounted(() => {
       font-size: 48rpx;
       font-weight: 600;
       flex: 1;
+      margin-left: 30rpx;
     }
   }
   .content {
@@ -732,7 +723,8 @@ onMounted(() => {
     margin-bottom: 10rpx;
     .content-item {
       flex: 1;
-      text-align: center;
+      text-align: left;
+      padding-left: 30rpx;
       margin: 20rpx 0rpx;
       border-right: #eeebeb;
       .content-title {
@@ -774,7 +766,7 @@ onMounted(() => {
   }
   .card-header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin-bottom: 30rpx;
 
@@ -1007,11 +999,13 @@ onMounted(() => {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 30rpx;
-
     .title {
-      font-size: 32rpx;
-      font-weight: 500;
-      color: #333;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      font-size: 30rpx;
+      font-weight: 600;
+      margin: 20rpx 0rpx 30rpx;
     }
   }
   .switch-group {
@@ -1198,15 +1192,15 @@ onMounted(() => {
 
         .status-icon {
           &.new {
-            background: #1890ff;
+            background: #667dfe;
           }
 
           &.processing {
-            background: #faad14;
+            background: #44e599;
           }
 
           &.completed {
-            background: #52c41a;
+            background: #fcb051;
           }
         }
       }
@@ -1233,14 +1227,15 @@ onMounted(() => {
     display: flex;
     align-items: center;
     gap: 8rpx;
-    background: #f5f5f5;
+    background: #fff;
     padding: 12rpx 24rpx;
     border-radius: 8rpx;
+    border: 1px solid #f6f6f6;
     cursor: pointer;
     transition: all 0.3s;
 
     &:hover {
-      background: #f0f0f0;
+      background: #fff;
     }
 
     text {
@@ -1251,6 +1246,8 @@ onMounted(() => {
 
   .warehouse-options {
     position: absolute;
+    max-height: 300rpx;
+    overflow-y: scroll;
     top: 100%;
     right: 0;
     margin-top: 8rpx;
@@ -1321,13 +1318,13 @@ onMounted(() => {
     &.value {
       flex: 1;
       text-align: right;
-      color: #ff6b6b;
+
       font-weight: 500;
     }
     &.stock {
       flex: 1;
       text-align: right;
-      color: #2b5cff;
+
       font-weight: 500;
     }
   }

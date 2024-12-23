@@ -37,7 +37,6 @@
       </view>
 
       <view class="form-item captcha-item">
-        <text class="iconfont icon-safe"></text>
         <input v-model="formData.captcha" type="text" placeholder="请输入验证码" class="input" maxlength="4" />
         <image class="captcha-img" :src="captchaUrl" @tap="refreshCaptcha" mode="aspectFit" />
       </view>
@@ -67,13 +66,17 @@
         />
       </view>
       <view class="form-item">
-        <text class="iconfont icon-safe"></text>
         <input v-model="formData.captcha" type="number" placeholder="请输入验证码" class="input" maxlength="6" />
         <view class="sms-btn" :class="{ disabled: counting }" @tap="getVerifyCode">
           {{ countText }}
         </view>
       </view>
       <button class="submit-btn" @tap="handlePhoneLogin">登录</button>
+      <view class="action-links">
+        <!-- <text class="link" @tap="forgotPassword">忘记密码</text> -->
+        <!-- <text class="divider">|</text> -->
+        <text class="link" @tap="goToRegister">立即注册</text>
+      </view>
 
       <!-- 手机号登录(旧) -->
       <!-- <view class="form-section" v-else>
@@ -334,7 +337,7 @@ const handlePhoneLogin = async () => {
     } else {
       uni.hideLoading()
       uni.showToast({
-        title: '登录失败，请重试',
+        title: res.message,
         icon: 'none',
       })
     }
@@ -394,7 +397,7 @@ onMounted(() => {
     border-radius: 50rpx;
     padding: 0 40rpx;
     margin-bottom: 30rpx;
-
+    justify-content: space-between;
     .iconfont {
       font-size: 40rpx;
       color: #999;

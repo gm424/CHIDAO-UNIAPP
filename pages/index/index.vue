@@ -15,6 +15,10 @@
       >
         <swiper-item v-for="banner in banners" :key="banner.id">
           <image :src="banner.image" mode="aspectFill" class="banner-image" @load="onImageLoad" @error="onImageError" />
+          <view class="banner-tip">
+            <view class="tip1">贴心的服务</view>
+            <view class="tip2">一流的品质</view>
+          </view>
           <view class="banner-title">{{ banner.title }}</view>
         </swiper-item>
       </swiper>
@@ -208,7 +212,7 @@ import RouteCard from '@/components/RouteCard.vue'
 import { mockHotRoutes, mockChannelRoutes, mockBanners } from '@/utils/mock'
 import { countries } from '@/utils/countries'
 import { getAction } from '@/common/store/manage'
-
+import { onReachBottom, onPullDownRefresh } from '@dcloudio/uni-app'
 // 数据定义
 const show = ref(false)
 const channels = [
@@ -266,7 +270,10 @@ const getDatePrice = () => {
     }
   })
 }
-
+// 下拉刷新
+onPullDownRefresh(() => {
+  loadHot()
+})
 // 计算日历天数
 const calendarDays = computed(() => {
   const days = []
@@ -454,6 +461,9 @@ const loadHot = () => {
   getAction('/tms/shift/getHot').then((res) => {
     if (res.success) {
       hotRoutes.value = res.result
+      setTimeout(() => {
+        uni.stopPullDownRefresh()
+      }, 1000)
     }
   })
 }
@@ -566,6 +576,7 @@ const scrollToDate = (date) => {
 </script>
 
 <style lang="scss" scoped>
+@import '@/styles/theme.scss';
 .container {
   background-color: #f6f6f6;
   padding: 0rpx 0rpx;
@@ -601,19 +612,40 @@ const scrollToDate = (date) => {
         // background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3) 30%, rgba(0, 0, 0, 0.7));
       }
     }
-
-    .banner-title {
+    .banner-tip {
       position: absolute;
-      left: 40rpx;
+      left: 60rpx;
+      color: #fff;
+      top: 140rpx;
+      display: flex;
+      flex-direction: row;
+      .tip1 {
+        padding: 0rpx 20rpx;
+        border-right: 1px solid rgba(255, 255, 255, 0.6);
+      }
+      .tip2 {
+        padding: 0rpx 20rpx;
+      }
+    }
+    .banner-title {
+      text-align: center;
+      font-style: normal;
+
+      font-family: 'CustomFont';
+      position: absolute;
+      left: 60rpx;
       top: 200rpx;
       color: #fff;
       font-size: 56rpx;
-      font-weight: bold;
+      // font-weight: bold;
       text-shadow: 0 2rpx 4rpx rgba(0, 0, 0, 0.3);
       z-index: 1;
       opacity: 0;
       transform: translateY(20rpx);
       animation: fadeInUp 0.5s forwards;
+      padding: 10rpx 0rpx;
+      border-top: 1px solid rgba(255, 255, 255, 0.6);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.6);
     }
   }
 
@@ -671,37 +703,67 @@ const scrollToDate = (date) => {
           // transform: scaleY(0);
           // transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        &.active {
-          flex-grow: 2; /* 选中的tab变宽 */
-          background-image: url('http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/海运卡航选中_1734419031377.png');
-          background-size: contain; /* 背景图片填充整个容器，可能会裁剪部分内容 */
-          background-repeat: no-repeat;
-          background-position: center;
-          height: 160rpx;
-          bottom: 20px;
-          .tab-text {
-            color: #181818;
-            font-weight: bold;
-            font-size: 32rpx;
-          }
-
-          .tab-bg {
-            // transform: scaleX(10.5);
-            // background: #fff;
-            // box-shadow: 0 8rpx 24rpx rgba(0, 122, 255, 0.3);
-          }
-        }
-
-        // &:not(.active) {
-        //   .tab-bg {
-        //     transform-origin: top;
-        //     transform: scaleY(0);
+        // &.active {
+        //   flex-grow: 2; /* 选中的tab变宽 */
+        //   background-image: url('http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/海运卡航选中_1734419031377.png');
+        //   background-size: contain; /* 背景图片填充整个容器，可能会裁剪部分内容 */
+        //   background-repeat: no-repeat;
+        //   background-position: center;
+        //   height: 160rpx;
+        //   bottom: 20px;
+        //   .tab-text {
+        //     color: #181818;
+        //     font-weight: bold;
+        //     font-size: 32rpx;
         //   }
+
         // }
       }
     }
   }
+  .channel-container .channel-tabs .tab-item.active {
+    flex-grow: 1.8;
+    background-image: url('http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/海运卡航选中_1734419031377.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 160rpx;
+    bottom: 20px;
+    .tab-text {
+      color: $theme-color;
+      font-weight: bold;
+      font-size: 32rpx;
+    }
+  }
 
+  .channel-container .channel-tabs .tab-item:first-child.active {
+    flex-grow: 1.5;
+    background-image: url('http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/空运选中_1734937528784.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 160rpx;
+    bottom: 20px;
+    .tab-text {
+      color: $theme-color;
+      font-weight: bold;
+      font-size: 32rpx;
+    }
+  }
+  .channel-container .channel-tabs .tab-item:nth-child(4).active {
+    flex-grow: 1.5;
+    background-image: url('http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/铁路选中_1734937737303.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 160rpx;
+    bottom: 20px;
+    .tab-text {
+      color: $theme-color;
+      font-weight: bold;
+      font-size: 32rpx;
+    }
+  }
   .search-bar {
     position: absolute;
     left: 20rpx;
@@ -959,5 +1021,11 @@ const scrollToDate = (date) => {
       }
     }
   }
+}
+@font-face {
+  font-family: 'CustomFont'; /* 给字体起一个名字 */
+  src: url('/styles/YouSheBiaoTiHei-2.ttf') format('truetype'); /* 引入 .ttf 文件 */
+  font-weight: normal; /* 设置字体权重（可选） */
+  font-style: normal; /* 设置字体样式（可选） */
 }
 </style>

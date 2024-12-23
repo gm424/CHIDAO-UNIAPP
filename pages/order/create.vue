@@ -193,6 +193,8 @@ onUnmounted(() => {
   uni.$off('addCargo', handleAddCargo)
   uni.$off('updateCargo', handleCargoUpdate)
   uni.$off('selectAddress', handleSelectAddress)
+  uni.removeStorageSync('shipAddress')
+  uni.removeStorageSync('receiveAddress')
 })
 
 // 预估费用
@@ -337,7 +339,9 @@ const submitOrder = () => {
       uni.showLoading({
         title: res.message,
       })
-      uni.hideLoading()
+      setTimeout(() => {
+        uni.hideLoading()
+      }, 1000)
     }
   })
 }

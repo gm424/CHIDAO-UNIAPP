@@ -104,14 +104,12 @@
           <u-form-item label="价格" required borderBottom>
             <u--input v-model="formData.price" type="number" placeholder="价格" border="none" />
           </u-form-item>
+
           <u-form-item label="申报币种" required borderBottom>
-            <u--input
-              v-model="formData.declareCurrency"
-              type="number"
-              placeholder="请输入申报币种"
-              border="none"
-              @click="showCurrencyPicker = true"
-            />
+            <div @click="showCurrencyPicker = true">
+              <text v-if="declareCurrency">{{ declareCurrency }}</text>
+              <text v-else style="color: #c0c4cc">请输入申报币种</text>
+            </div>
           </u-form-item>
           <u-form-item label="申报价值" required borderBottom>
             <u--input v-model="formData.declareValue" type="number" placeholder="请输入申报价值" border="none" />
@@ -166,6 +164,15 @@ const formData = ref({
   status: '1',
 })
 
+const currencyOptions = [
+  { text: 'CNY', value: '1' },
+  { text: 'HKD', value: '2' },
+  { text: 'USD', value: '3' },
+  { text: 'EUR', value: '4' },
+  { text: 'GBP', value: '5' },
+  { text: 'THB', value: '6' },
+]
+const declareCurrency = ref(null)
 const rules = {
   name: [{ required: true, message: '请输入商品名称', trigger: ['blur', 'change'] }],
   hsCode: [{ required: true, message: '请输入海关编码', trigger: ['blur', 'change'] }],
@@ -173,7 +180,7 @@ const rules = {
 }
 
 const uForm = ref(null)
-
+const showCurrencyPicker = ref(false)
 // 获取商品详情
 const loadGoodsDetail = async (id) => {
   ;(formData.value = uni.getStorageSync('goods')), console.log('formData', formData.value)
@@ -205,6 +212,13 @@ onLoad((options) => {
     loadGoodsDetail(options.id)
   }
 })
+// 币种选择确认
+const onCurrencyConfirm = (e) => {
+  const [{ value, text }] = e.value
+  formData.value.declareCurrency = value
+  declareCurrency.value = text
+  showCurrencyPicker.value = false
+}
 </script>
 
 <style lang="scss" scoped>

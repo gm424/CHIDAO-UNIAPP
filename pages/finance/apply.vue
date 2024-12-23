@@ -8,53 +8,55 @@
         <view class="form-section">
           <view class="section-title">
             <text class="title">企业基本信息</text>
-            <text class="subtitle">请填写企业基本资料</text>
           </view>
 
-          <u-form-item label="公司名称" prop="companyName" required>
-            <u-input v-model="formData.companyName" placeholder="请输入公司名称" />
+          <u-form-item label="公司名称" prop="companyName" required label-width="120">
+            <u--input v-model="formData.companyName" placeholder="请输入公司名称" border="none" />
           </u-form-item>
 
-          <u-form-item label="联系人" prop="contactName" required>
-            <u-input v-model="formData.contactName" placeholder="请输入联系人姓名" />
+          <u-form-item label="联系人" prop="contactName" required label-width="120">
+            <u--input v-model="formData.contactName" placeholder="请输入联系人姓名" border="none" />
           </u-form-item>
         </view>
 
         <view class="form-section">
           <view class="section-title">
             <text class="title">业务信息</text>
-            <text class="subtitle">请填写业务相关信息</text>
           </view>
 
-          <u-form-item label="月均流水" prop="monthlyFlow" required>
-            <u-input v-model="formData.monthlyFlow" type="number" placeholder="请输入月均流水(万元)" />
+          <u-form-item label="月均流水" prop="monthlyFlow" required label-width="120">
+            <u--input v-model="formData.monthlyFlow" type="number" border="none" placeholder="请输入月均流水(万元)" />
           </u-form-item>
 
-          <u-form-item label="主营产品" prop="product" required>
-            <u-input v-model="formData.product" placeholder="请输入主营产品" />
+          <u-form-item label="主营产品" prop="product" required label-width="120">
+            <u--input v-model="formData.product" placeholder="请输入主营产品" border="none" />
           </u-form-item>
 
-          <u-form-item label="品牌名称" prop="brand" required>
-            <u-input v-model="formData.brand" placeholder="请输入品牌名称" />
+          <u-form-item label="品牌名称" prop="brand" required label-width="120">
+            <u--input v-model="formData.brand" placeholder="请输入品牌名称" border="none" />
           </u-form-item>
 
-          <u-form-item label="平台模式" prop="companyMode" required>
-            <u-input v-model="formData.companyMode" placeholder="请输入平台模式" />
+          <u-form-item label="平台模式" prop="companyMode" required label-width="120">
+            <u--input v-model="formData.companyMode" placeholder="请输入平台模式" border="none" />
           </u-form-item>
         </view>
 
         <view class="form-section">
           <view class="section-title">
             <text class="title">申请信息</text>
-            <text class="subtitle">请填写申请相关信息</text>
           </view>
 
-          <u-form-item label="申请额度" prop="applyAmount" required>
-            <u-input v-model="formData.applyAmount" type="number" placeholder="请输入申请额度(万元)" />
+          <u-form-item label="申请额度" prop="applyAmount" required label-width="120">
+            <u--input v-model="formData.applyAmount" type="number" border="none" placeholder="请输入申请额度(万元)" />
           </u-form-item>
 
-          <u-form-item label="申请原因" prop="applyReason" required>
-            <u-textarea v-model="formData.applyReason" placeholder="请详细说明申请原因" :maxlength="200" />
+          <u-form-item label="申请原因" prop="applyReason" required label-width="120">
+            <u-textarea
+              v-model="formData.applyReason"
+              placeholder="请详细说明申请原因"
+              :maxlength="200"
+              border="none"
+            />
           </u-form-item>
         </view>
       </u-form>
@@ -102,7 +104,7 @@ const formData = ref({
   monthlyFlow: '',
   product: '',
   brand: '',
-  companyMode: 'B2B',
+  companyMode: '',
   applyAmount: '',
   applyReason: '',
   attachments: {},
@@ -466,7 +468,22 @@ onMounted(() => {
     }
   }
 }
+:deep(.u-form-item) {
+  padding: 20rpx 0;
 
+  .u-form-item__body {
+    padding: 0;
+  }
+
+  .u-form-item__body__left {
+    font-size: 28rpx;
+    color: #666;
+  }
+
+  .u-form-item__body__right {
+    flex: 1;
+  }
+}
 .step-buttons {
   display: flex;
   gap: 20rpx;

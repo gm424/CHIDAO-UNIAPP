@@ -886,6 +886,7 @@ to {
   border-radius: 1.5625rem;
   padding: 0 1.25rem;
   margin-bottom: 0.9375rem;
+  justify-content: space-between;
 }
 .form-section .form-item .iconfont[data-v-d08ef7d4] {
   font-size: 1.25rem;

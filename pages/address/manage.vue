@@ -17,12 +17,16 @@
         <view
           class="address-card"
           :class="{ 'default-address': address.isDefault === '1' }"
-          @tap="selectAddress(address)"
+          @tap="editAddress(address)"
         >
           <view class="card-content">
             <view class="user-info">
               <text class="name">{{ address.contactName }}</text>
               <text class="phone">{{ address.contactPhone }}</text>
+              <view v-if="address.isDefault === '1'" class="default-tag">
+                <u-icon name="checkmark" color="#fff" size="12"></u-icon>
+                <text>默认</text>
+              </view>
             </view>
 
             <view class="address-info">
@@ -31,9 +35,6 @@
                 <text class="detail">{{ address.address }}</text>
               </view>
             </view>
-          </view>
-          <view style="padding: 0 20rpx">
-            <u-icon name="edit-pen-fill" color="#6a6a6a" size="22" @tap="editAddress(address)"></u-icon>
           </view>
         </view>
       </u-swipe-action-item>
@@ -80,9 +81,6 @@ onUnmounted(() => {
 
 // 选择地址
 const selectAddress = (address) => {
-  if (!type.value) {
-    return
-  }
   // 缓存选中的地址
   if (type.value === '1') {
     uni.setStorageSync('shipAddress', JSON.stringify(address))

@@ -245,13 +245,13 @@ to {
   padding: 0.625rem;
 }
 .promo-section .banner[data-v-b0c916dd] {
-  background: linear-gradient(135deg, #2b5cff, #4c8dff);
+  background: linear-gradient(135deg, #ffb715, #f7c248);
   border-radius: 0.625rem;
   padding: 1.25rem;
   display: flex;
   align-items: center;
   margin-bottom: 1.25rem;
-  box-shadow: 0 0.125rem 0.75rem rgba(43, 92, 255, 0.15);
+  box-shadow: 0 0.125rem 0.75rem rgba(255, 198, 43, 0.15);
   transform: translateY(0);
   transition: transform 0.3s ease;
 }
@@ -336,7 +336,7 @@ to {
   opacity: 1;
 }
 .promo-section .feature-list .feature-item .feature-icon[data-v-b0c916dd] {
-  background: rgba(22, 119, 255, 0.1);
+  background: rgba(255, 193, 22, 0.1);
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 50%;
@@ -411,7 +411,7 @@ to {
   padding: 0.625rem;
 }
 .promo-section .bottom-section .apply-btn[data-v-b0c916dd] {
-  background: linear-gradient(135deg, #2b5cff, #4c8dff);
+  background: linear-gradient(135deg, #ffb715, #f3bf47);
   color: #fff;
   border-radius: 1.25rem;
   padding: 0.75rem 1.25rem;
@@ -421,7 +421,7 @@ to {
   justify-content: center;
   gap: 0.375rem;
   width: 90%;
-  box-shadow: 0 0.1875rem 0.625rem rgba(43, 92, 255, 0.2);
+  box-shadow: 0 0.1875rem 0.625rem rgba(255, 206, 43, 0.2);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
@@ -595,7 +595,7 @@ to {
   width: 2rem;
   height: 2rem;
   border-radius: 1.25rem;
-  background: rgba(43, 92, 255, 0.1);
+  background: rgba(255, 216, 43, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -667,9 +667,9 @@ to {
 }
 .approved-section .detail-section .section-header .header-right .more[data-v-b0c916dd] {
   font-size: 0.75rem;
-  color: #2b5cff;
+  color: #ffb715;
   padding: 0.25rem 0.5rem;
-  background: rgba(43, 92, 255, 0.1);
+  background: rgba(255, 206, 43, 0.1);
   border-radius: 0.1875rem;
 }
 .approved-section .detail-section .credit-list .credit-card[data-v-b0c916dd] {
@@ -722,7 +722,7 @@ to {
 }
 .approved-section .detail-section .credit-list .credit-card .card-content .info-row .value.amount[data-v-b0c916dd] {
   font-size: 1rem;
-  color: #2b5cff;
+  color: #ffb715;
   font-weight: 500;
 }
 @keyframes slideIn-b0c916dd {
@@ -752,8 +752,8 @@ to {
 .loading-circle[data-v-b0c916dd] {
   width: 1.25rem;
   height: 1.25rem;
-  border: 0.09375rem solid rgba(43, 92, 255, 0.2);
-  border-top-color: #2b5cff;
+  border: 0.09375rem solid rgba(255, 216, 43, 0.2);
+  border-top-color: #ffb715;
   border-radius: 50%;
   animation: spin-b0c916dd 1s linear infinite;
 }
@@ -828,7 +828,7 @@ to {
 .pending-section .progress-card .progress-steps .step-item .step-icon .loading-circle[data-v-b0c916dd] {
   width: 100%;
   height: 100%;
-  border: 0.09375rem solid #2b5cff;
+  border: 0.09375rem solid #ffb715;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -837,7 +837,7 @@ to {
 .pending-section .progress-card .progress-steps .step-item .step-icon .loading-circle .loading-icon[data-v-b0c916dd] {
   width: 1rem;
   height: 1rem;
-  border: 0.09375rem solid #2b5cff;
+  border: 0.09375rem solid #ffb715;
   border-top-color: transparent;
   border-radius: 50%;
   animation: loading-b0c916dd 1s linear infinite;
@@ -862,10 +862,10 @@ to {
   color: #999;
 }
 .pending-section .progress-card .progress-steps .step-item.completed .step-icon[data-v-b0c916dd] {
-  color: #2b5cff;
+  color: #ffb715;
 }
 .pending-section .progress-card .progress-steps .step-item.active .step-title[data-v-b0c916dd] {
-  color: #2b5cff;
+  color: #ffb715;
 }
 .pending-section .progress-card .progress-steps .step-line[data-v-b0c916dd] {
   width: 0.0625rem;
@@ -880,7 +880,7 @@ to {
   top: 0;
   width: 100%;
   height: 100%;
-  background: #2b5cff;
+  background: #ffb715;
 }
 .pending-section .progress-card .progress-steps .step-line .line-wait[data-v-b0c916dd] {
   position: absolute;
@@ -931,12 +931,12 @@ to {
   display: inline-flex;
   align-items: center;
   padding: 0.5rem 1.25rem;
-  background: rgba(43, 92, 255, 0.1);
+  background: rgba(255, 206, 43, 0.1);
   border-radius: 1.25rem;
 }
 .pending-section .contact-section .contact-btn uni-text[data-v-b0c916dd] {
   font-size: 0.875rem;
-  color: #2b5cff;
+  color: #ffb715;
   margin-left: 0.25rem;
 }
 .loading-more[data-v-b0c916dd] {

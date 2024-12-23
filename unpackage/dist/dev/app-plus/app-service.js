@@ -3318,7 +3318,7 @@ if (uni.restoreGlobal) {
       /* CLASS */
     );
   }
-  const __easycom_0$7 = /* @__PURE__ */ _export_sfc(_sfc_main$1i, [["render", _sfc_render$z], ["__scopeId", "data-v-1c933a9a"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/node_modules/uview-plus/components/u-icon/u-icon.vue"]]);
+  const __easycom_0$6 = /* @__PURE__ */ _export_sfc(_sfc_main$1i, [["render", _sfc_render$z], ["__scopeId", "data-v-1c933a9a"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/node_modules/uview-plus/components/u-icon/u-icon.vue"]]);
   const props$n = defineMixin({
     props: {
       // 是否细边框
@@ -3626,7 +3626,7 @@ if (uni.restoreGlobal) {
   };
   function _sfc_render$y(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_u_loading_icon = resolveEasycom(vue.resolveDynamicComponent("u-loading-icon"), __easycom_2$4);
-    const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$7);
+    const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$6);
     return vue.openBlock(), vue.createElementBlock("button", {
       "hover-start-time": Number(_ctx.hoverStartTime),
       "hover-stay-time": Number(_ctx.hoverStayTime),
@@ -3931,7 +3931,7 @@ if (uni.restoreGlobal) {
     }
   };
   function _sfc_render$x(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$7);
+    const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$6);
     return vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -4236,7 +4236,7 @@ if (uni.restoreGlobal) {
     }
   };
   function _sfc_render$v(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$7);
+    const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$6);
     const _component_u_line = resolveEasycom(vue.resolveDynamicComponent("u-line"), __easycom_1$6);
     return vue.openBlock(), vue.createElementBlock("view", {
       class: vue.normalizeClass(["u-cell", [_ctx.customClass]]),
@@ -4604,7 +4604,7 @@ if (uni.restoreGlobal) {
       /* FORWARDED */
     }, 8, ["show", "duration", "custom-style", "onClick", "onTouchmove"]);
   }
-  const __easycom_0$6 = /* @__PURE__ */ _export_sfc(_sfc_main$1b, [["render", _sfc_render$s], ["__scopeId", "data-v-35f7c3e5"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/node_modules/uview-plus/components/u-overlay/u-overlay.vue"]]);
+  const __easycom_0$5 = /* @__PURE__ */ _export_sfc(_sfc_main$1b, [["render", _sfc_render$s], ["__scopeId", "data-v-35f7c3e5"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/node_modules/uview-plus/components/u-overlay/u-overlay.vue"]]);
   const props$g = defineMixin({
     props: {
       bgColor: {
@@ -4873,9 +4873,9 @@ if (uni.restoreGlobal) {
     }
   };
   function _sfc_render$p(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_u_overlay = resolveEasycom(vue.resolveDynamicComponent("u-overlay"), __easycom_0$6);
+    const _component_u_overlay = resolveEasycom(vue.resolveDynamicComponent("u-overlay"), __easycom_0$5);
     const _component_u_status_bar = resolveEasycom(vue.resolveDynamicComponent("u-status-bar"), __easycom_1$4);
-    const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$7);
+    const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$6);
     const _component_u_safe_bottom = resolveEasycom(vue.resolveDynamicComponent("u-safe-bottom"), __easycom_3$5);
     const _component_u_transition = resolveEasycom(vue.resolveDynamicComponent("u-transition"), __easycom_4$3);
     return vue.openBlock(), vue.createElementBlock(
@@ -5173,7 +5173,7 @@ if (uni.restoreGlobal) {
                 vue.createElementVNode(
                   "view",
                   { class: "time-value" },
-                  vue.toDisplayString(__props.route.containers[0] ? __props.route.containers[0].containerVolume - __props.route.containers[0].volume : 0) + "CBM",
+                  vue.toDisplayString((__props.route.containers[0] ? __props.route.containers[0].containerVolume - __props.route.containers[0].volume : 0).toLocaleString()) + " CBM",
                   1
                   /* TEXT */
                 )
@@ -6304,10 +6304,13 @@ if (uni.restoreGlobal) {
         }).then((res) => {
           if (res.success) {
             datePrices.value = res.result || [];
-            formatAppLog("log", "at pages/index/index.vue:265", "价格列表", datePrices.value);
+            formatAppLog("log", "at pages/index/index.vue:269", "价格列表", datePrices.value);
           }
         });
       };
+      onPullDownRefresh(() => {
+        loadHot();
+      });
       const calendarDays = vue.computed(() => {
         const days = [];
         const firstDay = new Date(currentYear.value, currentMonth.value, 1);
@@ -6398,7 +6401,7 @@ if (uni.restoreGlobal) {
         return date3.toISOString().split("T")[0] === selectedDate.value;
       };
       const handleSearch = () => {
-        formatAppLog("log", "at pages/index/index.vue:383", "查询参数", selectedOrigin.value, selectedDest.value, selectedDate.value);
+        formatAppLog("log", "at pages/index/index.vue:390", "查询参数", selectedOrigin.value, selectedDest.value, selectedDate.value);
         if (!selectedOrigin.value.isoCode) {
           uni.showToast({
             title: "请选择起始地",
@@ -6441,15 +6444,18 @@ if (uni.restoreGlobal) {
         });
       };
       const onImageLoad = (e2) => {
-        formatAppLog("log", "at pages/index/index.vue:444", "图片加载成功");
+        formatAppLog("log", "at pages/index/index.vue:451", "图片加载成功");
       };
       const onImageError = (e2) => {
-        formatAppLog("error", "at pages/index/index.vue:449", "图片加载失败", e2);
+        formatAppLog("error", "at pages/index/index.vue:456", "图片加载失败", e2);
       };
       const loadHot = () => {
         getAction("/tms/shift/getHot").then((res) => {
           if (res.success) {
             hotRoutes.value = res.result;
+            setTimeout(() => {
+              uni.stopPullDownRefresh();
+            }, 1e3);
           }
         });
       };
@@ -6547,6 +6553,10 @@ if (uni.restoreGlobal) {
                         onLoad: onImageLoad,
                         onError: onImageError
                       }, null, 40, ["src"]),
+                      vue.createElementVNode("view", { class: "banner-tip" }, [
+                        vue.createElementVNode("view", { class: "tip1" }, "贴心的服务"),
+                        vue.createElementVNode("view", { class: "tip2" }, "一流的品质")
+                      ]),
                       vue.createElementVNode(
                         "view",
                         { class: "banner-title" },
@@ -7031,7 +7041,7 @@ if (uni.restoreGlobal) {
     }
   };
   function _sfc_render$o(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$7);
+    const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$6);
     return _ctx.show ? (vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -7169,7 +7179,7 @@ if (uni.restoreGlobal) {
           type: "loan",
           count: "12笔",
           bgColor: "rgba(43, 92, 255, 0.1)",
-          iconColor: "#2b5cff"
+          iconColor: "#ffb715"
         },
         {
           title: "我的采购",
@@ -7237,7 +7247,7 @@ if (uni.restoreGlobal) {
         getCreditList("refresh");
       });
       return (_ctx, _cache) => {
-        const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$7);
+        const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$6);
         const _component_u_empty = resolveEasycom(vue.resolveDynamicComponent("u-empty"), __easycom_3$4);
         return vue.openBlock(), vue.createElementBlock("view", { class: "container" }, [
           vue.createCommentVNode(" 未申请状态 "),
@@ -7735,7 +7745,8 @@ if (uni.restoreGlobal) {
       path: "pages/index/index",
       style: {
         navigationBarTitleText: "首页",
-        navigationStyle: "custom"
+        navigationStyle: "custom",
+        enablePullDownRefresh: true
       }
     },
     {
@@ -7793,7 +7804,8 @@ if (uni.restoreGlobal) {
     {
       path: "pages/routes/hot",
       style: {
-        navigationBarTitleText: "热门路线"
+        navigationBarTitleText: "热门路线",
+        enablePullDownRefresh: true
       }
     },
     {
@@ -7838,7 +7850,8 @@ if (uni.restoreGlobal) {
     {
       path: "pages/order/list",
       style: {
-        navigationBarTitleText: "我的订单"
+        navigationBarTitleText: "我的订单",
+        enablePullDownRefresh: true
       }
     },
     {
@@ -7928,7 +7941,8 @@ if (uni.restoreGlobal) {
     {
       path: "pages/goods/manage",
       style: {
-        navigationBarTitleText: "商品管理"
+        navigationBarTitleText: "商品管理",
+        enablePullDownRefresh: true
       }
     },
     {
@@ -7948,19 +7962,22 @@ if (uni.restoreGlobal) {
     {
       path: "pages/finance/loan-detail",
       style: {
-        navigationBarTitleText: "借贷流水"
+        navigationBarTitleText: "借贷流水",
+        enablePullDownRefresh: true
       }
     },
     {
       path: "pages/finance/purchase-detail",
       style: {
-        navigationBarTitleText: "我的采购"
+        navigationBarTitleText: "我的采购",
+        enablePullDownRefresh: true
       }
     },
     {
       path: "pages/finance/redeem-detail",
       style: {
-        navigationBarTitleText: "我的赎货"
+        navigationBarTitleText: "我的赎货",
+        enablePullDownRefresh: true
       }
     },
     {
@@ -10887,7 +10904,7 @@ ${i3}
       $props.loadingType == 5 ? (vue.openBlock(), vue.createBlock(_component_Loading5, { key: 4 })) : vue.createCommentVNode("v-if", true)
     ]);
   }
-  const __easycom_0$5 = /* @__PURE__ */ _export_sfc(_sfc_main$Z, [["render", _sfc_render$i], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/uni_modules/qiun-data-charts/components/qiun-loading/qiun-loading.vue"]]);
+  const __easycom_0$4 = /* @__PURE__ */ _export_sfc(_sfc_main$Z, [["render", _sfc_render$i], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/uni_modules/qiun-data-charts/components/qiun-loading/qiun-loading.vue"]]);
   const _sfc_main$Y = {
     name: "qiun-error",
     props: {
@@ -12635,7 +12652,7 @@ ${i3}
     }
   };
   function _sfc_render$g(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_qiun_loading = resolveEasycom(vue.resolveDynamicComponent("qiun-loading"), __easycom_0$5);
+    const _component_qiun_loading = resolveEasycom(vue.resolveDynamicComponent("qiun-loading"), __easycom_0$4);
     const _component_qiun_error = resolveEasycom(vue.resolveDynamicComponent("qiun-error"), __easycom_1$3);
     return vue.openBlock(), vue.createElementBlock("view", {
       class: "chartsview",
@@ -12693,18 +12710,18 @@ ${i3}
   }
   if (typeof block0$1 === "function")
     block0$1(_sfc_main$X);
-  const __easycom_0$4 = /* @__PURE__ */ _export_sfc(_sfc_main$X, [["render", _sfc_render$g], ["__scopeId", "data-v-0ca34aee"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/uni_modules/qiun-data-charts/components/qiun-data-charts/qiun-data-charts.vue"]]);
+  const __easycom_0$3 = /* @__PURE__ */ _export_sfc(_sfc_main$X, [["render", _sfc_render$g], ["__scopeId", "data-v-0ca34aee"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/uni_modules/qiun-data-charts/components/qiun-data-charts/qiun-data-charts.vue"]]);
   const _sfc_main$W = {
     __name: "tmsData",
     setup(__props) {
       const chartDataWms = vue.ref({});
       const chartType = vue.ref("total");
       const chartOpts = vue.ref({
-        color: ["#ffa438", "#4cd575", "#FAC858", "#EE6666", "#73C0DE", "#3CA272"],
+        color: ["#ffb918", "#4cd575", "#FAC858", "#EE6666", "#73C0DE", "#3CA272"],
         padding: [15, 15, 0, 15],
         enableScroll: false,
         legend: {
-          show: true,
+          show: false,
           position: "top",
           float: "right",
           itemWidth: 15,
@@ -12725,10 +12742,10 @@ ${i3}
         extra: {
           area: {
             type: "straight",
-            opacity: 0.15,
+            opacity: 0.45,
             addLine: true,
             width: 2,
-            gradient: false,
+            gradient: true,
             activeType: "none"
           },
           line: {
@@ -12744,7 +12761,7 @@ ${i3}
       const seriesData = vue.ref([]);
       const channelData = vue.ref({});
       const currentChartData = vue.computed(() => {
-        formatAppLog("log", "at pages/data/tmsData.vue:258", "加载图表数据", categories.value, seriesData.value);
+        formatAppLog("log", "at pages/data/tmsData.vue:249", "加载图表数据", categories.value, seriesData.value);
         return {
           categories: categories.value,
           series: seriesData.value
@@ -12770,42 +12787,42 @@ ${i3}
         {
           icon: "http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/0605-ship2-filled_1734597000934.png",
           title: "海运",
-          value: formatNumber(13),
+          value: formatNumber(9999),
           unit: "单",
           yearOnYear: -10.11
         },
         {
           icon: "http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/出差_1734597027658.png",
           title: "空运",
-          value: formatNumber(21),
+          value: formatNumber(8998),
           unit: "单",
           yearOnYear: 30.29
         },
         {
           icon: "http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/卡车运输货物_1734597056487.png",
           title: "卡航",
-          value: formatNumber(31),
+          value: formatNumber(9999),
           unit: "单",
           yearOnYear: 6.29
         },
         {
           icon: "http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/铁路_1734597041942.png",
           title: "铁路",
-          value: formatNumber(20),
+          value: formatNumber(8999),
           unit: "单",
           yearOnYear: 12.62
         },
         {
           icon: "http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/冰箱_1734597073488.png",
           title: "到门",
-          value: formatNumber(32),
+          value: formatNumber(3774),
           unit: "单",
           yearOnYear: -6.89
         },
         {
           icon: "http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/整柜出口_1734597090776.png",
           title: "到港",
-          value: formatNumber(89),
+          value: formatNumber(8349),
           unit: "单",
           yearOnYear: 1.04
         }
@@ -12953,7 +12970,7 @@ ${i3}
                 ]
               }
             }));
-            formatAppLog("log", "at pages/data/tmsData.vue:506", "categories.value", categories.value, seriesData.value);
+            formatAppLog("log", "at pages/data/tmsData.vue:497", "categories.value", categories.value, seriesData.value);
             channelData.value.categories = categories.value;
             channelData.value.seriesData = seriesData.value;
           } else {
@@ -12983,8 +13000,8 @@ ${i3}
         loadTmsTotalOrderData();
       });
       return (_ctx, _cache) => {
-        const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$7);
-        const _component_qiun_data_charts = resolveEasycom(vue.resolveDynamicComponent("qiun-data-charts"), __easycom_0$4);
+        const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$6);
+        const _component_qiun_data_charts = resolveEasycom(vue.resolveDynamicComponent("qiun-data-charts"), __easycom_0$3);
         return vue.openBlock(), vue.createElementBlock("view", null, [
           vue.createElementVNode("view", { class: "card" }, [
             vue.createElementVNode("view", { class: "title" }, "物流单数量"),
@@ -13041,7 +13058,7 @@ ${i3}
             vue.createElementVNode("view", { class: "title" }, [
               vue.createElementVNode("image", {
                 src: "http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/大数据科技数据流转_1734521664475.png",
-                style: { "width": "40rpx", "height": "40rpx" }
+                style: { "width": "40rpx", "height": "40rpx", "margin-right": "10rpx" }
               }),
               vue.createElementVNode("view", null, "渠道数据")
             ]),
@@ -13077,37 +13094,28 @@ ${i3}
                           vue.createElementVNode(
                             "text",
                             { class: "number" },
-                            vue.toDisplayString(item.value),
+                            vue.toDisplayString(item.value.toLocaleString()),
                             1
                             /* TEXT */
                           ),
-                          vue.createElementVNode(
-                            "text",
-                            { class: "unit" },
-                            vue.toDisplayString(item.unit),
-                            1
-                            /* TEXT */
-                          )
+                          vue.createCommentVNode(' <text class="unit">{{ item.unit }}</text> ')
                         ]),
-                        vue.createElementVNode("view", { class: "card-compare" }, [
-                          vue.createElementVNode("text", { class: "compare-item" }, [
-                            vue.createTextVNode(" 同比"),
-                            vue.createElementVNode("image", {
-                              src: item.yearOnYear > 0 ? "http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/上升_1734596204748.png" : "http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/上升备份_1734596173738.png",
-                              style: { "width": "28rpx", "height": "28rpx" }
-                            }, null, 8, ["src"]),
-                            vue.createElementVNode(
-                              "text",
-                              { style: { "font-weight": "600" } },
-                              vue.toDisplayString(item.yearOnYear) + "%",
-                              1
-                              /* TEXT */
-                            )
-                          ]),
-                          vue.createCommentVNode(` <text class="compare-item" :class="{ up: item.monthOnMonth > 0, down: item.monthOnMonth < 0 }">
+                        vue.createCommentVNode(` <view class="card-compare">
+              <text class="compare-item">
+                同比<image
+                  :src="
+                    item.yearOnYear > 0
+                      ? 'http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/上升_1734596204748.png'
+                      : 'http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/上升备份_1734596173738.png'
+                  "
+                  style="width: 28rpx; height: 28rpx"
+                ></image
+                ><text style="font-weight: 600">{{ item.yearOnYear }}%</text>
+              </text>
+              <text class="compare-item" :class="{ up: item.monthOnMonth > 0, down: item.monthOnMonth < 0 }">
               环比{{ item.monthOnMonth > 0 ? '+' : '' }}{{ item.monthOnMonth }}%
-            </text> `)
-                        ])
+            </text>
+            </view> `)
                       ])
                     ],
                     4
@@ -13122,8 +13130,8 @@ ${i3}
           vue.createElementVNode("view", { class: "chart-card" }, [
             vue.createElementVNode("view", { class: "title" }, [
               vue.createElementVNode("image", {
-                src: "http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/大数据科技数据流转_1734521664475.png",
-                style: { "width": "40rpx", "height": "40rpx" }
+                src: "http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/下降趋势_1734664718481.png",
+                style: { "width": "40rpx", "height": "40rpx", "margin-right": "10rpx" }
               }),
               vue.createElementVNode("view", null, "物流单量趋势")
             ]),
@@ -13163,10 +13171,10 @@ ${i3}
           vue.createElementVNode("view", { class: "chart-card" }, [
             vue.createElementVNode("view", { class: "title" }, [
               vue.createElementVNode("image", {
-                src: "http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/大数据科技数据流转_1734521664475.png",
-                style: { "width": "40rpx", "height": "40rpx" }
+                src: "http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/查库存_1734664689455.png",
+                style: { "width": "40rpx", "height": "40rpx", "margin-right": "10rpx" }
               }),
-              vue.createElementVNode("view", null, "产品货值分布")
+              vue.createElementVNode("view", null, "物流产品分析")
             ]),
             vue.createElementVNode("view", { class: "card-header" }, [
               vue.createElementVNode("view", { class: "switch-group" }, [
@@ -13206,8 +13214,8 @@ ${i3}
           vue.createElementVNode("view", { class: "chart-card" }, [
             vue.createElementVNode("view", { class: "title" }, [
               vue.createElementVNode("image", {
-                src: "http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/大数据科技数据流转_1734521664475.png",
-                style: { "width": "40rpx", "height": "40rpx" }
+                src: "http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/排行榜_1734664705135.png",
+                style: { "width": "40rpx", "height": "40rpx", "margin-right": "10rpx" }
               }),
               vue.createElementVNode("view", null, "排行榜"),
               vue.createElementVNode("text", { class: "sub-title" }, "TOP 10")
@@ -13254,15 +13262,7 @@ ${i3}
                   1
                   /* TEXT */
                 ),
-                vue.createElementVNode(
-                  "text",
-                  { class: "col amount" },
-                  vue.toDisplayString(rankType.value === "country" ? "发货数量" : "发货数量"),
-                  1
-                  /* TEXT */
-                ),
-                vue.createElementVNode("text", { class: "col percent" }, "占比"),
-                vue.createElementVNode("text", { class: "col trend" }, "同比")
+                vue.createElementVNode("text", { class: "col percent" }, "占比")
               ]),
               vue.createCommentVNode(" 列表内容 "),
               (vue.openBlock(true), vue.createElementBlock(
@@ -13311,13 +13311,6 @@ ${i3}
                       1
                       /* TEXT */
                     ),
-                    vue.createElementVNode(
-                      "text",
-                      { class: "col amount" },
-                      vue.toDisplayString(item.amount),
-                      1
-                      /* TEXT */
-                    ),
                     vue.createElementVNode("text", { class: "col percent" }, [
                       vue.createElementVNode(
                         "text",
@@ -13327,27 +13320,7 @@ ${i3}
                         /* TEXT */
                       ),
                       vue.createElementVNode("text", { class: "percent-symbol" }, "%")
-                    ]),
-                    vue.createElementVNode(
-                      "text",
-                      {
-                        class: vue.normalizeClass(["col trend", item.trend >= 0 ? "up" : "down"])
-                      },
-                      [
-                        vue.createCommentVNode(` <u-icon
-              :name="item.trend >= 0 ? 'arrow-up' : 'arrow-down'"
-              :color="item.trend >= 0 ? '#ff4d4f' : '#52c41a'"
-              size="12"
-            ></u-icon> `),
-                        vue.createTextVNode(
-                          " " + vue.toDisplayString(item.trend > 0 ? "+" : "") + vue.toDisplayString(item.trend) + "% ",
-                          1
-                          /* TEXT */
-                        )
-                      ],
-                      2
-                      /* CLASS */
-                    )
+                    ])
                   ]);
                 }),
                 128
@@ -13365,7 +13338,7 @@ ${i3}
     setup(__props) {
       const chartDataWms = vue.ref({});
       const chartOpts = vue.ref({
-        color: ["#FAC858", "#91CB74", "#EE6666", "#73C0DE", "#3CA272"],
+        color: ["#ffb918", "#91CB74", "#EE6666", "#73C0DE", "#3CA272"],
         padding: [15, 15, 0, 15],
         enableScroll: false,
         legend: {
@@ -13388,10 +13361,10 @@ ${i3}
         extra: {
           area: {
             type: "straight",
-            opacity: 0.15,
+            opacity: 0.45,
             addLine: true,
             width: 2,
-            gradient: false,
+            gradient: true,
             activeType: "none"
           },
           line: {
@@ -13406,7 +13379,7 @@ ${i3}
       const showWarehouseSelect = vue.ref(false);
       const showSelect = () => {
         showWarehouseSelect.value = !showWarehouseSelect.value;
-        formatAppLog("log", "at pages/data/wmsData.vue:278", "显示", showWarehouseSelect.value);
+        formatAppLog("log", "at pages/data/wmsData.vue:266", "显示", showWarehouseSelect.value);
       };
       const newCreatedCount = vue.ref(0);
       const pendingExecutionCount = vue.ref(0);
@@ -13532,7 +13505,7 @@ ${i3}
       const categories = vue.ref([]);
       const seriesData = vue.ref([]);
       const currentWarehouseData = vue.computed(() => {
-        formatAppLog("log", "at pages/data/wmsData.vue:423", "加载图表数据WMS", categories.value, seriesData.value);
+        formatAppLog("log", "at pages/data/wmsData.vue:411", "加载图表数据WMS", categories.value, seriesData.value);
         return {
           categories: categories.value,
           series: seriesData.value
@@ -13609,7 +13582,7 @@ ${i3}
             inventoryRankList.value = res.result;
           }
         } catch (error2) {
-          formatAppLog("error", "at pages/data/wmsData.vue:534", "获取库存排行数据失败:", error2);
+          formatAppLog("error", "at pages/data/wmsData.vue:522", "获取库存排行数据失败:", error2);
         }
       });
       const selectWarehouse = (item) => {
@@ -13685,29 +13658,17 @@ ${i3}
         getWarehouseList();
       });
       return (_ctx, _cache) => {
-        const _component_qiun_data_charts = resolveEasycom(vue.resolveDynamicComponent("qiun-data-charts"), __easycom_0$4);
-        const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$7);
+        const _component_qiun_data_charts = resolveEasycom(vue.resolveDynamicComponent("qiun-data-charts"), __easycom_0$3);
+        const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$6);
         return vue.openBlock(), vue.createElementBlock("view", null, [
           vue.createElementVNode("view", { class: "card" }, [
-            vue.createElementVNode("view", { class: "title" }, "库存总数"),
+            vue.createElementVNode("view", { class: "title" }, [
+              vue.createElementVNode("view", { style: { "flex": "1", "margin-left": "30rpx" } }, "库存总数"),
+              vue.createElementVNode("view", { style: { "flex": "1", "margin-left": "30rpx" } }, "库存总货值")
+            ]),
             vue.createElementVNode("view", { class: "header" }, [
-              vue.createElementVNode("view", { class: "header-order" }, "36.75万"),
-              vue.createElementVNode("view", { class: "count" }, [
-                vue.createElementVNode("text", null, "同比: "),
-                vue.createElementVNode("image", {
-                  src: "http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/上升_1734596204748.png",
-                  style: { "width": "28rpx", "height": "28rpx" }
-                }),
-                vue.createElementVNode("text", { style: { "color": "#333" } }, "1.29%")
-              ]),
-              vue.createElementVNode("view", { class: "count" }, [
-                vue.createElementVNode("text", null, "环比: "),
-                vue.createElementVNode("image", {
-                  src: "http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/上升_1734596204748.png",
-                  style: { "width": "28rpx", "height": "28rpx" }
-                }),
-                vue.createElementVNode("text", { style: { "color": "#333" } }, "6.29%")
-              ])
+              vue.createElementVNode("view", { class: "header-order" }, "9999"),
+              vue.createElementVNode("view", { class: "header-order" }, "9999")
             ]),
             vue.createElementVNode("view", { class: "content" }, [
               vue.createElementVNode("view", {
@@ -13735,10 +13696,10 @@ ${i3}
           vue.createElementVNode("view", { class: "chart-card" }, [
             vue.createElementVNode("view", { class: "title" }, [
               vue.createElementVNode("image", {
-                src: "http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/大数据科技数据流转_1734521664475.png",
-                style: { "width": "40rpx", "height": "40rpx" }
+                src: "http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/40组织绩效结果分析_1734664675688.png",
+                style: { "width": "40rpx", "height": "40rpx", "margin-right": "10rpx" }
               }),
-              vue.createElementVNode("view", null, "产品货值分布")
+              vue.createElementVNode("view", null, "库存产品分析")
             ]),
             vue.createElementVNode("view", { class: "card-header" }, [
               vue.createElementVNode("view", { class: "switch-group" }, [
@@ -13778,7 +13739,7 @@ ${i3}
             vue.createElementVNode("view", { class: "title" }, [
               vue.createElementVNode("image", {
                 src: "http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/下降趋势_1734664718481.png",
-                style: { "width": "40rpx", "height": "40rpx" }
+                style: { "width": "40rpx", "height": "40rpx", "margin-right": "10rpx" }
               }),
               vue.createElementVNode("view", null, "库存单量趋势")
             ]),
@@ -13817,7 +13778,7 @@ ${i3}
             vue.createElementVNode("view", { class: "status-cardlist" }, [
               vue.createElementVNode("view", {
                 class: "status-card",
-                style: { "border-right": "3rpx solid #e9e7e7" }
+                style: { "border-right": "2rpx solid #f6f6f6" }
               }, [
                 vue.createElementVNode("view", { class: "status-icon new" }),
                 vue.createElementVNode("view", { class: "status-content" }, [
@@ -13833,7 +13794,7 @@ ${i3}
               ]),
               vue.createElementVNode("view", {
                 class: "status-card",
-                style: { "border-right": "3rpx solid #e9e7e7" }
+                style: { "border-right": "2rpx solid #f6f6f6" }
               }, [
                 vue.createElementVNode("view", { class: "status-icon processing" }),
                 vue.createElementVNode("view", { class: "status-content" }, [
@@ -13940,9 +13901,9 @@ ${i3}
               vue.createElementVNode("view", { class: "title" }, [
                 vue.createElementVNode("image", {
                   src: "http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/排行榜_1734664705135.png",
-                  style: { "width": "40rpx", "height": "40rpx" }
+                  style: { "width": "40rpx", "height": "40rpx", "margin-right": "10rpx" }
                 }),
-                vue.createElementVNode("view", null, "库存排行TOP 10")
+                vue.createElementVNode("view", null, "库存数量排行")
               ]),
               vue.createElementVNode("view", {
                 class: "warehouse-select",
@@ -13951,7 +13912,7 @@ ${i3}
                 vue.createElementVNode("view", { class: "selected-warehouse" }, [
                   vue.createElementVNode(
                     "text",
-                    null,
+                    { style: { "margin-right": "20rpx" } },
                     vue.toDisplayString(selectedWarehouseLabel.value),
                     1
                     /* TEXT */
@@ -13959,7 +13920,7 @@ ${i3}
                   vue.createVNode(_component_u_icon, {
                     name: showWarehouseSelect.value ? "arrow-up" : "arrow-down",
                     size: "14",
-                    color: "#666"
+                    color: "#ffba1b"
                   }, null, 8, ["name"])
                 ]),
                 vue.createCommentVNode(" 下拉选项 "),
@@ -14175,7 +14136,7 @@ ${i3}
         {
           id: 4,
           name: "库存流水",
-          icon: "file-text",
+          icon: "http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/库存流水_1734924302208.png",
           path: "/pages/inventory/flow",
           bgColor: "#fff",
           iconColor: "#373737"
@@ -14237,7 +14198,7 @@ ${i3}
         {
           id: 4,
           name: "已签收",
-          icon: "http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/形状(2)_1734588763684.png",
+          icon: "http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/已完成_1734924416506.png",
           path: "/pages/order/list?status=5"
         }
       ];
@@ -14296,7 +14257,7 @@ ${i3}
         getUserInfo();
       });
       return (_ctx, _cache) => {
-        const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$7);
+        const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$6);
         const _component_u_button = resolveEasycom(vue.resolveDynamicComponent("u-button"), __easycom_5);
         return vue.openBlock(), vue.createElementBlock("view", { class: "container" }, [
           vue.createCommentVNode(" 顶部用户信息卡片 "),
@@ -14836,7 +14797,7 @@ ${i3}
         getDatePrice();
       });
       return (_ctx, _cache) => {
-        const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$7);
+        const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$6);
         const _component_u_popup = resolveEasycom(vue.resolveDynamicComponent("u-popup"), __easycom_4$2);
         const _component_u_search = resolveEasycom(vue.resolveDynamicComponent("u-search"), __easycom_1$7);
         const _component_u_cell = resolveEasycom(vue.resolveDynamicComponent("u-cell"), __easycom_1$5);
@@ -15772,50 +15733,7 @@ ${i3}
       const route2 = vue.ref({
         routeInfo: {}
       });
-      const priceInfo = {
-        basePrice: "45.00",
-        // 基础运费
-        fuelSurcharge: "5.00",
-        // 燃油附加费
-        insuranceFee: "2.00",
-        // 保险费
-        handlingFee: "3.00",
-        // 操作费
-        // 阶梯价格
-        ladderPrices: [
-          {
-            weight: "0-45",
-            price: "45.00"
-          },
-          {
-            weight: "45-100",
-            price: "42.50"
-          },
-          {
-            weight: "100-300",
-            price: "40.00"
-          },
-          {
-            weight: "300-500",
-            price: "38.50"
-          },
-          {
-            weight: "500+",
-            price: "36.00"
-          }
-        ],
-        otherFees: [
-          // 其他费用
-          {
-            name: "提货费",
-            price: "2.00"
-          },
-          {
-            name: "包装费",
-            price: "1.50"
-          }
-        ]
-      };
+      const priceInfo = vue.ref([]);
       const services = [
         {
           icon: "truck",
@@ -15876,6 +15794,7 @@ ${i3}
         "personas",
         "pixel-art"
       ];
+      const percent = vue.ref(4);
       const updateTimer = vue.ref(null);
       const scrollIndex = vue.ref(null);
       const getRandomAvatar = () => {
@@ -15940,6 +15859,15 @@ ${i3}
           joinList.value.pop();
         }
       };
+      const getFeeData = () => {
+        getAction("/oms/transQuoteScheme/queryAdditinalList", { schemeId: route2.value.routeInfo.quoteSchemeId }).then(
+          (res) => {
+            if (res.success) {
+              priceInfo.value = res.result;
+            }
+          }
+        );
+      };
       const onSwiperChange = (e2) => {
         scrollIndex.value = e2.detail.current;
       };
@@ -15951,7 +15879,10 @@ ${i3}
       vue.onMounted(() => {
         updateTimer.value = setInterval(updateDynamicData, 3e4);
         route2.value = uni.getStorageSync("routeInfo");
-        formatAppLog("log", "at pages/routes/detail.vue:375", "routeInfo", route2.value);
+        formatAppLog("log", "at pages/routes/detail.vue:356", "routeInfo", route2.value);
+        percent.value = Math.round(
+          (route2.value.containers[0] ? route2.value.containers[0].containerVolume - route2.value.containers[0].volume : 0) / route2.value.containers[0].containerVolume * 10
+        );
         if (!route2.value.id) {
           uni.showToast({
             title: "路线不存在",
@@ -15967,14 +15898,14 @@ ${i3}
             if (route2.value.routeInfo.chargingType === "4") {
               quoteRangeInfo.value.map((item) => {
                 const obj = { weightMax: item.maxRange === -1 ? "∞" : item.maxRange, _key: _.uniqueId("new_") };
-                formatAppLog("log", "at pages/routes/detail.vue:392", "obj", obj);
+                formatAppLog("log", "at pages/routes/detail.vue:380", "obj", obj);
                 for (const subItem of item.densityRangeInfos) {
-                  formatAppLog("log", "at pages/routes/detail.vue:394", "subItem", subItem);
+                  formatAppLog("log", "at pages/routes/detail.vue:382", "subItem", subItem);
                   obj[subItem.maxRange.toString() === "-1" ? "∞" : subItem.maxRange.toString()] = subItem["unitPrice"];
                 }
-                formatAppLog("log", "at pages/routes/detail.vue:397", "return", obj);
+                formatAppLog("log", "at pages/routes/detail.vue:385", "return", obj);
                 dataSource.value.push(obj);
-                formatAppLog("log", "at pages/routes/detail.vue:399", "dataSource", dataSource.value);
+                formatAppLog("log", "at pages/routes/detail.vue:387", "dataSource", dataSource.value);
               });
               handleColumns();
             } else {
@@ -15992,6 +15923,7 @@ ${i3}
             }
           }
         }
+        getFeeData();
       });
       const handleColumns = () => {
         const allKeys = /* @__PURE__ */ new Set();
@@ -16013,7 +15945,7 @@ ${i3}
             return -1;
           return parseInt(a2) - parseInt(b2);
         });
-        formatAppLog("log", "at pages/routes/detail.vue:439", "columns", columns.value);
+        formatAppLog("log", "at pages/routes/detail.vue:428", "columns", columns.value);
       };
       const createOrder = () => {
         uni.navigateTo({
@@ -16105,11 +16037,51 @@ ${i3}
             ]),
             vue.createElementVNode("view", { class: "pinning-details" }, [
               vue.createCommentVNode(" 容量图表 "),
-              vue.createElementVNode("view", { class: "capacity-chart" }, [
+              vue.createElementVNode("view", {
+                class: "capacity-chart",
+                style: { "position": "relative", "width": "90%", "margin": "20rpx auto" }
+              }, [
                 vue.createElementVNode("img", {
-                  src: "http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/剩余容量切图_1734088136643.png",
-                  mode: "aspectFit"
-                })
+                  src: "http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/编组10_1734664443312.png",
+                  mode: "aspectFit",
+                  style: { "width": "550rpx", "height": "180rpx" }
+                }),
+                (vue.openBlock(true), vue.createElementBlock(
+                  vue.Fragment,
+                  null,
+                  vue.renderList(percent.value, (i2, index2) => {
+                    return vue.openBlock(), vue.createElementBlock(
+                      "img",
+                      {
+                        src: "http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/黄_1734663675042.png",
+                        style: vue.normalizeStyle([{ "position": "absolute", "bottom": "10rpx", "width": "50rpx", "height": "120rpx" }, { left: index2 * 50 + 50 + "rpx" }])
+                      },
+                      null,
+                      4
+                      /* STYLE */
+                    );
+                  }),
+                  256
+                  /* UNKEYED_FRAGMENT */
+                )),
+                (vue.openBlock(true), vue.createElementBlock(
+                  vue.Fragment,
+                  null,
+                  vue.renderList(10 - percent.value, (i2, index2) => {
+                    return vue.openBlock(), vue.createElementBlock(
+                      "img",
+                      {
+                        src: "http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/灰_1734663695058.png",
+                        style: vue.normalizeStyle([{ "position": "absolute", "bottom": "10rpx", "width": "50rpx", "height": "120rpx" }, { left: (percent.value + index2) * 50 + 50 + "rpx" }])
+                      },
+                      null,
+                      4
+                      /* STYLE */
+                    );
+                  }),
+                  256
+                  /* UNKEYED_FRAGMENT */
+                ))
               ]),
               vue.createCommentVNode(" 拼柜动态 "),
               vue.createElementVNode("view", { class: "join-dynamics" }, [
@@ -16285,48 +16257,31 @@ ${i3}
             ]))
           ]),
           vue.createCommentVNode(" 价格说明 "),
-          vue.createElementVNode("view", { class: "section" }, [
-            vue.createElementVNode("view", { class: "section-title" }, "价格说明"),
+          priceInfo.value.length > 0 ? (vue.openBlock(), vue.createElementBlock("view", {
+            key: 0,
+            class: "section"
+          }, [
+            vue.createElementVNode("view", { class: "section-title" }, "附加费说明"),
             vue.createElementVNode("view", { class: "price-list" }, [
-              vue.createElementVNode("view", { class: "price-item" }, [
-                vue.createElementVNode("text", { class: "label" }, "基础运费"),
-                vue.createElementVNode(
-                  "text",
-                  { class: "value" },
-                  "¥" + vue.toDisplayString(priceInfo.basePrice) + "/KG",
-                  1
-                  /* TEXT */
-                )
-              ]),
-              vue.createElementVNode("view", { class: "price-item" }, [
-                vue.createElementVNode("text", { class: "label" }, "燃油附加费"),
-                vue.createElementVNode(
-                  "text",
-                  { class: "value" },
-                  "¥" + vue.toDisplayString(priceInfo.fuelSurcharge) + "/KG",
-                  1
-                  /* TEXT */
-                )
-              ]),
               (vue.openBlock(true), vue.createElementBlock(
                 vue.Fragment,
                 null,
-                vue.renderList(priceInfo.otherFees, (fee) => {
+                vue.renderList(priceInfo.value, (item, index2) => {
                   return vue.openBlock(), vue.createElementBlock("view", {
                     class: "price-item",
-                    key: fee.name
+                    key: index2
                   }, [
                     vue.createElementVNode(
                       "text",
                       { class: "label" },
-                      vue.toDisplayString(fee.name),
+                      vue.toDisplayString(item.feeItem_dictText),
                       1
                       /* TEXT */
                     ),
                     vue.createElementVNode(
                       "text",
                       { class: "value" },
-                      "¥" + vue.toDisplayString(fee.price) + "/KG",
+                      "¥" + vue.toDisplayString(item.unitPrice) + "/KG",
                       1
                       /* TEXT */
                     )
@@ -16336,7 +16291,7 @@ ${i3}
                 /* KEYED_FRAGMENT */
               ))
             ])
-          ]),
+          ])) : vue.createCommentVNode("v-if", true),
           vue.createCommentVNode(" 服务信息 "),
           vue.createElementVNode("view", { class: "section" }, [
             vue.createElementVNode("view", { class: "section-title" }, "服务说明"),
@@ -16493,6 +16448,8 @@ ${i3}
         uni.$off("addCargo", handleAddCargo);
         uni.$off("updateCargo", handleCargoUpdate);
         uni.$off("selectAddress", handleSelectAddress);
+        uni.removeStorageSync("shipAddress");
+        uni.removeStorageSync("receiveAddress");
       });
       const estimatedPrice = vue.computed(() => {
         calcAmount();
@@ -16614,12 +16571,14 @@ ${i3}
             uni.showLoading({
               title: res.message
             });
-            uni.hideLoading();
+            setTimeout(() => {
+              uni.hideLoading();
+            }, 1e3);
           }
         });
       };
       return (_ctx, _cache) => {
-        const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$7);
+        const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$6);
         const _component_u_button = resolveEasycom(vue.resolveDynamicComponent("u-button"), __easycom_5);
         return vue.openBlock(), vue.createElementBlock("view", { class: "container" }, [
           vue.createCommentVNode(" 第一部分：基本信息 "),
@@ -16993,7 +16952,7 @@ ${i3}
         });
       };
       return (_ctx, _cache) => {
-        const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$7);
+        const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$6);
         return vue.openBlock(), vue.createElementBlock("view", { class: "container" }, [
           vue.createCommentVNode(" 订单状态 "),
           vue.createElementVNode("view", { class: "status-section" }, [
@@ -17263,26 +17222,7 @@ ${i3}
                                     /* TEXT */
                                   )
                                 ]),
-                                vue.createElementVNode("view", { class: "detail-item" }, [
-                                  vue.createElementVNode("text", { class: "label" }, "申报单价: "),
-                                  vue.createElementVNode(
-                                    "text",
-                                    { class: "value price" },
-                                    "$" + vue.toDisplayString(item.declareUnitPrice),
-                                    1
-                                    /* TEXT */
-                                  )
-                                ]),
-                                vue.createElementVNode("view", { class: "detail-item" }, [
-                                  vue.createElementVNode("text", { class: "label" }, "申报总价: "),
-                                  vue.createElementVNode(
-                                    "text",
-                                    { class: "value price" },
-                                    "$" + vue.toDisplayString(item.totalDeclarePrice),
-                                    1
-                                    /* TEXT */
-                                  )
-                                ])
+                                vue.createCommentVNode(' <view class="detail-item">\n                    <text class="label">申报单价: </text>\n                    <text class="value price">${{ item.declareUnitPrice }}</text>\n                  </view>\n                  <view class="detail-item">\n                    <text class="label">申报总价: </text>\n                    <text class="value price">${{ item.totalDeclarePrice }}</text>\n                  </view> ')
                               ])
                             ]);
                           }),
@@ -17535,7 +17475,7 @@ ${i3}
     }
   };
   function _sfc_render$f(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$7);
+    const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$6);
     return vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -17639,6 +17579,21 @@ ${i3}
       vue.onUnmounted(() => {
         uni.$off("saveAddress");
       });
+      const selectAddress = (address) => {
+        if (!type2.value) {
+          return;
+        }
+        if (type2.value === "1") {
+          uni.setStorageSync("shipAddress", JSON.stringify(address));
+        } else if (type2.value === "2") {
+          uni.setStorageSync("receiveAddress", JSON.stringify(address));
+        }
+        uni.$emit("selectAddress", {
+          type: type2.value,
+          address
+        });
+        uni.navigateBack();
+      };
       const editAddress = (address) => {
         uni.navigateTo({
           url: `/pages/address/edit?id=${address.id}`
@@ -17713,7 +17668,7 @@ ${i3}
         }
       };
       return (_ctx, _cache) => {
-        const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$7);
+        const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$6);
         const _component_u_swipe_action_item = resolveEasycom(vue.resolveDynamicComponent("u-swipe-action-item"), __easycom_1$2);
         const _component_u_loading_icon = resolveEasycom(vue.resolveDynamicComponent("u-loading-icon"), __easycom_2$4);
         const _component_u_empty = resolveEasycom(vue.resolveDynamicComponent("u-empty"), __easycom_3$4);
@@ -17738,7 +17693,7 @@ ${i3}
                   default: vue.withCtx(() => [
                     vue.createElementVNode("view", {
                       class: vue.normalizeClass(["address-card", { "default-address": address.isDefault === "1" }]),
-                      onClick: ($event) => editAddress(address)
+                      onClick: ($event) => selectAddress(address)
                     }, [
                       vue.createElementVNode("view", { class: "card-content" }, [
                         vue.createElementVNode("view", { class: "user-info" }, [
@@ -17755,18 +17710,7 @@ ${i3}
                             vue.toDisplayString(address.contactPhone),
                             1
                             /* TEXT */
-                          ),
-                          address.isDefault === "1" ? (vue.openBlock(), vue.createElementBlock("view", {
-                            key: 0,
-                            class: "default-tag"
-                          }, [
-                            vue.createVNode(_component_u_icon, {
-                              name: "checkmark",
-                              color: "#fff",
-                              size: "12"
-                            }),
-                            vue.createElementVNode("text", null, "默认")
-                          ])) : vue.createCommentVNode("v-if", true)
+                          )
                         ]),
                         vue.createElementVNode("view", { class: "address-info" }, [
                           vue.createElementVNode("view", { class: "location" }, [
@@ -17786,6 +17730,14 @@ ${i3}
                             )
                           ])
                         ])
+                      ]),
+                      vue.createElementVNode("view", { style: { "padding": "0 20rpx" } }, [
+                        vue.createVNode(_component_u_icon, {
+                          name: "edit-pen-fill",
+                          color: "#6a6a6a",
+                          size: "22",
+                          onClick: ($event) => editAddress(address)
+                        }, null, 8, ["onClick"])
                       ])
                     ], 10, ["onClick"])
                   ]),
@@ -18761,7 +18713,7 @@ ${i3}
     }
   };
   function _sfc_render$d(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$7);
+    const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$6);
     return vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -18848,12 +18800,12 @@ ${i3}
       /* CLASS, STYLE */
     );
   }
-  const __easycom_1$1 = /* @__PURE__ */ _export_sfc(_sfc_main$H, [["render", _sfc_render$d], ["__scopeId", "data-v-5904192e"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/node_modules/uview-plus/components/u-input/u-input.vue"]]);
+  const uvInput = /* @__PURE__ */ _export_sfc(_sfc_main$H, [["render", _sfc_render$d], ["__scopeId", "data-v-5904192e"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/node_modules/uview-plus/components/u-input/u-input.vue"]]);
   const _sfc_main$G = {
     name: "u--input",
     mixins: [mpMixin, props$a, mixin],
     components: {
-      uvInput: __easycom_1$1
+      uvInput
     }
   };
   function _sfc_render$c(_ctx, _cache, $props, $setup, $data, $options) {
@@ -18905,7 +18857,7 @@ ${i3}
       /* FORWARDED */
     }, 8, ["modelValue", "type", "fixed", "disabled", "disabledColor", "clearable", "password", "maxlength", "placeholder", "placeholderClass", "placeholderStyle", "showWordLimit", "confirmType", "confirmHold", "holdKeyboard", "focus", "autoBlur", "disableDefaultPadding", "cursor", "cursorSpacing", "selectionStart", "selectionEnd", "adjustPosition", "inputAlign", "fontSize", "color", "prefixIcon", "suffixIcon", "suffixIconStyle", "prefixIconStyle", "border", "readonly", "shape", "customStyle", "formatter", "ignoreCompositionEvent"]);
   }
-  const __easycom_0$3 = /* @__PURE__ */ _export_sfc(_sfc_main$G, [["render", _sfc_render$c], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/node_modules/uview-plus/components/u--input/u--input.vue"]]);
+  const __easycom_1$1 = /* @__PURE__ */ _export_sfc(_sfc_main$G, [["render", _sfc_render$c], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/node_modules/uview-plus/components/u--input/u--input.vue"]]);
   const props$9 = defineMixin({
     props: {
       // input的label提示语
@@ -19039,7 +18991,7 @@ ${i3}
     }
   };
   function _sfc_render$b(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$7);
+    const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$6);
     const _component_u_line = resolveEasycom(vue.resolveDynamicComponent("u-line"), __easycom_1$6);
     return vue.openBlock(), vue.createElementBlock(
       "view",
@@ -21155,16 +21107,1600 @@ ${i3}
     ]);
   }
   const __easycom_4 = /* @__PURE__ */ _export_sfc(_sfc_main$z, [["render", _sfc_render$5], ["__scopeId", "data-v-1500ce68"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/node_modules/uview-plus/components/u-picker/u-picker.vue"]]);
+  let hscodeArr = [
+    {
+      group: "食品、饮料",
+      children: [
+        {
+          value: "01010700",
+          label: "奶粉"
+        },
+        {
+          value: "01010110",
+          label: "干鱼翅"
+        },
+        {
+          value: "01010120",
+          label: "干鲍鱼"
+        },
+        {
+          value: "01010130",
+          label: "干海参"
+        },
+        {
+          value: "01010140",
+          label: "干瑶柱"
+        },
+        {
+          value: "01010150",
+          label: "干海马、干海龙"
+        },
+        {
+          value: "01010160",
+          label: "鱼肚（花胶）"
+        },
+        {
+          value: "01010190",
+          label: "其他水产品"
+        },
+        {
+          value: "01010210",
+          label: "燕盏"
+        },
+        {
+          value: "01010220",
+          label: "燕饼（燕丝、燕条）"
+        },
+        {
+          value: "01010230",
+          label: "燕碎"
+        },
+        {
+          value: "01010290",
+          label: "其他燕窝制品"
+        },
+        {
+          value: "01010300",
+          label: "冬虫夏草"
+        },
+        {
+          value: "01010400",
+          label: "参"
+        },
+        {
+          value: "01010500",
+          label: "鹿茸"
+        },
+        {
+          value: "01010600",
+          label: "阿胶"
+        },
+        {
+          value: "01010800",
+          label: "调味品"
+        },
+        {
+          value: "01019900",
+          label: "其他食品"
+        },
+        {
+          value: "01020100",
+          label: "茶叶"
+        },
+        {
+          value: "01020200",
+          label: "咖啡"
+        },
+        {
+          value: "01029900",
+          label: "其他饮料"
+        }
+      ]
+    },
+    {
+      group: "酒",
+      children: [
+        {
+          value: "02010100",
+          label: "啤酒12度以下（不含12度）"
+        },
+        {
+          value: "02010200",
+          label: "啤酒12度至22度（不含22度)"
+        },
+        {
+          value: "02020100",
+          label: "葡萄酒12度以下（不含12度）"
+        },
+        {
+          value: "02020200",
+          label: "葡萄酒12度至22度（含22度）"
+        },
+        {
+          value: "02030100",
+          label: "清酒12度以下（不含12度）"
+        },
+        {
+          value: "02030200",
+          label: "清酒12度至22度（不含22度）"
+        },
+        {
+          value: "02030300",
+          label: "清酒22度及以上"
+        },
+        {
+          value: "02040000",
+          label: "白兰地"
+        },
+        {
+          value: "02050000",
+          label: "威士忌"
+        },
+        {
+          value: "02060000",
+          label: "伏特加"
+        },
+        {
+          value: "02070000",
+          label: "白酒"
+        },
+        {
+          value: "02080000",
+          label: "药酒"
+        },
+        {
+          value: "02990000",
+          label: "其他酒"
+        }
+      ]
+    },
+    {
+      group: "药",
+      children: [
+        {
+          value: "01030100",
+          label: "抗癌药品"
+        },
+        {
+          value: "01030200",
+          label: "中药酒"
+        },
+        {
+          value: "01039900",
+          label: "其他药品"
+        }
+      ]
+    },
+    {
+      group: "烟",
+      children: [
+        {
+          value: "03010000",
+          label: "卷烟"
+        },
+        {
+          value: "03020000",
+          label: "雪茄烟"
+        },
+        {
+          value: "03030000",
+          label: "烟丝"
+        },
+        {
+          value: "03990000",
+          label: "其他烟"
+        }
+      ]
+    },
+    {
+      group: "纺织品及其制成品",
+      children: [
+        {
+          value: "04010100",
+          label: "外衣"
+        },
+        {
+          value: "04010200",
+          label: "外裤"
+        },
+        {
+          value: "04010300",
+          label: "内衣裤"
+        },
+        {
+          value: "04010400",
+          label: "衬衫/T恤衫"
+        },
+        {
+          value: "04019900",
+          label: "其他衣着"
+        },
+        {
+          value: "04020100",
+          label: "帽子"
+        },
+        {
+          value: "04020200",
+          label: "丝巾、头巾、围巾"
+        },
+        {
+          value: "04020300",
+          label: "领带"
+        },
+        {
+          value: "04020400",
+          label: "腰带"
+        },
+        {
+          value: "04020500",
+          label: "手套"
+        },
+        {
+          value: "04029900",
+          label: "其他配饰"
+        },
+        {
+          value: "04030100",
+          label: "毛毯、被子、床罩、睡袋"
+        },
+        {
+          value: "04030200",
+          label: "枕头、床单、毛巾被、被套"
+        },
+        {
+          value: "04030300",
+          label: "地毯"
+        },
+        {
+          value: "04030400",
+          label: "窗帘"
+        },
+        {
+          value: "04039900",
+          label: "其他家纺用品"
+        },
+        {
+          value: "04990000",
+          label: "其他纺织品及其制成品"
+        }
+      ]
+    },
+    {
+      group: "皮革服装及配饰",
+      children: [
+        {
+          value: "05010100",
+          label: "裘皮衣"
+        },
+        {
+          value: "05010200",
+          label: "皮大衣"
+        },
+        {
+          value: "05010300",
+          label: "皮上衣"
+        },
+        {
+          value: "05010400",
+          label: "皮背心"
+        },
+        {
+          value: "05010500",
+          label: "皮裤"
+        },
+        {
+          value: "05010600",
+          label: "皮裙"
+        },
+        {
+          value: "05019900",
+          label: "其他皮革服装"
+        },
+        {
+          value: "05020100",
+          label: "皮帽"
+        },
+        {
+          value: "05020200",
+          label: "皮带"
+        },
+        {
+          value: "05020300",
+          label: "皮手套"
+        },
+        {
+          value: "05029900",
+          label: "其他皮革配饰"
+        },
+        {
+          value: "05990000",
+          label: "其他皮革制品（箱包和鞋靴除外）"
+        }
+      ]
+    },
+    {
+      group: "箱包和鞋靴",
+      children: [
+        {
+          value: "06010100",
+          label: "箱"
+        },
+        {
+          value: "06010200",
+          label: "挎包、背包、提包"
+        },
+        {
+          value: "06010300",
+          label: "钱包、钥匙包"
+        },
+        {
+          value: "06019900",
+          label: "其他箱包"
+        },
+        {
+          value: "06020100",
+          label: "皮鞋"
+        },
+        {
+          value: "06020200",
+          label: "皮靴"
+        },
+        {
+          value: "06020300",
+          label: "运动鞋"
+        },
+        {
+          value: "06029900",
+          label: "其他鞋靴"
+        }
+      ]
+    },
+    {
+      group: "表、钟及其配件、附件",
+      children: [
+        {
+          value: "07010100",
+          label: "高档手表（审定价格在人民币10000元及以上）"
+        },
+        {
+          value: "07010210",
+          label: "石英表（电子表）"
+        },
+        {
+          value: "07010220",
+          label: "机械表"
+        },
+        {
+          value: "07010290",
+          label: "其他表"
+        },
+        {
+          value: "07020100",
+          label: "座钟、挂钟、台钟"
+        },
+        {
+          value: "07020200",
+          label: "落地钟"
+        },
+        {
+          value: "07029900",
+          label: "其他钟"
+        },
+        {
+          value: "07030000",
+          label: "钟表配件、附件"
+        }
+      ]
+    },
+    {
+      group: "金银、贵重首饰及珠宝玉石",
+      children: [
+        {
+          value: "08010000",
+          label: "金银"
+        },
+        {
+          value: "08020100",
+          label: "钻石及钻石首饰"
+        },
+        {
+          value: "08020200",
+          label: "贵重首饰及珠宝玉石"
+        }
+      ]
+    },
+    {
+      group: "化妆品、洗护用品",
+      children: [
+        {
+          value: "09010112",
+          label: "香水及花露水"
+        },
+        {
+          value: "09010190",
+          label: "其他芳香类化妆品"
+        },
+        {
+          value: "09010212",
+          label: "唇膏、唇彩"
+        },
+        {
+          value: "09010222",
+          label: "唇线笔"
+        },
+        {
+          value: "09010299",
+          label: "其他唇用化妆品"
+        },
+        {
+          value: "09010312",
+          label: "睫毛膏（液、油）"
+        },
+        {
+          value: "09010322",
+          label: "眼线笔（液）"
+        },
+        {
+          value: "09010332",
+          label: "眉笔（眉粉）"
+        },
+        {
+          value: "09010342",
+          label: "眼影"
+        },
+        {
+          value: "09010392",
+          label: "其他眼用化妆品"
+        },
+        {
+          value: "09010412",
+          label: "洗甲（趾）液"
+        },
+        {
+          value: "09010422",
+          label: "指（趾）甲油"
+        },
+        {
+          value: "09010492",
+          label: "其他指（趾）甲化妆品"
+        },
+        {
+          value: "09010512",
+          label: "粉底及粉底液"
+        },
+        {
+          value: "09010522",
+          label: "粉饼"
+        },
+        {
+          value: "09010532",
+          label: "扑面粉"
+        },
+        {
+          value: "09010542",
+          label: "胭脂（粉）、腮红（粉）"
+        },
+        {
+          value: "09010592",
+          label: "其他粉状化妆品"
+        },
+        {
+          value: "09020110",
+          label: "洗面奶、洁面霜"
+        },
+        {
+          value: "09020120",
+          label: "卸妆水"
+        },
+        {
+          value: "09020190",
+          label: "其他清洁用品"
+        },
+        {
+          value: "09020212",
+          label: "化妆水"
+        },
+        {
+          value: "09020222",
+          label: "眼霜"
+        },
+        {
+          value: "09020232",
+          label: "面霜及乳液"
+        },
+        {
+          value: "09020242",
+          label: "精华液（素）"
+        },
+        {
+          value: "09020252",
+          label: "防晒霜（露、乳液）"
+        },
+        {
+          value: "09020262",
+          label: "面膜"
+        },
+        {
+          value: "09020272",
+          label: "润唇膏"
+        },
+        {
+          value: "09020282",
+          label: "护手霜"
+        },
+        {
+          value: "09020292",
+          label: "其他护肤用品"
+        },
+        {
+          value: "09020310",
+          label: "洗/护发液"
+        },
+        {
+          value: "09020390",
+          label: "其他护发用品"
+        },
+        {
+          value: "09029900",
+          label: "其他清洁护理品"
+        }
+      ]
+    },
+    {
+      group: "家用医疗、保健及美容器材",
+      children: [
+        {
+          value: "10010100",
+          label: "血糖计"
+        },
+        {
+          value: "10010200",
+          label: "血糖试纸"
+        },
+        {
+          value: "10010300",
+          label: "红外线耳探热针"
+        },
+        {
+          value: "10010400",
+          label: "家用雾化机"
+        },
+        {
+          value: "10010500",
+          label: "血压计"
+        },
+        {
+          value: "10019900",
+          label: "其他家用医疗器材"
+        },
+        {
+          value: "10020100",
+          label: "按摩床"
+        },
+        {
+          value: "10020200",
+          label: "按摩椅"
+        },
+        {
+          value: "10029900",
+          label: "其他家用保健器材"
+        },
+        {
+          value: "10030100",
+          label: "蒸汽仪"
+        },
+        {
+          value: "10030200",
+          label: "喷雾器"
+        },
+        {
+          value: "10039900",
+          label: "其他家用美容器材"
+        }
+      ]
+    },
+    {
+      group: "厨卫用具及小家电",
+      children: [
+        {
+          value: "11010100",
+          label: "餐具/刀具"
+        },
+        {
+          value: "11010200",
+          label: "炊具"
+        },
+        {
+          value: "11010300",
+          label: "灶具"
+        },
+        {
+          value: "11010400",
+          label: "净水器（含过滤芯）"
+        },
+        {
+          value: "11010500",
+          label: "净水器过滤芯"
+        },
+        {
+          value: "11011100",
+          label: "电饭煲"
+        },
+        {
+          value: "11011200",
+          label: "微波炉"
+        },
+        {
+          value: "11011300",
+          label: "电磁炉"
+        },
+        {
+          value: "11011400",
+          label: "抽油烟机"
+        },
+        {
+          value: "11011500",
+          label: "家用洗碗机"
+        },
+        {
+          value: "11011600",
+          label: "电动榨汁机"
+        },
+        {
+          value: "11011700",
+          label: "咖啡机"
+        },
+        {
+          value: "11019900",
+          label: "其他厨房用具"
+        },
+        {
+          value: "11020100",
+          label: "热水器"
+        },
+        {
+          value: "11021120",
+          label: "电吹风机"
+        },
+        {
+          value: "11021130",
+          label: "电动剃须刀"
+        },
+        {
+          value: "11020400",
+          label: "电动牙刷"
+        },
+        {
+          value: "11029900",
+          label: "其他卫生间用具"
+        },
+        {
+          value: "11030110",
+          label: "普通电话机"
+        },
+        {
+          value: "11030121",
+          label: "键盘式手持移动电话机"
+        },
+        {
+          value: "11030122",
+          label: "触屏式手持移动电话机"
+        },
+        {
+          value: "11030130",
+          label: "电话传真机"
+        },
+        {
+          value: "11030140",
+          label: "可视电话机"
+        },
+        {
+          value: "11030150",
+          label: "电话机配件、附件"
+        },
+        {
+          value: "11030190",
+          label: "其他电话机"
+        },
+        {
+          value: "11031200",
+          label: "电风扇"
+        },
+        {
+          value: "11031300",
+          label: "电熨斗"
+        },
+        {
+          value: "11031400",
+          label: "电暖器"
+        },
+        {
+          value: "11031500",
+          label: "增/除湿机、增除湿一体机"
+        },
+        {
+          value: "11031600",
+          label: "空气清新机"
+        },
+        {
+          value: "11031700",
+          label: "吸尘器"
+        },
+        {
+          value: "11031800",
+          label: "地板打蜡机"
+        },
+        {
+          value: "11031900",
+          label: "电动剪草机"
+        },
+        {
+          value: "11032000",
+          label: "电缝纫机、编织机"
+        },
+        {
+          value: "11032100",
+          label: "灯具"
+        },
+        {
+          value: "11039910",
+          label: "其他家电类信息技术产品"
+        },
+        {
+          value: "11039990",
+          label: "其他小家电"
+        }
+      ]
+    },
+    {
+      group: "家具",
+      children: [
+        {
+          value: "12010000",
+          label: "实木家具"
+        },
+        {
+          value: "12020000",
+          label: "皮质家具"
+        },
+        {
+          value: "12030000",
+          label: "藤、竹质家具"
+        },
+        {
+          value: "12990000",
+          label: "其他家具"
+        }
+      ]
+    },
+    {
+      group: "空调及其配件、附件",
+      children: [
+        {
+          value: "13010100",
+          label: "空调1匹及以下"
+        },
+        {
+          value: "13010200",
+          label: "空调1匹以上2匹以下（含2匹）"
+        },
+        {
+          value: "13010300",
+          label: "空调2匹以上3匹以下（含3匹）"
+        },
+        {
+          value: "13010400",
+          label: "空调3匹以上"
+        },
+        {
+          value: "13020000",
+          label: "空调配件、附件"
+        },
+        {
+          value: "13990000",
+          label: "其他空调"
+        }
+      ]
+    },
+    {
+      group: "电冰箱及其配件、附件",
+      children: [
+        {
+          value: "14010100",
+          label: "电冰箱和冰柜100公升及以下"
+        },
+        {
+          value: "14010200",
+          label: "电冰箱和冰柜101-200公升"
+        },
+        {
+          value: "14010300",
+          label: "电冰箱和冰柜201-250公升"
+        },
+        {
+          value: "14010400",
+          label: "电冰箱和冰柜251-300公升"
+        },
+        {
+          value: "14010500",
+          label: "电冰箱和冰柜301-400公升"
+        },
+        {
+          value: "14010600",
+          label: "电冰箱和冰柜401-500公升"
+        },
+        {
+          value: "14010700",
+          label: "电冰箱和冰柜501公升及以上"
+        },
+        {
+          value: "14020100",
+          label: "红酒柜12瓶及以下"
+        },
+        {
+          value: "14020200",
+          label: "红酒柜13-18瓶"
+        },
+        {
+          value: "14020300",
+          label: "红酒柜19-45瓶"
+        },
+        {
+          value: "14020400",
+          label: "红酒柜46-75瓶"
+        },
+        {
+          value: "14020500",
+          label: "红酒柜76-120瓶"
+        },
+        {
+          value: "14020600",
+          label: "红酒柜121瓶及以上"
+        },
+        {
+          value: "14030000",
+          label: "电冰箱配件、附件"
+        },
+        {
+          value: "14990000",
+          label: "其他电冰箱"
+        }
+      ]
+    },
+    {
+      group: "洗衣设备及其配件、附件",
+      children: [
+        {
+          value: "15010100",
+          label: "洗衣机波轮式"
+        },
+        {
+          value: "15010200",
+          label: "洗衣机滚筒式"
+        },
+        {
+          value: "15020000",
+          label: "干衣机/烘干机"
+        },
+        {
+          value: "15030000",
+          label: "洗衣设备配件、附件"
+        },
+        {
+          value: "15990000",
+          label: "其他洗衣设备"
+        }
+      ]
+    },
+    {
+      group: "电视机及其配件、附件",
+      children: [
+        {
+          value: "16010100",
+          label: "电视机22英寸及以下"
+        },
+        {
+          value: "16010200",
+          label: "电视机23英寸至32英寸"
+        },
+        {
+          value: "16010300",
+          label: "电视机33英寸至39英寸"
+        },
+        {
+          value: "16010400",
+          label: "电视机40英寸至42英寸"
+        },
+        {
+          value: "16010500",
+          label: "电视机43英寸至45英寸"
+        },
+        {
+          value: "16010600",
+          label: "电视机46英寸至49英寸"
+        },
+        {
+          value: "16010700",
+          label: "电视机50英寸至54英寸"
+        },
+        {
+          value: "16010800",
+          label: "电视机55英寸至59英寸"
+        },
+        {
+          value: "16010900",
+          label: "电视机60英寸至64英寸"
+        },
+        {
+          value: "16011000",
+          label: "电视机65英寸以上"
+        },
+        {
+          value: "16020000",
+          label: "电视机配件、附件"
+        },
+        {
+          value: "16990000",
+          label: "其他电视机"
+        }
+      ]
+    },
+    {
+      group: "摄影（像）设备及其配件、附件",
+      children: [
+        {
+          value: "17010110",
+          label: "一体式数字照相机"
+        },
+        {
+          value: "17010121",
+          label: "可拆卸式数字照相机机身"
+        },
+        {
+          value: "17010122",
+          label: "可拆卸式数码照相机镜头"
+        },
+        {
+          value: "17010210",
+          label: "反光式胶片照相机"
+        },
+        {
+          value: "17010220",
+          label: "一次成像照相机"
+        },
+        {
+          value: "17010290",
+          label: "其他照相机"
+        },
+        {
+          value: "17020100",
+          label: "电视摄像机"
+        },
+        {
+          value: "17020200",
+          label: "视频摄录一体机"
+        },
+        {
+          value: "17029900",
+          label: "其他摄像机"
+        },
+        {
+          value: "17030100",
+          label: "其他摄影（像）类信息技术产品"
+        },
+        {
+          value: "17030200",
+          label: "其他摄影（像）设备"
+        }
+      ]
+    },
+    {
+      group: "影音设备及其配件、附件",
+      children: [
+        {
+          value: "17990110",
+          label: "数码存储卡存储容量8G及以下"
+        },
+        {
+          value: "17990120",
+          label: "数码存储卡存储容量8G以上"
+        },
+        {
+          value: "17990200",
+          label: "闪光灯"
+        },
+        {
+          value: "17990300",
+          label: "支架"
+        },
+        {
+          value: "17990400",
+          label: "胶卷"
+        },
+        {
+          value: "17999900",
+          label: "其他摄影（像）设备配件、附件"
+        },
+        {
+          value: "18010100",
+          label: "录音笔"
+        },
+        {
+          value: "18010200",
+          label: "录音机"
+        },
+        {
+          value: "18010300",
+          label: "收音机"
+        },
+        {
+          value: "18010400",
+          label: "MP3播放器（音频多媒体播放器）"
+        },
+        {
+          value: "18010500",
+          label: "MP4播放器（视频多媒体播放器）"
+        },
+        {
+          value: "18019900",
+          label: "其他便携式影音设备"
+        },
+        {
+          value: "18020100",
+          label: "电唱机（含便携式激光唱机）"
+        },
+        {
+          value: "18020200",
+          label: "放像机"
+        },
+        {
+          value: "18020300",
+          label: "录像机"
+        },
+        {
+          value: "18020400",
+          label: "激光视盘机（LD、VCD、DVD等）"
+        },
+        {
+          value: "18020500",
+          label: "（单）功能座（功放、调谐、均衡等）"
+        },
+        {
+          value: "18020600",
+          label: "音箱"
+        },
+        {
+          value: "18020700",
+          label: "便携式收音、录音、激光唱盘一体机"
+        },
+        {
+          value: "18029900",
+          label: "其他音响设备"
+        },
+        {
+          value: "18030100",
+          label: "耳机及耳塞机"
+        },
+        {
+          value: "18030200",
+          label: "磁盘"
+        },
+        {
+          value: "18030310",
+          label: "重放声音或图像信息的磁带"
+        },
+        {
+          value: "18030320",
+          label: "其他磁带"
+        },
+        {
+          value: "18030400",
+          label: "半导体媒体"
+        },
+        {
+          value: "18030510",
+          label: "已录制唱片"
+        },
+        {
+          value: "18030520",
+          label: "其他唱片"
+        },
+        {
+          value: "18039900",
+          label: "其他影音设备配件、附件"
+        },
+        {
+          value: "18990100",
+          label: "其他影音类信息技术产品"
+        },
+        {
+          value: "18990200",
+          label: "其他影音设备"
+        }
+      ]
+    },
+    {
+      group: "计算机及其外围设备",
+      children: [
+        {
+          value: "19010100",
+          label: "台式个人计算机主机"
+        },
+        {
+          value: "19010200",
+          label: "主机、显示器一体机"
+        },
+        {
+          value: "19010310",
+          label: "键盘式笔记本电脑"
+        },
+        {
+          value: "19010320",
+          label: "触屏式笔记本电脑"
+        },
+        {
+          value: "19010410",
+          label: "主板"
+        },
+        {
+          value: "19010420",
+          label: "中央处理器（CPU）"
+        },
+        {
+          value: "19010431",
+          label: "内存条4G及以下"
+        },
+        {
+          value: "19010432",
+          label: "内存条4G以上"
+        },
+        {
+          value: "19010440",
+          label: "功能卡"
+        },
+        {
+          value: "19010490",
+          label: "其他计算机配件"
+        },
+        {
+          value: "19019900",
+          label: "其他计算机"
+        },
+        {
+          value: "19020100",
+          label: "鼠标"
+        },
+        {
+          value: "19020200",
+          label: "键盘"
+        },
+        {
+          value: "19020300",
+          label: "音箱"
+        },
+        {
+          value: "19020411",
+          label: "液晶显示器19英寸及以下"
+        },
+        {
+          value: "19020412",
+          label: "液晶显示器19英寸以上，24英寸及以下"
+        },
+        {
+          value: "19020413",
+          label: "液晶显示器24英寸以上"
+        },
+        {
+          value: "19020421",
+          label: "显像管（CRT)显示器17英寸及以下"
+        },
+        {
+          value: "19020422",
+          label: "显像管（CRT)显示器17英寸以上"
+        },
+        {
+          value: "19020490",
+          label: "其他显示器"
+        },
+        {
+          value: "19020511",
+          label: "黑白激光打印机"
+        },
+        {
+          value: "19020512",
+          label: "彩色激光打印机"
+        },
+        {
+          value: "19020520",
+          label: "喷墨打印机"
+        },
+        {
+          value: "19020530",
+          label: "针式打印机"
+        },
+        {
+          value: "19020541",
+          label: "喷墨多功能一体打印机"
+        },
+        {
+          value: "19020542",
+          label: "激光多功能一体打印机"
+        },
+        {
+          value: "19020590",
+          label: "其他打印机"
+        },
+        {
+          value: "19020600",
+          label: "扫描仪"
+        },
+        {
+          value: "19020700",
+          label: "视频投影仪"
+        },
+        {
+          value: "19020810",
+          label: "CD"
+        },
+        {
+          value: "19020820",
+          label: "DVD"
+        },
+        {
+          value: "19020890",
+          label: "其他驱动器"
+        },
+        {
+          value: "19020911",
+          label: "硬盘/移动硬盘1T及以下"
+        },
+        {
+          value: "19020912",
+          label: "硬盘/移动硬盘1T以上2T以下（含2T）"
+        },
+        {
+          value: "19020913",
+          label: "硬盘/移动硬盘2T以上"
+        },
+        {
+          value: "19020920",
+          label: "U盘"
+        },
+        {
+          value: "19020990",
+          label: "其他存储器"
+        },
+        {
+          value: "19029900",
+          label: "其他计算机外围设备"
+        }
+      ]
+    },
+    {
+      group: "教育用影视资料",
+      children: [
+        {
+          value: "21010000",
+          label: "幻灯片"
+        },
+        {
+          value: "21020000",
+          label: "录音带"
+        },
+        {
+          value: "21030000",
+          label: "录像带"
+        },
+        {
+          value: "21990000",
+          label: "其他教育专用影视资料"
+        }
+      ]
+    },
+    {
+      group: "文具用品、玩具、游戏品、节日或其他娱乐用品",
+      children: [
+        {
+          value: "22010100",
+          label: "电子计算器"
+        },
+        {
+          value: "22010200",
+          label: "电子字典/记事簿"
+        },
+        {
+          value: "22010300",
+          label: "电子(纸)书"
+        },
+        {
+          value: "22010400",
+          label: "笔"
+        },
+        {
+          value: "22019900",
+          label: "其他文具用品"
+        },
+        {
+          value: "22020110",
+          label: "单脚滑行车、踏板车"
+        },
+        {
+          value: "22020190",
+          label: "其他带轮玩具"
+        },
+        {
+          value: "22020200",
+          label: "玩偶"
+        },
+        {
+          value: "22020300",
+          label: "缩小（按比例缩小）的模型及类似娱乐用模型"
+        },
+        {
+          value: "22020400",
+          label: "智力玩具"
+        },
+        {
+          value: "22020500",
+          label: "玩具乐器"
+        },
+        {
+          value: "22029900",
+          label: "其他玩具"
+        },
+        {
+          value: "22030110",
+          label: "便携式游戏机"
+        },
+        {
+          value: "22030120",
+          label: "电脑游戏机"
+        },
+        {
+          value: "22030130",
+          label: "其他游戏机"
+        },
+        {
+          value: "22030191",
+          label: "游戏碟、盘、卡"
+        },
+        {
+          value: "22030192",
+          label: "游戏机遥控器、控制器"
+        },
+        {
+          value: "22030199",
+          label: "其他游戏机配件、附件"
+        },
+        {
+          value: "22030210",
+          label: "纸牌游戏用品"
+        },
+        {
+          value: "22030220",
+          label: "棋类产品"
+        },
+        {
+          value: "22030290",
+          label: "其他桌上或室内游戏用品"
+        },
+        {
+          value: "22030900",
+          label: "游戏品的配件、附件"
+        },
+        {
+          value: "22040110",
+          label: "节日装饰品"
+        },
+        {
+          value: "22040120",
+          label: "圣诞节传统用品"
+        },
+        {
+          value: "22040130",
+          label: "化装舞会及类似场合用品"
+        },
+        {
+          value: "22040190",
+          label: "其他节日用品"
+        },
+        {
+          value: "22040200",
+          label: "魔术道具及嬉戏品"
+        },
+        {
+          value: "22040900",
+          label: "其他娱乐用品"
+        }
+      ]
+    },
+    {
+      group: "邮票、艺术品、收藏品",
+      children: [
+        {
+          value: "23010100",
+          label: "中国邮票、小型张、纪念封"
+        },
+        {
+          value: "23010200",
+          label: "港澳台、外国邮票"
+        },
+        {
+          value: "23010300",
+          label: "港澳台、外国小型张、纪念封"
+        },
+        {
+          value: "23020000",
+          label: "艺术品、收藏品"
+        }
+      ]
+    },
+    {
+      group: "乐器",
+      children: [
+        {
+          value: "24010100",
+          label: "三角钢琴"
+        },
+        {
+          value: "24010200",
+          label: "立式钢琴"
+        },
+        {
+          value: "24010300",
+          label: "电子钢琴"
+        },
+        {
+          value: "24019900",
+          label: "其他钢琴"
+        },
+        {
+          value: "24020100",
+          label: "电子琴49键以下"
+        },
+        {
+          value: "24020200",
+          label: "电子琴49键及以上"
+        },
+        {
+          value: "24030000",
+          label: "萨克斯"
+        },
+        {
+          value: "24040000",
+          label: "电子吉他"
+        },
+        {
+          value: "24050000",
+          label: "数码小提琴"
+        },
+        {
+          value: "24060000",
+          label: "长、短笛"
+        },
+        {
+          value: "24070000",
+          label: "单簧管"
+        },
+        {
+          value: "24080000",
+          label: "双簧管"
+        },
+        {
+          value: "24090000",
+          label: "古筝"
+        },
+        {
+          value: "24990000",
+          label: "其他乐器"
+        }
+      ]
+    },
+    {
+      group: "运动用品、钓鱼用品",
+      children: [
+        {
+          value: "25010100",
+          label: "高尔夫球杆"
+        },
+        {
+          value: "25010200",
+          label: "高尔夫球"
+        },
+        {
+          value: "25019900",
+          label: "其他高尔夫球具"
+        },
+        {
+          value: "25020100",
+          label: "网球拍"
+        },
+        {
+          value: "25020200",
+          label: "羽毛球拍"
+        },
+        {
+          value: "25029900",
+          label: "其他运动器具"
+        },
+        {
+          value: "25030100",
+          label: "跑步机"
+        },
+        {
+          value: "25030200",
+          label: "健身车"
+        },
+        {
+          value: "25030300",
+          label: "综合训练器"
+        },
+        {
+          value: "25039900",
+          label: "其他多功能健身器具"
+        },
+        {
+          value: "25040000",
+          label: "钓鱼用具"
+        },
+        {
+          value: "25990000",
+          label: "其他运动用品"
+        }
+      ]
+    },
+    {
+      group: "自行车",
+      children: [
+        {
+          value: "26010000",
+          label: "自行车"
+        },
+        {
+          value: "26020000",
+          label: "三轮车"
+        },
+        {
+          value: "26030000",
+          label: "婴孩车"
+        },
+        {
+          value: "26090000",
+          label: "自行车配件、附件"
+        }
+      ]
+    },
+    {
+      group: "其他物品",
+      children: [
+        {
+          value: "27000000",
+          label: "其他物品"
+        }
+      ]
+    }
+  ];
   const _sfc_main$y = {
     __name: "add",
     setup(__props) {
       const uForm = vue.ref(null);
       const showCurrencyPicker = vue.ref(false);
+      const showHsCodePicker = vue.ref(false);
       const currencyOptions = [
-        { text: "人民币", value: "1" },
-        { text: "美元", value: "2" },
-        { text: "欧元", value: "3" }
+        { text: "CNY", value: "1" },
+        { text: "HKD", value: "2" },
+        { text: "USD", value: "3" },
+        { text: "EUR", value: "4" },
+        { text: "GBP", value: "5" },
+        { text: "THB", value: "6" }
       ];
+      const hsCodeOptions = vue.computed(() => {
+        return hscodeArr.map((item) => {
+          return item.group;
+        });
+      });
+      const hsCode = vue.ref(null);
+      const declareCurrency = vue.ref("");
       const formData = vue.ref({
         jsin: "",
         sku: "",
@@ -21204,14 +22740,23 @@ ${i3}
         declareValue: "",
         remark: ""
       });
-      vue.computed(() => {
-        const currency = currencyOptions.find((item) => item.value === formData.value.declareCurrency);
-        return currency ? currency.text : "";
-      });
+      const uPickerRef = vue.ref(null);
+      const changeHandler = (e2) => {
+        const { columnIndex, value, values, index: index2 } = e2;
+        if (columnIndex === 0) {
+          uPickerRef.value.setColumnValues(1, hscodeArr[index2].children);
+        }
+      };
       const onCurrencyConfirm = (e2) => {
         const [{ value, text }] = e2.value;
         formData.value.declareCurrency = value;
+        declareCurrency.value = text;
         showCurrencyPicker.value = false;
+      };
+      const onHsCodeConfirm = (e2) => {
+        formData.value.hsCode = e2.value[1].value;
+        hsCode.value = e2.value[0] + "/" + e2.value[1].label;
+        showHsCodePicker.value = false;
       };
       const rules2 = {
         sku: [{ required: true, message: "请输入商品编码", trigger: ["blur", "change"] }],
@@ -21226,7 +22771,7 @@ ${i3}
         declareValue: [{ required: true, message: "请输入申报价值", trigger: ["blur", "change"] }]
       };
       const handleSubmit = async () => {
-        formatAppLog("log", "at pages/goods/add.vue:234", "提交");
+        formatAppLog("log", "at pages/goods/add.vue:264", "提交");
         await uForm.value.validate();
         postAction("/merch/sku/add", formData.value).then((res) => {
           if (res.success) {
@@ -21237,6 +22782,10 @@ ${i3}
             setTimeout(() => {
               goBack();
             }, 1500);
+          } else {
+            uni.showToast({
+              title: res.message
+            });
           }
         });
       };
@@ -21244,7 +22793,7 @@ ${i3}
         uni.navigateBack();
       };
       return (_ctx, _cache) => {
-        const _component_u__input = resolveEasycom(vue.resolveDynamicComponent("u--input"), __easycom_0$3);
+        const _component_u__input = resolveEasycom(vue.resolveDynamicComponent("u--input"), __easycom_1$1);
         const _component_u_form_item = resolveEasycom(vue.resolveDynamicComponent("u-form-item"), __easycom_2$2);
         const _component_u__textarea = resolveEasycom(vue.resolveDynamicComponent("u--textarea"), __easycom_2$1);
         const _component_u__form = resolveEasycom(vue.resolveDynamicComponent("u--form"), __easycom_3$1);
@@ -21442,12 +22991,20 @@ ${i3}
                     borderBottom: ""
                   }, {
                     default: vue.withCtx(() => [
-                      vue.createVNode(_component_u__input, {
-                        modelValue: formData.value.hsCode,
-                        "onUpdate:modelValue": _cache[10] || (_cache[10] = ($event) => formData.value.hsCode = $event),
-                        placeholder: "请输入海关编码",
-                        border: "none"
-                      }, null, 8, ["modelValue"])
+                      vue.createElementVNode("div", {
+                        onClick: _cache[10] || (_cache[10] = ($event) => showHsCodePicker.value = true)
+                      }, [
+                        hsCode.value ? (vue.openBlock(), vue.createElementBlock(
+                          "text",
+                          { key: 0 },
+                          vue.toDisplayString(hsCode.value),
+                          1
+                          /* TEXT */
+                        )) : (vue.openBlock(), vue.createElementBlock("text", {
+                          key: 1,
+                          style: { "color": "#c0c4cc" }
+                        }, "请输入海关编码"))
+                      ])
                     ]),
                     _: 1
                     /* STABLE */
@@ -21573,14 +23130,20 @@ ${i3}
                     borderBottom: ""
                   }, {
                     default: vue.withCtx(() => [
-                      vue.createVNode(_component_u__input, {
-                        modelValue: formData.value.declareCurrency,
-                        "onUpdate:modelValue": _cache[18] || (_cache[18] = ($event) => formData.value.declareCurrency = $event),
-                        type: "number",
-                        placeholder: "请输入申报币种",
-                        border: "none",
-                        onClick: _cache[19] || (_cache[19] = ($event) => showCurrencyPicker.value = true)
-                      }, null, 8, ["modelValue"])
+                      vue.createElementVNode("div", {
+                        onClick: _cache[18] || (_cache[18] = ($event) => showCurrencyPicker.value = true)
+                      }, [
+                        declareCurrency.value ? (vue.openBlock(), vue.createElementBlock(
+                          "text",
+                          { key: 0 },
+                          vue.toDisplayString(declareCurrency.value),
+                          1
+                          /* TEXT */
+                        )) : (vue.openBlock(), vue.createElementBlock("text", {
+                          key: 1,
+                          style: { "color": "#c0c4cc" }
+                        }, "请输入申报币种"))
+                      ])
                     ]),
                     _: 1
                     /* STABLE */
@@ -21593,7 +23156,7 @@ ${i3}
                     default: vue.withCtx(() => [
                       vue.createVNode(_component_u__input, {
                         modelValue: formData.value.declareValue,
-                        "onUpdate:modelValue": _cache[20] || (_cache[20] = ($event) => formData.value.declareValue = $event),
+                        "onUpdate:modelValue": _cache[19] || (_cache[19] = ($event) => formData.value.declareValue = $event),
                         type: "number",
                         placeholder: "请输入申报价值",
                         border: "none"
@@ -21610,7 +23173,7 @@ ${i3}
                     default: vue.withCtx(() => [
                       vue.createVNode(_component_u__textarea, {
                         modelValue: formData.value.remark,
-                        "onUpdate:modelValue": _cache[21] || (_cache[21] = ($event) => formData.value.remark = $event),
+                        "onUpdate:modelValue": _cache[20] || (_cache[20] = ($event) => formData.value.remark = $event),
                         placeholder: "请输入备注信息",
                         maxlength: 200,
                         height: "120",
@@ -21626,6 +23189,17 @@ ${i3}
               /* STABLE */
             }, 8, ["model"])
           ]),
+          vue.createCommentVNode(" 海关编码选择器 "),
+          vue.createVNode(_component_u_picker, {
+            ref_key: "uPickerRef",
+            ref: uPickerRef,
+            keyName: "label",
+            show: showHsCodePicker.value,
+            columns: [hsCodeOptions.value],
+            onConfirm: onHsCodeConfirm,
+            onCancel: _cache[21] || (_cache[21] = ($event) => showHsCodePicker.value = false),
+            onChange: changeHandler
+          }, null, 8, ["show", "columns"]),
           vue.createCommentVNode(" 币种选择器 "),
           vue.createVNode(_component_u_picker, {
             show: showCurrencyPicker.value,
@@ -26733,7 +28307,7 @@ ${i3}
             captchaUrl.value = res;
           },
           fail(error2) {
-            formatAppLog("log", "at pages/login/index.vue:179", "error", error2);
+            formatAppLog("log", "at pages/login/index.vue:182", "error", error2);
           }
         });
       };
@@ -26799,7 +28373,7 @@ ${i3}
         // 可以继续添加其他国家/地区
       ];
       const onAreaConfirm = (e2) => {
-        formatAppLog("log", "at pages/login/index.vue:267", "e", e2);
+        formatAppLog("log", "at pages/login/index.vue:270", "e", e2);
         selectedArea.value = e2.value[0].value;
         showAreaPicker.value = false;
       };
@@ -26857,7 +28431,7 @@ ${i3}
           } else {
             uni.hideLoading();
             uni.showToast({
-              title: "登录失败，请重试",
+              title: res.message,
               icon: "none"
             });
           }
@@ -26955,7 +28529,6 @@ ${i3}
               ])
             ]),
             vue.createElementVNode("view", { class: "form-item captcha-item" }, [
-              vue.createElementVNode("text", { class: "iconfont icon-safe" }),
               vue.withDirectives(vue.createElementVNode(
                 "input",
                 {
@@ -27028,7 +28601,6 @@ ${i3}
                   ])
                 ]),
                 vue.createElementVNode("view", { class: "form-item" }, [
-                  vue.createElementVNode("text", { class: "iconfont icon-safe" }),
                   vue.withDirectives(vue.createElementVNode(
                     "input",
                     {
@@ -27059,6 +28631,14 @@ ${i3}
                   class: "submit-btn",
                   onClick: handlePhoneLogin
                 }, "登录"),
+                vue.createElementVNode("view", { class: "action-links" }, [
+                  vue.createCommentVNode(' <text class="link" @tap="forgotPassword">忘记密码</text> '),
+                  vue.createCommentVNode(' <text class="divider">|</text> '),
+                  vue.createElementVNode("text", {
+                    class: "link",
+                    onClick: goToRegister
+                  }, "立即注册")
+                ]),
                 vue.createCommentVNode(" 手机号登录(旧) "),
                 vue.createCommentVNode(' <view class="form-section" v-else>\n      <view class="form-item">\n        <view class="phone-prefix" @tap="showAreaPicker = true">\n          <text>+{{ selectedArea.code }}</text>\n          <text class="iconfont icon-arrow-down"></text>\n        </view>\n        <input\n          v-model="formData.username"\n          type="number"\n          placeholder="请输入手机号"\n          class="input phone-input"\n          maxlength="11"\n        />\n      </view>\n      <view class="form-item">\n        <text class="iconfont icon-lock"></text>\n        <input v-model="formData.password" type="password" placeholder="请输入密码" class="input" />\n      </view>\n\n      <view class="form-item captcha-item">\n        <text class="iconfont icon-safe"></text>\n        <input v-model="formData.captcha" type="text" placeholder="请输入验证码" class="input" maxlength="4" />\n        <image class="captcha-img" :src="captchaUrl" @tap="refreshCaptcha" mode="aspectFit" />\n      </view> '),
                 vue.createCommentVNode(' <button class="submit-btn" @tap="handleLogin">登录</button> ')
@@ -27122,8 +28702,13 @@ ${i3}
             captchaUrl.value = res;
           },
           fail(error2) {
-            formatAppLog("log", "at pages/login/register.vue:110", "error", error2);
+            formatAppLog("log", "at pages/login/register.vue:114", "error", error2);
           }
+        });
+      };
+      const goToLogin = () => {
+        uni.navigateTo({
+          url: "/pages/login/index"
         });
       };
       const toggleAgreement = () => {
@@ -27144,7 +28729,7 @@ ${i3}
         // 可以继续添加其他国家/地区
       ];
       const onAreaConfirm = (e2) => {
-        formatAppLog("log", "at pages/login/register.vue:179", "e", e2);
+        formatAppLog("log", "at pages/login/register.vue:189", "e", e2);
         selectedArea.value = e2.value[0].value;
         showAreaPicker.value = false;
       };
@@ -27198,7 +28783,7 @@ ${i3}
           } else {
             uni.hideLoading();
             uni.showToast({
-              title: "注册失败，请重试",
+              title: res.message,
               icon: "none"
             });
           }
@@ -27315,7 +28900,13 @@ ${i3}
             vue.createElementVNode("button", {
               class: "submit-btn",
               onClick: handlePhoneLogin
-            }, "注册")
+            }, "注册"),
+            vue.createElementVNode("view", { class: "action-links" }, [
+              vue.createElementVNode("text", {
+                class: "link",
+                onClick: goToLogin
+              }, "返回登录")
+            ])
           ]),
           vue.createCommentVNode(" 区号选择器 "),
           vue.createVNode(_component_u_picker, {
@@ -27929,7 +29520,7 @@ ${i3}
     }
   };
   function _sfc_render$4(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$7);
+    const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$6);
     return vue.openBlock(), vue.createElementBlock("view", { class: "u-number-box" }, [
       _ctx.showMinus && _ctx.$slots.minus ? (vue.openBlock(), vue.createElementBlock(
         "view",
@@ -28120,7 +29711,7 @@ ${i3}
         }
       };
       return (_ctx, _cache) => {
-        const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$7);
+        const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$6);
         const _component_u_number_box = resolveEasycom(vue.resolveDynamicComponent("u-number-box"), __easycom_3);
         const _component_u_button = resolveEasycom(vue.resolveDynamicComponent("u-button"), __easycom_5);
         return vue.openBlock(), vue.createElementBlock("view", { class: "container" }, [
@@ -28599,7 +30190,7 @@ ${i3}
     }
   };
   function _sfc_render$3(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$7);
+    const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$6);
     return vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -28909,7 +30500,7 @@ ${i3}
         }
       };
       return (_ctx, _cache) => {
-        const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$7);
+        const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$6);
         const _component_u_checkbox = resolveEasycom(vue.resolveDynamicComponent("u-checkbox"), __easycom_1);
         const _component_u_checkbox_group = resolveEasycom(vue.resolveDynamicComponent("u-checkbox-group"), __easycom_2);
         const _component_u_number_box = resolveEasycom(vue.resolveDynamicComponent("u-number-box"), __easycom_3);
@@ -29240,7 +30831,7 @@ ${i3}
       return (_ctx, _cache) => {
         const _component_u_search = resolveEasycom(vue.resolveDynamicComponent("u-search"), __easycom_1$7);
         const _component_u_swipe_action_item = resolveEasycom(vue.resolveDynamicComponent("u-swipe-action-item"), __easycom_1$2);
-        const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$7);
+        const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$6);
         return vue.openBlock(), vue.createElementBlock("view", { class: "container" }, [
           vue.createCommentVNode(" 下拉刷新 "),
           vue.createElementVNode("scroll-view", {
@@ -29401,14 +30992,24 @@ ${i3}
         description: "",
         status: "1"
       });
+      const currencyOptions = [
+        { text: "CNY", value: "1" },
+        { text: "HKD", value: "2" },
+        { text: "USD", value: "3" },
+        { text: "EUR", value: "4" },
+        { text: "GBP", value: "5" },
+        { text: "THB", value: "6" }
+      ];
+      const declareCurrency = vue.ref(null);
       const rules2 = {
         name: [{ required: true, message: "请输入商品名称", trigger: ["blur", "change"] }],
         hsCode: [{ required: true, message: "请输入海关编码", trigger: ["blur", "change"] }],
         declareUnitPrice: [{ required: true, message: "请输入申报单价", trigger: ["blur", "change"] }]
       };
       const uForm = vue.ref(null);
+      const showCurrencyPicker = vue.ref(false);
       const loadGoodsDetail = async (id) => {
-        formData.value = uni.getStorageSync("goods"), formatAppLog("log", "at pages/goods/edit.vue:179", "formData", formData.value);
+        formData.value = uni.getStorageSync("goods"), formatAppLog("log", "at pages/goods/edit.vue:186", "formData", formData.value);
       };
       const handleSubmit = async () => {
         await uForm.value.validate();
@@ -29432,8 +31033,14 @@ ${i3}
           loadGoodsDetail(options.id);
         }
       });
+      const onCurrencyConfirm = (e2) => {
+        const [{ value, text }] = e2.value;
+        formData.value.declareCurrency = value;
+        declareCurrency.value = text;
+        showCurrencyPicker.value = false;
+      };
       return (_ctx, _cache) => {
-        const _component_u__input = resolveEasycom(vue.resolveDynamicComponent("u--input"), __easycom_0$3);
+        const _component_u__input = resolveEasycom(vue.resolveDynamicComponent("u--input"), __easycom_1$1);
         const _component_u_form_item = resolveEasycom(vue.resolveDynamicComponent("u-form-item"), __easycom_2$2);
         const _component_u__textarea = resolveEasycom(vue.resolveDynamicComponent("u--textarea"), __easycom_2$1);
         const _component_u__form = resolveEasycom(vue.resolveDynamicComponent("u--form"), __easycom_3$1);
@@ -29762,14 +31369,20 @@ ${i3}
                     borderBottom: ""
                   }, {
                     default: vue.withCtx(() => [
-                      vue.createVNode(_component_u__input, {
-                        modelValue: formData.value.declareCurrency,
-                        "onUpdate:modelValue": _cache[18] || (_cache[18] = ($event) => formData.value.declareCurrency = $event),
-                        type: "number",
-                        placeholder: "请输入申报币种",
-                        border: "none",
-                        onClick: _cache[19] || (_cache[19] = ($event) => _ctx.showCurrencyPicker = true)
-                      }, null, 8, ["modelValue"])
+                      vue.createElementVNode("div", {
+                        onClick: _cache[18] || (_cache[18] = ($event) => showCurrencyPicker.value = true)
+                      }, [
+                        declareCurrency.value ? (vue.openBlock(), vue.createElementBlock(
+                          "text",
+                          { key: 0 },
+                          vue.toDisplayString(declareCurrency.value),
+                          1
+                          /* TEXT */
+                        )) : (vue.openBlock(), vue.createElementBlock("text", {
+                          key: 1,
+                          style: { "color": "#c0c4cc" }
+                        }, "请输入申报币种"))
+                      ])
                     ]),
                     _: 1
                     /* STABLE */
@@ -29782,7 +31395,7 @@ ${i3}
                     default: vue.withCtx(() => [
                       vue.createVNode(_component_u__input, {
                         modelValue: formData.value.declareValue,
-                        "onUpdate:modelValue": _cache[20] || (_cache[20] = ($event) => formData.value.declareValue = $event),
+                        "onUpdate:modelValue": _cache[19] || (_cache[19] = ($event) => formData.value.declareValue = $event),
                         type: "number",
                         placeholder: "请输入申报价值",
                         border: "none"
@@ -29799,7 +31412,7 @@ ${i3}
                     default: vue.withCtx(() => [
                       vue.createVNode(_component_u__textarea, {
                         modelValue: formData.value.remark,
-                        "onUpdate:modelValue": _cache[21] || (_cache[21] = ($event) => formData.value.remark = $event),
+                        "onUpdate:modelValue": _cache[20] || (_cache[20] = ($event) => formData.value.remark = $event),
                         placeholder: "请输入备注信息",
                         maxlength: 200,
                         height: "120",
@@ -29817,11 +31430,11 @@ ${i3}
           ]),
           vue.createCommentVNode(" 币种选择器 "),
           vue.createVNode(_component_u_picker, {
-            show: _ctx.showCurrencyPicker,
-            columns: [_ctx.currencyOptions],
-            onConfirm: _ctx.onCurrencyConfirm,
-            onCancel: _cache[22] || (_cache[22] = ($event) => _ctx.showCurrencyPicker = false)
-          }, null, 8, ["show", "columns", "onConfirm"]),
+            show: showCurrencyPicker.value,
+            columns: [currencyOptions],
+            onConfirm: onCurrencyConfirm,
+            onCancel: _cache[21] || (_cache[21] = ($event) => showCurrencyPicker.value = false)
+          }, null, 8, ["show", "columns"]),
           vue.createCommentVNode(" 底部按钮 "),
           vue.createElementVNode("view", { class: "bottom-bar" }, [
             vue.createVNode(_component_u_button, {
@@ -30352,7 +31965,7 @@ ${i3}
     }
   };
   function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$7);
+    const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$6);
     const _component_u_loading_icon = resolveEasycom(vue.resolveDynamicComponent("u-loading-icon"), __easycom_2$4);
     return vue.openBlock(), vue.createElementBlock(
       "view",
@@ -30613,7 +32226,7 @@ ${i3}
         monthlyFlow: "",
         product: "",
         brand: "",
-        companyMode: "B2B",
+        companyMode: "",
         applyAmount: "",
         applyReason: "",
         attachments: {}
@@ -30640,7 +32253,7 @@ ${i3}
         dataSource.value = Object.values(formData.value.attachments).map((item) => {
           return item;
         });
-        formatAppLog("log", "at pages/finance/apply.vue:146", "dataSource", dataSource.value);
+        formatAppLog("log", "at pages/finance/apply.vue:148", "dataSource", dataSource.value);
         initSupplement();
       };
       const initSupplement = () => {
@@ -30748,7 +32361,7 @@ ${i3}
             key: index2 + 1
           };
         });
-        formatAppLog("log", "at pages/finance/apply.vue:254", "initSupplement", dataSource.value, formData.value);
+        formatAppLog("log", "at pages/finance/apply.vue:256", "initSupplement", dataSource.value, formData.value);
       };
       const nextStep = async () => {
         try {
@@ -30790,9 +32403,9 @@ ${i3}
           uni.showLoading({
             title: "提交中"
           });
-          formatAppLog("log", "at pages/finance/apply.vue:313", "提交", formData.value, dataSource.value);
+          formatAppLog("log", "at pages/finance/apply.vue:315", "提交", formData.value, dataSource.value);
           save().then((ID) => {
-            formatAppLog("log", "at pages/finance/apply.vue:315", "ID", ID);
+            formatAppLog("log", "at pages/finance/apply.vue:317", "ID", ID);
             postAction(`/fms/customerApply/apply?id=${ID}`).then((res) => {
               if (res.success) {
                 uni.showToast({
@@ -30838,7 +32451,7 @@ ${i3}
       });
       return (_ctx, _cache) => {
         const _component_u_steps = resolveEasycom(vue.resolveDynamicComponent("u-steps"), __easycom_0$1);
-        const _component_u_input = resolveEasycom(vue.resolveDynamicComponent("u-input"), __easycom_1$1);
+        const _component_u__input = resolveEasycom(vue.resolveDynamicComponent("u--input"), __easycom_1$1);
         const _component_u_form_item = resolveEasycom(vue.resolveDynamicComponent("u-form-item"), __easycom_2$2);
         const _component_u_textarea = resolveEasycom(vue.resolveDynamicComponent("u-textarea"), __easycom_3$2);
         const _component_u_form = resolveEasycom(vue.resolveDynamicComponent("u-form"), __easycom_4$1);
@@ -30862,19 +32475,20 @@ ${i3}
               default: vue.withCtx(() => [
                 vue.createElementVNode("view", { class: "form-section" }, [
                   vue.createElementVNode("view", { class: "section-title" }, [
-                    vue.createElementVNode("text", { class: "title" }, "企业基本信息"),
-                    vue.createElementVNode("text", { class: "subtitle" }, "请填写企业基本资料")
+                    vue.createElementVNode("text", { class: "title" }, "企业基本信息")
                   ]),
                   vue.createVNode(_component_u_form_item, {
                     label: "公司名称",
                     prop: "companyName",
-                    required: ""
+                    required: "",
+                    "label-width": "120"
                   }, {
                     default: vue.withCtx(() => [
-                      vue.createVNode(_component_u_input, {
+                      vue.createVNode(_component_u__input, {
                         modelValue: formData.value.companyName,
                         "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => formData.value.companyName = $event),
-                        placeholder: "请输入公司名称"
+                        placeholder: "请输入公司名称",
+                        border: "none"
                       }, null, 8, ["modelValue"])
                     ]),
                     _: 1
@@ -30883,13 +32497,15 @@ ${i3}
                   vue.createVNode(_component_u_form_item, {
                     label: "联系人",
                     prop: "contactName",
-                    required: ""
+                    required: "",
+                    "label-width": "120"
                   }, {
                     default: vue.withCtx(() => [
-                      vue.createVNode(_component_u_input, {
+                      vue.createVNode(_component_u__input, {
                         modelValue: formData.value.contactName,
                         "onUpdate:modelValue": _cache[1] || (_cache[1] = ($event) => formData.value.contactName = $event),
-                        placeholder: "请输入联系人姓名"
+                        placeholder: "请输入联系人姓名",
+                        border: "none"
                       }, null, 8, ["modelValue"])
                     ]),
                     _: 1
@@ -30898,19 +32514,20 @@ ${i3}
                 ]),
                 vue.createElementVNode("view", { class: "form-section" }, [
                   vue.createElementVNode("view", { class: "section-title" }, [
-                    vue.createElementVNode("text", { class: "title" }, "业务信息"),
-                    vue.createElementVNode("text", { class: "subtitle" }, "请填写业务相关信息")
+                    vue.createElementVNode("text", { class: "title" }, "业务信息")
                   ]),
                   vue.createVNode(_component_u_form_item, {
                     label: "月均流水",
                     prop: "monthlyFlow",
-                    required: ""
+                    required: "",
+                    "label-width": "120"
                   }, {
                     default: vue.withCtx(() => [
-                      vue.createVNode(_component_u_input, {
+                      vue.createVNode(_component_u__input, {
                         modelValue: formData.value.monthlyFlow,
                         "onUpdate:modelValue": _cache[2] || (_cache[2] = ($event) => formData.value.monthlyFlow = $event),
                         type: "number",
+                        border: "none",
                         placeholder: "请输入月均流水(万元)"
                       }, null, 8, ["modelValue"])
                     ]),
@@ -30920,13 +32537,15 @@ ${i3}
                   vue.createVNode(_component_u_form_item, {
                     label: "主营产品",
                     prop: "product",
-                    required: ""
+                    required: "",
+                    "label-width": "120"
                   }, {
                     default: vue.withCtx(() => [
-                      vue.createVNode(_component_u_input, {
+                      vue.createVNode(_component_u__input, {
                         modelValue: formData.value.product,
                         "onUpdate:modelValue": _cache[3] || (_cache[3] = ($event) => formData.value.product = $event),
-                        placeholder: "请输入主营产品"
+                        placeholder: "请输入主营产品",
+                        border: "none"
                       }, null, 8, ["modelValue"])
                     ]),
                     _: 1
@@ -30935,13 +32554,15 @@ ${i3}
                   vue.createVNode(_component_u_form_item, {
                     label: "品牌名称",
                     prop: "brand",
-                    required: ""
+                    required: "",
+                    "label-width": "120"
                   }, {
                     default: vue.withCtx(() => [
-                      vue.createVNode(_component_u_input, {
+                      vue.createVNode(_component_u__input, {
                         modelValue: formData.value.brand,
                         "onUpdate:modelValue": _cache[4] || (_cache[4] = ($event) => formData.value.brand = $event),
-                        placeholder: "请输入品牌名称"
+                        placeholder: "请输入品牌名称",
+                        border: "none"
                       }, null, 8, ["modelValue"])
                     ]),
                     _: 1
@@ -30950,13 +32571,15 @@ ${i3}
                   vue.createVNode(_component_u_form_item, {
                     label: "平台模式",
                     prop: "companyMode",
-                    required: ""
+                    required: "",
+                    "label-width": "120"
                   }, {
                     default: vue.withCtx(() => [
-                      vue.createVNode(_component_u_input, {
+                      vue.createVNode(_component_u__input, {
                         modelValue: formData.value.companyMode,
                         "onUpdate:modelValue": _cache[5] || (_cache[5] = ($event) => formData.value.companyMode = $event),
-                        placeholder: "请输入平台模式"
+                        placeholder: "请输入平台模式",
+                        border: "none"
                       }, null, 8, ["modelValue"])
                     ]),
                     _: 1
@@ -30965,19 +32588,20 @@ ${i3}
                 ]),
                 vue.createElementVNode("view", { class: "form-section" }, [
                   vue.createElementVNode("view", { class: "section-title" }, [
-                    vue.createElementVNode("text", { class: "title" }, "申请信息"),
-                    vue.createElementVNode("text", { class: "subtitle" }, "请填写申请相关信息")
+                    vue.createElementVNode("text", { class: "title" }, "申请信息")
                   ]),
                   vue.createVNode(_component_u_form_item, {
                     label: "申请额度",
                     prop: "applyAmount",
-                    required: ""
+                    required: "",
+                    "label-width": "120"
                   }, {
                     default: vue.withCtx(() => [
-                      vue.createVNode(_component_u_input, {
+                      vue.createVNode(_component_u__input, {
                         modelValue: formData.value.applyAmount,
                         "onUpdate:modelValue": _cache[6] || (_cache[6] = ($event) => formData.value.applyAmount = $event),
                         type: "number",
+                        border: "none",
                         placeholder: "请输入申请额度(万元)"
                       }, null, 8, ["modelValue"])
                     ]),
@@ -30987,14 +32611,16 @@ ${i3}
                   vue.createVNode(_component_u_form_item, {
                     label: "申请原因",
                     prop: "applyReason",
-                    required: ""
+                    required: "",
+                    "label-width": "120"
                   }, {
                     default: vue.withCtx(() => [
                       vue.createVNode(_component_u_textarea, {
                         modelValue: formData.value.applyReason,
                         "onUpdate:modelValue": _cache[7] || (_cache[7] = ($event) => formData.value.applyReason = $event),
                         placeholder: "请详细说明申请原因",
-                        maxlength: 200
+                        maxlength: 200,
+                        border: "none"
                       }, null, 8, ["modelValue"])
                     ]),
                     _: 1
@@ -31159,7 +32785,7 @@ ${i3}
         }
       });
       return (_ctx, _cache) => {
-        const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$7);
+        const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$6);
         const _component_u_search = resolveEasycom(vue.resolveDynamicComponent("u-search"), __easycom_1$7);
         const _component_u_empty = resolveEasycom(vue.resolveDynamicComponent("u-empty"), __easycom_3$4);
         return vue.openBlock(), vue.createElementBlock("view", { class: "container" }, [
@@ -32367,7 +33993,7 @@ ${i3}
         enterprise.value = uni.getStorageSync("enterprise");
       });
       return (_ctx, _cache) => {
-        const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$7);
+        const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$6);
         return vue.openBlock(), vue.createElementBlock("view", { class: "container" }, [
           vue.createCommentVNode(" 自定义导航栏 "),
           vue.createElementVNode("view", { class: "custom-navbar" }, [
@@ -32657,7 +34283,7 @@ ${i3}
         getInventoryList("refresh");
       });
       return (_ctx, _cache) => {
-        const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$7);
+        const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$6);
         const _component_u_search = resolveEasycom(vue.resolveDynamicComponent("u-search"), __easycom_1$7);
         const _component_u_loading_icon = resolveEasycom(vue.resolveDynamicComponent("u-loading-icon"), __easycom_2$4);
         const _component_u_empty = resolveEasycom(vue.resolveDynamicComponent("u-empty"), __easycom_3$4);
@@ -33094,7 +34720,7 @@ ${i3}
         getRecordList("refresh");
       });
       return (_ctx, _cache) => {
-        const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$7);
+        const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$6);
         const _component_u_search = resolveEasycom(vue.resolveDynamicComponent("u-search"), __easycom_1$7);
         const _component_u_loading_icon = resolveEasycom(vue.resolveDynamicComponent("u-loading-icon"), __easycom_2$4);
         const _component_u_empty = resolveEasycom(vue.resolveDynamicComponent("u-empty"), __easycom_3$4);

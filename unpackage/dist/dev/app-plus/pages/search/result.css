@@ -899,7 +899,6 @@
   align-items: center;
 }
 .route-card .route-number .number[data-v-89cfe9c9] {
-  font-weight: bold;
   font-size: 0.8125rem;
 }
 .route-card .route-number .tags-container[data-v-89cfe9c9] {
@@ -947,12 +946,12 @@
   gap: 0.25rem;
 }
 .route-card .route-main .route-locations .location .city[data-v-89cfe9c9] {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: bold;
 }
 .route-card .route-main .route-locations .location .country-code[data-v-89cfe9c9] {
-  font-size: 0.75rem;
-  color: #666;
+  font-size: 1rem;
+  color: #b1b0b0;
 }
 .route-card .route-main .route-locations .route-arrow[data-v-89cfe9c9] {
   flex: 1;
@@ -984,11 +983,11 @@
   margin-top: 0.3125rem;
 }
 .route-card .route-main .route-times .time-item .time-label[data-v-89cfe9c9] {
-  color: #9c9b9b;
+  color: #bbbaba;
   font-size: 0.8125rem;
 }
 .route-card .route-main .route-times .time-item .time-value[data-v-89cfe9c9] {
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(0, 0, 0, 0.7);
   font-size: 0.8125rem;
   margin-left: 0.3125rem;
 }
@@ -1022,12 +1021,11 @@
   position: absolute;
   top: -0.78125rem;
   right: 0.15625rem;
-  background: linear-gradient(45deg, #ff4d4f, #ff7875);
+  background-color: #fa5151;
   padding: 0.1875rem 0.5rem;
   border-radius: 0.625rem;
   display: flex;
   align-items: center;
-  box-shadow: 0 0.0625rem 0.25rem rgba(255, 77, 79, 0.3);
   z-index: 3;
   animation: pulse-89cfe9c9 2s infinite;
 }
@@ -1038,7 +1036,7 @@
   right: 0.75rem;
   border-left: 0.25rem solid transparent;
   border-right: 0.25rem solid transparent;
-  border-top: 0.25rem solid #ff7875;
+  border-top: 0.25rem solid #fa5151;
 }
 .route-card .hot-tag .hot-icon[data-v-89cfe9c9] {
   width: 1rem;
@@ -1102,7 +1100,7 @@
 }
 .capacity-progress .progress-bar .progress-fill[data-v-89cfe9c9] {
   height: 100%;
-  background: linear-gradient(90deg, #ffb200 0%, #ffce5e 100%);
+  background: linear-gradient(90deg, #ff8202 0%, #ffce5e 100%);
   border-radius: 0.46875rem;
   position: relative;
   transition: width 0.3s ease;

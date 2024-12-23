@@ -4,7 +4,7 @@ $theme-color-light: #ffce5e;
 $theme-color-dark: #ff9c2d;
 
 // 渐变色
-$theme-gradient: linear-gradient(90deg, $theme-color 0%, $theme-color-light 100%);
+$theme-gradient: linear-gradient(90deg, #ff8202 0%, $theme-color-light 100%);
 $theme-gradient-vertical: linear-gradient(180deg, #ffdfc8 20%, #ffffff 100%);
 
 // 辅助色

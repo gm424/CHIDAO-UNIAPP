@@ -127,14 +127,14 @@
                     <text class="label">海关编码: </text>
                     <text class="value">{{ item.hsCode }}</text>
                   </view>
-                  <view class="detail-item">
+                  <!-- <view class="detail-item">
                     <text class="label">申报单价: </text>
                     <text class="value price">${{ item.declareUnitPrice }}</text>
                   </view>
                   <view class="detail-item">
                     <text class="label">申报总价: </text>
                     <text class="value price">${{ item.totalDeclarePrice }}</text>
-                  </view>
+                  </view> -->
                 </view>
               </view>
             </view>

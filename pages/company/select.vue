@@ -79,6 +79,7 @@ onMounted(() => {
 </script>
 
 <style lang="scss" scoped>
+@import '@/styles/theme.scss';
 .container {
   min-height: 100vh;
   background: #f5f6fa;
@@ -86,9 +87,10 @@ onMounted(() => {
 }
 
 .header {
-  padding: 40rpx 0;
+  padding: 120rpx 0 40rpx 0;
   text-align: center;
-
+  display: flex;
+  flex-direction: column;
   .title {
     font-size: 40rpx;
     font-weight: bold;
@@ -113,8 +115,8 @@ onMounted(() => {
     transition: all 0.3s;
 
     &.active {
-      border: 2rpx solid #2b5cff;
-      background: rgba(43, 92, 255, 0.05);
+      border: 2rpx solid $theme-color;
+      background: rgba(255, 216, 43, 0.05);
     }
 
     .company-info {
@@ -148,8 +150,8 @@ onMounted(() => {
         }
 
         &.customer {
-          background: rgba(43, 92, 255, 0.1);
-          color: #2b5cff;
+          background: rgba(255, 216, 43, 0.1);
+          color: $theme-color;
         }
 
         &.supplier {
@@ -175,13 +177,14 @@ onMounted(() => {
 .confirm-btn {
   position: fixed;
   left: 40rpx;
+  width: 90%;
   right: 40rpx;
   bottom: 40rpx;
   height: 88rpx;
   line-height: 88rpx;
-  background: #2b5cff;
+  background: $theme-color;
   color: #fff;
-  border-radius: 44rpx;
+  // border-radius: 44rpx;
   font-size: 32rpx;
   text-align: center;
 

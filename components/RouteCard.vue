@@ -60,7 +60,13 @@
         <view class="time-item">
           <view class="time-label">剩余容量: </view>
           <view class="time-value"
-            >{{ route.containers[0] ? route.containers[0].containerVolume - route.containers[0].volume : 0 }}CBM</view
+            >{{
+              (route.containers[0]
+                ? route.containers[0].containerVolume - route.containers[0].volume
+                : 0
+              ).toLocaleString()
+            }}
+            CBM</view
           >
         </view>
       </view>
@@ -287,7 +293,7 @@ onMounted(() => {
     align-items: center;
 
     .number {
-      font-weight: bold;
+      // font-weight: bold;
       font-size: 26rpx;
     }
     .tags-container {
@@ -337,13 +343,13 @@ onMounted(() => {
         gap: 8rpx;
 
         .city {
-          font-size: 18px;
+          font-size: 36rpx;
           font-weight: bold;
         }
 
         .country-code {
-          font-size: 24rpx;
-          color: #666;
+          font-size: 32rpx;
+          color: #b1b0b0;
         }
       }
 
@@ -378,12 +384,12 @@ onMounted(() => {
 
         margin-top: 10rpx;
         .time-label {
-          color: #9c9b9b;
+          color: #bbbaba;
           font-size: 26rpx;
         }
 
         .time-value {
-          color: rgba(0, 0, 0, 0.6);
+          color: rgba(0, 0, 0, 0.7);
           font-size: 26rpx;
           margin-left: 10rpx;
         }
@@ -424,12 +430,13 @@ onMounted(() => {
     position: absolute;
     top: -25rpx;
     right: 5rpx;
-    background: linear-gradient(45deg, #ff4d4f, #ff7875);
+    background-color: #fa5151;
+    // background: linear-gradient(45deg, #ff4d4f, #ff7875);
     padding: 6rpx 16rpx;
     border-radius: 20rpx;
     display: flex;
     align-items: center;
-    box-shadow: 0 2rpx 8rpx rgba(255, 77, 79, 0.3);
+    // box-shadow: 0 2rpx 8rpx rgba(255, 77, 79, 0.3);
     z-index: 3;
     animation: pulse 2s infinite;
 
@@ -440,7 +447,7 @@ onMounted(() => {
       right: 24rpx;
       border-left: 8rpx solid transparent;
       border-right: 8rpx solid transparent;
-      border-top: 8rpx solid #ff7875;
+      border-top: 8rpx solid #fa5151;
     }
 
     .hot-icon {

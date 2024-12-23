@@ -1,4 +1,4 @@
-import { DEVELOP_HOST, PRODUCT_HOST, isDevelopModel } from '@/config/index.js';
+import { DEVELOP_HOST, PRODUCT_HOST, isDevelopModel } from '@/config/index.js'
 
 /**
  * 资源站(小程序图标等用到的 host)
@@ -8,9 +8,8 @@ import { DEVELOP_HOST, PRODUCT_HOST, isDevelopModel } from '@/config/index.js';
 // const source_host = IMG_URL;
 
 // API 使用
-const API_HOST = isDevelopModel ? DEVELOP_HOST : PRODUCT_HOST;
-const API_HOST_TRACK = isDevelopModel ? 'http://47.119.132.63:8091' : 'http://erp.api.jiwangyun.com';
-
+const API_HOST = isDevelopModel ? DEVELOP_HOST : PRODUCT_HOST
+const API_HOST_TRACK = isDevelopModel ? 'http://47.119.132.63:8091' : 'http://erp.api.jiwangyun.com'
 const Api = {
   // 是否启用debug
   isDebug: isDevelopModel,
@@ -408,6 +407,6 @@ const Api = {
    */
 
   get_logistics_tracking: 'https://erp.api.jiwangyun.com/tms/tracking/getTracking',
-};
+}
 
-export default Api;
+export default Api

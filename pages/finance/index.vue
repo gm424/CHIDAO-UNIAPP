@@ -385,7 +385,7 @@ const functionList = ref([
     type: 'loan',
     count: '12笔',
     bgColor: 'rgba(43, 92, 255, 0.1)',
-    iconColor: '#2b5cff',
+    iconColor: '#ffb715',
   },
   {
     title: '我的采购',
@@ -476,13 +476,13 @@ onMounted(() => {
 
 .promo-section {
   .banner {
-    background: linear-gradient(135deg, #2b5cff, #4c8dff);
+    background: linear-gradient(135deg, #ffb715, #f7c248);
     border-radius: 20rpx;
     padding: 40rpx;
     display: flex;
     align-items: center;
     margin-bottom: 40rpx;
-    box-shadow: 0 4rpx 24rpx rgba(43, 92, 255, 0.15);
+    box-shadow: 0 4rpx 24rpx rgba(255, 198, 43, 0.15);
     transform: translateY(0);
     transition: transform 0.3s ease;
 
@@ -580,7 +580,7 @@ onMounted(() => {
       }
 
       .feature-icon {
-        background: rgba(22, 119, 255, 0.1);
+        background: rgba(255, 193, 22, 0.1);
         width: 80rpx;
         height: 80rpx;
         border-radius: 50%;
@@ -669,7 +669,7 @@ onMounted(() => {
     padding: 20rpx;
 
     .apply-btn {
-      background: linear-gradient(135deg, #2b5cff, #4c8dff);
+      background: linear-gradient(135deg, #ffb715, #f3bf47);
       color: #fff;
       border-radius: 40rpx;
       padding: 24rpx 40rpx;
@@ -679,7 +679,7 @@ onMounted(() => {
       justify-content: center;
       gap: 12rpx;
       width: 90%;
-      box-shadow: 0 6rpx 20rpx rgba(43, 92, 255, 0.2);
+      box-shadow: 0 6rpx 20rpx rgba(255, 206, 43, 0.2);
       transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       position: relative;
       overflow: hidden;
@@ -873,7 +873,7 @@ onMounted(() => {
         width: 64rpx;
         height: 64rpx;
         border-radius: 40rpx;
-        background: rgba(43, 92, 255, 0.1);
+        background: rgba(255, 216, 43, 0.1);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -954,9 +954,9 @@ onMounted(() => {
 
         .more {
           font-size: 24rpx;
-          color: #2b5cff;
+          color: #ffb715;
           padding: 8rpx 16rpx;
-          background: rgba(43, 92, 255, 0.1);
+          background: rgba(255, 206, 43, 0.1);
           border-radius: 6rpx;
         }
       }
@@ -1021,7 +1021,7 @@ onMounted(() => {
 
               &.amount {
                 font-size: 32rpx;
-                color: #2b5cff;
+                color: #ffb715;
                 font-weight: 500;
               }
             }
@@ -1063,8 +1063,8 @@ onMounted(() => {
 .loading-circle {
   width: 40rpx;
   height: 40rpx;
-  border: 3rpx solid rgba(43, 92, 255, 0.2);
-  border-top-color: #2b5cff;
+  border: 3rpx solid rgba(255, 216, 43, 0.2);
+  border-top-color: #ffb715;
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
@@ -1148,7 +1148,7 @@ onMounted(() => {
           .loading-circle {
             width: 100%;
             height: 100%;
-            border: 3rpx solid #2b5cff;
+            border: 3rpx solid #ffb715;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -1157,7 +1157,7 @@ onMounted(() => {
             .loading-icon {
               width: 32rpx;
               height: 32rpx;
-              border: 3rpx solid #2b5cff;
+              border: 3rpx solid #ffb715;
               border-top-color: transparent;
               border-radius: 50%;
               animation: loading 1s linear infinite;
@@ -1189,13 +1189,13 @@ onMounted(() => {
 
         &.completed {
           .step-icon {
-            color: #2b5cff;
+            color: #ffb715;
           }
         }
 
         &.active {
           .step-title {
-            color: #2b5cff;
+            color: #ffb715;
           }
         }
       }
@@ -1213,7 +1213,7 @@ onMounted(() => {
           top: 0;
           width: 100%;
           height: 100%;
-          background: #2b5cff;
+          background: #ffb715;
         }
 
         .line-wait {
@@ -1277,12 +1277,12 @@ onMounted(() => {
       display: inline-flex;
       align-items: center;
       padding: 16rpx 40rpx;
-      background: rgba(43, 92, 255, 0.1);
+      background: rgba(255, 206, 43, 0.1);
       border-radius: 40rpx;
 
       text {
         font-size: 28rpx;
-        color: #2b5cff;
+        color: #ffb715;
         margin-left: 8rpx;
       }
     }

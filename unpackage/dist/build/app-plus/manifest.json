@@ -7,8 +7,8 @@
   "id": "__UNI__B00B6F2",
   "name": "赤道数智链",
   "version": {
-    "name": "1.0.0",
-    "code": 101
+    "name": "1.0.2",
+    "code": 103
   },
   "description": "",
   "developer": {
@@ -148,26 +148,26 @@
         {
           "pagePath": "pages/index/index",
           "text": "首页",
-          "iconPath": "/./static/icons/home.png",
-          "selectedIconPath": "/./static/icons/home-active.png"
+          "iconPath": "/static/icons/home.png",
+          "selectedIconPath": "/static/icons/home-active.png"
         },
         {
           "pagePath": "pages/finance/index",
           "text": "金融",
-          "iconPath": "/./static/icons/fms.png",
-          "selectedIconPath": "/./static/icons/fms-active.png"
+          "iconPath": "/static/icons/fms.png",
+          "selectedIconPath": "/static/icons/fms-active.png"
         },
         {
           "pagePath": "pages/data/index",
           "text": "数据",
-          "iconPath": "/./static/icons/data.png",
-          "selectedIconPath": "/./static/icons/data-active.png"
+          "iconPath": "/static/icons/data.png",
+          "selectedIconPath": "/static/icons/data-active.png"
         },
         {
           "pagePath": "pages/profile/index",
           "text": "我的",
-          "iconPath": "/./static/icons/me.png",
-          "selectedIconPath": "/./static/icons/me-active.png"
+          "iconPath": "/static/icons/me.png",
+          "selectedIconPath": "/static/icons/me-active.png"
         }
       ],
       "selectedIndex": 0,
