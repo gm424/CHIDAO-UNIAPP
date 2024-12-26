@@ -3,7 +3,7 @@
     <!-- 路线基本信息卡片 -->
     <view class="route-card">
       <view class="route-number">
-        <text class="channel-isoCode">班次号: {{ route.code }}</text>
+        <text class="channel-isoCode"> {{ route.code }}</text>
         <text class="channel-tag">{{ route.channel_dictText }}</text>
       </view>
       <view class="route-locations">
@@ -30,7 +30,11 @@
       <view class="section-title">
         <view class="title"></view>
         <view class="value"
-          >{{ route.containers[0] ? route.containers[0].containerVolume - route.containers[0].volume : 0
+          >{{
+            route.containerContext.height *
+            route.containerContext.width *
+            route.containerContext.maxWeight *
+            route.remainingVolumeRate
           }}<text class="unit">CBM</text></view
         >
       </view>
@@ -86,13 +90,7 @@
           </swiper>
         </view>
 
-        <view class="percent"
-          >{{
-            ((route.containers[0] ? route.containers[0].containerVolume - route.containers[0].volume : 0) /
-              route.containers[0].containerVolume) *
-            100
-          }}%</view
-        >
+        <view class="percent">{{ (1 - route.remainingVolumeRate) * 100 }}%</view>
       </view>
     </view>
 
@@ -131,7 +129,7 @@
       <view class="section-title">附加费说明</view>
       <view class="price-list">
         <view class="price-item" v-for="(item, index) in priceInfo" :key="index">
-          <text class="label">{{ item.feeItem_dictText }}</text>
+          <text class="label">{{ item.feeItem_dictText }}({{ item.chargeCondition }})</text>
           <text class="value">¥{{ item.unitPrice }}/KG</text>
         </view>
       </view>
@@ -355,11 +353,7 @@ onMounted(() => {
   route.value = uni.getStorageSync('routeInfo')
   console.log('routeInfo', route.value)
 
-  percent.value = Math.round(
-    ((route.value.containers[0] ? route.value.containers[0].containerVolume - route.value.containers[0].volume : 0) /
-      route.value.containers[0].containerVolume) *
-      10
-  )
+  percent.value = Math.round((1 - route.value.remainingVolumeRate) * 10)
 
   if (!route.value.id) {
     // 获取路线详情

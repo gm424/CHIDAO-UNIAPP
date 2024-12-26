@@ -7,8 +7,8 @@
   "id": "__UNI__B00B6F2",
   "name": "赤道数智链",
   "version": {
-    "name": "1.0.2",
-    "code": 103
+    "name": "1.0.4",
+    "code": 108
   },
   "description": "",
   "developer": {
@@ -37,6 +37,7 @@
       "id": "1",
       "kernel": "WKWebview"
     },
+    "package": "com.chidaogroup.digitalChain",
     "usingComponents": true,
     "nvueStyleCompiler": "uni-app",
     "compilerVersion": 3,
@@ -90,7 +91,12 @@
           "<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>",
           "<uses-feature android:name=\"android.hardware.camera\"/>",
           "<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>"
-        ]
+        ],
+        "abiFilters": [
+          "armeabi-v7a",
+          "arm64-v8a"
+        ],
+        "targetSdkVersion": 30
       },
       "apple": {
         "dSYMs": false

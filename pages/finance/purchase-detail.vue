@@ -22,7 +22,7 @@
       <view v-for="(order, index) in orders" :key="index" class="order-card" @tap="viewOrderDetail(order)">
         <view class="order-header">
           <view class="left">
-            <text class="order-no">委采编号{{ order.entrustNo }}</text>
+            <text class="order-no">{{ order.entrustNo }}</text>
           </view>
           <text class="order-status" :class="order.status_dictText">{{ order.status_dictText }}</text>
         </view>

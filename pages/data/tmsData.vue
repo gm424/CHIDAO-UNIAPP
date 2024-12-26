@@ -1,5 +1,5 @@
 <template>
-  <view>
+  <view style="position: absolute; top: 20vh; width: 100%; padding-bottom: 100rpx">
     <view class="card">
       <view class="title">物流单数量</view>
       <view class="header">
@@ -36,32 +36,32 @@
         </view>
       </view>
     </view>
-
-    <view class="stat-container">
-      <view class="title">
-        <image
-          src="http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/大数据科技数据流转_1734521664475.png"
-          style="width: 40rpx; height: 40rpx; margin-right: 10rpx"
-        ></image>
-        <view>渠道数据</view>
-      </view>
-      <view class="stat-grid">
-        <view
-          v-for="(item, index) in statCards"
-          :key="index"
-          class="stat-card animate-fadeIn"
-          :style="{ animationDelay: `${index * 0.1}s` }"
-        >
-          <view class="card-icon">
-            <u-icon :name="item.icon" size="18" color="#ffb813"></u-icon>
-            <text class="card-title">{{ item.title }}</text>
-          </view>
-          <view class="card-content">
-            <view class="card-value">
-              <text class="number">{{ item.value.toLocaleString() }}</text>
-              <!-- <text class="unit">{{ item.unit }}</text> -->
+    <view style="background-color: #f5f5f5; padding-bottom: 40rpx">
+      <view class="stat-container">
+        <view class="title">
+          <image
+            src="http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/大数据科技数据流转_1734521664475.png"
+            style="width: 40rpx; height: 40rpx; margin-right: 10rpx"
+          ></image>
+          <view>渠道数据</view>
+        </view>
+        <view class="stat-grid">
+          <view
+            v-for="(item, index) in statCards"
+            :key="index"
+            class="stat-card animate-fadeIn"
+            :style="{ animationDelay: `${index * 0.1}s` }"
+          >
+            <view class="card-icon">
+              <u-icon :name="item.icon" size="18" color="#ffb813"></u-icon>
+              <text class="card-title">{{ item.title }}</text>
             </view>
-            <!-- <view class="card-compare">
+            <view class="card-content">
+              <view class="card-value">
+                <text class="number">{{ item.value.toLocaleString() }}</text>
+                <!-- <text class="unit">{{ item.unit }}</text> -->
+              </view>
+              <!-- <view class="card-compare">
               <text class="compare-item">
                 同比<image
                   :src="
@@ -77,115 +77,265 @@
               环比{{ item.monthOnMonth > 0 ? '+' : '' }}{{ item.monthOnMonth }}%
             </text>
             </view> -->
+            </view>
           </view>
         </view>
       </view>
-    </view>
 
-    <view class="chart-card">
-      <view class="title">
-        <image
-          src="http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/下降趋势_1734664718481.png"
-          style="width: 40rpx; height: 40rpx; margin-right: 10rpx"
-        ></image>
-        <view>物流单量趋势</view>
-      </view>
-      <view class="card-header">
-        <view class="switch-group">
-          <text class="switch-item" :class="{ active: chartType === 'total' }" @tap="switchChartType('total')"
-            >总单量</text
-          >
-          <text class="switch-item" :class="{ active: chartType === 'channel' }" @tap="switchChartType('channel')"
-            >渠道单量</text
-          >
+      <view class="chart-card">
+        <view class="title">
+          <image
+            src="http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/下降趋势_1734664718481.png"
+            style="width: 40rpx; height: 40rpx; margin-right: 10rpx"
+          ></image>
+          <view>物流单量趋势</view>
         </view>
-      </view>
-      <view class="chart-content">
-        <qiun-data-charts type="area" :opts="chartOpts" :chartData="currentChartData" />
-      </view>
-    </view>
-
-    <!-- 产品货值分布卡片 -->
-    <view class="chart-card">
-      <view class="title">
-        <image
-          src="http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/查库存_1734664689455.png"
-          style="width: 40rpx; height: 40rpx; margin-right: 10rpx"
-        ></image>
-        <view>物流产品分析</view>
-      </view>
-      <view class="card-header">
-        <view class="switch-group">
-          <text
-            class="switch-item"
-            :class="{ active: distributionType === 'value' }"
-            @tap="switchDistributionType('value')"
-            >货值分布</text
-          >
-          <text
-            class="switch-item"
-            :class="{ active: distributionType === 'type' }"
-            @tap="switchDistributionType('type')"
-            >类型分布</text
-          >
+        <view class="card-header">
+          <view class="switch-group">
+            <text class="switch-item" :class="{ active: chartType === 'total' }" @tap="switchChartType('total')"
+              >总单量</text
+            >
+            <text class="switch-item" :class="{ active: chartType === 'channel' }" @tap="switchChartType('channel')"
+              >渠道单量</text
+            >
+          </view>
         </view>
-      </view>
-      <view class="chart-content">
-        <view class="chart-wrapper">
-          <qiun-data-charts type="ring" :opts="valueDistOpts" :chartData="currentDistData" />
-        </view>
-      </view>
-    </view>
-
-    <!-- 排行榜卡片 -->
-    <view class="chart-card">
-      <view class="title">
-        <image
-          src="http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/排行榜_1734664705135.png"
-          style="width: 40rpx; height: 40rpx; margin-right: 10rpx"
-        ></image>
-        <view>排行榜</view>
-        <text class="sub-title">TOP 10</text>
-      </view>
-      <view class="card-header">
-        <view class="tab-group">
-          <text class="tab-item" :class="{ active: rankType === 'country' }" @tap="switchRankType('country')"
-            >国家分布</text
-          >
-          <text class="tab-item" :class="{ active: rankType === 'product' }" @tap="switchRankType('product')"
-            >产品排行</text
-          >
+        <view class="chart-content">
+          <qiun-data-charts type="area" :opts="chartOpts" :chartData="currentChartData" />
         </view>
       </view>
 
-      <view class="rank-list">
-        <!-- 表头 -->
-        <view class="rank-header">
-          <text class="col rank">排名</text>
-          <text class="col name">{{ rankType === 'country' ? '收货国家' : '品名' }}</text>
-          <text class="col count1">{{ rankType === 'country' ? '物流单量' : '产品货值' }}</text>
+      <!-- 产品货值分布卡片 -->
+      <view class="chart-card">
+        <view class="title">
+          <image
+            src="http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/查库存_1734664689455.png"
+            style="width: 40rpx; height: 40rpx; margin-right: 10rpx"
+          ></image>
+          <view>物流产品分析</view>
+        </view>
+        <view class="card-header">
+          <view class="switch-group">
+            <text
+              class="switch-item"
+              :class="{ active: distributionType === 'value' }"
+              @tap="switchDistributionType('value')"
+              >货值分布</text
+            >
+            <text
+              class="switch-item"
+              :class="{ active: distributionType === 'type' }"
+              @tap="switchDistributionType('type')"
+              >类型分布</text
+            >
+          </view>
+        </view>
+        <view class="chart-content">
+          <view class="chart-wrapper">
+            <qiun-data-charts type="ring" :opts="valueDistOpts" :chartData="currentDistData" />
+          </view>
+        </view>
+      </view>
 
-          <text class="col percent">占比</text>
+      <!-- 排行榜卡片 -->
+      <view class="chart-card">
+        <view class="title">
+          <image
+            src="http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/排行榜_1734664705135.png"
+            style="width: 40rpx; height: 40rpx; margin-right: 10rpx"
+          ></image>
+          <view>排行榜</view>
+          <text class="sub-title">TOP 10</text>
+        </view>
+        <view class="card-header">
+          <view class="tab-group">
+            <text class="tab-item" :class="{ active: rankType === 'country' }" @tap="switchRankType('country')"
+              >国家分布</text
+            >
+            <text class="tab-item" :class="{ active: rankType === 'product' }" @tap="switchRankType('product')"
+              >产品排行</text
+            >
+          </view>
         </view>
 
-        <!-- 列表内容 -->
-        <view class="rank-item" v-for="(item, index) in currentRankList" :key="index">
-          <text class="col rank">
-            <view class="rank-num" :class="{ 'top-3': index < 3 }">
-              <text>{{ index + 1 }}</text>
-              <image v-if="index < 3" :src="imageList[index]" style="width: 70rpx; height: 40rpx"></image>
+        <view class="rank-list">
+          <!-- 表头 -->
+          <view class="rank-header">
+            <text class="col rank">排名</text>
+            <text class="col name">{{ rankType === 'country' ? '收货国家' : '品名' }}</text>
+            <text class="col count1">{{ rankType === 'country' ? '物流单量' : '产品货值' }}</text>
+
+            <text class="col percent">占比</text>
+          </view>
+
+          <!-- 列表内容 -->
+          <view class="rank-item" v-for="(item, index) in currentRankList" :key="index">
+            <text class="col rank">
+              <view class="rank-num" :class="{ 'top-3': index < 3 }">
+                <text>{{ index + 1 }}</text>
+                <image v-if="index < 3" :src="imageList[index]" style="width: 70rpx; height: 40rpx"></image>
+              </view>
+            </text>
+            <text class="col name">{{ item.name }}</text>
+            <text class="col count">{{ item.count }}</text>
+
+            <text class="col percent">
+              <text class="percent-value">{{ item.percent }}</text>
+              <text class="percent-symbol">%</text>
+            </text>
+          </view>
+        </view>
+      </view>
+      <view class="stat-container">
+        <view class="title">
+          <image
+            src="http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/大数据科技数据流转_1734521664475.png"
+            style="width: 40rpx; height: 40rpx; margin-right: 10rpx"
+          ></image>
+          <view>渠道数据</view>
+        </view>
+        <view class="stat-grid">
+          <view
+            v-for="(item, index) in statCards"
+            :key="index"
+            class="stat-card animate-fadeIn"
+            :style="{ animationDelay: `${index * 0.1}s` }"
+          >
+            <view class="card-icon">
+              <u-icon :name="item.icon" size="18" color="#ffb813"></u-icon>
+              <text class="card-title">{{ item.title }}</text>
             </view>
-          </text>
-          <text class="col name">{{ item.name }}</text>
-          <text class="col count">{{ item.count }}</text>
-
-          <text class="col percent">
-            <text class="percent-value">{{ item.percent }}</text>
-            <text class="percent-symbol">%</text>
-          </text>
+            <view class="card-content">
+              <view class="card-value">
+                <text class="number">{{ item.value.toLocaleString() }}</text>
+                <!-- <text class="unit">{{ item.unit }}</text> -->
+              </view>
+              <!-- <view class="card-compare">
+              <text class="compare-item">
+                同比<image
+                  :src="
+                    item.yearOnYear > 0
+                      ? 'http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/上升_1734596204748.png'
+                      : 'http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/上升备份_1734596173738.png'
+                  "
+                  style="width: 28rpx; height: 28rpx"
+                ></image
+                ><text style="font-weight: 600">{{ item.yearOnYear }}%</text>
+              </text>
+              <text class="compare-item" :class="{ up: item.monthOnMonth > 0, down: item.monthOnMonth < 0 }">
+              环比{{ item.monthOnMonth > 0 ? '+' : '' }}{{ item.monthOnMonth }}%
+            </text>
+            </view> -->
+            </view>
+          </view>
         </view>
       </view>
-    </view>
+
+      <view class="chart-card">
+        <view class="title">
+          <image
+            src="http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/下降趋势_1734664718481.png"
+            style="width: 40rpx; height: 40rpx; margin-right: 10rpx"
+          ></image>
+          <view>物流单量趋势</view>
+        </view>
+        <view class="card-header">
+          <view class="switch-group">
+            <text class="switch-item" :class="{ active: chartType === 'total' }" @tap="switchChartType('total')"
+              >总单量</text
+            >
+            <text class="switch-item" :class="{ active: chartType === 'channel' }" @tap="switchChartType('channel')"
+              >渠道单量</text
+            >
+          </view>
+        </view>
+        <view class="chart-content">
+          <qiun-data-charts type="area" :opts="chartOpts" :chartData="currentChartData" />
+        </view>
+      </view>
+
+      <!-- 产品货值分布卡片 -->
+      <view class="chart-card">
+        <view class="title">
+          <image
+            src="http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/查库存_1734664689455.png"
+            style="width: 40rpx; height: 40rpx; margin-right: 10rpx"
+          ></image>
+          <view>物流产品分析</view>
+        </view>
+        <view class="card-header">
+          <view class="switch-group">
+            <text
+              class="switch-item"
+              :class="{ active: distributionType === 'value' }"
+              @tap="switchDistributionType('value')"
+              >货值分布</text
+            >
+            <text
+              class="switch-item"
+              :class="{ active: distributionType === 'type' }"
+              @tap="switchDistributionType('type')"
+              >类型分布</text
+            >
+          </view>
+        </view>
+        <view class="chart-content">
+          <view class="chart-wrapper">
+            <qiun-data-charts type="ring" :opts="valueDistOpts" :chartData="currentDistData" />
+          </view>
+        </view>
+      </view>
+
+      <!-- 排行榜卡片 -->
+      <view class="chart-card">
+        <view class="title">
+          <image
+            src="http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/排行榜_1734664705135.png"
+            style="width: 40rpx; height: 40rpx; margin-right: 10rpx"
+          ></image>
+          <view>排行榜</view>
+          <text class="sub-title">TOP 10</text>
+        </view>
+        <view class="card-header">
+          <view class="tab-group">
+            <text class="tab-item" :class="{ active: rankType === 'country' }" @tap="switchRankType('country')"
+              >国家分布</text
+            >
+            <text class="tab-item" :class="{ active: rankType === 'product' }" @tap="switchRankType('product')"
+              >产品排行</text
+            >
+          </view>
+        </view>
+
+        <view class="rank-list">
+          <!-- 表头 -->
+          <view class="rank-header">
+            <text class="col rank">排名</text>
+            <text class="col name">{{ rankType === 'country' ? '收货国家' : '品名' }}</text>
+            <text class="col count1">{{ rankType === 'country' ? '物流单量' : '产品货值' }}</text>
+
+            <text class="col percent">占比</text>
+          </view>
+
+          <!-- 列表内容 -->
+          <view class="rank-item" v-for="(item, index) in currentRankList" :key="index">
+            <text class="col rank">
+              <view class="rank-num" :class="{ 'top-3': index < 3 }">
+                <text>{{ index + 1 }}</text>
+                <image v-if="index < 3" :src="imageList[index]" style="width: 70rpx; height: 40rpx"></image>
+              </view>
+            </text>
+            <text class="col name">{{ item.name }}</text>
+            <text class="col count">{{ item.count }}</text>
+
+            <text class="col percent">
+              <text class="percent-value">{{ item.percent }}</text>
+              <text class="percent-symbol">%</text>
+            </text>
+          </view>
+        </view>
+      </view></view
+    >
   </view>
 </template>
 
@@ -193,7 +343,7 @@
 import { ref, computed, watch, onMounted } from 'vue'
 import { getAction } from '@/common/store/manage'
 import { onReady } from '@dcloudio/uni-app'
-
+import _ from 'lodash'
 const chartDataWms = ref({})
 // 图表类型切换
 const chartType = ref('total')
@@ -505,18 +655,21 @@ const loadTmsChannelChartData = () => {
 }
 
 const loadTmsTotalOrderData = () => {
-  getAction('/tms/statistics/transOrderStatisticsData', { dateRange: 'L30DS' }).then((res) => {
+  getAction('/tms/statistics/transOrderStatisticsData', { dateRange: 'TY' }).then((res) => {
     if (res.success) {
-      categories.value = res.result.map((item) => {
-        return item.dateStr
+      const grouped = _.groupBy(res.result, (item) => item.dateStr.slice(0, 7)) // 按年月分组
+
+      const result = Object.keys(grouped).map((month) => {
+        const totalOrderCount = _.sumBy(grouped[month], 'orderCount')
+
+        return { date: month, orderCount: totalOrderCount }
       })
+      categories.value = result.map((item) => item.date)
 
       seriesData.value = [
         {
           name: '总单量',
-          data: res.result.map((item) => {
-            return item.orderCount
-          }),
+          data: result.map((item) => item.orderCount),
         },
       ]
     }
@@ -533,8 +686,7 @@ onMounted(() => {
 .stat-container {
   background-color: #fff;
   width: 90%;
-  margin: 0rpx auto;
-  margin-top: 20vh;
+  margin: 20rpx auto;
   border-radius: 20rpx;
   padding: 20rpx;
   .title {
@@ -697,11 +849,11 @@ onMounted(() => {
   border-radius: 20rpx;
   width: 94%;
   margin: 0 auto;
-  position: absolute;
+  // position: absolute;
   padding: 1%;
-  top: 20vh;
-  left: 2%;
-  height: 25vh;
+  // top: 20vh;
+  // left: 2%;
+  min-height: 25vh;
   .title {
     color: #949191;
     padding: 20rpx 20rpx;

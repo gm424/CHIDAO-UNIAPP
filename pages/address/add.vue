@@ -175,7 +175,7 @@ const formData = ref({
   contactName: '', // 联系人
   contactPhone: '', // 联系电话
   country: 'CN', // 国家代码
-  country_dictText: '中国', // 国家名称
+  country_dictText: '', // 国家名称
   province: '', // 省份
   city: '', // 城市
   district: '', // 区县
@@ -252,6 +252,10 @@ const handleSubmit = () => {
       setTimeout(() => {
         uni.navigateBack()
       }, 1500)
+    } else {
+      uni.showToast({
+        title: res.message,
+      })
     }
   })
 }

@@ -233,7 +233,7 @@
             :style="{ animationDelay: `${index * 0.1}s` }"
           >
             <view class="card-header">
-              <text class="order-no">委采编号{{ item.entrustNo }}</text>
+              <text class="order-no">{{ item.entrustNo }}</text>
               <text class="status" :class="item.status">￥{{ item.credit ? item.credit : 0 }}</text>
             </view>
             <view class="card-content">

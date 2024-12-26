@@ -17911,7 +17911,7 @@ ${i3}
         // 联系电话
         country: "CN",
         // 国家代码
-        country_dictText: "中国",
+        country_dictText: "",
         // 国家名称
         province: "",
         // 省份
@@ -33524,7 +33524,7 @@ ${i3}
         // 联系电话
         country: "CN",
         // 国家代码
-        country_dictText: "中国",
+        country_dictText: "",
         // 国家名称
         province: "",
         // 省份

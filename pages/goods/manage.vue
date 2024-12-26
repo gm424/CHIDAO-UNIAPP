@@ -45,8 +45,13 @@
                 <view
                   >$<text style="color: #fa5252; font-size: 38rpx">{{ item.price }}</text></view
                 >
-                <!-- <u-icon name="edit-pen" size="20" color="#ffc848" @click="editGoods(item)"></u-icon>
-                <u-icon name="trash" size="20" color="#ff4d4f" @click="deleteGoods(item)"></u-icon> -->
+                <!-- <image
+                  src="http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/编辑_1735206337868.png"
+                  style="width: 30rpx; height: 30rpx; margin-right: 10rpx"
+                  @click="editGoods(item)"
+                ></image> -->
+
+                <!-- <u-icon name="trash" size="20" color="#ff4d4f" @click="deleteGoods(item)"></u-icon> -->
               </view>
             </view>
 
@@ -256,7 +261,7 @@ onShow(() => {
     border-radius: 30rpx;
     padding: 24rpx;
     margin-top: 25rpx;
-    box-shadow: 0 2rpx 12rpx rgba(0, 0, 0, 0.09);
+    // box-shadow: 0 2rpx 12rpx rgba(0, 0, 0, 0.09);
     position: relative;
     z-index: 1;
     height: 250rpx;
@@ -294,8 +299,8 @@ onShow(() => {
 
       .goods-actions {
         display: flex;
-        gap: 24rpx;
-        align-items: flex-start;
+        flex-direction: column;
+        font-size: 30rpx;
       }
     }
 
@@ -348,7 +353,8 @@ onShow(() => {
   align-items: center;
   gap: 12rpx;
   box-shadow: 0 4rpx 16rpx rgba(22, 119, 255, 0.2);
-
+  width: 80%;
+  justify-content: center;
   text {
     font-size: 28rpx;
   }

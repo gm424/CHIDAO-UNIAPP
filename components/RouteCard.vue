@@ -5,9 +5,9 @@
     </view>
 
     <view class="route-number">
-      <text class="number"
-        >班次号 : {{ route.code ? (route.code.length > 15 ? route.code.slice(0, 15) + '...' : route.code) : '' }}</text
-      >
+      <text class="number">{{
+        route.code ? (route.code.length > 15 ? route.code.slice(0, 15) + '...' : route.code) : ''
+      }}</text>
       <view class="tags-container">
         <view class="channel-tag">
           <text>{{ route.channel_dictText }}</text>
@@ -61,10 +61,10 @@
           <view class="time-label">剩余容量: </view>
           <view class="time-value"
             >{{
-              (route.containers[0]
-                ? route.containers[0].containerVolume - route.containers[0].volume
-                : 0
-              ).toLocaleString()
+              route.containerContext.height *
+              route.containerContext.width *
+              route.containerContext.maxWeight *
+              route.remainingVolumeRate
             }}
             CBM</view
           >
@@ -77,12 +77,7 @@
             <view
               class="progress-fill"
               :style="{
-                width: `${
-                  ((route.containers[0] ? route.containers[0].containerVolume - route.containers[0].volume : 0) /
-                  route.containers[0]
-                    ? route.containers[0].containerVolume
-                    : 1) * 100
-                }%`,
+                width: `${(1 - route.remainingVolumeRate) * 100}%`,
               }"
             >
               <view class="stripes"></view>
@@ -91,23 +86,11 @@
           <view
             class="progress-marker"
             :style="{
-              left: `${
-                ((route.containers[0] ? route.containers[0].containerVolume - route.containers[0].volume : 0) /
-                route.containers[0]
-                  ? route.containers[0].containerVolume
-                  : 1) * 100
-              }%`,
+              left: `${(1 - route.remainingVolumeRate) * 100}%`,
             }"
           >
             <view class="marker-arrow"></view>
-            <text class="marker-text"
-              >{{
-                ((route.containers[0] ? route.containers[0].containerVolume - route.containers[0].volume : 0) /
-                route.containers[0]
-                  ? route.containers[0].containerVolume
-                  : 1) * 100
-              }}%</text
-            >
+            <text class="marker-text">{{ (1 - route.remainingVolumeRate) * 100 }}%</text>
           </view>
         </view>
       </view>
@@ -150,7 +133,7 @@ import { ref, onMounted, onUnmounted } from 'vue'
 
 // 定义 updateTimer
 const updateTimer = ref(null)
-
+const scrollIndex = ref(null)
 // 定义 props
 defineProps({
   route: {
@@ -228,7 +211,10 @@ const joinList = ref([
     time: '10分���前',
   },
 ])
-
+// 添加轮播切换事件处理
+const onSwiperChange = (e) => {
+  scrollIndex.value = e.detail.current
+}
 // 定时更新头像和数据
 const updateDynamicData = () => {
   const newUser = {

@@ -4,6 +4,7 @@
     "@fingerprintjs/fingerprintjs": "^4.5.1",
     "@qiun/ucharts": "^2.5.0-20230101",
     "echarts": "^5.5.1",
+    "lodash": "^4.17.21",
     "md5": "^2.3.0",
     "uview-plus": "^3.3.54"
   }

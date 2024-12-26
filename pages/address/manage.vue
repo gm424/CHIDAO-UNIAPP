@@ -1,6 +1,19 @@
 <template>
   <view class="container">
     <!-- 地址列表 -->
+    <!-- 状态筛选标签 -->
+    <scroll-view scroll-x class="filter-tabs">
+      <view
+        v-for="item in statusList"
+        :key="item.value"
+        class="tab-item"
+        :class="{ active: currentStatus === item.value }"
+        @tap="switchStatus(item.value)"
+      >
+        {{ item.label }}
+      </view>
+    </scroll-view>
+
     <view
       class="address-list"
       :refresher-enabled="true"
@@ -14,19 +27,11 @@
         :options="swipeOptions"
         @click="handleSwipeClick($event, address)"
       >
-        <view
-          class="address-card"
-          :class="{ 'default-address': address.isDefault === '1' }"
-          @tap="editAddress(address)"
-        >
+        <view class="address-card" :class="{ 'default-address': address.isDefault === '1' }">
           <view class="card-content">
             <view class="user-info">
               <text class="name">{{ address.contactName }}</text>
               <text class="phone">{{ address.contactPhone }}</text>
-              <view v-if="address.isDefault === '1'" class="default-tag">
-                <u-icon name="checkmark" color="#fff" size="12"></u-icon>
-                <text>默认</text>
-              </view>
             </view>
 
             <view class="address-info">
@@ -35,6 +40,13 @@
                 <text class="detail">{{ address.address }}</text>
               </view>
             </view>
+          </view>
+          <view style="padding: 0 20rpx">
+            <image
+              src="http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/编辑_1735206337868.png"
+              style="width: 30rpx; height: 30rpx; margin-right: 10rpx"
+              @tap="editAddress(address)"
+            ></image>
           </view>
         </view>
       </u-swipe-action-item>
@@ -64,13 +76,17 @@ import { ref, onMounted, onUnmounted } from 'vue'
 import { mockAddressList } from '@/utils/mock'
 import { onShow } from '@dcloudio/uni-app'
 import { getAction, deleteAction } from '@/common/store/manage'
+import { load } from '@fingerprintjs/fingerprintjs'
 // 地址列表数据
+// 状态列表
+const statusList = [
+  { label: '发件地址', value: '1' },
+  { label: '收货地址', value: '2' },
+]
+const currentStatus = ref('1')
 const addressList = ref([])
-const type = ref('')
+const loading = ref(false)
 onShow(() => {
-  const pages = getCurrentPages()
-  const page = pages[pages.length - 1]
-  type.value = page.$page.options.type || ''
   getAddressList()
 })
 
@@ -78,24 +94,12 @@ onShow(() => {
 onUnmounted(() => {
   uni.$off('saveAddress')
 })
+// 切换状态
+const switchStatus = (status) => {
+  currentStatus.value = status
 
-// 选择地址
-const selectAddress = (address) => {
-  // 缓存选中的地址
-  if (type.value === '1') {
-    uni.setStorageSync('shipAddress', JSON.stringify(address))
-  } else if (type.value === '2') {
-    uni.setStorageSync('receiveAddress', JSON.stringify(address))
-  }
-
-  // 触发选择事件
-  uni.$emit('selectAddress', {
-    type: type.value,
-    address,
-  })
-
-  // 返回上一页
-  uni.navigateBack()
+  addressList.value = []
+  getAddressList()
 }
 
 // 编辑地址
@@ -139,15 +143,17 @@ const addAddress = () => {
 
 //获取地址列表
 const getAddressList = () => {
+  loading.value = true
   getAction('/catalog/customerAddr/list', {
     pageNo: 1,
     pageSize: 9999,
-    type: type.value,
+    type: currentStatus.value,
     column: 'createTime',
     order: 'desc',
   }).then((res) => {
     if (res.success) {
       addressList.value = res.result.records
+      loading.value = false
       // 获取地址列表
       uni.$on('saveAddress', (address) => {
         const index = addressList.value.findIndex((item) => item.id === address.id)
@@ -160,6 +166,8 @@ const getAddressList = () => {
           addressList.value.push(address)
         }
       })
+    } else {
+      loading.value = false
     }
   })
 }
@@ -197,7 +205,7 @@ const handleSwipeClick = (e, address) => {
 }
 
 .address-list {
-  padding: 20rpx 30rpx;
+  padding: 100rpx 30rpx;
 }
 
 .address-card {
@@ -322,6 +330,39 @@ const handleSwipeClick = (e, address) => {
 
 .empty-state {
   padding-top: 200rpx;
+}
+
+.filter-tabs {
+  background-color: #fff;
+  white-space: nowrap;
+  position: fixed;
+  z-index: 99;
+  border-bottom: 1rpx solid #eee;
+  display: flex;
+  .tab-item {
+    display: inline-block;
+    padding: 20rpx 30rpx;
+    font-size: 28rpx;
+    color: #666;
+    position: relative;
+    width: 20%;
+    &.active {
+      color: $theme-color;
+      font-weight: 500;
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 12%;
+        bottom: 0;
+        // transform: translateX(-50%);
+        width: 120rpx;
+        height: 4rpx;
+        background: $theme-color;
+        border-radius: 2rpx;
+      }
+    }
+  }
 }
 :deep(.u-swipe-action-item__right__button) {
   display: block !important;

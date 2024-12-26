@@ -33,7 +33,11 @@
             </view>
           </view>
           <view style="padding: 0 20rpx">
-            <u-icon name="edit-pen-fill" color="#6a6a6a" size="22" @tap="editAddress(address)"></u-icon>
+            <image
+              src="http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/编辑_1735206337868.png"
+              style="width: 30rpx; height: 30rpx; margin-right: 10rpx"
+              @tap="editAddress(address)"
+            ></image>
           </view>
         </view>
       </u-swipe-action-item>

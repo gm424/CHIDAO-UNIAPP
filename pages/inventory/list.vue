@@ -47,7 +47,7 @@
             </div>
 
             <div class="en-name">批次编号：{{ item.batchNo }}</div>
-            <div class="en-name">委采编号{{ item.entrustNo }}</div>
+            <div class="en-name">委采编号：{{ item.entrustNo }}</div>
             <div class="en-name">良品数量：{{ item.usableCount }}Pcs</div>
           </view>
           <!-- <view class="stock-info">
@@ -119,7 +119,7 @@ const getInventoryList = async (type = 'more') => {
       pageSize: pageSize.value,
       column: 'createTime',
       order: 'desc',
-      name: searchKeyword.value ? '*' + searchKeyword.value + '*' : '',
+      name: searchKeyword.value,
     })
 
     if (res.success) {

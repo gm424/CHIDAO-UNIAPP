@@ -1,213 +1,188 @@
 <template>
-  <view>
+  <view style="position: absolute; top: 20vh; width: 100%; padding-bottom: 100rpx">
     <view class="card">
       <view class="title">
         <view style="flex: 1; margin-left: 30rpx">库存总数</view>
         <view style="flex: 1; margin-left: 30rpx">库存总货值</view>
       </view>
       <view class="header">
-        <view class="header-order">9999</view>
-        <view class="header-order">9999</view>
+        <view class="header-order">{{ formatNumber(usableTotal) }}</view>
+        <view class="header-order">{{ formatNumber(valueTotal) }}</view>
       </view>
       <view class="content">
         <view class="content-item" style="border-right: 1px #e2e2e2 solid">
           <view class="content-title">在途数量(件)</view>
-          <view class="content-count">1.23万</view>
+          <view class="content-count">{{ formatNumber(transInTotal) }}</view>
         </view>
         <view class="content-item" style="border-right: 1px #f2f2f2 solid">
           <view class="content-title">锁定数量(件)</view>
-          <view class="content-count">0.82万</view>
+          <view class="content-count">{{ formatNumber(lockTotal) }}</view>
         </view>
         <view class="content-item">
           <view class="content-title">离仓数量(件)</view>
-          <view class="content-count">120.01万</view>
+          <view class="content-count">{{ formatNumber(outboundTotal) }}</view>
         </view>
       </view>
     </view>
 
-    <!-- <view class="stat-container">
-      <view class="title">
-        <image
-          src="http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/大数据科技数据流转_1734521664475.png"
-          style="width: 40rpx; height: 40rpx"
-        ></image>
-        <view>库存周转分析</view>
-      </view>
-
-      <view class="tab">库存周转率</view>
-
-      <view class="header">
-        <view class="header-order">86.88%</view>
-        <view class="count">同比:2.12%</view>
-        <view class="count">环比:1.31%</view>
-      </view>
-
-      <view class="description">
-        <view class="tab">平均在仓时间</view>
-        <view class="time">21天</view>
-      </view>
-
-      <view class="charts-box">
-        <qiun-data-charts type="ring" :opts="optsWms" :chartData="chartDataWms" />
-      </view>
-    </view> -->
-
-    <!-- 产品货值分布卡片 -->
-    <view class="chart-card">
-      <view class="title">
-        <image
-          src="http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/40组织绩效结果分析_1734664675688.png"
-          style="width: 40rpx; height: 40rpx; margin-right: 10rpx"
-        ></image>
-        <view>库存产品分析</view>
-      </view>
-      <view class="card-header">
-        <view class="switch-group">
-          <text
-            class="switch-item"
-            :class="{ active: distributionType === 'value' }"
-            @tap="switchDistributionType('value')"
-            >货值分布</text
-          >
-          <text
-            class="switch-item"
-            :class="{ active: distributionType === 'type' }"
-            @tap="switchDistributionType('type')"
-            >类型分布</text
-          >
-        </view>
-      </view>
-      <view class="chart-content">
-        <view class="chart-wrapper">
-          <qiun-data-charts type="ring" :opts="valueDistOpts" :chartData="currentDistData" />
-        </view>
-      </view>
-    </view>
-
-    <view class="chart-card-range">
-      <view class="title">
-        <image
-          src="http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/下降趋势_1734664718481.png"
-          style="width: 40rpx; height: 40rpx; margin-right: 10rpx"
-        ></image>
-        <view>库存单量趋势</view>
-      </view>
-
-      <view class="switch-group">
-        <text class="switch-item" :class="{ active: warehouseType === '6' }" @tap="switchWarehouseType('6')"
-          >入库单</text
-        >
-        <text class="switch-item" :class="{ active: warehouseType === '7' }" @tap="switchWarehouseType('7')"
-          >出库单</text
-        >
-        <text class="switch-item" :class="{ active: warehouseType === '8' }" @tap="switchWarehouseType('8')"
-          >调拨单</text
-        >
-      </view>
-
-      <view class="status-cardlist">
-        <view class="status-card" style="border-right: 2rpx solid #f6f6f6">
-          <view class="status-icon new"> </view>
-          <view class="status-content">
-            <text class="status-label">新订单</text>
-            <text class="status-value">{{ formatNumber(newCreatedCount) }}</text>
-          </view>
-        </view>
-        <view class="status-card" style="border-right: 2rpx solid #f6f6f6">
-          <view class="status-icon processing"> </view>
-          <view class="status-content">
-            <text class="status-label">执行中</text>
-            <text class="status-value">{{ formatNumber(pendingExecutionCount) }}</text>
-          </view>
-        </view>
-        <view class="status-card">
-          <view class="status-icon completed"> </view>
-          <view class="status-content">
-            <text class="status-label">已完成</text>
-            <text class="status-value">{{ formatNumber(completedCount) }}</text>
-          </view>
-        </view>
-      </view>
-
-      <view class="status-cards">
-        <view class="status-card" :class="{ active: currentMetric === 'order' }" @tap="switchMetric('order')">
-          <view class="status-content">
-            <text class="status-label">订单数量</text>
-            <text class="status-value">{{ formatNumber(orderCount) }}</text>
-          </view>
-        </view>
-        <view class="status-card" :class="{ active: currentMetric === 'value' }" @tap="switchMetric('value')">
-          <view class="status-content">
-            <text class="status-label">货值</text>
-            <text class="status-value">{{ formatNumber(amount) }}</text>
-          </view>
-        </view>
-        <view class="status-card" :class="{ active: currentMetric === 'quantity' }" @tap="switchMetric('quantity')">
-          <view class="status-content">
-            <text class="status-label">货物数量</text>
-            <text class="status-value">{{ formatNumber(pcs) }}</text>
-          </view>
-        </view>
-      </view>
-      <view class="chart-content">
-        <qiun-data-charts type="area" :opts="chartOpts" :chartData="currentWarehouseData" />
-      </view>
-    </view>
-
-    <!-- 库存排行榜卡片 -->
-    <view class="chart-card-range">
-      <view class="card-header">
+    <view style="background-color: #f5f5f5; padding-bottom: 40rpx">
+      <!-- 产品货值分布卡片 -->
+      <view class="chart-card">
         <view class="title">
           <image
-            src="http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/排行榜_1734664705135.png"
+            src="http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/40组织绩效结果分析_1734664675688.png"
             style="width: 40rpx; height: 40rpx; margin-right: 10rpx"
           ></image>
-          <view>库存数量排行</view>
+          <view>库存产品分析</view>
         </view>
-        <view class="warehouse-select" @tap="showSelect">
-          <view class="selected-warehouse">
-            <text style="margin-right: 20rpx">{{ selectedWarehouseLabel }}</text>
-            <u-icon :name="showWarehouseSelect ? 'arrow-up' : 'arrow-down'" size="14" color="#ffba1b"></u-icon>
-          </view>
-          <!-- 下拉选项 -->
-          <view class="warehouse-options" v-if="showWarehouseSelect">
-            <view
-              class="option-item"
-              v-for="item in warehouseOptions"
-              :key="item.value"
-              :class="{ active: selectedWarehouse === item.value }"
-              @click.stop="selectWarehouse(item)"
+        <view class="card-header">
+          <view class="switch-group">
+            <text
+              class="switch-item"
+              :class="{ active: distributionType === 'value' }"
+              @tap="switchDistributionType('value')"
+              >货值分布</text
             >
-              <text>{{ item.label }}</text>
-
-              <u-icon v-if="selectedWarehouse === item.value" name="checkmark" size="14" color="#2b5cff"></u-icon>
-            </view>
+            <text
+              class="switch-item"
+              :class="{ active: distributionType === 'type' }"
+              @tap="switchDistributionType('type')"
+              >类型分布</text
+            >
+          </view>
+        </view>
+        <view class="chart-content">
+          <view class="chart-wrapper">
+            <qiun-data-charts type="ring" :opts="valueDistOpts" :chartData="currentDistData" />
           </view>
         </view>
       </view>
 
-      <view class="rank-list">
-        <!-- 表头 -->
-        <view class="rank-header">
-          <text class="col rank">排名</text>
-          <text class="col name">品名</text>
-          <text class="col type">产品类型</text>
-          <text class="col value">产品货值</text>
-          <text class="col stock">库存数量</text>
+      <view class="chart-card-range">
+        <view class="title">
+          <image
+            src="http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/下降趋势_1734664718481.png"
+            style="width: 40rpx; height: 40rpx; margin-right: 10rpx"
+          ></image>
+          <view>库存单量趋势</view>
+        </view>
+        <view class="card-header">
+          <view class="switch-group">
+            <text class="switch-item" :class="{ active: warehouseType === '6' }" @tap="switchWarehouseType('6')"
+              >入库单</text
+            >
+            <text class="switch-item" :class="{ active: warehouseType === '7' }" @tap="switchWarehouseType('7')"
+              >出库单</text
+            >
+            <!-- <text class="switch-item" :class="{ active: warehouseType === '8' }" @tap="switchWarehouseType('8')"
+          >调拨单</text
+        > -->
+          </view>
+        </view>
+        <view class="status-cardlist">
+          <view class="status-card" style="border-right: 2rpx solid #f6f6f6">
+            <view class="status-icon new"> </view>
+            <view class="status-content">
+              <text class="status-label">新订单</text>
+              <text class="status-value">{{ formatNumber(newCreatedCount) }}</text>
+            </view>
+          </view>
+          <view class="status-card" style="border-right: 2rpx solid #f6f6f6">
+            <view class="status-icon processing"> </view>
+            <view class="status-content">
+              <text class="status-label">执行中</text>
+              <text class="status-value">{{ formatNumber(pendingExecutionCount) }}</text>
+            </view>
+          </view>
+          <view class="status-card">
+            <view class="status-icon completed"> </view>
+            <view class="status-content">
+              <text class="status-label">已完成</text>
+              <text class="status-value">{{ formatNumber(completedCount) }}</text>
+            </view>
+          </view>
         </view>
 
-        <!-- 列表内容 -->
-        <view class="rank-item" v-for="(item, index) in inventoryRankList" :key="index">
-          <text class="col rank">
-            <view class="rank-num" :class="{ 'top-3': index < 3 }">
-              <text>{{ index + 1 }}</text>
-              <image v-if="index < 3" :src="imageList[index]" style="width: 70rpx; height: 40rpx"></image>
+        <view class="status-cards">
+          <view class="status-card" :class="{ active: currentMetric === 'order' }" @tap="switchMetric('order')">
+            <view class="status-content">
+              <text class="status-label">订单数量</text>
+              <text class="status-value">{{ formatNumber(orderCount) }}</text>
             </view>
-          </text>
-          <text class="col name">{{ item.name }}</text>
-          <text class="col type">{{ item.type }}</text>
-          <text class="col value">${{ formatNumber(item.value) }}</text>
-          <text class="col stock">{{ formatNumber(item.stock) }}</text>
+          </view>
+          <view class="status-card" :class="{ active: currentMetric === 'value' }" @tap="switchMetric('value')">
+            <view class="status-content">
+              <text class="status-label">货值</text>
+              <text class="status-value">{{ formatNumber(amount) }}</text>
+            </view>
+          </view>
+          <view class="status-card" :class="{ active: currentMetric === 'quantity' }" @tap="switchMetric('quantity')">
+            <view class="status-content">
+              <text class="status-label">货物数量</text>
+              <text class="status-value">{{ formatNumber(pcs) }}</text>
+            </view>
+          </view>
+        </view>
+        <view class="chart-content">
+          <qiun-data-charts type="area" :opts="chartOpts" :chartData="currentWarehouseData" />
+        </view>
+      </view>
+
+      <!-- 库存排行榜卡片 -->
+      <view class="chart-card-range">
+        <view class="card-header">
+          <view class="title">
+            <image
+              src="http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/排行榜_1734664705135.png"
+              style="width: 40rpx; height: 40rpx; margin-right: 10rpx"
+            ></image>
+            <view>库存数量排行</view>
+          </view>
+          <view class="warehouse-select" @tap="showSelect">
+            <view class="selected-warehouse">
+              <text style="margin-right: 20rpx">{{ selectedWarehouseLabel }}</text>
+              <u-icon :name="showWarehouseSelect ? 'arrow-up' : 'arrow-down'" size="14" color="#ffba1b"></u-icon>
+            </view>
+            <!-- 下拉选项 -->
+            <view class="warehouse-options" v-if="showWarehouseSelect">
+              <view
+                class="option-item"
+                v-for="item in warehouseOptions"
+                :key="item.value"
+                :class="{ active: selectedWarehouse === item.value }"
+                @click.stop="selectWarehouse(item)"
+              >
+                <text>{{ item.label }}</text>
+
+                <u-icon v-if="selectedWarehouse === item.value" name="checkmark" size="14" color="#2b5cff"></u-icon>
+              </view>
+            </view>
+          </view>
+        </view>
+
+        <view class="rank-list">
+          <!-- 表头 -->
+          <view class="rank-header">
+            <text class="col rank">排名</text>
+            <text class="col name">品名</text>
+            <text class="col type">产品类型</text>
+            <text class="col value">产品货值</text>
+            <text class="col stock">库存数量</text>
+          </view>
+
+          <!-- 列表内容 -->
+          <view class="rank-item" v-for="(item, index) in inventoryRankList" :key="index">
+            <text class="col rank">
+              <view class="rank-num" :class="{ 'top-3': index < 3 }">
+                <text>{{ index + 1 }}</text>
+                <image v-if="index < 3" :src="imageList[index]" style="width: 70rpx; height: 40rpx"></image>
+              </view>
+            </text>
+            <text class="col name">{{ item.name }}</text>
+            <text class="col type">{{ item.type }}</text>
+            <text class="col value">${{ formatNumber(item.value) }}</text>
+            <text class="col stock">{{ formatNumber(item.stock) }}</text>
+          </view>
         </view>
       </view>
     </view>
@@ -218,6 +193,7 @@
 import { ref, computed, watch, onMounted, onUnmounted } from 'vue'
 import { getAction } from '@/common/store/manage'
 import { onReady } from '@dcloudio/uni-app'
+import _ from 'lodash'
 const chartDataWms = ref({})
 
 const chartOpts = ref({
@@ -225,7 +201,7 @@ const chartOpts = ref({
   padding: [15, 15, 0, 15],
   enableScroll: false,
   legend: {
-    show: true,
+    show: false,
     position: 'top',
     float: 'right',
     itemWidth: 15,
@@ -265,6 +241,12 @@ const showSelect = () => {
   showWarehouseSelect.value = !showWarehouseSelect.value
   console.log('显示', showWarehouseSelect.value)
 }
+const lockTotal = ref(0)
+const outboundTotal = ref(0)
+const transInTotal = ref(0)
+const valueTotal = ref(0)
+const usableTotal = ref(0)
+
 const newCreatedCount = ref(0)
 const pendingExecutionCount = ref(0)
 const completedCount = ref(0)
@@ -272,44 +254,6 @@ const completedCount = ref(0)
 const orderCount = ref(0)
 const amount = ref(0)
 const pcs = ref(0)
-const optsWms = ref({
-  rotate: false,
-  rotateLock: false,
-  color: ['#1890FF', '#91CB74', '#FAC858'],
-  padding: [5, 5, 5, 5],
-  dataLabel: true,
-  enableScroll: false,
-  legend: {
-    show: true,
-    position: 'right',
-    lineHeight: 25,
-  },
-  title: {
-    fontSize: 15,
-    color: '#666666',
-  },
-  subtitle: {
-    name: '36.75万',
-    fontSize: 25,
-    color: '#7cb5ec',
-  },
-  extra: {
-    ring: {
-      ringWidth: 40,
-      activeOpacity: 0.5,
-      offsetAngle: 0,
-      labelWidth: 15,
-      border: true,
-      borderWidth: 3,
-      borderColor: '#FFFFFF',
-      centerText: {
-        content: '45%',
-        fontSize: 30,
-        color: '#1890FF',
-      },
-    },
-  },
-})
 
 onReady(() => {
   getServerData()
@@ -429,42 +373,33 @@ const switchMetric = (metric) => {
 
   loadWmsOrderData()
 }
-
-// 订单状态数据
-const orderStatus = {
-  inbound: {
-    new: 160,
-    processing: 42,
-    completed: 103,
-  },
-  outbound: {
-    new: 10,
-    processing: 3306,
-    completed: 2152,
-  },
-  transfer: {
-    new: 1,
-    processing: 0,
-    completed: 106,
-  },
+const getWmsStockData = () => {
+  getAction('/app/wms/statistics/getWarehouseCountData').then((res) => {
+    if (res.success) {
+      lockTotal.value = res.result.totalLockAmount
+      outboundTotal.value = res.result.totalOutboundCount
+      transInTotal.value = res.result.totalTransCount
+      valueTotal.value = res.result.totalUsableAmount
+      usableTotal.value = res.result.totalUsableCount
+    }
+  })
 }
 
 // 仓库选择相关
 const selectedWarehouse = ref('all')
 const warehouseOptions = ref([])
-
 const selectedWarehouseLabel = computed(() => {
   const selected = warehouseOptions.value.find((item) => item.value === selectedWarehouse.value)
   return selected ? selected.label : '全部仓库'
 })
 
-// 格式化数字显示
+// 格式化数字
 const formatNumber = (num) => {
-  if (!num) return '0'
-  if (num >= 10000) {
+  if (num >= 10000 && num < 100000000) {
     return (num / 10000).toFixed(1) + '万'
+  } else if (num >= 100000000) {
+    return (num / 100000000).toFixed(1) + '亿'
   }
-  // 添加千位分隔符
   return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
 }
 const imageList = ref([
@@ -529,7 +464,7 @@ const selectWarehouse = (item) => {
   showWarehouseSelect.value = false
 }
 const loadWmsData = () => {
-  getAction('/wms/statistics/getOrderSummary', { orderType: warehouseType.value, dateRange: 'L30DS' }).then((res) => {
+  getAction('/wms/statistics/getOrderSummary', { orderType: warehouseType.value, dateRange: 'TY' }).then((res) => {
     if (res.success) {
       newCreatedCount.value = res.result.newCreatedCount
       pendingExecutionCount.value = res.result.pendingExecutionCount
@@ -538,46 +473,47 @@ const loadWmsData = () => {
   })
 }
 const loadWmsOrderData = () => {
-  getAction('/wms/statistics/getOrderDataByType', { orderType: warehouseType.value, dateRange: 'L30DS' }).then(
-    (res) => {
-      if (res.success) {
-        orderCount.value = res.result.orderCount
-        amount.value = res.result.amount
-        pcs.value = res.result.unControlPcs + res.result.controlPcs
-        categories.value = res.result.dataList.map((item) => {
-          return item.orderDate
-        })
-        if (currentMetric.value === 'order') {
-          seriesData.value = [
-            {
-              name: '单量',
-              data: res.result.dataList.map((it) => {
-                return it.orderCount
-              }),
-            },
-          ]
-        } else if (currentMetric.value === 'value') {
-          seriesData.value = [
-            {
-              name: '单量',
-              data: res.result.dataList.map((it) => {
-                return it.amount
-              }),
-            },
-          ]
-        } else {
-          seriesData.value = [
-            {
-              name: '单量',
-              data: res.result.dataList.map((it) => {
-                return it.controlPcs + it.unControlPcs
-              }),
-            },
-          ]
-        }
+  getAction('/wms/statistics/getOrderDataByType', { orderType: warehouseType.value, dateRange: 'TY' }).then((res) => {
+    if (res.success) {
+      orderCount.value = res.result.orderCount
+      amount.value = res.result.amount
+      pcs.value = res.result.unControlPcs + res.result.controlPcs
+
+      const grouped = _.groupBy(res.result.dataList, (item) => item.orderDate.slice(0, 7)) // 按年月分组
+
+      const result = Object.keys(grouped).map((month) => {
+        const totalOrderCount = _.sumBy(grouped[month], 'orderCount')
+        const totalAmount = _.sumBy(grouped[month], 'amount')
+        const totalControlPcs = _.sumBy(grouped[month], 'controlPcs')
+        const totalUnControlPcs = _.sumBy(grouped[month], 'unControlPcs')
+        return { date: month, orderCount: totalOrderCount, totalAmount, totalControlPcs, totalUnControlPcs }
+      })
+      categories.value = result.map((item) => item.date)
+
+      if (currentMetric.value === 'order') {
+        seriesData.value = [
+          {
+            name: '单量',
+            data: result.map((item) => item.orderCount),
+          },
+        ]
+      } else if (currentMetric.value === 'value') {
+        seriesData.value = [
+          {
+            name: '单量',
+            data: result.map((item) => item.totalAmount),
+          },
+        ]
+      } else {
+        seriesData.value = [
+          {
+            name: '单量',
+            data: result.map((item) => item.totalControlPcs + item.totalUnControlPcs),
+          },
+        ]
       }
     }
-  )
+  })
 }
 
 const getWarehouseList = () => {
@@ -596,6 +532,7 @@ onMounted(() => {
   loadWmsData()
   loadWmsOrderData()
   getWarehouseList()
+  getWmsStockData()
 })
 </script>
 
@@ -605,7 +542,6 @@ onMounted(() => {
   background-color: #fff;
   width: 90%;
   margin: 0rpx auto;
-  margin-top: 20vh;
   border-radius: 20rpx;
   padding: 20rpx;
   .title {
@@ -687,11 +623,10 @@ onMounted(() => {
   border-radius: 20rpx;
   width: 94%;
   margin: 0 auto;
-  position: absolute;
+
   padding: 1%;
-  top: 20vh;
-  left: 2%;
-  height: 25vh;
+
+  min-height: 25vh;
   .title {
     display: flex;
     flex-direction: row;
@@ -754,7 +689,7 @@ onMounted(() => {
   border-radius: 20rpx;
   padding: 30rpx;
   margin: 20rpx;
-  margin-top: 20vh;
+
   box-shadow: 0 2rpx 12rpx rgba(0, 0, 0, 0.05);
   .title {
     display: flex;
@@ -996,7 +931,7 @@ onMounted(() => {
   }
   .card-header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin-bottom: 30rpx;
     .title {
@@ -1015,6 +950,7 @@ onMounted(() => {
     padding: 4rpx;
     border: 1px solid #f7c34c;
     margin-bottom: 20rpx;
+
     .switch-item {
       min-width: 150rpx;
       padding: 12rpx 14rpx;

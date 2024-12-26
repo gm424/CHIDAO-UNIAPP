@@ -127,46 +127,6 @@ const toggleAgreement = () => {
   agreed.value = !agreed.value
 }
 
-// 登录
-const handleLogin = () => {
-  if (!isFormValid.value) {
-    uni.showToast({
-      title: '请完善登录信息',
-      icon: 'none',
-    })
-    return
-  }
-
-  uni.showLoading({
-    title: '登录中',
-  })
-
-  LoginServer.login(formData.value, {
-    success(res) {
-      uni.hideLoading()
-      // 登录成功后跳转到选择企业页面
-      uni.reLaunch({
-        url: '/pages/company/select',
-      })
-    },
-    fail(err) {},
-  })
-}
-
-// 忘记密码
-const forgotPassword = () => {
-  uni.navigateTo({
-    url: '/pages/login/forgot',
-  })
-}
-
-// 去注册
-const goToRegister = () => {
-  uni.navigateTo({
-    url: '/pages/login/register',
-  })
-}
-
 // 查看协议
 const viewAgreement = (type) => {
   uni.navigateTo({

@@ -616,7 +616,7 @@ const scrollToDate = (date) => {
       position: absolute;
       left: 60rpx;
       color: #fff;
-      top: 140rpx;
+      top: 7vh;
       display: flex;
       flex-direction: row;
       .tip1 {
@@ -634,7 +634,7 @@ const scrollToDate = (date) => {
       font-family: 'CustomFont';
       position: absolute;
       left: 60rpx;
-      top: 200rpx;
+      top: 11vh;
       color: #fff;
       font-size: 56rpx;
       // font-weight: bold;

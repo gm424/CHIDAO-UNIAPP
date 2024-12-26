@@ -154,7 +154,7 @@ const services = [
     id: 1,
     name: '地址管理',
     icon: 'http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/服务协议_1734589559881.png',
-    path: '/pages/address/list',
+    path: '/pages/address/manage',
     bgColor: '#fff',
     iconColor: '#373737',
   },
@@ -181,29 +181,29 @@ const services = [
 const orderTypes = [
   {
     id: 1,
-    name: '新创建',
+    name: '全部',
     icon: 'http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/形状_1734588692367.png',
     path: '/pages/order/list?status=6',
     // count: 2,
   },
   {
     id: 2,
-    name: '已收货',
+    name: '新创建',
     icon: 'http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/形状(1)_1734588718124.png',
-    path: '/pages/order/list?status=2',
+    path: '/pages/order/list?status=6',
     // count: 1,
   },
   {
     id: 3,
-    name: '转运中',
+    name: '执行中',
     icon: 'http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/编组16_1734588745536.png',
-    path: '/pages/order/list?status=4',
+    path: '/pages/order/list?status=1,2,3,7,8',
   },
   {
     id: 4,
-    name: '已签收',
+    name: '已完成',
     icon: 'http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/已完成_1734924416506.png',
-    path: '/pages/order/list?status=5',
+    path: '/pages/order/list?status=4',
   },
 ]
 
@@ -397,7 +397,7 @@ const goToCompanyInfo = () => {
 
 .section-contain {
   position: absolute;
-  top: 20vh;
+  top: 22vh;
   left: 0;
   width: 100%;
   min-height: 100vh;

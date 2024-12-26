@@ -6,14 +6,14 @@
         <u-icon name="arrow-left" color="#333" size="20"></u-icon>
       </view>
       <view class="route-info" @tap="showLocationSelect">
-        <text class="city">{{ searchParams.srcPortDict }}</text>
+        <text class="city">{{ selectedOrigin.name }}</text>
         <!-- <image
           class="double-arrow"
           src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCA0OCA0OCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNNDAgMjRMMzIgMTZNNDAgMjRMMzIgMzJNNDAgMjRIOE04IDI0TDE2IDE2TTggMjRMMTYgMzIiIHN0cm9rZT0iIzY2NiIgc3Ryb2tlLXdpZHRoPSI0IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS1kYXNoYXJyYXk9IjQgNCIvPjwvc3ZnPg=="
           mode="aspectFit"
         /> -->
         <text style="margin: 0 5rpx"> - </text>
-        <text class="city">{{ searchParams.dstPortDict }}</text>
+        <text class="city">{{ selectedDest.name }}</text>
         <text class="iconfont icon-down"></text>
       </view>
       <view class="navbar-right"></view>
@@ -58,18 +58,35 @@
           <text>修改地点</text>
           <text class="close-btn" @tap="closeLocationSelect">关闭</text>
         </view>
+        <!-- 添加渠道切换组件 -->
+        <view class="channel-selector">
+          <view
+            v-for="(item, index) in channelOptions"
+            :key="index"
+            class="channel-item"
+            :class="{ active: searchParams.channel === item.value }"
+            @tap="handleChannelChange(item.value)"
+          >
+            <u-icon
+              :name="item.icon"
+              size="24"
+              :color="searchParams.channel === item.value ? '#ffb715' : '#666'"
+            ></u-icon>
+            <text>{{ item.label }}</text>
+          </view>
+        </view>
         <view class="location-form">
           <view class="form-item">
             <text class="label">起始地</text>
             <view class="input" @tap="showCountrySelect('origin')">
-              <text>{{ searchParams.srcPortDict || '请选择' }}</text>
+              <text>{{ selectedOrigin.name || '请选择' }}</text>
               <text class="iconfont icon-right"></text>
             </view>
           </view>
           <view class="form-item">
             <text class="label">目的地</text>
             <view class="input" @tap="showCountrySelect('dest')">
-              <text>{{ searchParams.dstPortDict || '请选择' }}</text>
+              <text>{{ selectedDest.name || '请选择' }}</text>
               <text class="iconfont icon-right"></text>
             </view>
           </view>
@@ -266,7 +283,7 @@ const switchDate = (date) => {
 const loadDatesPrice = async (date) => {
   let params = {
     date: date,
-    channel: uni.getStorageSync('searchChannel'),
+    channel: searchParams.value.channel,
     srcPort: selectedOrigin.value.isoCode,
     dstPort: selectedDest.value.isoCode,
   }
@@ -282,7 +299,7 @@ const showLocationSelect = () => {
   showLocationPopup.value = true
 }
 
-// 关���地点选择
+// 关闭地点选择
 const closeLocationSelect = () => {
   showLocationPopup.value = false
 }
@@ -307,6 +324,7 @@ const selectCountry = (country) => {
   } else {
     selectedDest.value = country
   }
+  console.log('选择', selectType.value, country, searchParams.value)
   closeCountrySelect()
 }
 const getSrcAndDstList = () => {
@@ -327,9 +345,10 @@ const getSrcAndDstList = () => {
 const confirmLocationSelect = () => {
   searchParams.value.srcPort = selectedOrigin.value.isoCode
   searchParams.value.dstPort = selectedDest.value.isoCode
-  searchParams.value.srcPortDict = selectedOrigin.value.name
-  searchParams.value.dstPortDict = selectedDest.value.name
+
+  console.log('确定', searchParams.value, selectedOrigin.value, selectedDest.value)
   closeLocationSelect()
+  generateDateList(searchParams.value.date)
   getRouteList()
 }
 
@@ -396,7 +415,7 @@ const getDatePrice = () => {
 
   getAction('/tms/shift/getByDateRange', {
     date: date,
-    channel: uni.getStorageSync('searchChannel'),
+    channel: searchParams.value.channel,
     srcPort: selectedOrigin.value.isoCode,
     dstPort: selectedDest.value.isoCode,
   }).then((res) => {
@@ -518,6 +537,19 @@ const goBack = () => {
   uni.navigateBack()
 }
 
+// 渠道选项
+const channelOptions = [
+  { label: '海运', value: '1', icon: 'car' },
+  { label: '空运', value: '2', icon: 'car' },
+  { label: '铁路', value: '3', icon: 'car' },
+  { label: '卡航', value: '4', icon: 'car' },
+]
+
+// 处理渠道切换
+const handleChannelChange = (value) => {
+  searchParams.value.channel = value
+}
+
 onMounted(() => {
   // 从缓存获取搜索参数
   const srcPort = uni.getStorageSync('searchOrigin')
@@ -529,14 +561,13 @@ onMounted(() => {
   if (srcPort && dstPort && date) {
     searchParams.value.srcPort = srcPort.isoCode
     searchParams.value.dstPort = dstPort.isoCode
-    searchParams.value.srcPortDict = srcPort.name
-    searchParams.value.dstPortDict = dstPort.name
+
     searchParams.value.date = date
     searchParams.value.channel = channel
 
     // 初始化选中的地点
-    selectedOrigin.value = { name: srcPort.isoCode }
-    selectedDest.value = { name: dstPort.isoCode }
+    selectedOrigin.value = { isoCode: srcPort.isoCode, name: srcPort.name }
+    selectedDest.value = { isoCode: dstPort.isoCode, name: dstPort.name }
 
     // 生成日期列表并自动滚动到选中日期
     generateDateList(date)
@@ -557,7 +588,7 @@ onMounted(() => {
     })
   }
   console.log('参数', searchParams.value, srcPort)
-  // 执���搜索
+  // 执行搜索
   getRouteList()
   getDatePrice()
 })
@@ -915,5 +946,49 @@ onMounted(() => {
     height: 0; // 配合flex:1实现滚动
     overflow-y: auto;
   }
+}
+
+.channel-selector {
+  background: #fff;
+  padding: 20rpx 0;
+  border-bottom: 1rpx solid #f5f5f5;
+  display: flex;
+  width: 100%;
+
+  .channel-item {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    padding: 6rpx 10rpx;
+    margin-right: 10rpx;
+    border-radius: 30rpx;
+    background: #f8f8f8;
+    transition: all 0.3s;
+    justify-content: center;
+    display: flex;
+    &:last-child {
+      margin-right: 0;
+    }
+
+    text {
+      font-size: 26rpx;
+      color: #666;
+      margin-left: 8rpx;
+    }
+
+    &.active {
+      background: rgba(255, 183, 21, 0.1);
+
+      text {
+        color: #ffb715;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+// 修改原有样式以适应新增的渠道选择器
+.search-result {
+  padding-top: 180rpx; // 增加顶部内边距，为渠道选择器留出空间
 }
 </style>

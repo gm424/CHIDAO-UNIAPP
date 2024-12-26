@@ -1,5 +1,13 @@
 <template>
   <view class="container">
+    <!-- 日期选择区域 -->
+    <view class="date-picker-section">
+      <view class="date-display" @tap="showCalendar">
+        <text class="selected-date">{{ formatDate(selectedDate) }}</text>
+        <u-icon name="calendar" size="24" color="#666"></u-icon>
+      </view>
+    </view>
+
     <!-- 搜索区域 -->
     <view class="search-section">
       <view class="search-box">
@@ -17,6 +25,17 @@
         </u-search>
       </view>
     </view>
+
+    <!-- 日历选择弹窗 -->
+    <u-datetime-picker
+      :show="showDatePicker"
+      v-model="selectedDate"
+      mode="year-month"
+      :min-date="minDate.getTime()"
+      :max-date="maxDate.getTime()"
+      @confirm="onDateConfirm"
+      @cancel="showDatePicker = false"
+    ></u-datetime-picker>
 
     <!-- 流水记录 -->
     <view class="records-section">
@@ -73,7 +92,7 @@
 
       <!-- 空状态 -->
       <view v-if="recordsList.length === 0 && !loading" class="empty-state">
-        <u-empty mode="data" text="暂无流水记录"></u-empty>
+        <u-empty mode="data" text="无流水记录"></u-empty>
       </view>
     </view>
   </view>
@@ -98,10 +117,20 @@ const hasMore = ref(true)
 const loading = ref(false)
 const searchTimer = ref(null)
 
+// 日期选择相关
+const showDatePicker = ref(false)
+const selectedDate = ref(Date.now())
+const minDate = new Date('2020-01-01')
+const maxDate = new Date()
+
 // 获取流水列表
 const getRecordList = async (type = 'more') => {
   loading.value = true
   try {
+    const date = new Date(selectedDate.value)
+    const year = date.getFullYear()
+    const month = date.getMonth() + 1
+
     const res = await getAction('/wms/stockRecord/list', {
       pageNo: pageNo.value,
       pageSize: pageSize.value,
@@ -109,6 +138,8 @@ const getRecordList = async (type = 'more') => {
       order: 'desc',
       description: searchKeyword.value ? '*' + searchKeyword.value + '*' : '',
       controlled: currentFilter.value,
+      createTimeBegin: year + '-' + month + '-' + '01',
+      createTimeEnd: year + '-' + month + '-' + '31',
     })
 
     if (res.success) {
@@ -166,6 +197,44 @@ onPullDownRefresh(() => {
   getRecordList('refresh')
 })
 
+// 显示日历选择器
+const showCalendar = () => {
+  showDatePicker.value = true
+}
+
+// 格式化日期显示
+const formatDate = (timestamp) => {
+  if (!timestamp) {
+    const now = new Date()
+    return `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}`
+  }
+
+  try {
+    const date = new Date(Number(timestamp))
+    if (isNaN(date.getTime())) {
+      const now = new Date()
+      return `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}`
+    }
+    const year = date.getFullYear()
+    const month = String(date.getMonth() + 1).padStart(2, '0')
+    return `${year}-${month}`
+  } catch (error) {
+    console.error('日期格式化错误:', error)
+    const now = new Date()
+
+    return `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}`
+  }
+}
+
+// 日期选择确认
+const onDateConfirm = (e) => {
+  selectedDate.value = Number(e.value)
+  console.log('选择的时间戳:', selectedDate.value, e, formatDate(selectedDate.value))
+  showDatePicker.value = false
+  pageNo.value = 1
+  getRecordList('refresh')
+}
+
 onMounted(() => {
   getRecordList('refresh')
 })
@@ -177,6 +246,37 @@ onMounted(() => {
 .container {
   min-height: 100vh;
   padding-bottom: 20rpx;
+}
+
+.date-picker-section {
+  padding: 20rpx;
+  background: #fff;
+
+  .date-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80rpx;
+    // background: #f5f7fa;
+    border-radius: 12rpx;
+    gap: 12rpx;
+
+    .selected-date {
+      font-size: 28rpx;
+      color: #333;
+      font-weight: 500;
+    }
+
+    &:active {
+      opacity: 0.8;
+    }
+  }
+}
+
+.search-header {
+  padding: 20rpx;
+  background: #fff;
+  border-top: 1rpx solid #eee;
 }
 
 .search-section {

@@ -91,7 +91,15 @@
     {
       "path": "pages/address/list",
       "style": {
-        "navigationBarTitleText": "地址管理"
+        "navigationBarTitleText": "地址选择",
+        "enablePullDownRefresh": true
+      }
+    },
+    {
+      "path": "pages/address/manage",
+      "style": {
+        "navigationBarTitleText": "地址管理",
+        "enablePullDownRefresh": true
       }
     },
     {

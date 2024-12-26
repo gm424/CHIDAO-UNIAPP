@@ -71,9 +71,10 @@ const getServerData = () => {
   min-height: 100vh;
   background: #f5f5f5;
   padding-bottom: 50rpx;
+  position: relative;
 }
 .stat-banner {
-  height: 20vh;
+  height: 25vh;
   color: #fff;
   background-size: cover; /* 背景图片填充整个容器，可能会裁剪部分内容 */
   background-repeat: no-repeat;
@@ -81,7 +82,7 @@ const getServerData = () => {
   background-image: url('http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/banner_1734520009332.png');
   display: flex;
   align-items: flex-start;
-  padding-top: 120rpx;
+  padding-top: 5vh;
 
   .banner-content {
     width: 100%;

@@ -20,7 +20,7 @@
             <u--input v-model="formData.name" placeholder="请输入商品名称" border="none" />
           </u-form-item>
 
-          <u-form-item label="英文名称" prop="enName" borderBottom>
+          <u-form-item label="英文名称" prop="enName" borderBottom required>
             <u--input v-model="formData.enName" placeholder="请输入英文名称" border="none" />
           </u-form-item>
         </view>
@@ -39,11 +39,11 @@
             <u--input v-model="formData.color" placeholder="请输入颜色" border="none" />
           </u-form-item>
 
-          <u-form-item label="单位" prop="unit" required borderBottom>
+          <u-form-item label="单位" prop="unit" borderBottom>
             <u--input v-model="formData.unit" placeholder="请输入单位" border="none" />
           </u-form-item>
 
-          <u-form-item label="材质" prop="material" borderBottom>
+          <u-form-item label="材质" prop="material" borderBottom required>
             <u--input v-model="formData.material" placeholder="请输入材质" border="none" />
           </u-form-item>
 
@@ -94,7 +94,7 @@
                 <text class="unit-text">KG </text>
               </view>
               <view class="input-item">
-                <u--input v-model="formData.throwWeight" type="number" placeholder="泡重" border="none" />
+                <u--input v-model="formData.throwWeight" type="number" placeholder="泡重" border="none" disabled />
                 <text class="unit-text">KG</text>
               </view>
             </view>
@@ -107,14 +107,22 @@
           <u-form-item label="价格" required borderBottom>
             <u--input v-model="formData.price" type="number" placeholder="价格" border="none" />
           </u-form-item>
-          <u-form-item label="申报币种" required borderBottom>
+          <u-form-item label="申报币种" borderBottom>
             <div @click="showCurrencyPicker = true">
               <text v-if="declareCurrency">{{ declareCurrency }}</text>
               <text v-else style="color: #c0c4cc">请输入申报币种</text>
             </div>
           </u-form-item>
-          <u-form-item label="申报价值" required borderBottom>
+          <u-form-item label="申报价值" borderBottom>
             <u--input v-model="formData.declareValue" type="number" placeholder="请输入申报价值" border="none" />
+          </u-form-item>
+        </view>
+
+        <!-- 备注信息 -->
+        <view class="form-section">
+          <view class="section-title">商品图片</view>
+          <u-form-item borderBottom>
+            <JwUpload v-model:value="formData.imgUrl"></JwUpload>
           </u-form-item>
         </view>
 
@@ -163,6 +171,7 @@
 import { ref, computed } from 'vue'
 import { postAction } from '@/common/store/manage'
 import hsCodeArr from '@/utils/hscode.js'
+import JwUpload from '@/components/JwUpload.vue'
 const uForm = ref(null)
 const showCurrencyPicker = ref(false)
 const showHsCodePicker = ref(false)
@@ -190,6 +199,7 @@ const formData = ref({
   enName: '',
   brand: '',
   model: '',
+  imgUrl: '',
   color: '',
   unit: '',
   material: '',

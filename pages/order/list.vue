@@ -93,15 +93,13 @@
 import { ref, onMounted } from 'vue'
 import { getAction } from '@/common/store/manage'
 import dayjs from 'dayjs'
+import { onLoad } from '@dcloudio/uni-app'
 import { onReachBottom, onPullDownRefresh } from '@dcloudio/uni-app'
 // 状态列表
 const statusList = [
   { label: '新创建', value: '6' },
-  { label: '已下单', value: '1' },
-  { label: '已收货', value: '2' },
-  { label: '转运中', value: '3' },
-  { label: '已签收', value: '4' },
-  { label: '已取消', value: '5' },
+  { label: '执行中', value: '1,2,3,7,8' },
+  { label: '已完成', value: '4' },
 ]
 
 // 列表数据
@@ -114,7 +112,10 @@ const total = ref(0)
 const hasMore = ref(true)
 const loading = ref(false)
 const isRefreshing = ref(false)
-
+onLoad((options) => {
+  currentStatus.value = options.status
+  loadOrderList()
+})
 // 获取新创建订单列表
 const loadOrderList = async (type = 'add') => {
   loading.value = true
@@ -124,7 +125,7 @@ const loadOrderList = async (type = 'add') => {
     const res = await getAction(url, {
       pageNo: pageNo.value,
       pageSize: pageSize.value,
-      status: currentStatus.value,
+      statusList: currentStatus.value,
       keyword: searchKeyword.value,
     })
 
@@ -239,14 +240,14 @@ onMounted(() => {
   white-space: nowrap;
   padding: 0 20rpx;
   border-bottom: 1rpx solid #eee;
-
+  display: flex;
   .tab-item {
     display: inline-block;
     padding: 20rpx 30rpx;
     font-size: 28rpx;
     color: #666;
     position: relative;
-
+    width: 20%;
     &.active {
       color: $theme-color;
       font-weight: 500;
@@ -254,10 +255,10 @@ onMounted(() => {
       &::after {
         content: '';
         position: absolute;
-        left: 50%;
+        left: 12%;
         bottom: 0;
-        transform: translateX(-50%);
-        width: 40rpx;
+        // transform: translateX(-50%);
+        width: 90rpx;
         height: 4rpx;
         background: $theme-color;
         border-radius: 2rpx;

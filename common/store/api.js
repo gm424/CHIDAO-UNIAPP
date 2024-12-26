@@ -9,6 +9,7 @@ import { DEVELOP_HOST, PRODUCT_HOST, isDevelopModel } from '@/config/index.js'
 
 // API 使用
 const API_HOST = isDevelopModel ? DEVELOP_HOST : PRODUCT_HOST
+// const API_HOST_TRACK = isDevelopModel ? 'http://47.119.132.63:8091' : 'http://47.119.132.63:8091'
 const API_HOST_TRACK = isDevelopModel ? 'http://47.119.132.63:8091' : 'http://erp.api.jiwangyun.com'
 const Api = {
   // 是否启用debug

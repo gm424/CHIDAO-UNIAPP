@@ -41,7 +41,7 @@
         <image class="captcha-img" :src="captchaUrl" @tap="refreshCaptcha" mode="aspectFit" />
       </view>
 
-      <button class="submit-btn" @tap="handleLogin" :disabled="!isFormValid">登录</button>
+      <button class="submit-btn" @tap="handleLogin">登录</button>
 
       <view class="action-links">
         <!-- <text class="link" @tap="forgotPassword">忘记密码</text> -->
@@ -169,7 +169,7 @@ const captchaUrl = ref('')
 
 // 表单验证
 const isFormValid = computed(() => {
-  return formData.value.username && formData.value.password && formData.value.captcha && agreed.value
+  return formData.value.username && formData.value.password && formData.value.captcha
 })
 
 // 刷新验证码
@@ -197,8 +197,13 @@ const handleLogin = () => {
       icon: 'none',
     })
     return
+  } else if (!agreed.value) {
+    uni.showToast({
+      title: '请勾选同意协议',
+      icon: 'none',
+    })
+    return
   }
-
   uni.showLoading({
     title: '登录中',
   })
@@ -282,7 +287,7 @@ const countText = computed(() => {
 
 // 表单验证
 const isPhoneFormValid = computed(() => {
-  return formData.value.username && formData.value.captcha && agreed.value
+  return formData.value.username && formData.value.captcha
 })
 
 // 获取验证码
@@ -315,14 +320,20 @@ const getVerifyCode = async () => {
 
 // 手机号登录
 const handlePhoneLogin = async () => {
-  uni.showLoading({ title: '登录中' })
   if (!isPhoneFormValid.value) {
     uni.showToast({
       title: '请完善登录信息',
       icon: 'none',
     })
     return
+  } else if (!agreed.value) {
+    uni.showToast({
+      title: '请勾选同意协议',
+      icon: 'none',
+    })
+    return
   }
+  uni.showLoading({ title: '登录中' })
   postAction('/app/login' + '?finger=a9fb93c525b95036e6999882a872c7fb', {
     username: selectedArea.value.code + formData.value.username,
     captcha: formData.value.captcha,

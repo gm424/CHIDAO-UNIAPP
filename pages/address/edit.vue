@@ -27,7 +27,6 @@
           <text class="label">国家</text>
           <input v-model="formData.country_dictText" placeholder="请输入国家" class="input" @focus="show = true" />
         </view>
-
         <view class="form-item">
           <text class="label">州/省</text>
           <input v-model="formData.province" placeholder="请输入州/省" class="input" />
@@ -36,7 +35,6 @@
           <text class="label">城市</text>
           <input v-model="formData.city" placeholder="请输入城市" class="input" />
         </view>
-
         <view class="form-item">
           <text class="label">区/县</text>
           <input v-model="formData.district" placeholder="请输入区/县" class="input" />
@@ -175,7 +173,7 @@ const formData = ref({
   contactName: '', // 联系人
   contactPhone: '', // 联系电话
   country: 'CN', // 国家代码
-  country_dictText: '中国', // 国家名称
+  country_dictText: '', // 国家名称
   province: '', // 省份
   city: '', // 城市
   district: '', // 区县
