@@ -56,7 +56,10 @@
           </u-form-item>
 
           <u-form-item label="海关编码" prop="hsCode" borderBottom>
-            <u--input v-model="formData.hsCode" placeholder="请输入海关编码" border="none" />
+            <div @click="showHsCodePicker = true">
+              <text v-if="hsCode">{{ hsCode }}</text>
+              <text v-else style="color: #c0c4cc">请输入海关编码</text>
+            </div>
           </u-form-item>
 
           <u-form-item label="销售链接" prop="saleLink" borderBottom>
@@ -137,7 +140,16 @@
         </view>
       </u--form>
     </view>
-
+    <!-- 海关编码选择器 -->
+    <u-picker
+      ref="uPickerRef"
+      keyName="label"
+      :show="showHsCodePicker"
+      :columns="[hsCodeOptions]"
+      @confirm="onHsCodeConfirm"
+      @cancel="showHsCodePicker = false"
+      @change="changeHandler"
+    ></u-picker>
     <!-- 币种选择器 -->
     <u-picker
       :show="showCurrencyPicker"
@@ -163,11 +175,13 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import hsCodeArr from '@/utils/hscode.js'
+import { ref, onMounted, computed } from 'vue'
 import { getAction, putAction } from '@/common/store/manage'
 import { validateHsCode } from '@/common/utils/validate.js'
 import { onLoad } from '@dcloudio/uni-app'
 import JwUpload from '@/components/JwUpload.vue'
+const uPickerRef = ref(null)
 const formData = ref({
   name: '',
   enName: '',
@@ -177,7 +191,23 @@ const formData = ref({
   images: [],
   description: '',
   status: '1',
+  price: '',
+  declareValue: '',
 })
+const hsCode = ref('')
+const hsCodeOptions = computed(() => {
+  return hsCodeArr.map((item) => {
+    return item.group
+  })
+})
+const changeHandler = (e) => {
+  const { columnIndex, value, values, index } = e
+
+  if (columnIndex === 0) {
+    uPickerRef.value.setColumnValues(1, hsCodeArr[index].children)
+  }
+}
+const showHsCodePicker = ref(false)
 const showSubmit = ref(false)
 const currencyOptions = [
   { text: 'CNY', value: '1' },
@@ -190,10 +220,13 @@ const currencyOptions = [
 const declareCurrency = ref(null)
 const rules = {
   name: [{ required: true, message: '请输入商品名称', trigger: ['blur', 'change'] }],
-  hsCode: [{ required: true, message: '请输入海关编码', trigger: ['blur', 'change'] }],
   declareUnitPrice: [{ required: true, message: '请输入申报单价', trigger: ['blur', 'change'] }],
 }
-
+const onHsCodeConfirm = (e) => {
+  formData.value.hsCode = e.value[1].value
+  hsCode.value = e.value[0] + '/' + e.value[1].label
+  showHsCodePicker.value = false
+}
 const uForm = ref(null)
 const showCurrencyPicker = ref(false)
 // 获取商品详情

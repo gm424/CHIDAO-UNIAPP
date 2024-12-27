@@ -171,17 +171,19 @@
           </view>
 
           <!-- 列表内容 -->
-          <view class="rank-item" v-for="(item, index) in inventoryRankList" :key="index">
+          <view class="rank-item" v-for="(item, index) in stockDataSource" :key="index">
             <text class="col rank">
               <view class="rank-num" :class="{ 'top-3': index < 3 }">
                 <text>{{ index + 1 }}</text>
                 <image v-if="index < 3" :src="imageList[index]" style="width: 70rpx; height: 40rpx"></image>
               </view>
             </text>
-            <text class="col name">{{ item.name }}</text>
-            <text class="col type">{{ item.type }}</text>
-            <text class="col value">${{ formatNumber(item.value) }}</text>
-            <text class="col stock">{{ formatNumber(item.stock) }}</text>
+            <text class="col name">
+              {{ item.name }}
+            </text>
+            <text class="col type">{{ item.hsCodeGroupName }}</text>
+            <text class="col value">${{ formatNumber(item.price) }}</text>
+            <text class="col stock">{{ formatNumber(item.usableCount) }}</text>
           </view>
         </view>
       </view>
@@ -289,63 +291,87 @@ const distributionType = ref('value')
 // 切换分布类型
 const switchDistributionType = (type) => {
   distributionType.value = type
+  loadGoodsValueOrType()
 }
+const stockDataSource = ref([])
+
+//产品货值和类型分析
+const loadGoodsValueOrType = () => {
+  let url =
+    distributionType.value === 'value'
+      ? '/app/wms/statistics/usableCountByPriceRange'
+      : '/app/wms/statistics/inventoryTypeAnalysis'
+  getAction(url).then((res) => {
+    if (res.success) {
+      valueDistData.value = {
+        series: [
+          {
+            data: res.result.map((item, index) => {
+              return {
+                name: distributionType.value === 'value' ? item.priceRange : item.hsCodeName,
+                value:
+                  distributionType.value === 'value'
+                    ? parseInt(item.totalUsableCount)
+                    : parseInt(item.totalUsableCount),
+              }
+            }),
+          },
+        ],
+      }
+      valueDistOpts.value.subtitle.name = formatNumber(
+        valueDistData.value.series[0].data.reduce((acc, item) => acc + item.value, 0)
+      )
+      console.log('valueDistData', valueDistData.value)
+    }
+  })
+}
+
 // 产品货值分布图配置
 const valueDistOpts = ref({
-  padding: [5, 5, 5, 5],
+  color: ['#79a2ff', '#ff9e8b', '#58b1ff', '#ffb200'],
+  padding: [15, 5, 15, 5],
   dataLabel: false,
   legend: {
     show: true,
     position: 'bottom',
     lineHeight: 5,
   },
+
+  title: {
+    name: '货值',
+    fontSize: 15,
+    color: '#666666',
+  },
+  subtitle: {
+    name: '',
+    fontSize: 12,
+    color: '#333',
+  },
+
   extra: {
     ring: {
-      ringWidth: 60,
+      ringWidth: 45,
       centerColor: '#FFFFFF',
       activeOpacity: 0.7,
       activeRadius: 10,
       offsetAngle: 0,
-      border: false,
-      borderWidth: 3,
+      border: true,
+      borderWidth: 2,
       borderColor: '#FFFFFF',
       spaceBetween: 2,
       animation: true,
       animationDuration: 1000,
       animationType: 'scale',
+      // linearType: 'custom',
     },
   },
 })
 // 货值分布数据
-const valueDistData = ref({
-  series: [
-    {
-      data: [
-        { name: '0-1000元', value: 2500 },
-        { name: '1000-5000元', value: 3500 },
-        { name: '5000-10000元', value: 1800 },
-        { name: '10000-50000元', value: 1200 },
-        { name: '50000元以上', value: 500 },
-      ],
-    },
-  ],
-})
-
-const typeDistData = ref({
-  series: [
-    {
-      data: [
-        { name: '3C', value: 4500 },
-        { name: '电子烟', value: 3500 },
-        { name: '小米', value: 1800 },
-      ],
-    },
-  ],
-})
+const valueDistData = ref({})
 
 // 当前显示的分布数据
 const currentDistData = computed(() => {
-  return distributionType.value === 'value' ? valueDistData.value : typeDistData.value
+  return valueDistData.value
 })
 const categories = ref([])
 const seriesData = ref([])
@@ -392,6 +418,23 @@ const selectedWarehouseLabel = computed(() => {
   const selected = warehouseOptions.value.find((item) => item.value === selectedWarehouse.value)
   return selected ? selected.label : '全部仓库'
 })
+
+// 获取产品排行
+const getWarehouseStockData = () => {
+  getAction(
+    '/app/wms/statistics/getWarehouseStockData',
+    selectedWarehouse.value === 'all' ? {} : { warehouseId: selectedWarehouse.value }
+  ).then((res) => {
+    if (res.success) {
+      stockDataSource.value = res.result.map((item, index) => {
+        return {
+          key: index + 1,
+          ...item,
+        }
+      })
+    }
+  })
+}
 
 // 格式化数字
 const formatNumber = (num) => {
@@ -445,17 +488,7 @@ const inventoryRankList = ref([
 // 监听仓库选择变化
 watch(selectedWarehouse, async (newVal) => {
   // 这里可以调用API获取对应仓库的排行数据
-  try {
-    const res = await getAction('/warehouse/inventory/rank', {
-      warehouseId: newVal,
-      pageSize: 10,
-    })
-    if (res.success) {
-      inventoryRankList.value = res.result
-    }
-  } catch (error) {
-    console.error('获取库存排行数据失败:', error)
-  }
+  getWarehouseStockData()
 })
 
 // 选择仓库
@@ -533,6 +566,8 @@ onMounted(() => {
   loadWmsOrderData()
   getWarehouseList()
   getWmsStockData()
+  loadGoodsValueOrType()
+  getWarehouseStockData()
 })
 </script>
 
@@ -703,7 +738,6 @@ onMounted(() => {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 30rpx;
 
     .title {
       font-size: 32rpx;
@@ -1218,8 +1252,6 @@ onMounted(() => {
 }
 
 .rank-list {
-  padding: 20rpx;
-
   .rank-header {
     display: flex;
     padding: 20rpx 0;
@@ -1231,10 +1263,11 @@ onMounted(() => {
   .rank-item {
     display: flex;
     padding: 24rpx 0;
+    align-items: center;
     border-bottom: 1px solid #f5f5f5;
     font-size: 26rpx;
     color: #333;
-
+    text-align: left;
     &:last-child {
       border-bottom: none;
     }
@@ -1244,24 +1277,29 @@ onMounted(() => {
     &.rank {
       width: 80rpx;
       text-align: center;
+      padding: 0 8rpx;
     }
     &.name {
       flex: 1.2;
+      overflow-x: scroll;
+      white-space: nowrap;
+      padding: 0 8rpx;
     }
     &.type {
-      flex: 1;
+      flex: 1.1;
+      padding: 0 8rpx;
+      overflow-x: scroll;
+      white-space: nowrap;
     }
     &.value {
       flex: 1;
-      text-align: right;
-
       font-weight: 500;
+      padding: 0 8rpx;
     }
     &.stock {
       flex: 1;
-      text-align: right;
-
       font-weight: 500;
+      padding: 0 8rpx;
     }
   }
 

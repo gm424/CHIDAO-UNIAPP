@@ -4,22 +4,6 @@
       <view class="title">物流单数量</view>
       <view class="header">
         <view class="header-order">{{ formatNumber(orderNum) }}</view>
-        <!-- <view class="count">
-          <text>同比: </text>
-          <image
-            src="http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/上升_1734596204748.png"
-            style="width: 28rpx; height: 28rpx"
-          ></image>
-          <text style="color: #333">1.29%</text>
-        </view>
-        <view class="count">
-          <text>环比: </text>
-          <image
-            src="http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/上升_1734596204748.png"
-            style="width: 28rpx; height: 28rpx"
-          ></image>
-          <text style="color: #333">0.37%</text>
-        </view> -->
       </view>
       <view class="content">
         <view class="content-item" style="border-right: 1px #e2e2e2 solid">
@@ -59,24 +43,7 @@
             <view class="card-content">
               <view class="card-value">
                 <text class="number">{{ item.value.toLocaleString() }}</text>
-                <!-- <text class="unit">{{ item.unit }}</text> -->
               </view>
-              <!-- <view class="card-compare">
-              <text class="compare-item">
-                同比<image
-                  :src="
-                    item.yearOnYear > 0
-                      ? 'http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/上升_1734596204748.png'
-                      : 'http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/上升备份_1734596173738.png'
-                  "
-                  style="width: 28rpx; height: 28rpx"
-                ></image
-                ><text style="font-weight: 600">{{ item.yearOnYear }}%</text>
-              </text>
-              <text class="compare-item" :class="{ up: item.monthOnMonth > 0, down: item.monthOnMonth < 0 }">
-              环比{{ item.monthOnMonth > 0 ? '+' : '' }}{{ item.monthOnMonth }}%
-            </text>
-            </view> -->
             </view>
           </view>
         </view>
@@ -148,11 +115,11 @@
           <text class="sub-title">TOP 10</text>
         </view>
         <view class="card-header">
-          <view class="tab-group">
-            <text class="tab-item" :class="{ active: rankType === 'country' }" @tap="switchRankType('country')"
+          <view class="switch-group">
+            <text class="switch-item" :class="{ active: rankType === 'country' }" @tap="switchRankType('country')"
               >国家分布</text
             >
-            <text class="tab-item" :class="{ active: rankType === 'product' }" @tap="switchRankType('product')"
+            <text class="switch-item" :class="{ active: rankType === 'product' }" @tap="switchRankType('product')"
               >产品排行</text
             >
           </view>
@@ -169,173 +136,45 @@
           </view>
 
           <!-- 列表内容 -->
-          <view class="rank-item" v-for="(item, index) in currentRankList" :key="index">
-            <text class="col rank">
-              <view class="rank-num" :class="{ 'top-3': index < 3 }">
-                <text>{{ index + 1 }}</text>
-                <image v-if="index < 3" :src="imageList[index]" style="width: 70rpx; height: 40rpx"></image>
-              </view>
-            </text>
-            <text class="col name">{{ item.name }}</text>
-            <text class="col count">{{ item.count }}</text>
-
-            <text class="col percent">
-              <text class="percent-value">{{ item.percent }}</text>
-              <text class="percent-symbol">%</text>
-            </text>
-          </view>
-        </view>
-      </view>
-      <view class="stat-container">
-        <view class="title">
-          <image
-            src="http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/大数据科技数据流转_1734521664475.png"
-            style="width: 40rpx; height: 40rpx; margin-right: 10rpx"
-          ></image>
-          <view>渠道数据</view>
-        </view>
-        <view class="stat-grid">
           <view
-            v-for="(item, index) in statCards"
+            class="rank-item"
+            v-for="(item, index) in allocationDataSource"
             :key="index"
-            class="stat-card animate-fadeIn"
-            :style="{ animationDelay: `${index * 0.1}s` }"
+            v-if="rankType === 'country'"
           >
-            <view class="card-icon">
-              <u-icon :name="item.icon" size="18" color="#ffb813"></u-icon>
-              <text class="card-title">{{ item.title }}</text>
-            </view>
-            <view class="card-content">
-              <view class="card-value">
-                <text class="number">{{ item.value.toLocaleString() }}</text>
-                <!-- <text class="unit">{{ item.unit }}</text> -->
-              </view>
-              <!-- <view class="card-compare">
-              <text class="compare-item">
-                同比<image
-                  :src="
-                    item.yearOnYear > 0
-                      ? 'http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/上升_1734596204748.png'
-                      : 'http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/上升备份_1734596173738.png'
-                  "
-                  style="width: 28rpx; height: 28rpx"
-                ></image
-                ><text style="font-weight: 600">{{ item.yearOnYear }}%</text>
-              </text>
-              <text class="compare-item" :class="{ up: item.monthOnMonth > 0, down: item.monthOnMonth < 0 }">
-              环比{{ item.monthOnMonth > 0 ? '+' : '' }}{{ item.monthOnMonth }}%
-            </text>
-            </view> -->
-            </view>
-          </view>
-        </view>
-      </view>
-
-      <view class="chart-card">
-        <view class="title">
-          <image
-            src="http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/下降趋势_1734664718481.png"
-            style="width: 40rpx; height: 40rpx; margin-right: 10rpx"
-          ></image>
-          <view>物流单量趋势</view>
-        </view>
-        <view class="card-header">
-          <view class="switch-group">
-            <text class="switch-item" :class="{ active: chartType === 'total' }" @tap="switchChartType('total')"
-              >总单量</text
-            >
-            <text class="switch-item" :class="{ active: chartType === 'channel' }" @tap="switchChartType('channel')"
-              >渠道单量</text
-            >
-          </view>
-        </view>
-        <view class="chart-content">
-          <qiun-data-charts type="area" :opts="chartOpts" :chartData="currentChartData" />
-        </view>
-      </view>
-
-      <!-- 产品货值分布卡片 -->
-      <view class="chart-card">
-        <view class="title">
-          <image
-            src="http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/查库存_1734664689455.png"
-            style="width: 40rpx; height: 40rpx; margin-right: 10rpx"
-          ></image>
-          <view>物流产品分析</view>
-        </view>
-        <view class="card-header">
-          <view class="switch-group">
-            <text
-              class="switch-item"
-              :class="{ active: distributionType === 'value' }"
-              @tap="switchDistributionType('value')"
-              >货值分布</text
-            >
-            <text
-              class="switch-item"
-              :class="{ active: distributionType === 'type' }"
-              @tap="switchDistributionType('type')"
-              >类型分布</text
-            >
-          </view>
-        </view>
-        <view class="chart-content">
-          <view class="chart-wrapper">
-            <qiun-data-charts type="ring" :opts="valueDistOpts" :chartData="currentDistData" />
-          </view>
-        </view>
-      </view>
-
-      <!-- 排行榜卡片 -->
-      <view class="chart-card">
-        <view class="title">
-          <image
-            src="http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/排行榜_1734664705135.png"
-            style="width: 40rpx; height: 40rpx; margin-right: 10rpx"
-          ></image>
-          <view>排行榜</view>
-          <text class="sub-title">TOP 10</text>
-        </view>
-        <view class="card-header">
-          <view class="tab-group">
-            <text class="tab-item" :class="{ active: rankType === 'country' }" @tap="switchRankType('country')"
-              >国家分布</text
-            >
-            <text class="tab-item" :class="{ active: rankType === 'product' }" @tap="switchRankType('product')"
-              >产品排行</text
-            >
-          </view>
-        </view>
-
-        <view class="rank-list">
-          <!-- 表头 -->
-          <view class="rank-header">
-            <text class="col rank">排名</text>
-            <text class="col name">{{ rankType === 'country' ? '收货国家' : '品名' }}</text>
-            <text class="col count1">{{ rankType === 'country' ? '物流单量' : '产品货值' }}</text>
-
-            <text class="col percent">占比</text>
-          </view>
-
-          <!-- 列表内容 -->
-          <view class="rank-item" v-for="(item, index) in currentRankList" :key="index">
             <text class="col rank">
               <view class="rank-num" :class="{ 'top-3': index < 3 }">
-                <text>{{ index + 1 }}</text>
+                <text>{{ item.rankNum }}</text>
+                <image v-if="index < 3" :src="imageList[index]" style="width: 70rpx; height: 40rpx"></image>
+              </view>
+            </text>
+            <text class="col name">{{ item.dstCountry }}</text>
+            <text class="col count">{{ item.orderCount }}</text>
+
+            <text class="col percent">
+              <text class="percent-value">{{ item.proportion }}</text>
+              <text class="percent-symbol">%</text>
+            </text>
+          </view>
+
+          <view class="rank-item" v-for="(item, index) in stockDataSource" :key="item.id" v-else>
+            <text class="col rank">
+              <view class="rank-num" :class="{ 'top-3': index < 3 }">
+                <text>{{ item.rankNum }}</text>
                 <image v-if="index < 3" :src="imageList[index]" style="width: 70rpx; height: 40rpx"></image>
               </view>
             </text>
             <text class="col name">{{ item.name }}</text>
-            <text class="col count">{{ item.count }}</text>
+            <text class="col count">{{ item.totalValue }}</text>
 
             <text class="col percent">
-              <text class="percent-value">{{ item.percent }}</text>
+              <text class="percent-value">{{ item.proportion }}</text>
               <text class="percent-symbol">%</text>
             </text>
           </view>
         </view>
-      </view></view
-    >
+      </view>
+    </view>
   </view>
 </template>
 
@@ -422,53 +261,59 @@ const formatNumber = (num) => {
   }
   return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
 }
-
+const seaCount = ref(0)
+const airCount = ref(0)
+const roadCount = ref(0)
+const railCount = ref(0)
+const dtdCount = ref(0)
+const headCount = ref(0)
 // 统计卡片数据
-const statCards = ref([
-  {
-    icon: 'http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/0605-ship2-filled_1734597000934.png',
-    title: '海运',
-    value: formatNumber(9999),
-    unit: '单',
-    yearOnYear: -10.11,
-  },
-  {
-    icon: 'http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/出差_1734597027658.png',
-    title: '空运',
-    value: formatNumber(8998),
-    unit: '单',
-    yearOnYear: 30.29,
-  },
-  {
-    icon: 'http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/卡车运输货物_1734597056487.png',
-    title: '卡航',
-    value: formatNumber(9999),
-    unit: '单',
-    yearOnYear: 6.29,
-  },
-  {
-    icon: 'http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/铁路_1734597041942.png',
-    title: '铁路',
-    value: formatNumber(8999),
-    unit: '单',
-    yearOnYear: 12.62,
-  },
-  {
-    icon: 'http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/冰箱_1734597073488.png',
-    title: '到门',
-    value: formatNumber(3774),
-    unit: '单',
-    yearOnYear: -6.89,
-  },
-
-  {
-    icon: 'http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/整柜出口_1734597090776.png',
-    title: '到港',
-    value: formatNumber(8349),
-    unit: '单',
-    yearOnYear: 1.04,
-  },
-])
+const statCards = computed(() => {
+  return [
+    {
+      icon: 'http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/0605-ship2-filled_1734597000934.png',
+      title: '海运',
+      value: formatNumber(seaCount.value),
+      unit: '单',
+      yearOnYear: -10.11,
+    },
+    {
+      icon: 'http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/出差_1734597027658.png',
+      title: '空运',
+      value: formatNumber(airCount.value),
+      unit: '单',
+      yearOnYear: 30.29,
+    },
+    {
+      icon: 'http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/卡车运输货物_1734597056487.png',
+      title: '卡航',
+      value: formatNumber(roadCount.value),
+      unit: '单',
+      yearOnYear: 6.29,
+    },
+    {
+      icon: 'http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/铁路_1734597041942.png',
+      title: '铁路',
+      value: formatNumber(railCount.value),
+      unit: '单',
+      yearOnYear: 12.62,
+    },
+    {
+      icon: 'http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/冰箱_1734597073488.png',
+      title: '到门',
+      value: formatNumber(dtdCount.value),
+      unit: '单',
+      yearOnYear: -6.89,
+    },
+    {
+      icon: 'http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/整柜出口_1734597090776.png',
+      title: '到港',
+      value: formatNumber(headCount.value),
+      unit: '单',
+      yearOnYear: 1.04,
+    },
+  ]
+})
 
 onReady(() => {
   getServerData()
@@ -495,27 +340,39 @@ const getServerData = () => {
 
 // 产品货值分布图配置
 const valueDistOpts = ref({
-  padding: [5, 5, 5, 5],
+  color: ['#79a2ff', '#ff9e8b', '#58b1ff', '#ffb200'],
+  padding: [15, 5, 15, 5],
   dataLabel: false,
   legend: {
     show: true,
     position: 'bottom',
     lineHeight: 5,
   },
+  title: {
+    name: '货值',
+    fontSize: 15,
+    color: '#666666',
+  },
+  subtitle: {
+    name: '',
+    fontSize: 12,
+    color: '#333',
+  },
   extra: {
     ring: {
-      ringWidth: 60,
+      ringWidth: 45,
       centerColor: '#FFFFFF',
       activeOpacity: 0.7,
       activeRadius: 10,
       offsetAngle: 0,
-      border: false,
-      borderWidth: 3,
+      border: true,
+      borderWidth: 2,
       borderColor: '#FFFFFF',
       spaceBetween: 2,
       animation: true,
       animationDuration: 1000,
       animationType: 'scale',
+      // linearType: 'custom',
     },
   },
 })
@@ -526,41 +383,15 @@ const distributionType = ref('value')
 // 切换分布类型
 const switchDistributionType = (type) => {
   distributionType.value = type
+  loadGoodsValueOrType()
 }
 
 // 货值分布数据
-const valueDistData = ref({
-  series: [
-    {
-      data: [
-        { name: '0-1000元', value: 2500 },
-        { name: '1000-5000元', value: 3500 },
-        { name: '5000-10000元', value: 1800 },
-        { name: '10000-50000元', value: 1200 },
-        { name: '50000元以上', value: 500 },
-      ],
-    },
-  ],
-})
-
-// 类型分布数据
-const typeDistData = ref({
-  series: [
-    {
-      data: [
-        { name: '电子产品', value: 3800 },
-        { name: '服装鞋帽', value: 2500 },
-        { name: '家居用品', value: 1600 },
-        { name: '食品饮料', value: 1200 },
-        { name: '其他', value: 800 },
-      ],
-    },
-  ],
-})
+const valueDistData = ref({})
 
 // 当前显示的分布数据
 const currentDistData = computed(() => {
-  return distributionType.value === 'value' ? valueDistData.value : typeDistData.value
+  return valueDistData.value
 })
 
 // 排行榜类型
@@ -592,58 +423,108 @@ const currentRankList = computed(() => {
 // 切换排行榜类型
 const switchRankType = (type) => {
   rankType.value = type
+  if (type === 'country') {
+    getAllocation()
+  } else {
+    getStockData()
+  }
 }
 
 // 饼图颜色列表
-const colorList = ['#1890FF', '#2FC25B', '#FACC14', '#223273', '#8543E0']
+let colorList = ['#30d6ab', '#3195ff', '#ffaf21', '#34b5f0']
 const orderNum = ref(0)
 const totalChargingWeightValue = ref(0)
 const totalValue = ref(0)
 const totalCubeValue = ref(0)
+
+// 获取单量数据
 const loadData = () => {
-  getAction('/tms/transOrder/sum').then((res) => {
+  getAction('/bi/tms/orderValueStatistics', { dateRange: 'TY' }).then((res) => {
     if (res.success) {
-      orderNum.value = res.result.count
-      totalChargingWeightValue.value = res.result.chargingWeightSum
-      totalValue.value = res.result.totalValueSum
-      totalCubeValue.value = res.result.totalCube
+      orderNum.value = res.result.orderCount
+      totalChargingWeightValue.value = res.result.chargingWeight
+      totalValue.value = res.result.cubes
+      totalCubeValue.value = res.result.totalValue
     }
   })
 }
+
+//获取渠道统计数据
+const loadTmsChannelData = () => {
+  getAction('/bi/tms/channelStatistics', { dateRange: 'TY' }).then((res) => {
+    if (res.success) {
+      seaCount.value = res.result.seaCount
+      airCount.value = res.result.airCount
+      roadCount.value = res.result.roadCount
+      railCount.value = res.result.railCount
+      dtdCount.value = res.result.dtdCount
+      headCount.value = res.result.headCount
+    }
+  })
+}
+const stockDataSource = ref([])
+const allocationDataSource = ref([])
 const imageList = ref([
   'http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/编组30_1734664613566.png',
   'http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/编组30备份_1734664629802.png',
   'http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/编组30备份2_1734664658738.png',
 ])
 const loadTmsChannelChartData = () => {
-  getAction('/tms/statistics/transStatisticsChannelNumData').then((res) => {
+  getAction('/bi/tms/channalOrderTrend', { dateRange: 'TY' }).then((res) => {
     if (res.success && res.result) {
       seriesData.value = []
-
-      const dates = []
-      const today = new Date()
-
-      for (let i = 6; i >= 0; i--) {
-        const date = new Date()
-        date.setDate(today.getDate() - i)
-        const formattedDate = date.toISOString().split('T')[0]
-        dates.push(formattedDate)
-      }
-
-      categories.value = dates
-      seriesData.value = Object.entries(res.result).map(([key, value]) => ({
-        name: key,
-        type: 'line',
-        data: value,
-        markPoint: {
-          data: [
-            {
-              type: 'max',
-              name: '最高点',
-            },
-          ],
+      let grouped = []
+      grouped = _.groupBy(res.result, (item) => item.dateStr.slice(0, 7))
+      const result = Object.keys(grouped).map((month) => {
+        // 空运
+        const airCount = _.sumBy(grouped[month], 'airCount')
+        // 铁路
+        const railwayCount = _.sumBy(grouped[month], 'railwayCount')
+        // 快递
+        const expressCount = _.sumBy(grouped[month], 'expressCount')
+        // 海运
+        const shippingFclCount = _.sumBy(grouped[month], 'shippingFclCount')
+        // 到门
+        const dtdCount = _.sumBy(grouped[month], 'dtdCount')
+        // 到港
+        const headCount = _.sumBy(grouped[month], 'headCount')
+        // 海外仓
+        const owCount = _.sumBy(grouped[month], 'owCount')
+        return { date: month, airCount, railwayCount, expressCount, shippingFclCount, dtdCount, headCount, owCount }
+      })
+      categories.value = result.map((item) => item.date)
+      seriesData.value = [
+        {
+          type: 'line',
+          name: '空运',
+          data: result.map((item) => item.airCount),
         },
-      }))
+        {
+          type: 'line',
+          name: '海运',
+          data: result.map((item) => item.shippingFclCount),
+        },
+        {
+          type: 'line',
+          name: '铁路',
+          data: result.map((item) => item.railwayCount),
+        },
+        {
+          type: 'line',
+          name: '快递',
+          data: result.map((item) => item.expressCount),
+        },
+        {
+          type: 'line',
+          name: '到门',
+          data: result.map((item) => item.dtdCount),
+        },
+        {
+          type: 'line',
+          name: '到港',
+          data: result.map((item) => item.headCount),
+        },
+      ]
       console.log('categories.value', categories.value, seriesData.value)
       channelData.value.categories = categories.value
       channelData.value.seriesData = seriesData.value
@@ -651,6 +532,48 @@ const loadTmsChannelChartData = () => {
       seriesData.value = []
     }
     // 初始化图表
+  })
+}
+//产品货值和类型分析
+const loadGoodsValueOrType = () => {
+  let url = distributionType.value === 'value' ? '/bi/tms/productValueAnalysis' : '/bi/tms/productTypeAnalysis'
+  getAction(url, { dateRange: 'TY' }).then((res) => {
+    if (res.success) {
+      valueDistData.value = {
+        series: [
+          {
+            data: res.result.map((item, index) => {
+              return {
+                name: item.valueRange,
+                value: parseInt(item.count),
+              }
+            }),
+          },
+        ],
+      }
+      valueDistOpts.value.subtitle.name = formatNumber(
+        valueDistData.value.series[0].data.reduce((acc, item) => acc + item.value, 0)
+      )
+      console.log('valueDistData', valueDistData.value)
+    }
+  })
+}
+
+// 获取产品排行
+const getStockData = () => {
+  getAction('/bi/tms/productRanking', { dateRange: 'TY' }).then((res) => {
+    if (res.success) {
+      stockDataSource.value = res.result
+    }
+  })
+}
+
+// 获取国家分布
+const getAllocation = () => {
+  getAction('/bi/tms/orderAllocation', { dateRange: 'TY' }).then((res) => {
+    if (res.success) {
+      allocationDataSource.value = res.result
+    }
   })
 }
 
@@ -677,6 +600,9 @@ const loadTmsTotalOrderData = () => {
 }
 onMounted(() => {
   loadData()
+  loadTmsChannelData()
+  loadGoodsValueOrType()
+  getAllocation()
   loadTmsTotalOrderData()
 })
 </script>
@@ -922,8 +848,6 @@ onMounted(() => {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 30rpx;
-
     .title {
       font-size: 32rpx;
       font-weight: 500;

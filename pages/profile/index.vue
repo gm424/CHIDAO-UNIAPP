@@ -183,7 +183,7 @@ const orderTypes = [
     id: 1,
     name: '全部',
     icon: 'http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/形状_1734588692367.png',
-    path: '/pages/order/list?status=6',
+    path: '/pages/order/list?status=all',
     // count: 2,
   },
   {

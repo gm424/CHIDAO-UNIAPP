@@ -64,7 +64,7 @@
     </view>
 
     <!-- 添加地址按钮 -->
-    <view class="add-btn" @tap="addAddress">
+    <view class="add-button" @tap="addAddress">
       <u-icon name="plus" color="#fff" size="20"></u-icon>
       <text>新增地址</text>
     </view>
@@ -295,32 +295,25 @@ const handleSwipeClick = (e, address) => {
   }
 }
 
-.add-btn {
+.add-button {
   position: fixed;
-  left: 40rpx;
   right: 40rpx;
   bottom: 40rpx;
-  height: 88rpx;
   background: $theme-color;
-  border-radius: 44rpx;
+  color: #fff;
+  height: 96rpx;
+  padding: 0 40rpx;
+  border-radius: 48rpx;
   display: flex;
   align-items: center;
+  gap: 12rpx;
+  box-shadow: 0 4rpx 16rpx rgba(22, 119, 255, 0.2);
+  width: 80%;
   justify-content: center;
-  color: #fff;
-  font-size: 32rpx;
-  box-shadow: 0 4rpx 16rpx rgba($theme-color, 0.3);
-  transition: all 0.3s;
-
-  &:active {
-    transform: translateY(2rpx);
-    box-shadow: 0 2rpx 8rpx rgba($theme-color, 0.3);
-  }
-
   text {
-    margin-left: 8rpx;
+    font-size: 28rpx;
   }
 }
-
 .loading-more {
   text-align: center;
   padding: 30rpx 0;

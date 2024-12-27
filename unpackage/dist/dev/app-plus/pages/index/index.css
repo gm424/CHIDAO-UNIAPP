@@ -1667,7 +1667,7 @@ to {
   position: absolute;
   left: 1.875rem;
   color: #fff;
-  top: 4.375rem;
+  top: 7vh;
   display: flex;
   flex-direction: row;
 }
@@ -1684,7 +1684,7 @@ to {
   font-family: "CustomFont";
   position: absolute;
   left: 1.875rem;
-  top: 6.25rem;
+  top: 11vh;
   color: #fff;
   font-size: 1.75rem;
   text-shadow: 0 0.0625rem 0.125rem rgba(0, 0, 0, 0.3);

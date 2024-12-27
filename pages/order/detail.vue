@@ -27,8 +27,8 @@
       <view class="route-main">
         <view class="route-locations">
           <view class="location">
-            <text class="city">{{ orderDetail.srcPort_dictText }}</text>
-            <text class="country-code">{{ orderDetail.srcPort }}</text>
+            <text class="city">{{ orderDetail.srcCountry_dictText }}</text>
+            <text class="country-code">{{ orderDetail.srcCountry }}</text>
           </view>
           <view class="route-arrow">
             <image
@@ -39,8 +39,8 @@
             <text class="arrow-time">{{ orderDetail.referenceTimeCost }}</text>
           </view>
           <view class="location">
-            <text class="city">{{ orderDetail.dstPort_dictText }}</text>
-            <text class="country-code">{{ orderDetail.dstPort }}</text>
+            <text class="city">{{ orderDetail.dstCountry_dictText }}</text>
+            <text class="country-code">{{ orderDetail.dstCountry }}</text>
           </view>
         </view>
       </view>

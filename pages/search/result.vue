@@ -67,11 +67,11 @@
             :class="{ active: searchParams.channel === item.value }"
             @tap="handleChannelChange(item.value)"
           >
-            <u-icon
+            <!-- <u-icon
               :name="item.icon"
               size="24"
               :color="searchParams.channel === item.value ? '#ffb715' : '#666'"
-            ></u-icon>
+            ></u-icon> -->
             <text>{{ item.label }}</text>
           </view>
         </view>
@@ -90,7 +90,7 @@
               <text class="iconfont icon-right"></text>
             </view>
           </view>
-          <button class="confirm-btn" @tap="confirmLocationSelect">确认</button>
+          <u-button class="confirm-btn" @tap="confirmLocationSelect">确认</u-button>
         </view>
       </view>
     </u-popup>
@@ -746,7 +746,7 @@ onMounted(() => {
 
 .location-popup {
   background: #fff;
-  padding: 60rpx 30rpx;
+  padding: 100rpx 30rpx 60rpx 30rpx;
 
   .popup-header {
     display: flex;
@@ -784,9 +784,9 @@ onMounted(() => {
 
     .confirm-btn {
       margin-top: 30rpx;
-      background: #007aff;
+      background: $theme-color;
       color: #fff;
-      border-radius: 8rpx;
+      border-radius: 20rpx;
     }
   }
 }
@@ -959,7 +959,7 @@ onMounted(() => {
     flex: 1;
     display: inline-flex;
     align-items: center;
-    padding: 6rpx 10rpx;
+    padding: 10rpx 10rpx;
     margin-right: 10rpx;
     border-radius: 30rpx;
     background: #f8f8f8;

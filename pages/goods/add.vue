@@ -259,14 +259,10 @@ const onHsCodeConfirm = (e) => {
 const rules = {
   sku: [{ required: true, message: '请输入商品编码', trigger: ['blur', 'change'] }],
   name: [{ required: true, message: '请输入商品名称', trigger: ['blur', 'change'] }],
-  unit: [{ required: true, message: '请输入单位', trigger: ['blur', 'change'] }],
   length: [{ required: true, message: '请输入长度', trigger: ['blur', 'change'] }],
   width: [{ required: true, message: '请输入宽度', trigger: ['blur', 'change'] }],
   height: [{ required: true, message: '请输入高度', trigger: ['blur', 'change'] }],
-  grossWeight: [{ required: true, message: '请输入毛重', trigger: ['blur', 'change'] }],
   price: [{ required: true, message: '请输入价格', trigger: ['blur', 'change'] }],
-  declareCurrency: [{ required: true, message: '请选择币种', trigger: ['blur', 'change'] }],
-  declareValue: [{ required: true, message: '请输入申报价值', trigger: ['blur', 'change'] }],
 }
 
 // 提交表单

@@ -345,6 +345,7 @@
   white-space: nowrap;
   padding: 0 0.625rem;
   border-bottom: 0.03125rem solid #eee;
+  display: flex;
 }
 .filter-tabs .tab-item[data-v-456ecf67] {
   display: inline-block;
@@ -352,6 +353,7 @@
   font-size: 0.875rem;
   color: #666;
   position: relative;
+  width: 15%;
 }
 .filter-tabs .tab-item.active[data-v-456ecf67] {
   color: #ffb200;
@@ -360,10 +362,9 @@
 .filter-tabs .tab-item.active[data-v-456ecf67]::after {
   content: "";
   position: absolute;
-  left: 50%;
+  left: 12%;
   bottom: 0;
-  transform: translateX(-50%);
-  width: 1.25rem;
+  width: 2.8125rem;
   height: 0.125rem;
   background: #ffb200;
   border-radius: 0.0625rem;

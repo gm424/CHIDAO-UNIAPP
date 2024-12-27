@@ -41,8 +41,8 @@
         <view class="route-main">
           <view class="route-locations">
             <view class="location">
-              <text class="city">{{ item.srcPort_dictText }}</text>
-              <text class="country-code">{{ item.srcPort }}</text>
+              <text class="city">{{ item.srcCountry_dictText }}</text>
+              <text class="country-code">{{ item.srcCountry }}</text>
             </view>
             <view class="route-arrow">
               <image
@@ -53,8 +53,8 @@
               <text class="arrow-time">{{ item.referenceTimeCost }}</text>
             </view>
             <view class="location">
-              <text class="city">{{ item.dstPort_dictText }}</text>
-              <text class="country-code">{{ item.dstPort }}</text>
+              <text class="city">{{ item.dstCountry_dictText }}</text>
+              <text class="country-code">{{ item.dstCountry }}</text>
             </view>
           </view>
         </view>
@@ -97,6 +97,7 @@ import { onLoad } from '@dcloudio/uni-app'
 import { onReachBottom, onPullDownRefresh } from '@dcloudio/uni-app'
 // 状态列表
 const statusList = [
+  { label: '全部', value: 'all' },
   { label: '新创建', value: '6' },
   { label: '执行中', value: '1,2,3,7,8' },
   { label: '已完成', value: '4' },
@@ -119,15 +120,24 @@ onLoad((options) => {
 // 获取新创建订单列表
 const loadOrderList = async (type = 'add') => {
   loading.value = true
-  let url = currentStatus.value === '6' ? '/tms/transOrder/listInquiryList' : '/tms/transOrder/list'
+  let url =
+    currentStatus.value === '6' || currentStatus.value === 'all'
+      ? '/tms/transOrder/listInquiryList'
+      : '/tms/transOrder/list'
 
   try {
-    const res = await getAction(url, {
-      pageNo: pageNo.value,
-      pageSize: pageSize.value,
-      statusList: currentStatus.value,
-      keyword: searchKeyword.value,
-    })
+    const res = await getAction(
+      url,
+      Object.assign(
+        {
+          pageNo: pageNo.value,
+          pageSize: pageSize.value,
+
+          keyword: searchKeyword.value,
+        },
+        currentStatus.value === 'all' ? {} : { statusList: currentStatus.value }
+      )
+    )
 
     if (res.success) {
       if (type === 'refresh') {
@@ -247,7 +257,7 @@ onMounted(() => {
     font-size: 28rpx;
     color: #666;
     position: relative;
-    width: 20%;
+    width: 15%;
     &.active {
       color: $theme-color;
       font-weight: 500;

@@ -130,16 +130,15 @@ const getRecordList = async (type = 'more') => {
     const date = new Date(selectedDate.value)
     const year = date.getFullYear()
     const month = date.getMonth() + 1
-
+    const days = new Date(year, month, 0).getDate()
     const res = await getAction('/wms/stockRecord/list', {
       pageNo: pageNo.value,
       pageSize: pageSize.value,
       column: 'createTime',
       order: 'desc',
       description: searchKeyword.value ? '*' + searchKeyword.value + '*' : '',
-      controlled: currentFilter.value,
       createTimeBegin: year + '-' + month + '-' + '01',
-      createTimeEnd: year + '-' + month + '-' + '31',
+      createTimeEnd: year + '-' + month + '-' + days,
     })
 
     if (res.success) {
