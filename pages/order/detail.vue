@@ -48,27 +48,34 @@
 
     <!-- 地址信息 -->
     <view class="address-section card">
-      <!-- <view class="section-title">发货地址</view>
-      <view class="address-card">
-        <view class="contact-info">
-          <text class="name">{{ orderDetail.pickupContactName }}</text>
-          <text class="phone">{{ orderDetail.pickupContactPhone }}</text>
+      <view style="display: flex; flex-direction: row; width: 100%">
+        <view class="section-title">
+          <u-icon name="http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/编组2x_1735552689688.png" size="24" />
         </view>
-        <view class="address-detail">
-          <text>{{ orderDetail.pickupCountry }} {{ orderDetail.pickupDetailAddr }}</text>
+        <view class="address-card">
+          <view class="contact-info">
+            <text class="name">{{ orderDetail.pickupInfo.pickupContactName }}</text>
+            <text class="phone">{{ orderDetail.pickupInfo.pickupContactPhone }}</text>
+          </view>
+          <view class="address-detail">
+            <text>{{ orderDetail.pickupInfo.pickupDetailAddr }}</text>
+          </view>
+        </view></view
+      >
+      <view style="display: flex; flex-direction: row; width: 100%"
+        ><view class="section-title">
+          <u-icon name="http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/编组2x(1)_1735552678622.png" size="24" />
         </view>
-      </view> -->
-
-      <view class="section-title">收货地址</view>
-      <view class="address-card">
-        <view class="contact-info">
-          <text class="name">{{ orderDetail.recvContactName }}</text>
-          <text class="phone">{{ orderDetail.recvContactPhone }}</text>
-        </view>
-        <view class="address-detail">
-          <text>{{ orderDetail.recvCountry }} {{ orderDetail.recvDetailAddr }}</text>
-        </view>
-      </view>
+        <view class="address-card">
+          <view class="contact-info">
+            <text class="name">{{ orderDetail.recvContactName }}</text>
+            <text class="phone">{{ orderDetail.recvContactPhone }}</text>
+          </view>
+          <view class="address-detail">
+            <text> {{ orderDetail.recvDetailAddr }}</text>
+          </view>
+        </view></view
+      >
     </view>
 
     <!-- 货物信息 -->
@@ -336,24 +343,12 @@ const viewLogistics = () => {
     margin-bottom: 24rpx;
     position: relative;
     padding-left: 20rpx;
-
-    &::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 6rpx;
-      height: 24rpx;
-      background: $theme-color;
-      border-radius: 3rpx;
-    }
   }
 
   .address-card {
-    background: #f9f9f9;
+    flex: 1;
     border-radius: 16rpx;
-    padding: 24rpx;
+    padding: 0rpx 24rpx;
     margin-bottom: 24rpx;
 
     .contact-info {
@@ -369,14 +364,14 @@ const viewLogistics = () => {
       }
 
       .phone {
-        color: #666;
+        color: #9b9a9a;
         font-size: 28rpx;
       }
     }
 
     .address-detail {
       font-size: 28rpx;
-      color: #7c7b7b;
+      color: #afadad;
       line-height: 1.5;
     }
   }

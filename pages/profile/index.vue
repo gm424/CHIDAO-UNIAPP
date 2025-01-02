@@ -99,6 +99,7 @@
       <!-- 退出登录按钮 -->
       <view class="logout-section">
         <u-button class="logout-btn" @tap="handleLogout">退出登录</u-button>
+        <u-button class="logout-btn" style="margin-top: 20rpx" @tap="handleQuit">注销账号</u-button>
       </view>
     </view>
   </view>
@@ -218,14 +219,14 @@ const otherMenus = [
     iconColor: '#373737',
     desc: '已认证',
   },
-  {
-    id: 2,
-    name: '设置',
-    icon: 'http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/设置_1734589587248.png',
-    path: '/pages/settings/security',
-    bgColor: '#fff',
-    iconColor: '#373737',
-  },
+  // {
+  //   id: 2,
+  //   name: '设置',
+  //   icon: 'http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/设置_1734589587248.png',
+  //   path: '/pages/setting/account',
+  //   bgColor: '#fff',
+  //   iconColor: '#373737',
+  // },
   {
     id: 3,
     name: '关于我们',
@@ -255,6 +256,21 @@ const handleLogout = () => {
     },
   })
 }
+const handleQuit = () => {
+  uni.showModal({
+    title: '提示',
+    content: '确定要注销该用户吗？',
+    success: (res) => {
+      if (res.confirm) {
+        uni.clearStorageSync()
+        uni.reLaunch({
+          url: '/pages/login/index',
+        })
+      }
+    },
+  })
+}
+
 const getUserInfo = () => {
   getAction('/auth/accountInfo').then((res) => {
     model.value = res.result
@@ -401,6 +417,7 @@ const goToCompanyInfo = () => {
   left: 0;
   width: 100%;
   min-height: 100vh;
+  padding-bottom: 100rpx;
 }
 
 .section-card {

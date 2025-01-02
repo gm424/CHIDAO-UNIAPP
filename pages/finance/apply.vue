@@ -56,6 +56,7 @@
               placeholder="请详细说明申请原因"
               :maxlength="200"
               border="none"
+              style="width: 100%"
             />
           </u-form-item>
         </view>
@@ -467,6 +468,11 @@ onMounted(() => {
       }
     }
   }
+}
+:deep(.u-form-item .u-form-item__body__left) {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 10rpx;
 }
 :deep(.u-form-item) {
   padding: 20rpx 0;

@@ -16,7 +16,7 @@
 
       <view class="section">
         <view class="section-title">3. 信息保护</view>
-        <view class="paragraph"> 3.1 我们采用业界标准的安全技术和程序来保��用户的个人信息。 </view>
+        <view class="paragraph"> 3.1 我们采用业界标准的安全技术和程序来保护用户的个人信息。 </view>
         <view class="paragraph"> 3.2 我们定期审查信息收集、存储和处理实践，以防止未经授权的访问。 </view>
       </view>
 

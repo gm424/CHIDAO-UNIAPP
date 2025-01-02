@@ -33,49 +33,49 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
-import { putAction, getAction } from '@/common/store/manage'
+import { ref, onMounted } from 'vue';
+import { putAction, getAction } from '@/common/store/manage';
 
-const companyList = ref([])
-const selectedCompany = ref(null)
+const companyList = ref([]);
+const selectedCompany = ref(null);
 // 获取角色文本
 const getRoleText = (role) => {
   const roleMap = {
     ADMIN: '管理员',
     CUSTOMER: '客户',
     SUPPLIER: '供应商',
-  }
-  return roleMap[role] || role
-}
+  };
+  return roleMap[role] || role;
+};
 
 const requestEnterpriseList = async () => {
   getAction('/sys/user/userEnterpriseList').then((res) => {
-    companyList.value = res.result
-  })
-}
+    companyList.value = res.result;
+  });
+};
 const select = (item) => {
-  selectedCompany.value = item
-}
+  selectedCompany.value = item;
+};
 // 确认选择
 const handleEnterpriseClick = () => {
   if (selectedCompany.value.status !== '1') {
-    return
+    return;
   }
 
   putAction('/auth/{orgCode}/switchEnterprise'.replace('{orgCode}', selectedCompany.value.orgCode)).then((res) => {
     if (res.success) {
       // 保存选中的企业信息
-      uni.setStorageSync('currentCompany', selectedCompany.value)
+      uni.setStorageSync('currentCompany', selectedCompany.value);
       // 跳转到首页
       uni.reLaunch({
         url: '/pages/index/index',
-      })
+      });
     }
-  })
-}
+  });
+};
 onMounted(() => {
-  requestEnterpriseList()
-})
+  requestEnterpriseList();
+});
 </script>
 
 <style lang="scss" scoped>

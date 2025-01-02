@@ -200,7 +200,7 @@ const chartDataWms = ref({})
 
 const chartOpts = ref({
   color: ['#ffb918', '#91CB74', '#EE6666', '#73C0DE', '#3CA272'],
-  padding: [15, 15, 0, 15],
+  padding: [35, 15, 20, 0],
   enableScroll: false,
   legend: {
     show: false,
@@ -216,7 +216,7 @@ const chartOpts = ref({
   },
   yAxis: {
     gridType: 'dash',
-    dashLength: 2,
+    dashLength: 8,
     formatter: (val) => val,
   },
   extra: {
@@ -951,7 +951,7 @@ onMounted(() => {
 .chart-card-range {
   background: #fff;
   border-radius: 20rpx;
-  padding: 30rpx;
+  padding: 30rpx 15rpx;
   margin: 20rpx;
   margin-top: 20rpx;
   box-shadow: 0 2rpx 12rpx rgba(0, 0, 0, 0.05);
@@ -1003,7 +1003,7 @@ onMounted(() => {
     }
   }
   .chart-content {
-    height: 500rpx;
+    height: 400rpx;
     width: 100%;
   }
 

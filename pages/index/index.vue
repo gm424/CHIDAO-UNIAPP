@@ -51,20 +51,20 @@
           <!-- 起始地和目的地 -->
           <view class="location-row">
             <view class="location" @tap="showCountrySelect('origin')">
-              <text>起始地 {{ selectedOrigin.name }}</text>
+              <text> {{ selectedOrigin.name ? selectedOrigin.name : '起始地' }}</text>
             </view>
 
             <text class="divider">|</text>
 
             <view class="location" @tap="showCountrySelect('dest')">
-              <text>目的地 {{ selectedDest.name }}</text>
+              <text> {{ selectedDest.name ? selectedDest.name : '目的地' }}</text>
             </view>
           </view>
 
           <!-- 发运时间 -->
           <view class="location-row">
             <view class="location" @tap="showDateSelect">
-              <text>日期 {{ selectedDate }}</text>
+              <text> {{ selectedDate ? selectedDate : '日期' }}</text>
             </view>
           </view>
 
@@ -122,7 +122,7 @@
     <u-popup :show="showCountryPopup" @close="closeCountrySelect" mode="bottom" round="10">
       <view class="country-popup">
         <view class="popup-header">
-          <text>选择国家</text>
+          <text>选择国家/地区</text>
           <text class="close-btn" @tap="closeCountrySelect">关闭</text>
         </view>
 

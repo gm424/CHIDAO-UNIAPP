@@ -67,8 +67,10 @@
             >
           </view>
         </view>
-        <view class="chart-content">
-          <qiun-data-charts type="area" :opts="chartOpts" :chartData="currentChartData" />
+        <view class="chart-content-trend">
+          <view style="height: 400rpx">
+            <qiun-data-charts type="area" :opts="chartOpts" :chartData="currentChartData" />
+          </view>
         </view>
       </view>
 
@@ -189,7 +191,7 @@ const chartType = ref('total')
 
 const chartOpts = ref({
   color: ['#ffb918', '#4cd575', '#FAC858', '#EE6666', '#73C0DE', '#3CA272'],
-  padding: [15, 15, 0, 15],
+  padding: [15, 15, 15, -2],
   enableScroll: false,
   legend: {
     show: false,
@@ -207,7 +209,7 @@ const chartOpts = ref({
   },
   yAxis: {
     gridType: 'dash',
-    dashLength: 2,
+    dashLength: 8,
     formatter: (val) => val,
   },
   extra: {
@@ -877,6 +879,10 @@ onMounted(() => {
         // box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.1);
       }
     }
+  }
+  .chart-content-trend {
+    height: 400rpx;
+    width: 100%;
   }
   .chart-content {
     height: 500rpx;

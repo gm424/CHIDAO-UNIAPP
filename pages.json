@@ -18,7 +18,8 @@
       "path": "pages/finance/index",
       "style": {
         "navigationBarTitleText": "金融",
-        "enablePullDownRefresh": true
+        "enablePullDownRefresh": true,
+        "navigationStyle": "custom"
       }
     },
     {
@@ -96,6 +97,13 @@
       }
     },
     {
+      "path": "pages/setting/account",
+      "style": {
+        "navigationBarTitleText": "设置",
+        "enablePullDownRefresh": true
+      }
+    },
+    {
       "path": "pages/address/manage",
       "style": {
         "navigationBarTitleText": "地址管理",
@@ -127,12 +135,7 @@
         "navigationBarTitleText": "编辑资料"
       }
     },
-    {
-      "path": "pages/settings/account",
-      "style": {
-        "navigationBarTitleText": "账户设置"
-      }
-    },
+
     {
       "path": "pages/about/index",
       "style": {

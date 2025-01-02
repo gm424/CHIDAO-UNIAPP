@@ -31,10 +31,13 @@
         <view class="title"></view>
         <view class="value"
           >{{
-            route.containerContext.height *
-            route.containerContext.width *
-            route.containerContext.maxWeight *
-            route.remainingVolumeRate
+            (
+              (route.containerContext.height *
+                route.containerContext.width *
+                route.containerContext.length *
+                route.remainingVolumeRate) /
+              1000000
+            ).toFixed(2)
           }}<text class="unit">CBM</text></view
         >
       </view>
@@ -90,7 +93,7 @@
           </swiper>
         </view>
 
-        <view class="percent">{{ (1 - route.remainingVolumeRate) * 100 }}%</view>
+        <view class="percent">{{ (route.remainingVolumeRate * 100).toFixed(0) }}%</view>
       </view>
     </view>
 
@@ -129,8 +132,10 @@
       <view class="section-title">附加费说明</view>
       <view class="price-list">
         <view class="price-item" v-for="(item, index) in priceInfo" :key="index">
-          <text class="label">{{ item.feeItem_dictText }}({{ item.chargeCondition }})</text>
-          <text class="value">¥{{ item.unitPrice }}/KG</text>
+          <text class="label"
+            >{{ item.feeItem_dictText }}{{ item.chargeCondition ? `(${item.chargeCondition})` : '' }}</text
+          >
+          <text class="value">¥{{ item.unitPrice }}/{{ item.chargeType_dictText }}</text>
         </view>
       </view>
     </view>

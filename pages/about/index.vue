@@ -5,7 +5,7 @@
         <image src="http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/logo2_1721897398716.png" mode="aspectFit" />
       </view>
       <view class="app-info">
-        <text class="name">供应链服务平台</text>
+        <text class="name">赤道数智链</text>
         <text class="version">版本 1.0.0</text>
       </view>
 
@@ -33,7 +33,10 @@
           </view>
         </view>
       </view>
-
+      <view class="section">
+        <view class="section-title">隐私政策</view>
+        <view class="paragraph">https://privacy.1ts.fun/product/<br />241229UZGvYt6IBzClHU</view>
+      </view>
       <view class="copyright">
         <text>Copyright © 2024 All Rights Reserved</text>
       </view>

@@ -61,10 +61,13 @@
           <view class="time-label">剩余容量: </view>
           <view class="time-value"
             >{{
-              route.containerContext.height *
-              route.containerContext.width *
-              route.containerContext.maxWeight *
-              route.remainingVolumeRate
+              (
+                (route.containerContext.height *
+                  route.containerContext.width *
+                  route.containerContext.length *
+                  route.remainingVolumeRate) /
+                1000000
+              ).toFixed(2)
             }}
             CBM</view
           >
@@ -77,20 +80,31 @@
             <view
               class="progress-fill"
               :style="{
-                width: `${(1 - route.remainingVolumeRate) * 100}%`,
+                width: `${route.remainingVolumeRate * 100}%`,
               }"
             >
               <view class="stripes"></view>
             </view>
           </view>
           <view
+            v-if="route.remainingVolumeRate * 100 >= 50"
             class="progress-marker"
             :style="{
-              left: `${(1 - route.remainingVolumeRate) * 100}%`,
+              left: `${route.remainingVolumeRate * 100}%`,
             }"
           >
             <view class="marker-arrow"></view>
-            <text class="marker-text">{{ (1 - route.remainingVolumeRate) * 100 }}%</text>
+            <text class="marker-text">{{ (route.remainingVolumeRate * 100).toFixed(0) }}%</text>
+          </view>
+
+          <view
+            v-else
+            class="progress-marker-small"
+            :style="{
+              left: `${route.remainingVolumeRate * 100}%`,
+            }"
+          >
+            <text class="marker-text">{{ (route.remainingVolumeRate * 100).toFixed(0) }}%</text>
           </view>
         </view>
       </view>
@@ -563,6 +577,22 @@ onMounted(() => {
         background-position: center;
         width: 60rpx;
         height: 60rpx;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    .progress-marker-small {
+      position: absolute;
+      top: 0rpx;
+      transform: translateX(60%);
+
+      .marker-text {
+        transform: translateX(-50%);
+        font-size: 20rpx;
+        color: $theme-color;
+
         display: flex;
         justify-content: center;
         align-items: center;

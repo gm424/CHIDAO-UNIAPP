@@ -3318,7 +3318,7 @@ if (uni.restoreGlobal) {
       /* CLASS */
     );
   }
-  const __easycom_0$7 = /* @__PURE__ */ _export_sfc(_sfc_main$1k, [["render", _sfc_render$A], ["__scopeId", "data-v-1c933a9a"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/node_modules/uview-plus/components/u-icon/u-icon.vue"]]);
+  const __easycom_0$6 = /* @__PURE__ */ _export_sfc(_sfc_main$1k, [["render", _sfc_render$A], ["__scopeId", "data-v-1c933a9a"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/node_modules/uview-plus/components/u-icon/u-icon.vue"]]);
   const props$o = defineMixin({
     props: {
       // 是否细边框
@@ -3626,7 +3626,7 @@ if (uni.restoreGlobal) {
   };
   function _sfc_render$z(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_u_loading_icon = resolveEasycom(vue.resolveDynamicComponent("u-loading-icon"), __easycom_3$5);
-    const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$7);
+    const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$6);
     return vue.openBlock(), vue.createElementBlock("button", {
       "hover-start-time": Number(_ctx.hoverStartTime),
       "hover-stay-time": Number(_ctx.hoverStayTime),
@@ -3931,7 +3931,7 @@ if (uni.restoreGlobal) {
     }
   };
   function _sfc_render$y(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$7);
+    const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$6);
     return vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -4236,7 +4236,7 @@ if (uni.restoreGlobal) {
     }
   };
   function _sfc_render$w(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$7);
+    const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$6);
     const _component_u_line = resolveEasycom(vue.resolveDynamicComponent("u-line"), __easycom_1$6);
     return vue.openBlock(), vue.createElementBlock("view", {
       class: vue.normalizeClass(["u-cell", [_ctx.customClass]]),
@@ -4538,7 +4538,7 @@ if (uni.restoreGlobal) {
       /* CLASS, STYLE, NEED_HYDRATION */
     )) : vue.createCommentVNode("v-if", true);
   }
-  const __easycom_4$3 = /* @__PURE__ */ _export_sfc(_sfc_main$1e, [["render", _sfc_render$u], ["__scopeId", "data-v-0573594d"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/node_modules/uview-plus/components/u-transition/u-transition.vue"]]);
+  const __easycom_4$4 = /* @__PURE__ */ _export_sfc(_sfc_main$1e, [["render", _sfc_render$u], ["__scopeId", "data-v-0573594d"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/node_modules/uview-plus/components/u-transition/u-transition.vue"]]);
   const props$i = defineMixin({
     props: {
       // 是否显示遮罩
@@ -4588,7 +4588,7 @@ if (uni.restoreGlobal) {
     }
   };
   function _sfc_render$t(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_u_transition = resolveEasycom(vue.resolveDynamicComponent("u-transition"), __easycom_4$3);
+    const _component_u_transition = resolveEasycom(vue.resolveDynamicComponent("u-transition"), __easycom_4$4);
     return vue.openBlock(), vue.createBlock(_component_u_transition, {
       show: _ctx.show,
       "custom-class": "u-overlay",
@@ -4604,7 +4604,7 @@ if (uni.restoreGlobal) {
       /* FORWARDED */
     }, 8, ["show", "duration", "custom-style", "onClick", "onTouchmove"]);
   }
-  const __easycom_0$6 = /* @__PURE__ */ _export_sfc(_sfc_main$1d, [["render", _sfc_render$t], ["__scopeId", "data-v-35f7c3e5"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/node_modules/uview-plus/components/u-overlay/u-overlay.vue"]]);
+  const __easycom_0$5 = /* @__PURE__ */ _export_sfc(_sfc_main$1d, [["render", _sfc_render$t], ["__scopeId", "data-v-35f7c3e5"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/node_modules/uview-plus/components/u-overlay/u-overlay.vue"]]);
   const props$h = defineMixin({
     props: {
       bgColor: {
@@ -4873,11 +4873,11 @@ if (uni.restoreGlobal) {
     }
   };
   function _sfc_render$q(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_u_overlay = resolveEasycom(vue.resolveDynamicComponent("u-overlay"), __easycom_0$6);
+    const _component_u_overlay = resolveEasycom(vue.resolveDynamicComponent("u-overlay"), __easycom_0$5);
     const _component_u_status_bar = resolveEasycom(vue.resolveDynamicComponent("u-status-bar"), __easycom_1$4);
-    const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$7);
+    const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$6);
     const _component_u_safe_bottom = resolveEasycom(vue.resolveDynamicComponent("u-safe-bottom"), __easycom_3$4);
-    const _component_u_transition = resolveEasycom(vue.resolveDynamicComponent("u-transition"), __easycom_4$3);
+    const _component_u_transition = resolveEasycom(vue.resolveDynamicComponent("u-transition"), __easycom_4$4);
     return vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -4948,7 +4948,7 @@ if (uni.restoreGlobal) {
       /* CLASS */
     );
   }
-  const __easycom_4$2 = /* @__PURE__ */ _export_sfc(_sfc_main$1a, [["render", _sfc_render$q], ["__scopeId", "data-v-74921bef"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/node_modules/uview-plus/components/u-popup/u-popup.vue"]]);
+  const __easycom_4$3 = /* @__PURE__ */ _export_sfc(_sfc_main$1a, [["render", _sfc_render$q], ["__scopeId", "data-v-74921bef"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/node_modules/uview-plus/components/u-popup/u-popup.vue"]]);
   const _sfc_main$19 = {
     __name: "RouteCard",
     props: {
@@ -5177,7 +5177,7 @@ if (uni.restoreGlobal) {
                 vue.createElementVNode(
                   "view",
                   { class: "time-value" },
-                  vue.toDisplayString(__props.route.containerContext.height * __props.route.containerContext.width * __props.route.containerContext.maxWeight * __props.route.remainingVolumeRate) + " CBM",
+                  vue.toDisplayString((__props.route.containerContext.height * __props.route.containerContext.width * __props.route.containerContext.length * __props.route.remainingVolumeRate / 1e6).toFixed(2)) + " CBM",
                   1
                   /* TEXT */
                 )
@@ -5191,7 +5191,7 @@ if (uni.restoreGlobal) {
                     {
                       class: "progress-fill",
                       style: vue.normalizeStyle({
-                        width: `${(1 - __props.route.remainingVolumeRate) * 100}%`
+                        width: `${__props.route.remainingVolumeRate * 100}%`
                       })
                     },
                     [
@@ -5206,7 +5206,7 @@ if (uni.restoreGlobal) {
                   {
                     class: "progress-marker",
                     style: vue.normalizeStyle({
-                      left: `${(1 - __props.route.remainingVolumeRate) * 100}%`
+                      left: `${__props.route.remainingVolumeRate * 100}%`
                     })
                   },
                   [
@@ -5214,7 +5214,7 @@ if (uni.restoreGlobal) {
                     vue.createElementVNode(
                       "text",
                       { class: "marker-text" },
-                      vue.toDisplayString((1 - __props.route.remainingVolumeRate) * 100) + "%",
+                      vue.toDisplayString((__props.route.remainingVolumeRate * 100).toFixed(0)) + "%",
                       1
                       /* TEXT */
                     )
@@ -6522,7 +6522,7 @@ if (uni.restoreGlobal) {
         const _component_u_search = resolveEasycom(vue.resolveDynamicComponent("u-search"), __easycom_1$7);
         const _component_u_cell = resolveEasycom(vue.resolveDynamicComponent("u-cell"), __easycom_1$5);
         const _component_u_cell_group = resolveEasycom(vue.resolveDynamicComponent("u-cell-group"), __easycom_2$4);
-        const _component_u_popup = resolveEasycom(vue.resolveDynamicComponent("u-popup"), __easycom_4$2);
+        const _component_u_popup = resolveEasycom(vue.resolveDynamicComponent("u-popup"), __easycom_4$3);
         return vue.openBlock(), vue.createElementBlock("view", { class: "container" }, [
           vue.createCommentVNode(" 搜索栏 "),
           vue.createElementVNode(
@@ -6613,7 +6613,7 @@ if (uni.restoreGlobal) {
                       vue.createElementVNode(
                         "text",
                         null,
-                        "起始地 " + vue.toDisplayString(selectedOrigin.value.name),
+                        vue.toDisplayString(selectedOrigin.value.name ? selectedOrigin.value.name : "起始地"),
                         1
                         /* TEXT */
                       )
@@ -6626,7 +6626,7 @@ if (uni.restoreGlobal) {
                       vue.createElementVNode(
                         "text",
                         null,
-                        "目的地 " + vue.toDisplayString(selectedDest.value.name),
+                        vue.toDisplayString(selectedDest.value.name ? selectedDest.value.name : "目的地"),
                         1
                         /* TEXT */
                       )
@@ -6641,7 +6641,7 @@ if (uni.restoreGlobal) {
                       vue.createElementVNode(
                         "text",
                         null,
-                        "日期 " + vue.toDisplayString(selectedDate.value),
+                        vue.toDisplayString(selectedDate.value ? selectedDate.value : "日期"),
                         1
                         /* TEXT */
                       )
@@ -6731,7 +6731,7 @@ if (uni.restoreGlobal) {
             default: vue.withCtx(() => [
               vue.createElementVNode("view", { class: "country-popup" }, [
                 vue.createElementVNode("view", { class: "popup-header" }, [
-                  vue.createElementVNode("text", null, "选择国家"),
+                  vue.createElementVNode("text", null, "选择国家/地区"),
                   vue.createElementVNode("text", {
                     class: "close-btn",
                     onClick: closeCountrySelect
@@ -7045,7 +7045,7 @@ if (uni.restoreGlobal) {
     }
   };
   function _sfc_render$p(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$7);
+    const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$6);
     return _ctx.show ? (vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -7090,13 +7090,1517 @@ if (uni.restoreGlobal) {
       /* STYLE */
     )) : vue.createCommentVNode("v-if", true);
   }
-  const __easycom_4$1 = /* @__PURE__ */ _export_sfc(_sfc_main$16, [["render", _sfc_render$p], ["__scopeId", "data-v-bd84101d"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/node_modules/uview-plus/components/u-empty/u-empty.vue"]]);
+  const __easycom_4$2 = /* @__PURE__ */ _export_sfc(_sfc_main$16, [["render", _sfc_render$p], ["__scopeId", "data-v-bd84101d"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/node_modules/uview-plus/components/u-empty/u-empty.vue"]]);
+  const props$d = defineMixin({
+    props: {
+      // 是否展示工具条
+      show: {
+        type: Boolean,
+        default: () => props$r.toolbar.show
+      },
+      // 取消按钮的文字
+      cancelText: {
+        type: String,
+        default: () => props$r.toolbar.cancelText
+      },
+      // 确认按钮的文字
+      confirmText: {
+        type: String,
+        default: () => props$r.toolbar.confirmText
+      },
+      // 取消按钮的颜色
+      cancelColor: {
+        type: String,
+        default: () => props$r.toolbar.cancelColor
+      },
+      // 确认按钮的颜色
+      confirmColor: {
+        type: String,
+        default: () => props$r.toolbar.confirmColor
+      },
+      // 标题文字
+      title: {
+        type: String,
+        default: () => props$r.toolbar.title
+      },
+      // 开启右侧插槽
+      rightSlot: {
+        type: Boolean,
+        default: false
+      }
+    }
+  });
   const _sfc_main$15 = {
+    name: "u-toolbar",
+    mixins: [mpMixin, mixin, props$d],
+    emits: ["confirm", "cancel"],
+    created() {
+    },
+    methods: {
+      // 点击取消按钮
+      cancel() {
+        this.$emit("cancel");
+      },
+      // 点击确定按钮
+      confirm() {
+        this.$emit("confirm");
+      }
+    }
+  };
+  function _sfc_render$o(_ctx, _cache, $props, $setup, $data, $options) {
+    return _ctx.show ? (vue.openBlock(), vue.createElementBlock(
+      "view",
+      {
+        key: 0,
+        class: "u-toolbar",
+        onTouchmove: _cache[2] || (_cache[2] = vue.withModifiers((...args) => _ctx.noop && _ctx.noop(...args), ["stop", "prevent"]))
+      },
+      [
+        vue.createElementVNode("view", { class: "u-toolbar__left" }, [
+          vue.createElementVNode("view", {
+            class: "u-toolbar__cancel__wrapper",
+            "hover-class": "u-hover-class"
+          }, [
+            vue.createElementVNode(
+              "text",
+              {
+                class: "u-toolbar__wrapper__cancel",
+                onClick: _cache[0] || (_cache[0] = (...args) => $options.cancel && $options.cancel(...args)),
+                style: vue.normalizeStyle({
+                  color: _ctx.cancelColor
+                })
+              },
+              vue.toDisplayString(_ctx.cancelText),
+              5
+              /* TEXT, STYLE */
+            )
+          ])
+        ]),
+        _ctx.title ? (vue.openBlock(), vue.createElementBlock(
+          "text",
+          {
+            key: 0,
+            class: "u-toolbar__title u-line-1"
+          },
+          vue.toDisplayString(_ctx.title),
+          1
+          /* TEXT */
+        )) : vue.createCommentVNode("v-if", true),
+        vue.createElementVNode("view", { class: "u-toolbar__right" }, [
+          !_ctx.rightSlot ? (vue.openBlock(), vue.createElementBlock("view", {
+            key: 0,
+            class: "u-toolbar__confirm__wrapper",
+            "hover-class": "u-hover-class"
+          }, [
+            vue.createElementVNode(
+              "text",
+              {
+                class: "u-toolbar__wrapper__confirm",
+                onClick: _cache[1] || (_cache[1] = (...args) => $options.confirm && $options.confirm(...args)),
+                style: vue.normalizeStyle({
+                  color: _ctx.confirmColor
+                })
+              },
+              vue.toDisplayString(_ctx.confirmText),
+              5
+              /* TEXT, STYLE */
+            )
+          ])) : vue.renderSlot(_ctx.$slots, "right", { key: 1 }, void 0, true)
+        ])
+      ],
+      32
+      /* NEED_HYDRATION */
+    )) : vue.createCommentVNode("v-if", true);
+  }
+  const __easycom_0$4 = /* @__PURE__ */ _export_sfc(_sfc_main$15, [["render", _sfc_render$o], ["__scopeId", "data-v-3fd495d6"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/node_modules/uview-plus/components/u-toolbar/u-toolbar.vue"]]);
+  const props$c = defineMixin({
+    props: {
+      modelValue: {
+        type: Array,
+        default: () => []
+      },
+      hasInput: {
+        type: Boolean,
+        default: false
+      },
+      placeholder: {
+        type: String,
+        default: () => "请选择"
+      },
+      // 是否展示picker弹窗
+      show: {
+        type: Boolean,
+        default: () => props$r.picker.show
+      },
+      // 弹出的方向，可选值为 top bottom right left center
+      popupMode: {
+        type: String,
+        default: () => props$r.picker.popupMode
+      },
+      // 是否展示顶部的操作栏
+      showToolbar: {
+        type: Boolean,
+        default: () => props$r.picker.showToolbar
+      },
+      // 顶部标题
+      title: {
+        type: String,
+        default: () => props$r.picker.title
+      },
+      // 对象数组，设置每一列的数据
+      columns: {
+        type: Array,
+        default: () => props$r.picker.columns
+      },
+      // 是否显示加载中状态
+      loading: {
+        type: Boolean,
+        default: () => props$r.picker.loading
+      },
+      // 各列中，单个选项的高度
+      itemHeight: {
+        type: [String, Number],
+        default: () => props$r.picker.itemHeight
+      },
+      // 取消按钮的文字
+      cancelText: {
+        type: String,
+        default: () => props$r.picker.cancelText
+      },
+      // 确认按钮的文字
+      confirmText: {
+        type: String,
+        default: () => props$r.picker.confirmText
+      },
+      // 取消按钮的颜色
+      cancelColor: {
+        type: String,
+        default: () => props$r.picker.cancelColor
+      },
+      // 确认按钮的颜色
+      confirmColor: {
+        type: String,
+        default: () => props$r.picker.confirmColor
+      },
+      // 每列中可见选项的数量
+      visibleItemCount: {
+        type: [String, Number],
+        default: () => props$r.picker.visibleItemCount
+      },
+      // 选项对象中，需要展示的属性键名
+      keyName: {
+        type: String,
+        default: () => props$r.picker.keyName
+      },
+      // 是否允许点击遮罩关闭选择器
+      closeOnClickOverlay: {
+        type: Boolean,
+        default: () => props$r.picker.closeOnClickOverlay
+      },
+      // 各列的默认索引
+      defaultIndex: {
+        type: Array,
+        default: () => props$r.picker.defaultIndex
+      },
+      // 是否在手指松开时立即触发 change 事件。若不开启则会在滚动动画结束后触发 change 事件，只在微信2.21.1及以上有效
+      immediateChange: {
+        type: Boolean,
+        default: () => props$r.picker.immediateChange
+      },
+      // 工具栏右侧插槽是否开启
+      toolbarRightSlot: {
+        type: Boolean,
+        default: false
+      },
+      // 层级
+      zIndex: {
+        type: [String, Number],
+        default: () => props$r.picker.zIndex
+      }
+    }
+  });
+  const _sfc_main$14 = {
+    name: "u-picker",
+    mixins: [mpMixin, mixin, props$c],
+    data() {
+      return {
+        // 上一次选择的列索引
+        lastIndex: [],
+        // 索引值 ，对应picker-view的value
+        innerIndex: [],
+        // 各列的值
+        innerColumns: [],
+        // 上一次的变化列索引
+        columnIndex: 0,
+        showByClickInput: false
+      };
+    },
+    watch: {
+      // 监听默认索引的变化，重新设置对应的值
+      defaultIndex: {
+        immediate: true,
+        deep: true,
+        handler(n2) {
+          this.setIndexs(n2, true);
+        }
+      },
+      // 监听columns参数的变化
+      columns: {
+        immediate: true,
+        deep: true,
+        handler(n2) {
+          this.setColumns(n2);
+        }
+      }
+    },
+    emits: ["close", "cancel", "confirm", "change", "update:modelValue", "update:show"],
+    computed: {
+      inputLabel() {
+        let items = this.innerColumns.map((item, index2) => item[this.innerIndex[index2]]);
+        let res = [];
+        items.forEach((element) => {
+          res.push(element[this.keyName]);
+        });
+        return res;
+      },
+      inputValue() {
+        let items = this.innerColumns.map((item, index2) => item[this.innerIndex[index2]]);
+        let res = [];
+        items.forEach((element) => {
+          res.push(element["id"]);
+        });
+        return res;
+      }
+    },
+    methods: {
+      addUnit,
+      testArray: test.array,
+      // 获取item需要显示的文字，判别为对象还是文本
+      getItemText(item) {
+        if (test.object(item)) {
+          return item[this.keyName];
+        } else {
+          return item;
+        }
+      },
+      // 关闭选择器
+      closeHandler() {
+        if (this.closeOnClickOverlay) {
+          if (this.hasInput) {
+            this.showByClickInput = false;
+          }
+          this.$emit("update:show", false);
+          this.$emit("close");
+        }
+      },
+      // 点击工具栏的取消按钮
+      cancel() {
+        if (this.hasInput) {
+          this.showByClickInput = false;
+        }
+        this.$emit("update:show", false);
+        this.$emit("cancel");
+      },
+      // 点击工具栏的确定按钮
+      confirm() {
+        this.$emit("update:modelValue", this.inputValue);
+        if (this.hasInput) {
+          this.showByClickInput = false;
+        }
+        this.$emit("update:show", false);
+        this.$emit("confirm", {
+          indexs: this.innerIndex,
+          value: this.innerColumns.map((item, index2) => item[this.innerIndex[index2]]),
+          values: this.innerColumns
+        });
+      },
+      // 选择器某一列的数据发生变化时触发
+      changeHandler(e2) {
+        const {
+          value
+        } = e2.detail;
+        let index2 = 0, columnIndex = 0;
+        for (let i2 = 0; i2 < value.length; i2++) {
+          let item = value[i2];
+          if (item !== (this.lastIndex[i2] || 0)) {
+            columnIndex = i2;
+            index2 = item;
+            break;
+          }
+        }
+        this.columnIndex = columnIndex;
+        const values = this.innerColumns;
+        this.setLastIndex(value);
+        this.setIndexs(value);
+        this.$emit("update:modelValue", this.inputValue);
+        this.$emit("change", {
+          // 微信小程序不能传递this，会因为循环引用而报错
+          // picker: this,
+          value: this.innerColumns.map((item, index3) => item[value[index3]]),
+          index: index2,
+          indexs: value,
+          // values为当前变化列的数组内容
+          values,
+          columnIndex
+        });
+      },
+      // 设置index索引，此方法可被外部调用设置
+      setIndexs(index2, setLastIndex) {
+        this.innerIndex = deepClone(index2);
+        if (setLastIndex) {
+          this.setLastIndex(index2);
+        }
+      },
+      // 记录上一次的各列索引位置
+      setLastIndex(index2) {
+        this.lastIndex = deepClone(index2);
+      },
+      // 设置对应列选项的所有值
+      setColumnValues(columnIndex, values) {
+        this.innerColumns.splice(columnIndex, 1, values);
+        this.setLastIndex(this.innerIndex.slice(0, columnIndex));
+        let tmpIndex = deepClone(this.innerIndex);
+        for (let i2 = 0; i2 < this.innerColumns.length; i2++) {
+          if (i2 > this.columnIndex) {
+            tmpIndex[i2] = 0;
+          }
+        }
+        this.setIndexs(tmpIndex);
+      },
+      // 获取对应列的所有选项
+      getColumnValues(columnIndex) {
+        (async () => {
+          await sleep();
+        })();
+        return this.innerColumns[columnIndex];
+      },
+      // 设置整体各列的columns的值
+      setColumns(columns) {
+        this.innerColumns = deepClone(columns);
+        if (this.innerIndex.length === 0) {
+          this.innerIndex = new Array(columns.length).fill(0);
+        }
+      },
+      // 获取各列选中值对应的索引
+      getIndexs() {
+        return this.innerIndex;
+      },
+      // 获取各列选中的值
+      getValues() {
+        (async () => {
+          await sleep();
+        })();
+        return this.innerColumns.map((item, index2) => item[this.innerIndex[index2]]);
+      }
+    }
+  };
+  function _sfc_render$n(_ctx, _cache, $props, $setup, $data, $options) {
+    const _component_u_toolbar = resolveEasycom(vue.resolveDynamicComponent("u-toolbar"), __easycom_0$4);
+    const _component_u_loading_icon = resolveEasycom(vue.resolveDynamicComponent("u-loading-icon"), __easycom_3$5);
+    const _component_u_popup = resolveEasycom(vue.resolveDynamicComponent("u-popup"), __easycom_4$3);
+    return vue.openBlock(), vue.createElementBlock("view", { class: "u-picker-warrper" }, [
+      _ctx.hasInput ? (vue.openBlock(), vue.createElementBlock("view", {
+        key: 0,
+        class: "u-picker-input cursor-pointer",
+        onClick: _cache[0] || (_cache[0] = ($event) => $data.showByClickInput = !$data.showByClickInput)
+      }, [
+        vue.renderSlot(_ctx.$slots, "default", {}, () => [
+          vue.createElementVNode(
+            "view",
+            null,
+            vue.toDisplayString($options.inputLabel && $options.inputLabel.length ? $options.inputLabel.join("/") : _ctx.placeholder),
+            1
+            /* TEXT */
+          )
+        ], true)
+      ])) : vue.createCommentVNode("v-if", true),
+      vue.createVNode(_component_u_popup, {
+        show: _ctx.show || _ctx.hasInput && $data.showByClickInput,
+        mode: _ctx.popupMode,
+        zIndex: _ctx.zIndex,
+        onClose: $options.closeHandler
+      }, {
+        default: vue.withCtx(() => [
+          vue.createElementVNode("view", { class: "u-picker" }, [
+            _ctx.showToolbar ? (vue.openBlock(), vue.createBlock(_component_u_toolbar, {
+              key: 0,
+              cancelColor: _ctx.cancelColor,
+              confirmColor: _ctx.confirmColor,
+              cancelText: _ctx.cancelText,
+              confirmText: _ctx.confirmText,
+              title: _ctx.title,
+              rightSlot: _ctx.toolbarRightSlot ? true : false,
+              onCancel: $options.cancel,
+              onConfirm: $options.confirm
+            }, {
+              right: vue.withCtx(() => [
+                vue.renderSlot(_ctx.$slots, "toolbar-right", {}, void 0, true)
+              ]),
+              _: 3
+              /* FORWARDED */
+            }, 8, ["cancelColor", "confirmColor", "cancelText", "confirmText", "title", "rightSlot", "onCancel", "onConfirm"])) : vue.createCommentVNode("v-if", true),
+            vue.renderSlot(_ctx.$slots, "toolbar-bottom", {}, void 0, true),
+            vue.createElementVNode("picker-view", {
+              class: "u-picker__view",
+              indicatorStyle: `height: ${$options.addUnit(_ctx.itemHeight)}`,
+              value: $data.innerIndex,
+              immediateChange: _ctx.immediateChange,
+              style: vue.normalizeStyle({
+                height: `${$options.addUnit(_ctx.visibleItemCount * _ctx.itemHeight)}`
+              }),
+              onChange: _cache[1] || (_cache[1] = (...args) => $options.changeHandler && $options.changeHandler(...args))
+            }, [
+              (vue.openBlock(true), vue.createElementBlock(
+                vue.Fragment,
+                null,
+                vue.renderList($data.innerColumns, (item, index2) => {
+                  return vue.openBlock(), vue.createElementBlock("picker-view-column", {
+                    key: index2,
+                    class: "u-picker__view__column"
+                  }, [
+                    $options.testArray(item) ? (vue.openBlock(true), vue.createElementBlock(
+                      vue.Fragment,
+                      { key: 0 },
+                      vue.renderList(item, (item1, index1) => {
+                        return vue.openBlock(), vue.createElementBlock(
+                          "view",
+                          {
+                            class: "u-picker__view__column__item u-line-1",
+                            key: index1,
+                            style: vue.normalizeStyle({
+                              height: $options.addUnit(_ctx.itemHeight),
+                              lineHeight: $options.addUnit(_ctx.itemHeight),
+                              fontWeight: index1 === $data.innerIndex[index2] ? "bold" : "normal",
+                              display: "block"
+                            })
+                          },
+                          vue.toDisplayString($options.getItemText(item1)),
+                          5
+                          /* TEXT, STYLE */
+                        );
+                      }),
+                      128
+                      /* KEYED_FRAGMENT */
+                    )) : vue.createCommentVNode("v-if", true)
+                  ]);
+                }),
+                128
+                /* KEYED_FRAGMENT */
+              ))
+            ], 44, ["indicatorStyle", "value", "immediateChange"]),
+            _ctx.loading ? (vue.openBlock(), vue.createElementBlock("view", {
+              key: 1,
+              class: "u-picker--loading"
+            }, [
+              vue.createVNode(_component_u_loading_icon, { mode: "circle" })
+            ])) : vue.createCommentVNode("v-if", true)
+          ])
+        ]),
+        _: 3
+        /* FORWARDED */
+      }, 8, ["show", "mode", "zIndex", "onClose"])
+    ]);
+  }
+  const __easycom_4$1 = /* @__PURE__ */ _export_sfc(_sfc_main$14, [["render", _sfc_render$n], ["__scopeId", "data-v-1500ce68"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/node_modules/uview-plus/components/u-picker/u-picker.vue"]]);
+  const props$b = defineMixin({
+    props: {
+      // 是否显示input
+      hasInput: {
+        type: Boolean,
+        default: () => false
+      },
+      placeholder: {
+        type: String,
+        default: () => "请选择"
+      },
+      format: {
+        type: String,
+        default: () => ""
+      },
+      // 是否打开组件
+      show: {
+        type: Boolean,
+        default: () => props$r.datetimePicker.show
+      },
+      // 弹出的方向，可选值为 top bottom right left center
+      popupMode: {
+        type: String,
+        default: () => props$r.picker.popupMode
+      },
+      // 是否展示顶部的操作栏
+      showToolbar: {
+        type: Boolean,
+        default: () => props$r.datetimePicker.showToolbar
+      },
+      // 工具栏右侧内容
+      toolbarRightSlot: {
+        type: Boolean,
+        default: false
+      },
+      // 绑定值
+      modelValue: {
+        type: [String, Number],
+        default: () => props$r.datetimePicker.value
+      },
+      // 顶部标题
+      title: {
+        type: String,
+        default: () => props$r.datetimePicker.title
+      },
+      // 展示格式，mode=date为日期选择，mode=time为时间选择，mode=year-month为年月选择，mode=datetime为日期时间选择
+      mode: {
+        type: String,
+        default: () => props$r.datetimePicker.mode
+      },
+      // 可选的最大时间
+      maxDate: {
+        type: Number,
+        // 最大默认值为后10年
+        default: () => props$r.datetimePicker.maxDate
+      },
+      // 可选的最小时间
+      minDate: {
+        type: Number,
+        // 最小默认值为前10年
+        default: () => props$r.datetimePicker.minDate
+      },
+      // 可选的最小小时，仅mode=time有效
+      minHour: {
+        type: Number,
+        default: () => props$r.datetimePicker.minHour
+      },
+      // 可选的最大小时，仅mode=time有效
+      maxHour: {
+        type: Number,
+        default: () => props$r.datetimePicker.maxHour
+      },
+      // 可选的最小分钟，仅mode=time有效
+      minMinute: {
+        type: Number,
+        default: () => props$r.datetimePicker.minMinute
+      },
+      // 可选的最大分钟，仅mode=time有效
+      maxMinute: {
+        type: Number,
+        default: () => props$r.datetimePicker.maxMinute
+      },
+      // 选项过滤函数
+      filter: {
+        type: [Function, null],
+        default: () => props$r.datetimePicker.filter
+      },
+      // 选项格式化函数
+      formatter: {
+        type: [Function, null],
+        default: () => props$r.datetimePicker.formatter
+      },
+      // 是否显示加载中状态
+      loading: {
+        type: Boolean,
+        default: () => props$r.datetimePicker.loading
+      },
+      // 各列中，单个选项的高度
+      itemHeight: {
+        type: [String, Number],
+        default: () => props$r.datetimePicker.itemHeight
+      },
+      // 取消按钮的文字
+      cancelText: {
+        type: String,
+        default: () => props$r.datetimePicker.cancelText
+      },
+      // 确认按钮的文字
+      confirmText: {
+        type: String,
+        default: () => props$r.datetimePicker.confirmText
+      },
+      // 取消按钮的颜色
+      cancelColor: {
+        type: String,
+        default: () => props$r.datetimePicker.cancelColor
+      },
+      // 确认按钮的颜色
+      confirmColor: {
+        type: String,
+        default: () => props$r.datetimePicker.confirmColor
+      },
+      // 每列中可见选项的数量
+      visibleItemCount: {
+        type: [String, Number],
+        default: () => props$r.datetimePicker.visibleItemCount
+      },
+      // 是否允许点击遮罩关闭选择器
+      closeOnClickOverlay: {
+        type: Boolean,
+        default: () => props$r.datetimePicker.closeOnClickOverlay
+      },
+      // 各列的默认索引
+      defaultIndex: {
+        type: Array,
+        default: () => props$r.datetimePicker.defaultIndex
+      }
+    }
+  });
+  var SECONDS_A_MINUTE = 60;
+  var SECONDS_A_HOUR = SECONDS_A_MINUTE * 60;
+  var SECONDS_A_DAY = SECONDS_A_HOUR * 24;
+  var SECONDS_A_WEEK = SECONDS_A_DAY * 7;
+  var MILLISECONDS_A_SECOND = 1e3;
+  var MILLISECONDS_A_MINUTE = SECONDS_A_MINUTE * MILLISECONDS_A_SECOND;
+  var MILLISECONDS_A_HOUR = SECONDS_A_HOUR * MILLISECONDS_A_SECOND;
+  var MILLISECONDS_A_DAY = SECONDS_A_DAY * MILLISECONDS_A_SECOND;
+  var MILLISECONDS_A_WEEK = SECONDS_A_WEEK * MILLISECONDS_A_SECOND;
+  var MS = "millisecond";
+  var S$1 = "second";
+  var MIN = "minute";
+  var H$1 = "hour";
+  var D$1 = "day";
+  var W$1 = "week";
+  var M$3 = "month";
+  var Q$1 = "quarter";
+  var Y$1 = "year";
+  var DATE = "date";
+  var FORMAT_DEFAULT = "YYYY-MM-DDTHH:mm:ssZ";
+  var INVALID_DATE_STRING = "Invalid Date";
+  var REGEX_PARSE = /^(\d{4})[-/]?(\d{1,2})?[-/]?(\d{0,2})[Tt\s]*(\d{1,2})?:?(\d{1,2})?:?(\d{1,2})?[.:]?(\d+)?$/;
+  var REGEX_FORMAT = /\[([^\]]+)]|Y{1,4}|M{1,4}|D{1,2}|d{1,4}|H{1,2}|h{1,2}|a|A|m{1,2}|s{1,2}|Z{1,2}|SSS/g;
+  const en = {
+    name: "en",
+    weekdays: "Sunday_Monday_Tuesday_Wednesday_Thursday_Friday_Saturday".split("_"),
+    months: "January_February_March_April_May_June_July_August_September_October_November_December".split("_"),
+    ordinal: function ordinal(n2) {
+      var s2 = ["th", "st", "nd", "rd"];
+      var v2 = n2 % 100;
+      return "[" + n2 + (s2[(v2 - 20) % 10] || s2[v2] || s2[0]) + "]";
+    }
+  };
+  var padStart = function padStart2(string2, length, pad) {
+    var s2 = String(string2);
+    if (!s2 || s2.length >= length)
+      return string2;
+    return "" + Array(length + 1 - s2.length).join(pad) + string2;
+  };
+  var padZoneStr = function padZoneStr2(instance) {
+    var negMinutes = -instance.utcOffset();
+    var minutes = Math.abs(negMinutes);
+    var hourOffset = Math.floor(minutes / 60);
+    var minuteOffset = minutes % 60;
+    return (negMinutes <= 0 ? "+" : "-") + padStart(hourOffset, 2, "0") + ":" + padStart(minuteOffset, 2, "0");
+  };
+  var monthDiff = function monthDiff2(a2, b2) {
+    if (a2.date() < b2.date())
+      return -monthDiff2(b2, a2);
+    var wholeMonthDiff = (b2.year() - a2.year()) * 12 + (b2.month() - a2.month());
+    var anchor = a2.clone().add(wholeMonthDiff, M$3);
+    var c2 = b2 - anchor < 0;
+    var anchor2 = a2.clone().add(wholeMonthDiff + (c2 ? -1 : 1), M$3);
+    return +(-(wholeMonthDiff + (b2 - anchor) / (c2 ? anchor - anchor2 : anchor2 - anchor)) || 0);
+  };
+  var absFloor = function absFloor2(n2) {
+    return n2 < 0 ? Math.ceil(n2) || 0 : Math.floor(n2);
+  };
+  var prettyUnit = function prettyUnit2(u2) {
+    var special = {
+      M: M$3,
+      y: Y$1,
+      w: W$1,
+      d: D$1,
+      D: DATE,
+      h: H$1,
+      m: MIN,
+      s: S$1,
+      ms: MS,
+      Q: Q$1
+    };
+    return special[u2] || String(u2 || "").toLowerCase().replace(/s$/, "");
+  };
+  var isUndefined$1 = function isUndefined2(s2) {
+    return s2 === void 0;
+  };
+  const U$1 = {
+    s: padStart,
+    z: padZoneStr,
+    m: monthDiff,
+    a: absFloor,
+    p: prettyUnit,
+    u: isUndefined$1
+  };
+  var L$1 = "en";
+  var Ls$1 = {};
+  Ls$1[L$1] = en;
+  var IS_DAYJS = "$isDayjsObject";
+  var isDayjs = function isDayjs2(d2) {
+    return d2 instanceof Dayjs || !!(d2 && d2[IS_DAYJS]);
+  };
+  var parseLocale = function parseLocale2(preset, object3, isLocal) {
+    var l2;
+    if (!preset)
+      return L$1;
+    if (typeof preset === "string") {
+      var presetLower = preset.toLowerCase();
+      if (Ls$1[presetLower]) {
+        l2 = presetLower;
+      }
+      if (object3) {
+        Ls$1[presetLower] = object3;
+        l2 = presetLower;
+      }
+      var presetSplit = preset.split("-");
+      if (!l2 && presetSplit.length > 1) {
+        return parseLocale2(presetSplit[0]);
+      }
+    } else {
+      var name = preset.name;
+      Ls$1[name] = preset;
+      l2 = name;
+    }
+    if (!isLocal && l2)
+      L$1 = l2;
+    return l2 || !isLocal && L$1;
+  };
+  var dayjs$1 = function dayjs2(date3, c2) {
+    if (isDayjs(date3)) {
+      return date3.clone();
+    }
+    var cfg = typeof c2 === "object" ? c2 : {};
+    cfg.date = date3;
+    cfg.args = arguments;
+    return new Dayjs(cfg);
+  };
+  var wrapper = function wrapper2(date3, instance) {
+    return dayjs$1(date3, {
+      locale: instance.$L,
+      utc: instance.$u,
+      x: instance.$x,
+      $offset: instance.$offset
+      // todo: refactor; do not use this.$offset in you code
+    });
+  };
+  var Utils = U$1;
+  Utils.l = parseLocale;
+  Utils.i = isDayjs;
+  Utils.w = wrapper;
+  var parseDate = function parseDate2(cfg) {
+    var date3 = cfg.date, utc = cfg.utc;
+    if (date3 === null)
+      return /* @__PURE__ */ new Date(NaN);
+    if (Utils.u(date3))
+      return /* @__PURE__ */ new Date();
+    if (date3 instanceof Date)
+      return new Date(date3);
+    if (typeof date3 === "string" && !/Z$/i.test(date3)) {
+      var d2 = date3.match(REGEX_PARSE);
+      if (d2) {
+        var m2 = d2[2] - 1 || 0;
+        var ms2 = (d2[7] || "0").substring(0, 3);
+        if (utc) {
+          return new Date(Date.UTC(d2[1], m2, d2[3] || 1, d2[4] || 0, d2[5] || 0, d2[6] || 0, ms2));
+        }
+        return new Date(d2[1], m2, d2[3] || 1, d2[4] || 0, d2[5] || 0, d2[6] || 0, ms2);
+      }
+    }
+    return new Date(date3);
+  };
+  var Dayjs = /* @__PURE__ */ function() {
+    function Dayjs2(cfg) {
+      this.$L = parseLocale(cfg.locale, null, true);
+      this.parse(cfg);
+      this.$x = this.$x || cfg.x || {};
+      this[IS_DAYJS] = true;
+    }
+    var _proto = Dayjs2.prototype;
+    _proto.parse = function parse(cfg) {
+      this.$d = parseDate(cfg);
+      this.init();
+    };
+    _proto.init = function init2() {
+      var $d = this.$d;
+      this.$y = $d.getFullYear();
+      this.$M = $d.getMonth();
+      this.$D = $d.getDate();
+      this.$W = $d.getDay();
+      this.$H = $d.getHours();
+      this.$m = $d.getMinutes();
+      this.$s = $d.getSeconds();
+      this.$ms = $d.getMilliseconds();
+    };
+    _proto.$utils = function $utils() {
+      return Utils;
+    };
+    _proto.isValid = function isValid() {
+      return !(this.$d.toString() === INVALID_DATE_STRING);
+    };
+    _proto.isSame = function isSame(that2, units) {
+      var other = dayjs$1(that2);
+      return this.startOf(units) <= other && other <= this.endOf(units);
+    };
+    _proto.isAfter = function isAfter(that2, units) {
+      return dayjs$1(that2) < this.startOf(units);
+    };
+    _proto.isBefore = function isBefore(that2, units) {
+      return this.endOf(units) < dayjs$1(that2);
+    };
+    _proto.$g = function $g(input, get, set) {
+      if (Utils.u(input))
+        return this[get];
+      return this.set(set, input);
+    };
+    _proto.unix = function unix() {
+      return Math.floor(this.valueOf() / 1e3);
+    };
+    _proto.valueOf = function valueOf() {
+      return this.$d.getTime();
+    };
+    _proto.startOf = function startOf(units, _startOf) {
+      var _this = this;
+      var isStartOf = !Utils.u(_startOf) ? _startOf : true;
+      var unit = Utils.p(units);
+      var instanceFactory = function instanceFactory2(d2, m2) {
+        var ins = Utils.w(_this.$u ? Date.UTC(_this.$y, m2, d2) : new Date(_this.$y, m2, d2), _this);
+        return isStartOf ? ins : ins.endOf(D$1);
+      };
+      var instanceFactorySet = function instanceFactorySet2(method, slice) {
+        var argumentStart = [0, 0, 0, 0];
+        var argumentEnd = [23, 59, 59, 999];
+        return Utils.w(_this.toDate()[method].apply(
+          // eslint-disable-line prefer-spread
+          _this.toDate("s"),
+          (isStartOf ? argumentStart : argumentEnd).slice(slice)
+        ), _this);
+      };
+      var $W = this.$W, $M = this.$M, $D = this.$D;
+      var utcPad = "set" + (this.$u ? "UTC" : "");
+      switch (unit) {
+        case Y$1:
+          return isStartOf ? instanceFactory(1, 0) : instanceFactory(31, 11);
+        case M$3:
+          return isStartOf ? instanceFactory(1, $M) : instanceFactory(0, $M + 1);
+        case W$1: {
+          var weekStart = this.$locale().weekStart || 0;
+          var gap = ($W < weekStart ? $W + 7 : $W) - weekStart;
+          return instanceFactory(isStartOf ? $D - gap : $D + (6 - gap), $M);
+        }
+        case D$1:
+        case DATE:
+          return instanceFactorySet(utcPad + "Hours", 0);
+        case H$1:
+          return instanceFactorySet(utcPad + "Minutes", 1);
+        case MIN:
+          return instanceFactorySet(utcPad + "Seconds", 2);
+        case S$1:
+          return instanceFactorySet(utcPad + "Milliseconds", 3);
+        default:
+          return this.clone();
+      }
+    };
+    _proto.endOf = function endOf(arg) {
+      return this.startOf(arg, false);
+    };
+    _proto.$set = function $set(units, _int) {
+      var _C$D$C$DATE$C$M$C$Y$C;
+      var unit = Utils.p(units);
+      var utcPad = "set" + (this.$u ? "UTC" : "");
+      var name = (_C$D$C$DATE$C$M$C$Y$C = {}, _C$D$C$DATE$C$M$C$Y$C[D$1] = utcPad + "Date", _C$D$C$DATE$C$M$C$Y$C[DATE] = utcPad + "Date", _C$D$C$DATE$C$M$C$Y$C[M$3] = utcPad + "Month", _C$D$C$DATE$C$M$C$Y$C[Y$1] = utcPad + "FullYear", _C$D$C$DATE$C$M$C$Y$C[H$1] = utcPad + "Hours", _C$D$C$DATE$C$M$C$Y$C[MIN] = utcPad + "Minutes", _C$D$C$DATE$C$M$C$Y$C[S$1] = utcPad + "Seconds", _C$D$C$DATE$C$M$C$Y$C[MS] = utcPad + "Milliseconds", _C$D$C$DATE$C$M$C$Y$C)[unit];
+      var arg = unit === D$1 ? this.$D + (_int - this.$W) : _int;
+      if (unit === M$3 || unit === Y$1) {
+        var date3 = this.clone().set(DATE, 1);
+        date3.$d[name](arg);
+        date3.init();
+        this.$d = date3.set(DATE, Math.min(this.$D, date3.daysInMonth())).$d;
+      } else if (name)
+        this.$d[name](arg);
+      this.init();
+      return this;
+    };
+    _proto.set = function set(string2, _int2) {
+      return this.clone().$set(string2, _int2);
+    };
+    _proto.get = function get(unit) {
+      return this[Utils.p(unit)]();
+    };
+    _proto.add = function add(number3, units) {
+      var _this2 = this, _C$MIN$C$H$C$S$unit;
+      number3 = Number(number3);
+      var unit = Utils.p(units);
+      var instanceFactorySet = function instanceFactorySet2(n2) {
+        var d2 = dayjs$1(_this2);
+        return Utils.w(d2.date(d2.date() + Math.round(n2 * number3)), _this2);
+      };
+      if (unit === M$3) {
+        return this.set(M$3, this.$M + number3);
+      }
+      if (unit === Y$1) {
+        return this.set(Y$1, this.$y + number3);
+      }
+      if (unit === D$1) {
+        return instanceFactorySet(1);
+      }
+      if (unit === W$1) {
+        return instanceFactorySet(7);
+      }
+      var step = (_C$MIN$C$H$C$S$unit = {}, _C$MIN$C$H$C$S$unit[MIN] = MILLISECONDS_A_MINUTE, _C$MIN$C$H$C$S$unit[H$1] = MILLISECONDS_A_HOUR, _C$MIN$C$H$C$S$unit[S$1] = MILLISECONDS_A_SECOND, _C$MIN$C$H$C$S$unit)[unit] || 1;
+      var nextTimeStamp = this.$d.getTime() + number3 * step;
+      return Utils.w(nextTimeStamp, this);
+    };
+    _proto.subtract = function subtract(number3, string2) {
+      return this.add(number3 * -1, string2);
+    };
+    _proto.format = function format2(formatStr) {
+      var _this3 = this;
+      var locale = this.$locale();
+      if (!this.isValid())
+        return locale.invalidDate || INVALID_DATE_STRING;
+      var str = formatStr || FORMAT_DEFAULT;
+      var zoneStr = Utils.z(this);
+      var $H = this.$H, $m = this.$m, $M = this.$M;
+      var weekdays = locale.weekdays, months = locale.months, meridiem = locale.meridiem;
+      var getShort = function getShort2(arr, index2, full, length) {
+        return arr && (arr[index2] || arr(_this3, str)) || full[index2].slice(0, length);
+      };
+      var get$H = function get$H2(num) {
+        return Utils.s($H % 12 || 12, num, "0");
+      };
+      var meridiemFunc = meridiem || function(hour, minute, isLowercase) {
+        var m2 = hour < 12 ? "AM" : "PM";
+        return isLowercase ? m2.toLowerCase() : m2;
+      };
+      var matches = function matches2(match) {
+        switch (match) {
+          case "YY":
+            return String(_this3.$y).slice(-2);
+          case "YYYY":
+            return Utils.s(_this3.$y, 4, "0");
+          case "M":
+            return $M + 1;
+          case "MM":
+            return Utils.s($M + 1, 2, "0");
+          case "MMM":
+            return getShort(locale.monthsShort, $M, months, 3);
+          case "MMMM":
+            return getShort(months, $M);
+          case "D":
+            return _this3.$D;
+          case "DD":
+            return Utils.s(_this3.$D, 2, "0");
+          case "d":
+            return String(_this3.$W);
+          case "dd":
+            return getShort(locale.weekdaysMin, _this3.$W, weekdays, 2);
+          case "ddd":
+            return getShort(locale.weekdaysShort, _this3.$W, weekdays, 3);
+          case "dddd":
+            return weekdays[_this3.$W];
+          case "H":
+            return String($H);
+          case "HH":
+            return Utils.s($H, 2, "0");
+          case "h":
+            return get$H(1);
+          case "hh":
+            return get$H(2);
+          case "a":
+            return meridiemFunc($H, $m, true);
+          case "A":
+            return meridiemFunc($H, $m, false);
+          case "m":
+            return String($m);
+          case "mm":
+            return Utils.s($m, 2, "0");
+          case "s":
+            return String(_this3.$s);
+          case "ss":
+            return Utils.s(_this3.$s, 2, "0");
+          case "SSS":
+            return Utils.s(_this3.$ms, 3, "0");
+          case "Z":
+            return zoneStr;
+        }
+        return null;
+      };
+      return str.replace(REGEX_FORMAT, function(match, $1) {
+        return $1 || matches(match) || zoneStr.replace(":", "");
+      });
+    };
+    _proto.utcOffset = function utcOffset() {
+      return -Math.round(this.$d.getTimezoneOffset() / 15) * 15;
+    };
+    _proto.diff = function diff(input, units, _float) {
+      var _this4 = this;
+      var unit = Utils.p(units);
+      var that2 = dayjs$1(input);
+      var zoneDelta = (that2.utcOffset() - this.utcOffset()) * MILLISECONDS_A_MINUTE;
+      var diff2 = this - that2;
+      var getMonth = function getMonth2() {
+        return Utils.m(_this4, that2);
+      };
+      var result;
+      switch (unit) {
+        case Y$1:
+          result = getMonth() / 12;
+          break;
+        case M$3:
+          result = getMonth();
+          break;
+        case Q$1:
+          result = getMonth() / 3;
+          break;
+        case W$1:
+          result = (diff2 - zoneDelta) / MILLISECONDS_A_WEEK;
+          break;
+        case D$1:
+          result = (diff2 - zoneDelta) / MILLISECONDS_A_DAY;
+          break;
+        case H$1:
+          result = diff2 / MILLISECONDS_A_HOUR;
+          break;
+        case MIN:
+          result = diff2 / MILLISECONDS_A_MINUTE;
+          break;
+        case S$1:
+          result = diff2 / MILLISECONDS_A_SECOND;
+          break;
+        default:
+          result = diff2;
+          break;
+      }
+      return _float ? result : Utils.a(result);
+    };
+    _proto.daysInMonth = function daysInMonth() {
+      return this.endOf(M$3).$D;
+    };
+    _proto.$locale = function $locale() {
+      return Ls$1[this.$L];
+    };
+    _proto.locale = function locale(preset, object3) {
+      if (!preset)
+        return this.$L;
+      var that2 = this.clone();
+      var nextLocaleName = parseLocale(preset, object3, true);
+      if (nextLocaleName)
+        that2.$L = nextLocaleName;
+      return that2;
+    };
+    _proto.clone = function clone2() {
+      return Utils.w(this.$d, this);
+    };
+    _proto.toDate = function toDate() {
+      return new Date(this.valueOf());
+    };
+    _proto.toJSON = function toJSON() {
+      return this.isValid() ? this.toISOString() : null;
+    };
+    _proto.toISOString = function toISOString() {
+      return this.$d.toISOString();
+    };
+    _proto.toString = function toString2() {
+      return this.$d.toUTCString();
+    };
+    return Dayjs2;
+  }();
+  var proto = Dayjs.prototype;
+  dayjs$1.prototype = proto;
+  [["$ms", MS], ["$s", S$1], ["$m", MIN], ["$H", H$1], ["$W", D$1], ["$M", M$3], ["$y", Y$1], ["$D", DATE]].forEach(function(g2) {
+    proto[g2[1]] = function(input) {
+      return this.$g(input, g2[0], g2[1]);
+    };
+  });
+  dayjs$1.extend = function(plugin, option) {
+    if (!plugin.$i) {
+      plugin(option, Dayjs, dayjs$1);
+      plugin.$i = true;
+    }
+    return dayjs$1;
+  };
+  dayjs$1.locale = parseLocale;
+  dayjs$1.isDayjs = isDayjs;
+  dayjs$1.unix = function(timestamp) {
+    return dayjs$1(timestamp * 1e3);
+  };
+  dayjs$1.en = Ls$1[L$1];
+  dayjs$1.Ls = Ls$1;
+  dayjs$1.p = {};
+  function times(n2, iteratee) {
+    let index2 = -1;
+    const result = Array(n2 < 0 ? 0 : n2);
+    while (++index2 < n2) {
+      result[index2] = iteratee(index2);
+    }
+    return result;
+  }
+  const _sfc_main$13 = {
+    name: "up-datetime-picker",
+    mixins: [mpMixin, mixin, props$b],
+    data() {
+      return {
+        // 原来的日期选择器不方便，这里增加一个hasInput选项支持类似element的自带输入框的功能。
+        inputValue: "",
+        // 表单显示值
+        showByClickInput: false,
+        // 是否在hasInput模式下显示日期选择弹唱
+        columns: [],
+        innerDefaultIndex: [],
+        innerFormatter: (type2, value) => value
+      };
+    },
+    watch: {
+      show(newValue, oldValue) {
+        if (newValue) {
+          this.updateColumnValue(this.innerValue);
+        }
+      },
+      modelValue(newValue) {
+        this.init();
+      },
+      propsChange() {
+        this.init();
+      }
+    },
+    computed: {
+      // 如果以下这些变量发生了变化，意味着需要重新初始化各列的值
+      propsChange() {
+        return [this.mode, this.maxDate, this.minDate, this.minHour, this.maxHour, this.minMinute, this.maxMinute, this.filter];
+      }
+    },
+    mounted() {
+      this.init();
+    },
+    emits: ["close", "cancel", "confirm", "change", "update:modelValue"],
+    methods: {
+      getInputValue(newValue) {
+        if (newValue == "" || !newValue || newValue == void 0) {
+          this.inputValue = "";
+          return;
+        }
+        if (this.mode == "time") {
+          this.inputValue = newValue;
+        } else {
+          if (this.format) {
+            this.inputValue = dayjs$1(newValue).format(this.format);
+          } else {
+            let format2 = "";
+            switch (this.mode) {
+              case "date":
+                format2 = "YYYY-MM-DD";
+                break;
+              case "year-month":
+                format2 = "YYYY-MM";
+                break;
+              case "datetime":
+                format2 = "YYYY-MM-DD HH:mm";
+                break;
+              case "time":
+                format2 = "HH:mm";
+                break;
+            }
+            this.inputValue = dayjs$1(newValue).format(format2);
+          }
+        }
+      },
+      init() {
+        this.innerValue = this.correctValue(this.modelValue);
+        this.updateColumnValue(this.innerValue);
+        this.getInputValue(this.innerValue);
+      },
+      // 在微信小程序中，不支持将函数当做props参数，故只能通过ref形式调用
+      setFormatter(e2) {
+        this.innerFormatter = e2;
+      },
+      // 关闭选择器
+      close() {
+        if (this.closeOnClickOverlay) {
+          this.$emit("close");
+        }
+      },
+      // 点击工具栏的取消按钮
+      cancel() {
+        if (this.hasInput) {
+          this.showByClickInput = false;
+        }
+        this.$emit("cancel");
+      },
+      // 点击工具栏的确定按钮
+      confirm() {
+        this.$emit("update:modelValue", this.innerValue);
+        if (this.hasInput) {
+          this.getInputValue(this.innerValue);
+          this.showByClickInput = false;
+        }
+        this.$emit("confirm", {
+          value: this.innerValue,
+          mode: this.mode
+        });
+      },
+      //用正则截取输出值,当出现多组数字时,抛出错误
+      intercept(e2, type2) {
+        let judge = e2.match(/\d+/g);
+        if (judge.length > 1) {
+          error("请勿在过滤或格式化函数时添加数字");
+          return 0;
+        } else if (type2 && judge[0].length == 4) {
+          return judge[0];
+        } else if (judge[0].length > 2) {
+          error("请勿在过滤或格式化函数时添加数字");
+          return 0;
+        } else {
+          return judge[0];
+        }
+      },
+      // 列发生变化时触发
+      change(e2) {
+        const { indexs, values } = e2;
+        let selectValue = "";
+        if (this.mode === "time") {
+          selectValue = `${this.intercept(values[0][indexs[0]])}:${this.intercept(values[1][indexs[1]])}`;
+        } else {
+          const year = parseInt(this.intercept(values[0][indexs[0]], "year"));
+          const month = parseInt(this.intercept(values[1][indexs[1]]));
+          let date3 = parseInt(values[2] ? this.intercept(values[2][indexs[2]]) : 1);
+          let hour = 0, minute = 0;
+          const maxDate = dayjs$1(`${year}-${month}`).daysInMonth();
+          if (this.mode === "year-month") {
+            date3 = 1;
+          }
+          date3 = Math.min(maxDate, date3);
+          if (this.mode === "datetime") {
+            hour = parseInt(this.intercept(values[3][indexs[3]]));
+            minute = parseInt(this.intercept(values[4][indexs[4]]));
+          }
+          selectValue = Number(new Date(year, month - 1, date3, hour, minute));
+        }
+        selectValue = this.correctValue(selectValue);
+        this.innerValue = selectValue;
+        this.updateColumnValue(selectValue);
+        this.$emit("change", {
+          value: selectValue,
+          // 微信小程序不能传递this实例，会因为循环引用而报错
+          // picker: this.$refs.picker,
+          mode: this.mode
+        });
+      },
+      // 更新各列的值，进行补0、格式化等操作
+      updateColumnValue(value) {
+        this.innerValue = value;
+        this.updateColumns();
+        setTimeout(() => {
+          this.updateIndexs(value);
+        }, 0);
+      },
+      // 更新索引
+      updateIndexs(value) {
+        let values = [];
+        const formatter = this.formatter || this.innerFormatter;
+        if (this.mode === "time") {
+          const timeArr = value.split(":");
+          values = [formatter("hour", timeArr[0]), formatter("minute", timeArr[1])];
+        } else {
+          values = [
+            formatter("year", `${dayjs$1(value).year()}`),
+            // 月份补0
+            formatter("month", padZero(dayjs$1(value).month() + 1))
+          ];
+          if (this.mode === "date") {
+            values.push(formatter("day", padZero(dayjs$1(value).date())));
+          }
+          if (this.mode === "datetime") {
+            values.push(formatter("day", padZero(dayjs$1(value).date())), formatter("hour", padZero(dayjs$1(value).hour())), formatter("minute", padZero(dayjs$1(value).minute())));
+          }
+        }
+        const indexs = this.columns.map((column, index2) => {
+          return Math.max(0, column.findIndex((item) => item === values[index2]));
+        });
+        this.innerDefaultIndex = indexs;
+      },
+      // 更新各列的值
+      updateColumns() {
+        const formatter = this.formatter || this.innerFormatter;
+        const results = this.getOriginColumns().map((column) => column.values.map((value) => formatter(column.type, value)));
+        this.columns = results;
+      },
+      getOriginColumns() {
+        const results = this.getRanges().map(({ type: type2, range: range2 }) => {
+          let values = times(range2[1] - range2[0] + 1, (index2) => {
+            let value = range2[0] + index2;
+            value = type2 === "year" ? `${value}` : padZero(value);
+            return value;
+          });
+          if (this.filter) {
+            values = this.filter(type2, values);
+            if (!values || values && values.length == 0) {
+              formatAppLog("log", "at node_modules/uview-plus/components/u-datetime-picker/u-datetime-picker.vue:347", "日期filter结果不能为空");
+            }
+          }
+          return { type: type2, values };
+        });
+        return results;
+      },
+      // 通过最大值和最小值生成数组
+      generateArray(start, end) {
+        return Array.from(new Array(end + 1).keys()).slice(start);
+      },
+      // 得出合法的时间
+      correctValue(value) {
+        const isDateMode = this.mode !== "time";
+        if (isDateMode && !dayjs$1.unix(value).isValid()) {
+          value = this.minDate;
+        } else if (!isDateMode && !value) {
+          value = `${padZero(this.minHour)}:${padZero(this.minMinute)}`;
+        }
+        if (!isDateMode) {
+          if (String(value).indexOf(":") === -1)
+            return error("时间错误，请传递如12:24的格式");
+          let [hour, minute] = value.split(":");
+          hour = padZero(range$1(this.minHour, this.maxHour, Number(hour)));
+          minute = padZero(range$1(this.minMinute, this.maxMinute, Number(minute)));
+          return `${hour}:${minute}`;
+        } else {
+          value = dayjs$1(value).isBefore(dayjs$1(this.minDate)) ? this.minDate : value;
+          value = dayjs$1(value).isAfter(dayjs$1(this.maxDate)) ? this.maxDate : value;
+          return value;
+        }
+      },
+      // 获取每列的最大和最小值
+      getRanges() {
+        if (this.mode === "time") {
+          return [
+            {
+              type: "hour",
+              range: [this.minHour, this.maxHour]
+            },
+            {
+              type: "minute",
+              range: [this.minMinute, this.maxMinute]
+            }
+          ];
+        }
+        const { maxYear, maxDate, maxMonth, maxHour, maxMinute } = this.getBoundary("max", this.innerValue);
+        const { minYear, minDate, minMonth, minHour, minMinute } = this.getBoundary("min", this.innerValue);
+        const result = [
+          {
+            type: "year",
+            range: [minYear, maxYear]
+          },
+          {
+            type: "month",
+            range: [minMonth, maxMonth]
+          },
+          {
+            type: "day",
+            range: [minDate, maxDate]
+          },
+          {
+            type: "hour",
+            range: [minHour, maxHour]
+          },
+          {
+            type: "minute",
+            range: [minMinute, maxMinute]
+          }
+        ];
+        if (this.mode === "date")
+          result.splice(3, 2);
+        if (this.mode === "year-month")
+          result.splice(2, 3);
+        return result;
+      },
+      // 根据minDate、maxDate、minHour、maxHour等边界值，判断各列的开始和结束边界值
+      getBoundary(type2, innerValue) {
+        const value = new Date(innerValue);
+        const boundary = new Date(this[`${type2}Date`]);
+        const year = dayjs$1(boundary).year();
+        let month = 1;
+        let date3 = 1;
+        let hour = 0;
+        let minute = 0;
+        if (type2 === "max") {
+          month = 12;
+          date3 = dayjs$1(value).daysInMonth();
+          hour = 23;
+          minute = 59;
+        }
+        if (dayjs$1(value).year() === year) {
+          month = dayjs$1(boundary).month() + 1;
+          if (dayjs$1(value).month() + 1 === month) {
+            date3 = dayjs$1(boundary).date();
+            if (dayjs$1(value).date() === date3) {
+              hour = dayjs$1(boundary).hour();
+              if (dayjs$1(value).hour() === hour) {
+                minute = dayjs$1(boundary).minute();
+              }
+            }
+          }
+        }
+        return {
+          [`${type2}Year`]: year,
+          [`${type2}Month`]: month,
+          [`${type2}Date`]: date3,
+          [`${type2}Hour`]: hour,
+          [`${type2}Minute`]: minute
+        };
+      }
+    }
+  };
+  function _sfc_render$m(_ctx, _cache, $props, $setup, $data, $options) {
+    const _component_up_input = vue.resolveComponent("up-input");
+    const _component_u_picker = resolveEasycom(vue.resolveDynamicComponent("u-picker"), __easycom_4$1);
+    return vue.openBlock(), vue.createElementBlock("view", { class: "u-datetime-picker" }, [
+      _ctx.hasInput ? (vue.openBlock(), vue.createElementBlock("view", {
+        key: 0,
+        class: "u-datetime-picker__has-input",
+        onClick: _cache[1] || (_cache[1] = ($event) => $data.showByClickInput = !$data.showByClickInput)
+      }, [
+        vue.renderSlot(_ctx.$slots, "trigger", { value: $data.inputValue }, () => [
+          vue.createVNode(_component_up_input, {
+            placeholder: _ctx.placeholder,
+            readonly: !!$data.showByClickInput,
+            border: "surround",
+            modelValue: $data.inputValue,
+            "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => $data.inputValue = $event)
+          }, null, 8, ["placeholder", "readonly", "modelValue"]),
+          vue.createElementVNode("div", { class: "input-cover" })
+        ], true)
+      ])) : vue.createCommentVNode("v-if", true),
+      vue.createVNode(_component_u_picker, {
+        ref: "picker",
+        show: _ctx.show || _ctx.hasInput && $data.showByClickInput,
+        popupMode: _ctx.popupMode,
+        closeOnClickOverlay: _ctx.closeOnClickOverlay,
+        columns: $data.columns,
+        title: _ctx.title,
+        itemHeight: _ctx.itemHeight,
+        showToolbar: _ctx.showToolbar,
+        visibleItemCount: _ctx.visibleItemCount,
+        defaultIndex: $data.innerDefaultIndex,
+        cancelText: _ctx.cancelText,
+        confirmText: _ctx.confirmText,
+        cancelColor: _ctx.cancelColor,
+        confirmColor: _ctx.confirmColor,
+        toolbarRightSlot: _ctx.toolbarRightSlot,
+        onClose: $options.close,
+        onCancel: $options.cancel,
+        onConfirm: $options.confirm,
+        onChange: $options.change
+      }, {
+        "toolbar-right": vue.withCtx(() => [
+          vue.renderSlot(_ctx.$slots, "toolbar-right", {}, void 0, true)
+        ]),
+        "toolbar-bottom": vue.withCtx(() => [
+          vue.renderSlot(_ctx.$slots, "toolbar-bottom", {}, void 0, true)
+        ]),
+        _: 3
+        /* FORWARDED */
+      }, 8, ["show", "popupMode", "closeOnClickOverlay", "columns", "title", "itemHeight", "showToolbar", "visibleItemCount", "defaultIndex", "cancelText", "confirmText", "cancelColor", "confirmColor", "toolbarRightSlot", "onClose", "onCancel", "onConfirm", "onChange"])
+    ]);
+  }
+  const __easycom_2$3 = /* @__PURE__ */ _export_sfc(_sfc_main$13, [["render", _sfc_render$m], ["__scopeId", "data-v-e39cc2d0"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/node_modules/uview-plus/components/u-datetime-picker/u-datetime-picker.vue"]]);
+  const _sfc_main$12 = {
     __name: "index",
     setup(__props) {
       const financeStatus = vue.ref("none");
       const rejectReason = vue.ref("");
+      const selectedDate = vue.ref(Date.now());
       const loading = vue.ref(false);
+      const minDate = /* @__PURE__ */ new Date("2020-01-01");
+      const maxDate = /* @__PURE__ */ new Date();
       const creditDetails = vue.ref([]);
       const loanRecords = vue.ref([]);
       const purchaseOrders = vue.ref([]);
@@ -7116,6 +8620,26 @@ if (uni.restoreGlobal) {
           title: "正在接入客服...",
           icon: "none"
         });
+      };
+      const formatDays = (timestamp) => {
+        if (!timestamp) {
+          const now = /* @__PURE__ */ new Date();
+          return `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}`;
+        }
+        try {
+          const date3 = new Date(Number(timestamp));
+          if (isNaN(date3.getTime())) {
+            const now = /* @__PURE__ */ new Date();
+            return `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}`;
+          }
+          const year = date3.getFullYear();
+          const month = String(date3.getMonth() + 1).padStart(2, "0");
+          return `${year}-${month}`;
+        } catch (error2) {
+          formatAppLog("error", "at pages/finance/index.vue:367", "日期格式化错误:", error2);
+          const now = /* @__PURE__ */ new Date();
+          return `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}`;
+        }
       };
       onShow(() => {
         checkFinanceStatus();
@@ -7143,7 +8667,7 @@ if (uni.restoreGlobal) {
         getAction("/fms/customerApply/queryByRole", { businessType: "LOAN" }).then((res) => {
           if (res.success) {
             financeStatus.value = res.result ? res.result.status : "none";
-            if (financeStatus.value === "3" || financeStatus.value === "4") {
+            if (financeStatus.value === "3") {
               uni.navigateTo({
                 url: "/pages/finance/apply"
               });
@@ -7179,7 +8703,7 @@ if (uni.restoreGlobal) {
         {
           title: "借贷流水",
           desc: "查看借贷记录",
-          icon: "file-text",
+          icon: "http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/借贷流水_1735543644762.png",
           type: "loan",
           count: "12笔",
           bgColor: "rgba(43, 92, 255, 0.1)",
@@ -7188,7 +8712,7 @@ if (uni.restoreGlobal) {
         {
           title: "我的采购",
           desc: "查看采购订单",
-          icon: "shopping-cart",
+          icon: "http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/采购_1735543594093.png",
           type: "purchase",
           count: "8单",
           bgColor: "rgba(54, 207, 201, 0.1)",
@@ -7197,7 +8721,7 @@ if (uni.restoreGlobal) {
         {
           title: "我的赎货",
           desc: "查看赎货记录",
-          icon: "gift",
+          icon: "http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/赎货_1735543520919.png",
           type: "redeem",
           count: "5单",
           bgColor: "rgba(255, 77, 79, 0.1)",
@@ -7205,6 +8729,7 @@ if (uni.restoreGlobal) {
         }
       ]);
       const creditList = vue.ref([]);
+      const showDatePicker = vue.ref(false);
       const pageNo = vue.ref(1);
       const pageSize = vue.ref(10);
       const hasMore = vue.ref(true);
@@ -7213,11 +8738,17 @@ if (uni.restoreGlobal) {
       const getCreditList = async (type2) => {
         loading.value = true;
         try {
+          const date3 = new Date(selectedDate.value);
+          const year = date3.getFullYear();
+          const month = date3.getMonth() + 1;
+          const days = new Date(year, month, 0).getDate();
           const res = await getAction("/fms/creditUsage/list", {
             pageNo: pageNo.value,
             pageSize: pageSize.value,
             column: "createTime",
-            order: "desc"
+            order: "desc",
+            createTimeBegin: year + "-" + month + "-01",
+            createTimeEnd: year + "-" + month + "-" + days
           });
           if (res.success) {
             if (type2 === "refresh") {
@@ -7229,7 +8760,7 @@ if (uni.restoreGlobal) {
             hasMore.value = creditList.value.length < total.value;
           }
         } catch (error2) {
-          formatAppLog("error", "at pages/finance/index.vue:441", "加载订单列表失败:", error2);
+          formatAppLog("error", "at pages/finance/index.vue:522", "加载订单列表失败:", error2);
         } finally {
           loading.value = false;
           isRefreshing.value = false;
@@ -7241,158 +8772,164 @@ if (uni.restoreGlobal) {
         pageNo.value++;
         getCreditList();
       });
+      const onDateConfirm = (e2) => {
+        selectedDate.value = Number(e2.value);
+        formatAppLog("log", "at pages/finance/index.vue:537", "选择的时间戳:", selectedDate.value, e2, formatDays(selectedDate.value));
+        showDatePicker.value = false;
+        pageNo.value = 1;
+        getCreditList("refresh");
+      };
       onPullDownRefresh(async () => {
         isRefreshing.value = true;
         pageNo.value = 1;
         await getCreditList("refresh");
         uni.stopPullDownRefresh();
       });
+      const showCalendar = () => {
+        showDatePicker.value = true;
+      };
       vue.onMounted(() => {
         getCreditList("refresh");
       });
       return (_ctx, _cache) => {
-        const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$7);
-        const _component_u_empty = resolveEasycom(vue.resolveDynamicComponent("u-empty"), __easycom_4$1);
+        const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$6);
+        const _component_u_empty = resolveEasycom(vue.resolveDynamicComponent("u-empty"), __easycom_4$2);
+        const _component_u_datetime_picker = resolveEasycom(vue.resolveDynamicComponent("u-datetime-picker"), __easycom_2$3);
         return vue.openBlock(), vue.createElementBlock("view", { class: "container" }, [
           vue.createCommentVNode(" 未申请状态 "),
-          financeStatus.value === "none" ? (vue.openBlock(), vue.createElementBlock("view", {
+          financeStatus.value === "none" || financeStatus.value === "4" ? (vue.openBlock(), vue.createElementBlock("view", {
             key: 0,
             class: "promo-section"
           }, [
-            vue.createElementVNode("view", { class: "banner animate-fadeIn" }, [
-              vue.createElementVNode("image", {
-                src: "https://cdn-icons-png.flaticon.com/512/4021/4021708.png",
-                mode: "aspectFit"
-              }),
+            vue.createElementVNode("view", { class: "banner" }, [
               vue.createElementVNode("view", { class: "banner-text" }, [
                 vue.createElementVNode("text", { class: "title" }, "供应链金融服务"),
                 vue.createElementVNode("text", { class: "subtitle" }, "专业金融服务 · 助力企业腾飞"),
                 vue.createElementVNode("view", { class: "stats" }, [
                   vue.createElementVNode("view", { class: "stat-item" }, [
                     vue.createVNode(_component_u_icon, {
-                      name: "star-fill",
+                      name: "http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/企业服务_1735549003704.png",
                       color: "#fff",
-                      size: "28"
+                      size: "20"
                     }),
-                    vue.createElementVNode("text", { class: "number" }, "10000+"),
-                    vue.createElementVNode("text", { class: "label" }, "服务企业")
+                    vue.createElementVNode("text", { class: "label" }, "服务企业"),
+                    vue.createElementVNode("text", { class: "number" }, "10,000+")
                   ]),
                   vue.createElementVNode("view", { class: "stat-item" }, [
                     vue.createVNode(_component_u_icon, {
-                      name: "checkmark-circle-fill",
+                      name: "http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/审批_1735549017758.png",
                       color: "#fff",
-                      size: "28"
+                      size: "20"
                     }),
-                    vue.createElementVNode("text", { class: "number" }, "99%"),
-                    vue.createElementVNode("text", { class: "label" }, "审批通过率")
+                    vue.createElementVNode("text", { class: "label" }, "审批通过率"),
+                    vue.createElementVNode("text", { class: "number" }, "99%")
                   ])
                 ])
               ])
             ]),
-            vue.createElementVNode("view", { class: "feature-list" }, [
-              vue.createElementVNode("view", { class: "feature-item animate-fadeInUp delay-200" }, [
-                vue.createElementVNode("view", { class: "feature-icon" }, [
-                  vue.createVNode(_component_u_icon, {
-                    name: "clock-fill",
-                    color: "#ffb200",
-                    size: "32"
-                  })
-                ]),
-                vue.createElementVNode("text", { class: "feature-title" }, "快速审批"),
-                vue.createElementVNode("text", { class: "feature-desc" }, "最快1个工作日完成审核")
-              ]),
-              vue.createElementVNode("view", { class: "feature-item animate-fadeInUp delay-400" }, [
-                vue.createElementVNode("view", { class: "feature-icon" }, [
-                  vue.createVNode(_component_u_icon, {
-                    name: "rmb-circle-fill",
-                    color: "#ffb200",
-                    size: "32"
-                  })
-                ]),
-                vue.createElementVNode("text", { class: "feature-title" }, "灵活额度"),
-                vue.createElementVNode("text", { class: "feature-desc" }, "最高可贷1000万")
-              ]),
-              vue.createElementVNode("view", { class: "feature-item animate-fadeInUp delay-600" }, [
-                vue.createElementVNode("view", { class: "feature-icon" }, [
-                  vue.createVNode(_component_u_icon, {
-                    name: "gift-fill",
-                    color: "#ffb200",
-                    size: "32"
-                  })
-                ]),
-                vue.createElementVNode("text", { class: "feature-title" }, "优惠利率"),
-                vue.createElementVNode("text", { class: "feature-desc" }, "年化利率低至4.35%")
-              ])
-            ]),
-            vue.createElementVNode("view", { class: "process-section" }, [
-              vue.createElementVNode("text", { class: "section-title" }, "申请流程"),
-              vue.createElementVNode("view", { class: "process-list" }, [
-                vue.createElementVNode("view", { class: "process-item" }, [
-                  vue.createElementVNode("view", { class: "process-icon" }, [
+            vue.createElementVNode("view", { class: "list" }, [
+              vue.createElementVNode("view", { class: "feature-list" }, [
+                vue.createElementVNode("view", { class: "feature-item" }, [
+                  vue.createElementVNode("view", { class: "feature-icon" }, [
                     vue.createVNode(_component_u_icon, {
-                      name: "edit-pen",
-                      size: "24",
-                      color: "#1677ff"
+                      name: "http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/快速审批_1735548910679.png",
+                      color: "#ffb200",
+                      size: "60"
                     })
                   ]),
-                  vue.createElementVNode("text", { class: "process-text" }, "提交申请")
+                  vue.createElementVNode("text", { class: "feature-title" }, "快速审批"),
+                  vue.createElementVNode("text", { class: "feature-desc" }, "最快1个工作日完成审核")
                 ]),
-                vue.createElementVNode("view", { class: "process-arrow" }, [
-                  vue.createVNode(_component_u_icon, {
-                    name: "arrow-right",
-                    size: "20",
-                    color: "#ddd"
-                  })
-                ]),
-                vue.createElementVNode("view", { class: "process-item" }, [
-                  vue.createElementVNode("view", { class: "process-icon" }, [
+                vue.createElementVNode("view", { class: "feature-item" }, [
+                  vue.createElementVNode("view", { class: "feature-icon" }, [
                     vue.createVNode(_component_u_icon, {
-                      name: "file-text",
-                      size: "24",
-                      color: "#1677ff"
+                      name: "http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/灵活额度_1735548929862.png",
+                      color: "#ffb200",
+                      size: "60"
                     })
                   ]),
-                  vue.createElementVNode("text", { class: "process-text" }, "资料审核")
+                  vue.createElementVNode("text", { class: "feature-title" }, "灵活额度"),
+                  vue.createElementVNode("text", { class: "feature-desc" }, [
+                    vue.createTextVNode("最高可贷"),
+                    vue.createElementVNode("br"),
+                    vue.createTextVNode("1,000万")
+                  ])
                 ]),
-                vue.createElementVNode("view", { class: "process-arrow" }, [
-                  vue.createVNode(_component_u_icon, {
-                    name: "arrow-right",
-                    size: "20",
-                    color: "#ddd"
-                  })
-                ]),
-                vue.createElementVNode("view", { class: "process-item" }, [
-                  vue.createElementVNode("view", { class: "process-icon" }, [
+                vue.createElementVNode("view", { class: "feature-item" }, [
+                  vue.createElementVNode("view", { class: "feature-icon" }, [
                     vue.createVNode(_component_u_icon, {
-                      name: "star",
-                      size: "24",
-                      color: "#1677ff"
+                      name: "http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/优惠利率_1735548945690.png",
+                      color: "#ffb200",
+                      size: "60"
                     })
                   ]),
-                  vue.createElementVNode("text", { class: "process-text" }, "额度授信")
+                  vue.createElementVNode("text", { class: "feature-title" }, "优惠利率"),
+                  vue.createElementVNode("text", { class: "feature-desc" }, "年化利率低至4.35%")
                 ])
-              ])
-            ]),
-            vue.createElementVNode("view", { class: "bottom-section animate-fadeInUp delay-800" }, [
-              vue.createElementVNode("button", {
-                class: "apply-btn",
-                onClick: navigateToApply
-              }, [
-                vue.createElementVNode("text", null, "立即申请"),
-                vue.createVNode(_component_u_icon, {
-                  name: "arrow-right",
-                  color: "#fff",
-                  size: "20"
-                })
               ]),
-              vue.createElementVNode("text", { class: "apply-tips" }, "预计2分钟完成申请")
+              vue.createElementVNode("view", { class: "process-section" }, [
+                vue.createElementVNode("text", { class: "section-title" }, "申请流程"),
+                vue.createElementVNode("view", { class: "process-list" }, [
+                  vue.createElementVNode("view", { class: "process-item" }, [
+                    vue.createElementVNode("view", { class: "process-icon" }, [
+                      vue.createVNode(_component_u_icon, {
+                        name: "http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/提交申请_1735548967727.png",
+                        size: "80"
+                      })
+                    ]),
+                    vue.createElementVNode("text", { class: "process-text" }, "提交申请")
+                  ]),
+                  vue.createElementVNode("view", { class: "process-arrow" }, [
+                    vue.createVNode(_component_u_icon, {
+                      name: "http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/箭头_1735548892503.png",
+                      size: "30"
+                    })
+                  ]),
+                  vue.createElementVNode("view", { class: "process-item" }, [
+                    vue.createElementVNode("view", { class: "process-icon" }, [
+                      vue.createVNode(_component_u_icon, {
+                        name: "http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/资料审核_1735548979630.png",
+                        size: "80"
+                      })
+                    ]),
+                    vue.createElementVNode("text", { class: "process-text" }, "资料审核")
+                  ]),
+                  vue.createElementVNode("view", { class: "process-arrow" }, [
+                    vue.createVNode(_component_u_icon, {
+                      name: "http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/箭头_1735548892503.png",
+                      size: "30"
+                    })
+                  ]),
+                  vue.createElementVNode("view", { class: "process-item" }, [
+                    vue.createElementVNode("view", { class: "process-icon" }, [
+                      vue.createVNode(_component_u_icon, {
+                        name: "http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/额度授信_1735548877057.png",
+                        size: "80"
+                      })
+                    ]),
+                    vue.createElementVNode("text", { class: "process-text" }, "额度授信")
+                  ])
+                ])
+              ]),
+              vue.createElementVNode("view", { class: "bottom-section" }, [
+                vue.createElementVNode("button", {
+                  class: "apply-btn",
+                  onClick: navigateToApply
+                }, [
+                  vue.createElementVNode("text", null, "立即申请")
+                ]),
+                vue.createElementVNode("text", { class: "apply-tips" }, "预计2分钟完成申请")
+              ])
             ])
           ])) : financeStatus.value === "1" || financeStatus.value === "2" ? (vue.openBlock(), vue.createElementBlock(
             vue.Fragment,
             { key: 1 },
             [
               vue.createCommentVNode(" 待审核状态 "),
-              vue.createElementVNode("view", { class: "pending-section animate-fadeIn" }, [
+              vue.createElementVNode("view", {
+                class: "pending-section animate-fadeIn",
+                style: { "margin-top": "50rpx" }
+              }, [
                 vue.createCommentVNode(" 审核进度卡片 "),
                 vue.createElementVNode("view", { class: "progress-card" }, [
                   vue.createElementVNode("view", { class: "progress-header" }, [
@@ -7515,7 +9052,10 @@ if (uni.restoreGlobal) {
             { key: 2 },
             [
               vue.createCommentVNode(" 审核未通过状态 "),
-              vue.createElementVNode("view", { class: "rejected-section" }, [
+              vue.createElementVNode("view", {
+                class: "rejected-section",
+                style: { "margin-top": "50rpx" }
+              }, [
                 vue.createElementVNode("view", { class: "status-icon" }, [
                   vue.createVNode(_component_u_icon, {
                     name: "close-circle",
@@ -7544,8 +9084,12 @@ if (uni.restoreGlobal) {
             { key: 3 },
             [
               vue.createCommentVNode(" 审核通过状态 "),
-              vue.createElementVNode("view", { class: "approved-section" }, [
+              vue.createElementVNode("view", {
+                class: "approved-section",
+                style: { "margin-top": "50rpx" }
+              }, [
                 vue.createCommentVNode(" 授信卡片滑动区 "),
+                vue.createElementVNode("view", { style: { "font-weight": "500", "font-size": "46rpx", "margin": "10rpx 5rpx" } }, "供应链金融"),
                 vue.createElementVNode("scroll-view", {
                   "scroll-x": "",
                   class: "credit-cards",
@@ -7656,7 +9200,27 @@ if (uni.restoreGlobal) {
                 vue.createCommentVNode(" 授信明细 "),
                 vue.createElementVNode("view", { class: "detail-section" }, [
                   vue.createElementVNode("view", { class: "section-header" }, [
-                    vue.createElementVNode("text", { class: "title" }, "授信明细")
+                    vue.createElementVNode("text", { class: "title" }, "授信明细"),
+                    vue.createCommentVNode(" 日期选择区域 "),
+                    vue.createElementVNode("view", { class: "date-picker-section" }, [
+                      vue.createElementVNode("view", {
+                        class: "date-display",
+                        onClick: showCalendar
+                      }, [
+                        vue.createElementVNode(
+                          "text",
+                          { class: "selected-date" },
+                          vue.toDisplayString(formatDays(selectedDate.value)),
+                          1
+                          /* TEXT */
+                        ),
+                        vue.createVNode(_component_u_icon, {
+                          name: "calendar",
+                          size: "24",
+                          color: "#666"
+                        })
+                      ])
+                    ])
                   ]),
                   vue.createElementVNode("view", { class: "credit-list" }, [
                     (vue.openBlock(true), vue.createElementBlock(
@@ -7732,7 +9296,18 @@ if (uni.restoreGlobal) {
                       mode: "order",
                       text: "暂无订单数据"
                     })
-                  ])) : vue.createCommentVNode("v-if", true)
+                  ])) : vue.createCommentVNode("v-if", true),
+                  vue.createCommentVNode(" 日历选择弹窗 "),
+                  vue.createVNode(_component_u_datetime_picker, {
+                    show: showDatePicker.value,
+                    modelValue: selectedDate.value,
+                    "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => selectedDate.value = $event),
+                    mode: "year-month",
+                    "min-date": vue.unref(minDate).getTime(),
+                    "max-date": vue.unref(maxDate).getTime(),
+                    onConfirm: onDateConfirm,
+                    onCancel: _cache[1] || (_cache[1] = ($event) => showDatePicker.value = false)
+                  }, null, 8, ["show", "modelValue", "min-date", "max-date"])
                 ])
               ])
             ],
@@ -7743,7 +9318,7 @@ if (uni.restoreGlobal) {
       };
     }
   };
-  const PagesFinanceIndex = /* @__PURE__ */ _export_sfc(_sfc_main$15, [["__scopeId", "data-v-b0c916dd"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/finance/index.vue"]]);
+  const PagesFinanceIndex = /* @__PURE__ */ _export_sfc(_sfc_main$12, [["__scopeId", "data-v-b0c916dd"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/finance/index.vue"]]);
   const pages = [
     {
       path: "pages/index/index",
@@ -7763,7 +9338,8 @@ if (uni.restoreGlobal) {
       path: "pages/finance/index",
       style: {
         navigationBarTitleText: "金融",
-        enablePullDownRefresh: true
+        enablePullDownRefresh: true,
+        navigationStyle: "custom"
       }
     },
     {
@@ -7841,6 +9417,13 @@ if (uni.restoreGlobal) {
       }
     },
     {
+      path: "pages/setting/account",
+      style: {
+        navigationBarTitleText: "设置",
+        enablePullDownRefresh: true
+      }
+    },
+    {
       path: "pages/address/manage",
       style: {
         navigationBarTitleText: "地址管理",
@@ -7870,12 +9453,6 @@ if (uni.restoreGlobal) {
       path: "pages/profile/edit",
       style: {
         navigationBarTitleText: "编辑资料"
-      }
-    },
-    {
-      path: "pages/settings/account",
-      style: {
-        navigationBarTitleText: "账户设置"
       }
     },
     {
@@ -8380,48 +9957,48 @@ if (uni.restoreGlobal) {
   function I(e2) {
     return e2 && "string" == typeof e2 ? JSON.parse(e2) : e2;
   }
-  const S$1 = true, b = "app", A = I(define_process_env_UNI_SECURE_NETWORK_CONFIG_default), C = b, P = I(""), T = I("[]") || [];
+  const S = true, b = "app", A = I(define_process_env_UNI_SECURE_NETWORK_CONFIG_default), C = b, P = I(""), T = I("[]") || [];
   let O = "";
   try {
     O = "__UNI__B00B6F2";
   } catch (e2) {
   }
   let E = {};
-  function L$1(e2, t2 = {}) {
+  function L(e2, t2 = {}) {
     var n2, s2;
     return n2 = E, s2 = e2, Object.prototype.hasOwnProperty.call(n2, s2) || (E[e2] = t2), E[e2];
   }
   E = uni._globalUniCloudObj ? uni._globalUniCloudObj : uni._globalUniCloudObj = {};
-  const R = ["invoke", "success", "fail", "complete"], U$1 = L$1("_globalUniCloudInterceptor");
+  const R = ["invoke", "success", "fail", "complete"], U = L("_globalUniCloudInterceptor");
   function N(e2, t2) {
-    U$1[e2] || (U$1[e2] = {}), g(t2) && Object.keys(t2).forEach((n2) => {
+    U[e2] || (U[e2] = {}), g(t2) && Object.keys(t2).forEach((n2) => {
       R.indexOf(n2) > -1 && function(e3, t3, n3) {
-        let s2 = U$1[e3][t3];
-        s2 || (s2 = U$1[e3][t3] = []), -1 === s2.indexOf(n3) && m(n3) && s2.push(n3);
+        let s2 = U[e3][t3];
+        s2 || (s2 = U[e3][t3] = []), -1 === s2.indexOf(n3) && m(n3) && s2.push(n3);
       }(e2, n2, t2[n2]);
     });
   }
-  function D$1(e2, t2) {
-    U$1[e2] || (U$1[e2] = {}), g(t2) ? Object.keys(t2).forEach((n2) => {
+  function D(e2, t2) {
+    U[e2] || (U[e2] = {}), g(t2) ? Object.keys(t2).forEach((n2) => {
       R.indexOf(n2) > -1 && function(e3, t3, n3) {
-        const s2 = U$1[e3][t3];
+        const s2 = U[e3][t3];
         if (!s2)
           return;
         const r2 = s2.indexOf(n3);
         r2 > -1 && s2.splice(r2, 1);
       }(e2, n2, t2[n2]);
-    }) : delete U$1[e2];
+    }) : delete U[e2];
   }
-  function M$3(e2, t2) {
+  function M$2(e2, t2) {
     return e2 && 0 !== e2.length ? e2.reduce((e3, n2) => e3.then(() => n2(t2)), Promise.resolve()) : Promise.resolve();
   }
   function q(e2, t2) {
-    return U$1[e2] && U$1[e2][t2] || [];
+    return U[e2] && U[e2][t2] || [];
   }
   function F(e2) {
     N("callObject", e2);
   }
-  const K = L$1("_globalUniCloudListener"), j = "response", $ = "needLogin", B = "refreshToken", W$1 = "clientdb", H$1 = "cloudfunction", z = "cloudobject";
+  const K = L("_globalUniCloudListener"), j = "response", $ = "needLogin", B = "refreshToken", W = "clientdb", H = "cloudfunction", z = "cloudobject";
   function J(e2) {
     return K[e2] || (K[e2] = []), K[e2];
   }
@@ -8433,15 +10010,15 @@ if (uni.restoreGlobal) {
     const n2 = J(e2), s2 = n2.indexOf(t2);
     -1 !== s2 && n2.splice(s2, 1);
   }
-  function Y$1(e2, t2) {
+  function Y(e2, t2) {
     const n2 = J(e2);
     for (let e3 = 0; e3 < n2.length; e3++) {
       (0, n2[e3])(t2);
     }
   }
-  let Q$1, X = false;
+  let Q, X = false;
   function Z() {
-    return Q$1 || (Q$1 = new Promise((e2) => {
+    return Q || (Q = new Promise((e2) => {
       X && e2(), function t2() {
         if ("function" == typeof getCurrentPages) {
           const t3 = getCurrentPages();
@@ -8451,7 +10028,7 @@ if (uni.restoreGlobal) {
           t2();
         }, 30);
       }();
-    }), Q$1);
+    }), Q);
   }
   function ee(e2) {
     const t2 = {};
@@ -10013,7 +11590,7 @@ ${i3}
     }
     _send(e2, t2) {
       const n2 = this.getAction(), s2 = this.getCommand();
-      if (s2.$db.push({ $method: e2, $param: Gn(t2) }), S$1) {
+      if (s2.$db.push({ $method: e2, $param: Gn(t2) }), S) {
         const e3 = s2.$db.find((e4) => "collection" === e4.$method), t3 = e3 && e3.$param;
         t3 && 1 === t3.length && "string" == typeof e3.$param[0] && e3.$param[0].indexOf(",") > -1 && console.warn("检测到使用JQL语法联表查询时，未使用getTemp先过滤主表数据，在主表数据量大的情况下可能会查询缓慢。\n- 如何优化请参考此文档：https://uniapp.dcloud.net.cn/uniCloud/jql?id=lookup-with-temp \n- 如果主表数据量很小请忽略此信息，项目发行时不会出现此提示。");
       }
@@ -10048,7 +11625,7 @@ ${i3}
   }
   class ts extends class {
     constructor({ uniClient: e2 = {}, isJQL: t2 = false } = {}) {
-      this._uniClient = e2, this._authCallBacks = {}, this._dbCallBacks = {}, e2._isDefault && (this._dbCallBacks = L$1("_globalUniCloudDatabaseCallback")), t2 || (this.auth = zn(this._authCallBacks)), this._isJQL = t2, Object.assign(this, zn(this._dbCallBacks)), this.env = Hn({}, { get: (e3, t3) => ({ $env: t3 }) }), this.Geo = Hn({}, { get: (e3, t3) => Zn({ path: ["Geo"], method: t3 }) }), this.serverDate = Zn({ path: [], method: "serverDate" }), this.RegExp = Zn({ path: [], method: "RegExp" });
+      this._uniClient = e2, this._authCallBacks = {}, this._dbCallBacks = {}, e2._isDefault && (this._dbCallBacks = L("_globalUniCloudDatabaseCallback")), t2 || (this.auth = zn(this._authCallBacks)), this._isJQL = t2, Object.assign(this, zn(this._dbCallBacks)), this.env = Hn({}, { get: (e3, t3) => ({ $env: t3 }) }), this.Geo = Hn({}, { get: (e3, t3) => Zn({ path: ["Geo"], method: t3 }) }), this.serverDate = Zn({ path: [], method: "serverDate" }), this.RegExp = Zn({ path: [], method: "RegExp" });
     }
     getCloudEnv(e2) {
       if ("string" != typeof e2 || !e2.trim())
@@ -10090,9 +11667,9 @@ ${i3}
       }
       const i2 = this, o2 = this._isJQL ? "databaseForJQL" : "database";
       function a2(e3) {
-        return i2._callback("error", [e3]), M$3(q(o2, "fail"), e3).then(() => M$3(q(o2, "complete"), e3)).then(() => (r2(null, e3), Y$1(j, { type: W$1, content: e3 }), Promise.reject(e3)));
+        return i2._callback("error", [e3]), M$2(q(o2, "fail"), e3).then(() => M$2(q(o2, "complete"), e3)).then(() => (r2(null, e3), Y(j, { type: W, content: e3 }), Promise.reject(e3)));
       }
-      const c2 = M$3(q(o2, "invoke")), u2 = this._uniClient;
+      const c2 = M$2(q(o2, "invoke")), u2 = this._uniClient;
       return c2.then(() => u2.callFunction({ name: "DCloud-clientDB", type: h, data: { action: e2, command: t2, multiCommand: n2 } })).then((e3) => {
         const { code: t3, message: n3, token: s3, tokenExpired: c3, systemInfo: u3 = [] } = e3.result;
         if (u3)
@@ -10105,7 +11682,7 @@ ${i3}
         if (t3) {
           return a2(new te({ code: t3, message: n3, requestId: e3.requestId }));
         }
-        e3.result.errCode = e3.result.errCode || e3.result.code, e3.result.errMsg = e3.result.errMsg || e3.result.message, s3 && c3 && (ie({ token: s3, tokenExpired: c3 }), this._callbackAuth("refreshToken", [{ token: s3, tokenExpired: c3 }]), this._callback("refreshToken", [{ token: s3, tokenExpired: c3 }]), Y$1(B, { token: s3, tokenExpired: c3 }));
+        e3.result.errCode = e3.result.errCode || e3.result.code, e3.result.errMsg = e3.result.errMsg || e3.result.message, s3 && c3 && (ie({ token: s3, tokenExpired: c3 }), this._callbackAuth("refreshToken", [{ token: s3, tokenExpired: c3 }]), this._callback("refreshToken", [{ token: s3, tokenExpired: c3 }]), Y(B, { token: s3, tokenExpired: c3 }));
         const h2 = [{ prop: "affectedDocs", tips: "affectedDocs不再推荐使用，请使用inserted/deleted/updated/data.length替代" }, { prop: "code", tips: "code不再推荐使用，请使用errCode替代" }, { prop: "message", tips: "message不再推荐使用，请使用errMsg替代" }];
         for (let t4 = 0; t4 < h2.length; t4++) {
           const { prop: n4, tips: s4 } = h2[t4];
@@ -10115,10 +11692,10 @@ ${i3}
           }
         }
         return function(e4) {
-          return M$3(q(o2, "success"), e4).then(() => M$3(q(o2, "complete"), e4)).then(() => {
+          return M$2(q(o2, "success"), e4).then(() => M$2(q(o2, "complete"), e4)).then(() => {
             r2(e4, null);
             const t4 = i2._parseResult(e4);
-            return Y$1(j, { type: W$1, content: t4 }), Promise.resolve(t4);
+            return Y(j, { type: W, content: t4 }), Promise.resolve(t4);
           });
         }(e3);
       }, (e3) => {
@@ -10227,7 +11804,7 @@ ${i3}
       n2.uniIdRedirectUrl = e2;
       if (J($).length > 0)
         return setTimeout(() => {
-          Y$1($, n2);
+          Y($, n2);
         }, 0), t2.abortLoginPageJump = true, t2;
       t2.autoToLoginPage = true;
     }
@@ -10273,7 +11850,7 @@ ${i3}
         Z().then(() => {
           const n3 = us();
           if (n3 && Is({ redirect: n3 }))
-            return t3.length > 0 ? Y$1($, Object.assign({ uniIdRedirectUrl: n3 }, e3)) : void (ps && Ss({ api: "navigateTo", redirect: n3 }));
+            return t3.length > 0 ? Y($, Object.assign({ uniIdRedirectUrl: n3 }, e3)) : void (ps && Ss({ api: "navigateTo", redirect: n3 }));
         });
       }(n2);
     });
@@ -10290,7 +11867,7 @@ ${i3}
         V($, e4);
       }, e3.offNeedLogin = function(e4) {
         G($, e4);
-      }, ds && (L$1("_globalUniCloudStatus").needLoginInit || (L$1("_globalUniCloudStatus").needLoginInit = true, Z().then(() => {
+      }, ds && (L("_globalUniCloudStatus").needLoginInit || (L("_globalUniCloudStatus").needLoginInit = true, Z().then(() => {
         ks.call(e3);
       }), gs && As.call(e3)));
     }(e2), function(e3) {
@@ -10402,7 +11979,7 @@ ${i3}
         }(t3), t3);
       };
     };
-  }), Ls$1 = t(Es);
+  }), Ls = t(Es);
   const Rs = "manual";
   function Us(e2) {
     return { props: { localdata: { type: Array, default: () => [] }, options: { type: [Object, Array], default: () => ({}) }, spaceInfo: { type: Object, default: () => ({}) }, collection: { type: [String, Array], default: "" }, action: { type: String, default: "" }, field: { type: String, default: "" }, orderby: { type: String, default: "" }, where: { type: [String, Object], default: "" }, pageData: { type: String, default: "add" }, pageCurrent: { type: Number, default: 1 }, pageSize: { type: Number, default: 20 }, getcount: { type: [Boolean, String], default: false }, gettree: { type: [Boolean, String], default: false }, gettreepath: { type: [Boolean, String], default: false }, startwith: { type: String, default: "" }, limitlevel: { type: Number, default: 10 }, groupby: { type: String, default: "" }, groupField: { type: String, default: "" }, distinct: { type: [Boolean, String], default: false }, foreignKey: { type: String, default: "" }, loadtime: { type: String, default: "auto" }, manual: { type: Boolean, default: false } }, data: () => ({ mixinDatacomLoading: false, mixinDatacomHasMore: false, mixinDatacomResData: [], mixinDatacomErrorMessage: "", mixinDatacomPage: {}, mixinDatacomError: null }), created() {
@@ -10473,11 +12050,11 @@ ${i3}
             const r3 = n3 ? n3({ params: s4 }) : {};
             let i3, o3;
             try {
-              return await M$3(q(t3, "invoke"), { ...r3 }), i3 = await e3(...s4), await M$3(q(t3, "success"), { ...r3, result: i3 }), i3;
+              return await M$2(q(t3, "invoke"), { ...r3 }), i3 = await e3(...s4), await M$2(q(t3, "success"), { ...r3, result: i3 }), i3;
             } catch (e4) {
-              throw o3 = e4, await M$3(q(t3, "fail"), { ...r3, error: o3 }), o3;
+              throw o3 = e4, await M$2(q(t3, "fail"), { ...r3, error: o3 }), o3;
             } finally {
-              await M$3(q(t3, "complete"), o3 ? { ...r3, error: o3 } : { ...r3, result: i3 });
+              await M$2(q(t3, "complete"), o3 ? { ...r3, error: o3 } : { ...r3, result: i3 });
             }
           };
         }({ fn: async function s4(...h2) {
@@ -10495,7 +12072,7 @@ ${i3}
             p2 = true, l2 = { result: new te(e3) };
           }
           const { errSubject: f2, errCode: g2, errMsg: m2, newToken: y2 } = l2.result || {};
-          if (a2 && uni.hideLoading(), y2 && y2.token && y2.tokenExpired && (ie(y2), Y$1(B, { ...y2 })), g2) {
+          if (a2 && uni.hideLoading(), y2 && y2.token && y2.tokenExpired && (ie(y2), Y(B, { ...y2 })), g2) {
             let e3 = m2;
             if (p2 && o2) {
               e3 = (await o2({ objectName: t2, methodName: c2, params: h2, errSubject: f2, errCode: g2, errMsg: m2 })).errMsg || m2;
@@ -10521,9 +12098,9 @@ ${i3}
                 }
               }
             const n3 = new te({ subject: f2, code: g2, message: m2, requestId: l2.requestId });
-            throw n3.detail = l2.result, Y$1(j, { type: z, content: n3 }), n3;
+            throw n3.detail = l2.result, Y(j, { type: z, content: n3 }), n3;
           }
-          return Y$1(j, { type: z, content: l2.result }), l2.result;
+          return Y(j, { type: z, content: l2.result }), l2.result;
         }, interceptorName: "callObject", getCallbackArgs: function({ params: e3 } = {}) {
           return { objectName: t2, methodName: c2, params: e3 };
         } });
@@ -10531,7 +12108,7 @@ ${i3}
     };
   }
   function Ds(e2) {
-    return L$1("_globalUniCloudSecureNetworkCache__{spaceId}".replace("{spaceId}", e2.config.spaceId));
+    return L("_globalUniCloudSecureNetworkCache__{spaceId}".replace("{spaceId}", e2.config.spaceId));
   }
   async function Ms({ openid: e2, callLoginByWeixin: t2 = false } = {}) {
     Ds(this);
@@ -10763,7 +12340,7 @@ ${i3}
           return this._databaseForJQL = n3, n3;
         };
       }(t2), function(e3) {
-        e3.getCurrentUserInfo = Os, e3.chooseAndUploadFile = Ls$1.initChooseAndUploadFile(e3), Object.assign(e3, { get mixinDatacom() {
+        e3.getCurrentUserInfo = Os, e3.chooseAndUploadFile = Ls.initChooseAndUploadFile(e3), Object.assign(e3, { get mixinDatacom() {
           return Us(e3);
         } }), e3.SSEChannel = $s, e3.initSecureNetworkByWeixin = Fs(e3), e3.setCustomClientInfo = Ks, e3.importObject = Ns(e3);
       }(t2);
@@ -10782,13 +12359,13 @@ ${i3}
             }
             const r2 = "callFunction" === t3 && !s2, i2 = this._initPromiseHub.exec();
             n4 = n4 || {};
-            const { success: o2, fail: a2, complete: u2 } = ee(n4), h2 = i2.then(() => s2 ? Promise.resolve() : M$3(q(t3, "invoke"), n4)).then(() => e4.call(this, n4)).then((e5) => s2 ? Promise.resolve(e5) : M$3(q(t3, "success"), e5).then(() => M$3(q(t3, "complete"), e5)).then(() => (r2 && Y$1(j, { type: H$1, content: e5 }), Promise.resolve(e5))), (e5) => s2 ? Promise.reject(e5) : M$3(q(t3, "fail"), e5).then(() => M$3(q(t3, "complete"), e5)).then(() => (Y$1(j, { type: H$1, content: e5 }), Promise.reject(e5))));
+            const { success: o2, fail: a2, complete: u2 } = ee(n4), h2 = i2.then(() => s2 ? Promise.resolve() : M$2(q(t3, "invoke"), n4)).then(() => e4.call(this, n4)).then((e5) => s2 ? Promise.resolve(e5) : M$2(q(t3, "success"), e5).then(() => M$2(q(t3, "complete"), e5)).then(() => (r2 && Y(j, { type: H, content: e5 }), Promise.resolve(e5))), (e5) => s2 ? Promise.reject(e5) : M$2(q(t3, "fail"), e5).then(() => M$2(q(t3, "complete"), e5)).then(() => (Y(j, { type: H, content: e5 }), Promise.reject(e5))));
             if (!(o2 || a2 || u2))
               return h2;
             h2.then((e5) => {
-              o2 && o2(e5), u2 && u2(e5), r2 && Y$1(j, { type: H$1, content: e5 });
+              o2 && o2(e5), u2 && u2(e5), r2 && Y(j, { type: H, content: e5 });
             }, (e5) => {
-              a2 && a2(e5), u2 && u2(e5), r2 && Y$1(j, { type: H$1, content: e5 });
+              a2 && a2(e5), u2 && u2(e5), r2 && Y(j, { type: H, content: e5 });
             });
           };
         }(t2[e3], e3)).bind(t2);
@@ -10811,16 +12388,16 @@ ${i3}
     }
     Object.assign(Js, { get mixinDatacom() {
       return Us(Js);
-    } }), Cs(Js), Js.addInterceptor = N, Js.removeInterceptor = D$1, Js.interceptObject = F;
+    } }), Cs(Js), Js.addInterceptor = N, Js.removeInterceptor = D, Js.interceptObject = F;
   })();
   var Vs = Js;
-  const _sfc_main$14 = {
+  const _sfc_main$11 = {
     name: "loading1",
     data() {
       return {};
     }
   };
-  function _sfc_render$o(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$l(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", { class: "container loading1" }, [
       vue.createElementVNode("view", { class: "shape shape1" }),
       vue.createElementVNode("view", { class: "shape shape2" }),
@@ -10828,14 +12405,14 @@ ${i3}
       vue.createElementVNode("view", { class: "shape shape4" })
     ]);
   }
-  const Loading1 = /* @__PURE__ */ _export_sfc(_sfc_main$14, [["render", _sfc_render$o], ["__scopeId", "data-v-0e645258"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/uni_modules/qiun-data-charts/components/qiun-loading/loading1.vue"]]);
-  const _sfc_main$13 = {
+  const Loading1 = /* @__PURE__ */ _export_sfc(_sfc_main$11, [["render", _sfc_render$l], ["__scopeId", "data-v-0e645258"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/uni_modules/qiun-data-charts/components/qiun-loading/loading1.vue"]]);
+  const _sfc_main$10 = {
     name: "loading2",
     data() {
       return {};
     }
   };
-  function _sfc_render$n(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$k(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", { class: "container loading2" }, [
       vue.createElementVNode("view", { class: "shape shape1" }),
       vue.createElementVNode("view", { class: "shape shape2" }),
@@ -10843,14 +12420,14 @@ ${i3}
       vue.createElementVNode("view", { class: "shape shape4" })
     ]);
   }
-  const Loading2 = /* @__PURE__ */ _export_sfc(_sfc_main$13, [["render", _sfc_render$n], ["__scopeId", "data-v-3df48dc2"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/uni_modules/qiun-data-charts/components/qiun-loading/loading2.vue"]]);
-  const _sfc_main$12 = {
+  const Loading2 = /* @__PURE__ */ _export_sfc(_sfc_main$10, [["render", _sfc_render$k], ["__scopeId", "data-v-3df48dc2"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/uni_modules/qiun-data-charts/components/qiun-loading/loading2.vue"]]);
+  const _sfc_main$$ = {
     name: "loading3",
     data() {
       return {};
     }
   };
-  function _sfc_render$m(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$j(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", { class: "container loading3" }, [
       vue.createElementVNode("view", { class: "shape shape1" }),
       vue.createElementVNode("view", { class: "shape shape2" }),
@@ -10858,14 +12435,14 @@ ${i3}
       vue.createElementVNode("view", { class: "shape shape4" })
     ]);
   }
-  const Loading3 = /* @__PURE__ */ _export_sfc(_sfc_main$12, [["render", _sfc_render$m], ["__scopeId", "data-v-27a8293c"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/uni_modules/qiun-data-charts/components/qiun-loading/loading3.vue"]]);
-  const _sfc_main$11 = {
+  const Loading3 = /* @__PURE__ */ _export_sfc(_sfc_main$$, [["render", _sfc_render$j], ["__scopeId", "data-v-27a8293c"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/uni_modules/qiun-data-charts/components/qiun-loading/loading3.vue"]]);
+  const _sfc_main$_ = {
     name: "loading5",
     data() {
       return {};
     }
   };
-  function _sfc_render$l(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$i(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", { class: "container loading5" }, [
       vue.createElementVNode("view", { class: "shape shape1" }),
       vue.createElementVNode("view", { class: "shape shape2" }),
@@ -10873,14 +12450,14 @@ ${i3}
       vue.createElementVNode("view", { class: "shape shape4" })
     ]);
   }
-  const Loading4 = /* @__PURE__ */ _export_sfc(_sfc_main$11, [["render", _sfc_render$l], ["__scopeId", "data-v-2e7deb83"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/uni_modules/qiun-data-charts/components/qiun-loading/loading4.vue"]]);
-  const _sfc_main$10 = {
+  const Loading4 = /* @__PURE__ */ _export_sfc(_sfc_main$_, [["render", _sfc_render$i], ["__scopeId", "data-v-2e7deb83"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/uni_modules/qiun-data-charts/components/qiun-loading/loading4.vue"]]);
+  const _sfc_main$Z = {
     name: "loading6",
     data() {
       return {};
     }
   };
-  function _sfc_render$k(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$h(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", { class: "container loading6" }, [
       vue.createElementVNode("view", { class: "shape shape1" }),
       vue.createElementVNode("view", { class: "shape shape2" }),
@@ -10888,8 +12465,8 @@ ${i3}
       vue.createElementVNode("view", { class: "shape shape4" })
     ]);
   }
-  const Loading5 = /* @__PURE__ */ _export_sfc(_sfc_main$10, [["render", _sfc_render$k], ["__scopeId", "data-v-ef674bbb"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/uni_modules/qiun-data-charts/components/qiun-loading/loading5.vue"]]);
-  const _sfc_main$$ = {
+  const Loading5 = /* @__PURE__ */ _export_sfc(_sfc_main$Z, [["render", _sfc_render$h], ["__scopeId", "data-v-ef674bbb"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/uni_modules/qiun-data-charts/components/qiun-loading/loading5.vue"]]);
+  const _sfc_main$Y = {
     components: { Loading1, Loading2, Loading3, Loading4, Loading5 },
     name: "qiun-loading",
     props: {
@@ -10902,7 +12479,7 @@ ${i3}
       return {};
     }
   };
-  function _sfc_render$j(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$g(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_Loading1 = vue.resolveComponent("Loading1");
     const _component_Loading2 = vue.resolveComponent("Loading2");
     const _component_Loading3 = vue.resolveComponent("Loading3");
@@ -10916,8 +12493,8 @@ ${i3}
       $props.loadingType == 5 ? (vue.openBlock(), vue.createBlock(_component_Loading5, { key: 4 })) : vue.createCommentVNode("v-if", true)
     ]);
   }
-  const __easycom_0$5 = /* @__PURE__ */ _export_sfc(_sfc_main$$, [["render", _sfc_render$j], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/uni_modules/qiun-data-charts/components/qiun-loading/qiun-loading.vue"]]);
-  const _sfc_main$_ = {
+  const __easycom_0$3 = /* @__PURE__ */ _export_sfc(_sfc_main$Y, [["render", _sfc_render$g], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/uni_modules/qiun-data-charts/components/qiun-loading/qiun-loading.vue"]]);
+  const _sfc_main$X = {
     name: "qiun-error",
     props: {
       errorMessage: {
@@ -10929,7 +12506,7 @@ ${i3}
       return {};
     }
   };
-  function _sfc_render$i(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$f(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", { class: "chartsview" }, [
       vue.createElementVNode("view", { class: "charts-error" }),
       vue.createElementVNode(
@@ -10941,7 +12518,7 @@ ${i3}
       )
     ]);
   }
-  const __easycom_1$3 = /* @__PURE__ */ _export_sfc(_sfc_main$_, [["render", _sfc_render$i], ["__scopeId", "data-v-a99d579b"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/uni_modules/qiun-data-charts/components/qiun-error/qiun-error.vue"]]);
+  const __easycom_1$3 = /* @__PURE__ */ _export_sfc(_sfc_main$X, [["render", _sfc_render$f], ["__scopeId", "data-v-a99d579b"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/uni_modules/qiun-data-charts/components/qiun-error/qiun-error.vue"]]);
   const color$1 = ["#1890FF", "#91CB74", "#FAC858", "#EE6666", "#73C0DE", "#3CA272", "#FC8452", "#9A60B4", "#ea7ccc"];
   const formatDateTime = (timeStamp, returnType) => {
     var date3 = /* @__PURE__ */ new Date();
@@ -11957,7 +13534,7 @@ ${i3}
     var currentdate = year + seperator + month + seperator + strDate;
     return currentdate;
   }
-  const _sfc_main$Z = {
+  const _sfc_main$W = {
     name: "qiun-data-charts",
     mixins: [Vs.mixinDatacom],
     props: {
@@ -12663,8 +14240,8 @@ ${i3}
       }
     }
   };
-  function _sfc_render$h(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_qiun_loading = resolveEasycom(vue.resolveDynamicComponent("qiun-loading"), __easycom_0$5);
+  function _sfc_render$e(_ctx, _cache, $props, $setup, $data, $options) {
+    const _component_qiun_loading = resolveEasycom(vue.resolveDynamicComponent("qiun-loading"), __easycom_0$3);
     const _component_qiun_error = resolveEasycom(vue.resolveDynamicComponent("qiun-error"), __easycom_1$3);
     return vue.openBlock(), vue.createElementBlock("view", {
       class: "chartsview",
@@ -12721,8 +14298,8 @@ ${i3}
     ], 8, ["id"]);
   }
   if (typeof block0$1 === "function")
-    block0$1(_sfc_main$Z);
-  const __easycom_0$4 = /* @__PURE__ */ _export_sfc(_sfc_main$Z, [["render", _sfc_render$h], ["__scopeId", "data-v-0ca34aee"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/uni_modules/qiun-data-charts/components/qiun-data-charts/qiun-data-charts.vue"]]);
+    block0$1(_sfc_main$W);
+  const __easycom_0$2 = /* @__PURE__ */ _export_sfc(_sfc_main$W, [["render", _sfc_render$e], ["__scopeId", "data-v-0ca34aee"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/uni_modules/qiun-data-charts/components/qiun-data-charts/qiun-data-charts.vue"]]);
   var lodash = { exports: {} };
   /**
    * @license
@@ -18206,14 +19783,14 @@ ${i3}
   })(lodash, lodash.exports);
   var lodashExports = lodash.exports;
   const _$1 = /* @__PURE__ */ getDefaultExportFromCjs(lodashExports);
-  const _sfc_main$Y = {
+  const _sfc_main$V = {
     __name: "tmsData",
     setup(__props) {
       const chartDataWms = vue.ref({});
       const chartType = vue.ref("total");
       const chartOpts = vue.ref({
         color: ["#ffb918", "#4cd575", "#FAC858", "#EE6666", "#73C0DE", "#3CA272"],
-        padding: [15, 15, 0, 15],
+        padding: [15, 15, 15, -2],
         enableScroll: false,
         legend: {
           show: false,
@@ -18231,7 +19808,7 @@ ${i3}
         },
         yAxis: {
           gridType: "dash",
-          dashLength: 2,
+          dashLength: 8,
           formatter: (val) => val
         },
         extra: {
@@ -18256,7 +19833,7 @@ ${i3}
       const seriesData = vue.ref([]);
       const channelData = vue.ref({});
       const currentChartData = vue.computed(() => {
-        formatAppLog("log", "at pages/data/tmsData.vue:238", "加载图表数据", categories.value, seriesData.value);
+        formatAppLog("log", "at pages/data/tmsData.vue:240", "加载图表数据", categories.value, seriesData.value);
         return {
           categories: categories.value,
           series: seriesData.value
@@ -18503,7 +20080,7 @@ ${i3}
                 data: result.map((item) => item.headCount)
               }
             ];
-            formatAppLog("log", "at pages/data/tmsData.vue:528", "categories.value", categories.value, seriesData.value);
+            formatAppLog("log", "at pages/data/tmsData.vue:530", "categories.value", categories.value, seriesData.value);
             channelData.value.categories = categories.value;
             channelData.value.seriesData = seriesData.value;
           } else {
@@ -18530,7 +20107,7 @@ ${i3}
             valueDistOpts.value.subtitle.name = formatNumber(
               valueDistData.value.series[0].data.reduce((acc, item) => acc + item.value, 0)
             );
-            formatAppLog("log", "at pages/data/tmsData.vue:557", "valueDistData", valueDistData.value);
+            formatAppLog("log", "at pages/data/tmsData.vue:559", "valueDistData", valueDistData.value);
           }
         });
       };
@@ -18574,8 +20151,8 @@ ${i3}
         loadTmsTotalOrderData();
       });
       return (_ctx, _cache) => {
-        const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$7);
-        const _component_qiun_data_charts = resolveEasycom(vue.resolveDynamicComponent("qiun-data-charts"), __easycom_0$4);
+        const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$6);
+        const _component_qiun_data_charts = resolveEasycom(vue.resolveDynamicComponent("qiun-data-charts"), __easycom_0$2);
         return vue.openBlock(), vue.createElementBlock("view", { style: { "position": "absolute", "top": "20vh", "width": "100%", "padding-bottom": "100rpx" } }, [
           vue.createElementVNode("view", { class: "card" }, [
             vue.createElementVNode("view", { class: "title" }, "物流单数量"),
@@ -18716,12 +20293,14 @@ ${i3}
                   )
                 ])
               ]),
-              vue.createElementVNode("view", { class: "chart-content" }, [
-                vue.createVNode(_component_qiun_data_charts, {
-                  type: "area",
-                  opts: chartOpts.value,
-                  chartData: currentChartData.value
-                }, null, 8, ["opts", "chartData"])
+              vue.createElementVNode("view", { class: "chart-content-trend" }, [
+                vue.createElementVNode("view", { style: { "height": "400rpx" } }, [
+                  vue.createVNode(_component_qiun_data_charts, {
+                    type: "area",
+                    opts: chartOpts.value,
+                    chartData: currentChartData.value
+                  }, null, 8, ["opts", "chartData"])
+                ])
               ])
             ]),
             vue.createCommentVNode(" 产品货值分布卡片 "),
@@ -18950,14 +20529,14 @@ ${i3}
       };
     }
   };
-  const tmsData = /* @__PURE__ */ _export_sfc(_sfc_main$Y, [["__scopeId", "data-v-4ef1b407"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/data/tmsData.vue"]]);
-  const _sfc_main$X = {
+  const tmsData = /* @__PURE__ */ _export_sfc(_sfc_main$V, [["__scopeId", "data-v-4ef1b407"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/data/tmsData.vue"]]);
+  const _sfc_main$U = {
     __name: "wmsData",
     setup(__props) {
       const chartDataWms = vue.ref({});
       const chartOpts = vue.ref({
         color: ["#ffb918", "#91CB74", "#EE6666", "#73C0DE", "#3CA272"],
-        padding: [15, 15, 0, 15],
+        padding: [35, 15, 20, 0],
         enableScroll: false,
         legend: {
           show: false,
@@ -18973,7 +20552,7 @@ ${i3}
         },
         yAxis: {
           gridType: "dash",
-          dashLength: 2,
+          dashLength: 8,
           formatter: (val) => val
         },
         extra: {
@@ -19274,8 +20853,8 @@ ${i3}
         getWarehouseStockData();
       });
       return (_ctx, _cache) => {
-        const _component_qiun_data_charts = resolveEasycom(vue.resolveDynamicComponent("qiun-data-charts"), __easycom_0$4);
-        const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$7);
+        const _component_qiun_data_charts = resolveEasycom(vue.resolveDynamicComponent("qiun-data-charts"), __easycom_0$2);
+        const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$6);
         return vue.openBlock(), vue.createElementBlock("view", { style: { "position": "absolute", "top": "20vh", "width": "100%", "padding-bottom": "100rpx" } }, [
           vue.createElementVNode("view", { class: "card" }, [
             vue.createElementVNode("view", { class: "title" }, [
@@ -19681,8 +21260,8 @@ ${i3}
       };
     }
   };
-  const wmsData = /* @__PURE__ */ _export_sfc(_sfc_main$X, [["__scopeId", "data-v-9a2d55c1"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/data/wmsData.vue"]]);
-  const _sfc_main$W = {
+  const wmsData = /* @__PURE__ */ _export_sfc(_sfc_main$U, [["__scopeId", "data-v-9a2d55c1"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/data/wmsData.vue"]]);
+  const _sfc_main$T = {
     __name: "index",
     setup(__props) {
       const chartDataWms = vue.ref({});
@@ -19749,8 +21328,8 @@ ${i3}
       };
     }
   };
-  const PagesDataIndex = /* @__PURE__ */ _export_sfc(_sfc_main$W, [["__scopeId", "data-v-af28c7f4"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/data/index.vue"]]);
-  const _sfc_main$V = {
+  const PagesDataIndex = /* @__PURE__ */ _export_sfc(_sfc_main$T, [["__scopeId", "data-v-af28c7f4"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/data/index.vue"]]);
+  const _sfc_main$S = {
     __name: "index",
     setup(__props) {
       const model = vue.ref({});
@@ -19854,14 +21433,14 @@ ${i3}
           iconColor: "#373737",
           desc: "已认证"
         },
-        {
-          id: 2,
-          name: "设置",
-          icon: "http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/设置_1734589587248.png",
-          path: "/pages/settings/security",
-          bgColor: "#fff",
-          iconColor: "#373737"
-        },
+        // {
+        //   id: 2,
+        //   name: '设置',
+        //   icon: 'http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/设置_1734589587248.png',
+        //   path: '/pages/setting/account',
+        //   bgColor: '#fff',
+        //   iconColor: '#373737',
+        // },
         {
           id: 3,
           name: "关于我们",
@@ -19888,18 +21467,32 @@ ${i3}
           }
         });
       };
+      const handleQuit = () => {
+        uni.showModal({
+          title: "提示",
+          content: "确定要注销该用户吗？",
+          success: (res) => {
+            if (res.confirm) {
+              uni.clearStorageSync();
+              uni.reLaunch({
+                url: "/pages/login/index"
+              });
+            }
+          }
+        });
+      };
       const getUserInfo = () => {
         getAction("/auth/accountInfo").then((res) => {
           model.value = res.result;
           uni.setStorageSync("enterprise", res.result.enterprise);
-          formatAppLog("log", "at pages/profile/index.vue:262", "model", model.value);
+          formatAppLog("log", "at pages/profile/index.vue:278", "model", model.value);
         });
       };
       vue.onMounted(() => {
         getUserInfo();
       });
       return (_ctx, _cache) => {
-        const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$7);
+        const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$6);
         const _component_u_button = resolveEasycom(vue.resolveDynamicComponent("u-button"), __easycom_5);
         return vue.openBlock(), vue.createElementBlock("view", { class: "container" }, [
           vue.createCommentVNode(" 顶部用户信息卡片 "),
@@ -20143,6 +21736,17 @@ ${i3}
                 ]),
                 _: 1
                 /* STABLE */
+              }),
+              vue.createVNode(_component_u_button, {
+                class: "logout-btn",
+                style: { "margin-top": "20rpx" },
+                onClick: handleQuit
+              }, {
+                default: vue.withCtx(() => [
+                  vue.createTextVNode("注销账号")
+                ]),
+                _: 1
+                /* STABLE */
               })
             ])
           ])
@@ -20150,8 +21754,8 @@ ${i3}
       };
     }
   };
-  const PagesProfileIndex = /* @__PURE__ */ _export_sfc(_sfc_main$V, [["__scopeId", "data-v-201c0da5"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/profile/index.vue"]]);
-  const _sfc_main$U = {
+  const PagesProfileIndex = /* @__PURE__ */ _export_sfc(_sfc_main$S, [["__scopeId", "data-v-201c0da5"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/profile/index.vue"]]);
+  const _sfc_main$R = {
     __name: "result",
     setup(__props) {
       const searchParams = vue.ref({
@@ -20447,9 +22051,9 @@ ${i3}
         getDatePrice();
       });
       return (_ctx, _cache) => {
-        const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$7);
+        const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$6);
         const _component_u_button = resolveEasycom(vue.resolveDynamicComponent("u-button"), __easycom_5);
-        const _component_u_popup = resolveEasycom(vue.resolveDynamicComponent("u-popup"), __easycom_4$2);
+        const _component_u_popup = resolveEasycom(vue.resolveDynamicComponent("u-popup"), __easycom_4$3);
         const _component_u_search = resolveEasycom(vue.resolveDynamicComponent("u-search"), __easycom_1$7);
         const _component_u_cell = resolveEasycom(vue.resolveDynamicComponent("u-cell"), __easycom_1$5);
         const _component_u_cell_group = resolveEasycom(vue.resolveDynamicComponent("u-cell-group"), __easycom_2$4);
@@ -20857,8 +22461,8 @@ ${i3}
       };
     }
   };
-  const PagesSearchResult = /* @__PURE__ */ _export_sfc(_sfc_main$U, [["__scopeId", "data-v-51958986"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/search/result.vue"]]);
-  const _sfc_main$T = {
+  const PagesSearchResult = /* @__PURE__ */ _export_sfc(_sfc_main$R, [["__scopeId", "data-v-51958986"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/search/result.vue"]]);
+  const _sfc_main$Q = {
     __name: "purchase-detail-info",
     setup(__props) {
       const orderId = vue.ref("");
@@ -21150,8 +22754,8 @@ ${i3}
       };
     }
   };
-  const PagesFinancePurchaseDetailInfo = /* @__PURE__ */ _export_sfc(_sfc_main$T, [["__scopeId", "data-v-a82a8092"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/finance/purchase-detail-info.vue"]]);
-  const _sfc_main$S = {
+  const PagesFinancePurchaseDetailInfo = /* @__PURE__ */ _export_sfc(_sfc_main$Q, [["__scopeId", "data-v-a82a8092"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/finance/purchase-detail-info.vue"]]);
+  const _sfc_main$P = {
     __name: "redeem-detail-info",
     setup(__props) {
       const orderId = vue.ref("");
@@ -21377,8 +22981,8 @@ ${i3}
       };
     }
   };
-  const PagesFinanceRedeemDetailInfo = /* @__PURE__ */ _export_sfc(_sfc_main$S, [["__scopeId", "data-v-457d5a16"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/finance/redeem-detail-info.vue"]]);
-  const _sfc_main$R = {
+  const PagesFinanceRedeemDetailInfo = /* @__PURE__ */ _export_sfc(_sfc_main$P, [["__scopeId", "data-v-457d5a16"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/finance/redeem-detail-info.vue"]]);
+  const _sfc_main$O = {
     __name: "hot",
     setup(__props) {
       const hotRoutes = vue.ref([]);
@@ -21411,8 +23015,8 @@ ${i3}
       };
     }
   };
-  const PagesRoutesHot = /* @__PURE__ */ _export_sfc(_sfc_main$R, [["__scopeId", "data-v-eb410b6b"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/routes/hot.vue"]]);
-  const _sfc_main$Q = {
+  const PagesRoutesHot = /* @__PURE__ */ _export_sfc(_sfc_main$O, [["__scopeId", "data-v-eb410b6b"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/routes/hot.vue"]]);
+  const _sfc_main$N = {
     __name: "detail",
     setup(__props) {
       const dataSource = vue.ref([]);
@@ -21565,7 +23169,7 @@ ${i3}
       vue.onMounted(() => {
         updateTimer.value = setInterval(updateDynamicData, 3e4);
         route2.value = uni.getStorageSync("routeInfo");
-        formatAppLog("log", "at pages/routes/detail.vue:354", "routeInfo", route2.value);
+        formatAppLog("log", "at pages/routes/detail.vue:359", "routeInfo", route2.value);
         percent.value = Math.round((1 - route2.value.remainingVolumeRate) * 10);
         if (!route2.value.id) {
           uni.showToast({
@@ -21582,14 +23186,14 @@ ${i3}
             if (route2.value.routeInfo.chargingType === "4") {
               quoteRangeInfo.value.map((item) => {
                 const obj = { weightMax: item.maxRange === -1 ? "∞" : item.maxRange, _key: _.uniqueId("new_") };
-                formatAppLog("log", "at pages/routes/detail.vue:374", "obj", obj);
+                formatAppLog("log", "at pages/routes/detail.vue:379", "obj", obj);
                 for (const subItem of item.densityRangeInfos) {
-                  formatAppLog("log", "at pages/routes/detail.vue:376", "subItem", subItem);
+                  formatAppLog("log", "at pages/routes/detail.vue:381", "subItem", subItem);
                   obj[subItem.maxRange.toString() === "-1" ? "∞" : subItem.maxRange.toString()] = subItem["unitPrice"];
                 }
-                formatAppLog("log", "at pages/routes/detail.vue:379", "return", obj);
+                formatAppLog("log", "at pages/routes/detail.vue:384", "return", obj);
                 dataSource.value.push(obj);
-                formatAppLog("log", "at pages/routes/detail.vue:381", "dataSource", dataSource.value);
+                formatAppLog("log", "at pages/routes/detail.vue:386", "dataSource", dataSource.value);
               });
               handleColumns();
             } else {
@@ -21629,7 +23233,7 @@ ${i3}
             return -1;
           return parseInt(a2) - parseInt(b2);
         });
-        formatAppLog("log", "at pages/routes/detail.vue:422", "columns", columns.value);
+        formatAppLog("log", "at pages/routes/detail.vue:427", "columns", columns.value);
       };
       const createOrder = () => {
         uni.navigateTo({
@@ -21712,7 +23316,7 @@ ${i3}
               vue.createElementVNode("view", { class: "title" }),
               vue.createElementVNode("view", { class: "value" }, [
                 vue.createTextVNode(
-                  vue.toDisplayString(route2.value.containerContext.height * route2.value.containerContext.width * route2.value.containerContext.maxWeight * route2.value.remainingVolumeRate),
+                  vue.toDisplayString((route2.value.containerContext.height * route2.value.containerContext.width * route2.value.containerContext.length * route2.value.remainingVolumeRate / 1e6).toFixed(2)),
                   1
                   /* TEXT */
                 ),
@@ -21831,7 +23435,7 @@ ${i3}
               vue.createElementVNode(
                 "view",
                 { class: "percent" },
-                vue.toDisplayString((1 - route2.value.remainingVolumeRate) * 100) + "%",
+                vue.toDisplayString((route2.value.remainingVolumeRate * 100).toFixed(0)) + "%",
                 1
                 /* TEXT */
               )
@@ -21958,14 +23562,14 @@ ${i3}
                     vue.createElementVNode(
                       "text",
                       { class: "label" },
-                      vue.toDisplayString(item.feeItem_dictText) + "(" + vue.toDisplayString(item.chargeCondition) + ")",
+                      vue.toDisplayString(item.feeItem_dictText) + vue.toDisplayString(item.chargeCondition ? `(${item.chargeCondition})` : ""),
                       1
                       /* TEXT */
                     ),
                     vue.createElementVNode(
                       "text",
                       { class: "value" },
-                      "¥" + vue.toDisplayString(item.unitPrice) + "/KG",
+                      "¥" + vue.toDisplayString(item.unitPrice) + "/" + vue.toDisplayString(item.chargeType_dictText),
                       1
                       /* TEXT */
                     )
@@ -22086,8 +23690,8 @@ ${i3}
       };
     }
   };
-  const PagesRoutesDetail = /* @__PURE__ */ _export_sfc(_sfc_main$Q, [["__scopeId", "data-v-92e9abc9"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/routes/detail.vue"]]);
-  const _sfc_main$P = {
+  const PagesRoutesDetail = /* @__PURE__ */ _export_sfc(_sfc_main$N, [["__scopeId", "data-v-92e9abc9"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/routes/detail.vue"]]);
+  const _sfc_main$M = {
     __name: "create",
     setup(__props) {
       const totalPrice = vue.ref("0.0");
@@ -22185,15 +23789,17 @@ ${i3}
           shipAddress.value = shipAddress.value ? shipAddress.value : {};
           receiveAddress.value = receiveAddress.value ? receiveAddress.value : {};
           dynamicValidateForm.value.dtdTransInfo = {
-            pickupCity: shipAddress.value.city,
-            pickupCompany: shipAddress.value.company,
-            pickupProvince: shipAddress.value.province,
-            pickupCountry: shipAddress.value.country,
-            pickupContactName: shipAddress.value.contactName,
-            pickupContactPhone: shipAddress.value.contactPhone,
-            pickupDetailAddr: shipAddress.value.detailAddr,
-            pickupDistrict: shipAddress.value.district,
-            pickupPostcode: shipAddress.value.postcode,
+            pickupInfo: {
+              pickupCity: shipAddress.value.city,
+              pickupCompany: shipAddress.value.company,
+              pickupProvince: shipAddress.value.province,
+              pickupCountry: shipAddress.value.country,
+              pickupContactName: shipAddress.value.contactName,
+              pickupContactPhone: shipAddress.value.contactPhone,
+              pickupDetailAddr: shipAddress.value.detailAddr,
+              pickupDistrict: shipAddress.value.district,
+              pickupPostcode: shipAddress.value.postcode
+            },
             recvCity: receiveAddress.value.city,
             recvCompany: receiveAddress.value.company,
             recvProvince: receiveAddress.value.province,
@@ -22262,7 +23868,7 @@ ${i3}
         });
       };
       return (_ctx, _cache) => {
-        const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$7);
+        const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$6);
         const _component_u_button = resolveEasycom(vue.resolveDynamicComponent("u-button"), __easycom_5);
         return vue.openBlock(), vue.createElementBlock("view", { class: "container" }, [
           vue.createCommentVNode(" 第一部分：基本信息 "),
@@ -22604,8 +24210,8 @@ ${i3}
       };
     }
   };
-  const PagesOrderCreate = /* @__PURE__ */ _export_sfc(_sfc_main$P, [["__scopeId", "data-v-8837ac90"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/order/create.vue"]]);
-  const _sfc_main$O = {
+  const PagesOrderCreate = /* @__PURE__ */ _export_sfc(_sfc_main$M, [["__scopeId", "data-v-8837ac90"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/order/create.vue"]]);
+  const _sfc_main$L = {
     __name: "detail",
     setup(__props) {
       const orderDetail = vue.ref({});
@@ -22636,7 +24242,7 @@ ${i3}
         });
       };
       return (_ctx, _cache) => {
-        const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$7);
+        const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$6);
         return vue.openBlock(), vue.createElementBlock("view", { class: "container" }, [
           vue.createCommentVNode(" 订单状态 "),
           vue.createElementVNode("view", { class: "status-section" }, [
@@ -22738,33 +24344,74 @@ ${i3}
           ]),
           vue.createCommentVNode(" 地址信息 "),
           vue.createElementVNode("view", { class: "address-section card" }, [
-            vue.createCommentVNode(' <view class="section-title">发货地址</view>\n      <view class="address-card">\n        <view class="contact-info">\n          <text class="name">{{ orderDetail.pickupContactName }}</text>\n          <text class="phone">{{ orderDetail.pickupContactPhone }}</text>\n        </view>\n        <view class="address-detail">\n          <text>{{ orderDetail.pickupCountry }} {{ orderDetail.pickupDetailAddr }}</text>\n        </view>\n      </view> '),
-            vue.createElementVNode("view", { class: "section-title" }, "收货地址"),
-            vue.createElementVNode("view", { class: "address-card" }, [
-              vue.createElementVNode("view", { class: "contact-info" }, [
-                vue.createElementVNode(
-                  "text",
-                  { class: "name" },
-                  vue.toDisplayString(orderDetail.value.recvContactName),
-                  1
-                  /* TEXT */
-                ),
-                vue.createElementVNode(
-                  "text",
-                  { class: "phone" },
-                  vue.toDisplayString(orderDetail.value.recvContactPhone),
-                  1
-                  /* TEXT */
-                )
+            vue.createElementVNode("view", { style: { "display": "flex", "flex-direction": "row", "width": "100%" } }, [
+              vue.createElementVNode("view", { class: "section-title" }, [
+                vue.createVNode(_component_u_icon, {
+                  name: "http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/编组2x_1735552689688.png",
+                  size: "24"
+                })
               ]),
-              vue.createElementVNode("view", { class: "address-detail" }, [
-                vue.createElementVNode(
-                  "text",
-                  null,
-                  vue.toDisplayString(orderDetail.value.recvCountry) + " " + vue.toDisplayString(orderDetail.value.recvDetailAddr),
-                  1
-                  /* TEXT */
-                )
+              vue.createElementVNode("view", { class: "address-card" }, [
+                vue.createElementVNode("view", { class: "contact-info" }, [
+                  vue.createElementVNode(
+                    "text",
+                    { class: "name" },
+                    vue.toDisplayString(orderDetail.value.pickupInfo.pickupContactName),
+                    1
+                    /* TEXT */
+                  ),
+                  vue.createElementVNode(
+                    "text",
+                    { class: "phone" },
+                    vue.toDisplayString(orderDetail.value.pickupInfo.pickupContactPhone),
+                    1
+                    /* TEXT */
+                  )
+                ]),
+                vue.createElementVNode("view", { class: "address-detail" }, [
+                  vue.createElementVNode(
+                    "text",
+                    null,
+                    vue.toDisplayString(orderDetail.value.pickupInfo.pickupDetailAddr),
+                    1
+                    /* TEXT */
+                  )
+                ])
+              ])
+            ]),
+            vue.createElementVNode("view", { style: { "display": "flex", "flex-direction": "row", "width": "100%" } }, [
+              vue.createElementVNode("view", { class: "section-title" }, [
+                vue.createVNode(_component_u_icon, {
+                  name: "http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/编组2x(1)_1735552678622.png",
+                  size: "24"
+                })
+              ]),
+              vue.createElementVNode("view", { class: "address-card" }, [
+                vue.createElementVNode("view", { class: "contact-info" }, [
+                  vue.createElementVNode(
+                    "text",
+                    { class: "name" },
+                    vue.toDisplayString(orderDetail.value.recvContactName),
+                    1
+                    /* TEXT */
+                  ),
+                  vue.createElementVNode(
+                    "text",
+                    { class: "phone" },
+                    vue.toDisplayString(orderDetail.value.recvContactPhone),
+                    1
+                    /* TEXT */
+                  )
+                ]),
+                vue.createElementVNode("view", { class: "address-detail" }, [
+                  vue.createElementVNode(
+                    "text",
+                    null,
+                    vue.toDisplayString(orderDetail.value.recvDetailAddr),
+                    1
+                    /* TEXT */
+                  )
+                ])
               ])
             ])
           ]),
@@ -22943,7 +24590,7 @@ ${i3}
       };
     }
   };
-  const PagesOrderDetail = /* @__PURE__ */ _export_sfc(_sfc_main$O, [["__scopeId", "data-v-6b23c96c"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/order/detail.vue"]]);
+  const PagesOrderDetail = /* @__PURE__ */ _export_sfc(_sfc_main$L, [["__scopeId", "data-v-6b23c96c"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/order/detail.vue"]]);
   const MIN_DISTANCE = 10;
   function getDirection(x, y2) {
     if (x > y2 && x > MIN_DISTANCE) {
@@ -23003,7 +24650,7 @@ ${i3}
       }
     }
   });
-  const props$d = defineMixin({
+  const props$a = defineMixin({
     props: {
       // 控制打开或者关闭
       show: {
@@ -23066,7 +24713,7 @@ ${i3}
     (Comp.$wxs || (Comp.$wxs = [])).push("wxs");
     (Comp.$wxsModules || (Comp.$wxsModules = {}))["wxs"] = "229ea0d2";
   };
-  const _sfc_main$N = {
+  const _sfc_main$K = {
     name: "u-swipe-action-item",
     emits: ["click", "update:show"],
     mixins: [
@@ -23074,7 +24721,7 @@ ${i3}
       mixin,
       touchMixin,
       wxs,
-      props$d
+      props$a
     ],
     data() {
       return {
@@ -23158,8 +24805,8 @@ ${i3}
       }
     }
   };
-  function _sfc_render$g(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$7);
+  function _sfc_render$d(_ctx, _cache, $props, $setup, $data, $options) {
+    const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$6);
     return vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -23247,9 +24894,9 @@ ${i3}
     );
   }
   if (typeof block0 === "function")
-    block0(_sfc_main$N);
-  const __easycom_1$2 = /* @__PURE__ */ _export_sfc(_sfc_main$N, [["render", _sfc_render$g], ["__scopeId", "data-v-8b5d76c2"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/node_modules/uview-plus/components/u-swipe-action-item/u-swipe-action-item.vue"]]);
-  const _sfc_main$M = {
+    block0(_sfc_main$K);
+  const __easycom_1$2 = /* @__PURE__ */ _export_sfc(_sfc_main$K, [["render", _sfc_render$d], ["__scopeId", "data-v-8b5d76c2"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/node_modules/uview-plus/components/u-swipe-action-item/u-swipe-action-item.vue"]]);
+  const _sfc_main$J = {
     __name: "list",
     setup(__props) {
       const addressList = vue.ref([]);
@@ -23354,8 +25001,8 @@ ${i3}
       return (_ctx, _cache) => {
         const _component_u_swipe_action_item = resolveEasycom(vue.resolveDynamicComponent("u-swipe-action-item"), __easycom_1$2);
         const _component_u_loading_icon = resolveEasycom(vue.resolveDynamicComponent("u-loading-icon"), __easycom_3$5);
-        const _component_u_empty = resolveEasycom(vue.resolveDynamicComponent("u-empty"), __easycom_4$1);
-        const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$7);
+        const _component_u_empty = resolveEasycom(vue.resolveDynamicComponent("u-empty"), __easycom_4$2);
+        const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$6);
         return vue.openBlock(), vue.createElementBlock("view", { class: "container" }, [
           vue.createCommentVNode(" 地址列表 "),
           vue.createElementVNode("view", {
@@ -23466,7 +25113,179 @@ ${i3}
       };
     }
   };
-  const PagesAddressList = /* @__PURE__ */ _export_sfc(_sfc_main$M, [["__scopeId", "data-v-90a3874e"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/address/list.vue"]]);
+  const PagesAddressList = /* @__PURE__ */ _export_sfc(_sfc_main$J, [["__scopeId", "data-v-90a3874e"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/address/list.vue"]]);
+  const _sfc_main$I = {
+    __name: "account",
+    setup(__props) {
+      const userInfo = vue.ref({
+        phone: "138****8000"
+      });
+      const settings = vue.ref({
+        orderNotify: true,
+        messagePush: true
+      });
+      const cacheSize = vue.ref("2.5MB");
+      const version2 = vue.ref("1.0.0");
+      const modifyPassword = () => {
+        uni.navigateTo({
+          url: "/pages/settings/password"
+        });
+      };
+      const bindPhone = () => {
+        uni.navigateTo({
+          url: "/pages/settings/phone"
+        });
+      };
+      const toggleOrderNotify = (e2) => {
+        settings.value.orderNotify = e2.detail.value;
+      };
+      const toggleMessagePush = (e2) => {
+        settings.value.messagePush = e2.detail.value;
+      };
+      const clearCache = () => {
+        uni.showModal({
+          title: "提示",
+          content: "确定要清除缓存吗？",
+          success: (res) => {
+            if (res.confirm) {
+              uni.showLoading({
+                title: "清理中"
+              });
+              setTimeout(() => {
+                uni.hideLoading();
+                cacheSize.value = "0B";
+                uni.showToast({
+                  title: "清理成功",
+                  icon: "success"
+                });
+              }, 1e3);
+            }
+          }
+        });
+      };
+      const handleLogout = () => {
+        uni.showModal({
+          title: "提示",
+          content: "确定要退出登录吗？",
+          success: (res) => {
+            if (res.confirm) {
+              uni.reLaunch({
+                url: "/pages/login/index"
+              });
+            }
+          }
+        });
+      };
+      return (_ctx, _cache) => {
+        return vue.openBlock(), vue.createElementBlock("view", { class: "container" }, [
+          vue.createCommentVNode(" 账户安全 "),
+          vue.createElementVNode("view", { class: "section" }, [
+            vue.createElementVNode("view", { class: "section-title" }, "账户安全"),
+            vue.createElementVNode("view", { class: "menu-list" }, [
+              vue.createElementVNode("view", {
+                class: "menu-item",
+                onClick: modifyPassword
+              }, [
+                vue.createElementVNode("view", { class: "menu-left" }, [
+                  vue.createElementVNode("text", { class: "iconfont icon-lock" }),
+                  vue.createElementVNode("text", { class: "label" }, "修改密码")
+                ]),
+                vue.createElementVNode("text", { class: "iconfont icon-arrow-right" })
+              ]),
+              vue.createElementVNode("view", {
+                class: "menu-item",
+                onClick: bindPhone
+              }, [
+                vue.createElementVNode("view", { class: "menu-left" }, [
+                  vue.createElementVNode("text", { class: "iconfont icon-phone" }),
+                  vue.createElementVNode("text", { class: "label" }, "手机绑定")
+                ]),
+                vue.createElementVNode("view", { class: "menu-right" }, [
+                  vue.createElementVNode(
+                    "text",
+                    { class: "value" },
+                    vue.toDisplayString(userInfo.value.phone),
+                    1
+                    /* TEXT */
+                  ),
+                  vue.createElementVNode("text", { class: "iconfont icon-arrow-right" })
+                ])
+              ])
+            ])
+          ]),
+          vue.createCommentVNode(" 通知设置 "),
+          vue.createElementVNode("view", { class: "section" }, [
+            vue.createElementVNode("view", { class: "section-title" }, "通知设置"),
+            vue.createElementVNode("view", { class: "menu-list" }, [
+              vue.createElementVNode("view", { class: "menu-item" }, [
+                vue.createElementVNode("view", { class: "menu-left" }, [
+                  vue.createElementVNode("text", { class: "iconfont icon-notification" }),
+                  vue.createElementVNode("text", { class: "label" }, "订单通知")
+                ]),
+                vue.createElementVNode("switch", {
+                  checked: settings.value.orderNotify,
+                  onChange: toggleOrderNotify,
+                  color: "#007aff"
+                }, null, 40, ["checked"])
+              ]),
+              vue.createElementVNode("view", { class: "menu-item" }, [
+                vue.createElementVNode("view", { class: "menu-left" }, [
+                  vue.createElementVNode("text", { class: "iconfont icon-message" }),
+                  vue.createElementVNode("text", { class: "label" }, "消息推送")
+                ]),
+                vue.createElementVNode("switch", {
+                  checked: settings.value.messagePush,
+                  onChange: toggleMessagePush,
+                  color: "#007aff"
+                }, null, 40, ["checked"])
+              ])
+            ])
+          ]),
+          vue.createCommentVNode(" 其他设置 "),
+          vue.createElementVNode("view", { class: "section" }, [
+            vue.createElementVNode("view", { class: "section-title" }, "其他设置"),
+            vue.createElementVNode("view", { class: "menu-list" }, [
+              vue.createElementVNode("view", {
+                class: "menu-item",
+                onClick: clearCache
+              }, [
+                vue.createElementVNode("view", { class: "menu-left" }, [
+                  vue.createElementVNode("text", { class: "iconfont icon-clear" }),
+                  vue.createElementVNode("text", { class: "label" }, "清除缓存")
+                ]),
+                vue.createElementVNode(
+                  "text",
+                  { class: "value" },
+                  vue.toDisplayString(cacheSize.value),
+                  1
+                  /* TEXT */
+                )
+              ]),
+              vue.createElementVNode("view", { class: "menu-item" }, [
+                vue.createElementVNode("view", { class: "menu-left" }, [
+                  vue.createElementVNode("text", { class: "iconfont icon-version" }),
+                  vue.createElementVNode("text", { class: "label" }, "当前版本")
+                ]),
+                vue.createElementVNode(
+                  "text",
+                  { class: "value" },
+                  vue.toDisplayString(version2.value),
+                  1
+                  /* TEXT */
+                )
+              ])
+            ])
+          ]),
+          vue.createCommentVNode(" ���出登录 "),
+          vue.createElementVNode("view", {
+            class: "logout-btn",
+            onClick: handleLogout
+          }, "退出登录")
+        ]);
+      };
+    }
+  };
+  const PagesSettingAccount = /* @__PURE__ */ _export_sfc(_sfc_main$I, [["__scopeId", "data-v-61ad0cc6"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/setting/account.vue"]]);
   var __assign = function() {
     __assign = Object.assign || function __assign2(t2) {
       for (var s2, i2 = 1, n2 = arguments.length; i2 < n2; i2++) {
@@ -25490,52 +27309,52 @@ ${i3}
   function doesMatch(value) {
     return matchMedia("(dynamic-range: ".concat(value, ")")).matches;
   }
-  var M$2 = Math;
+  var M = Math;
   var fallbackFn = function() {
     return 0;
   };
   function getMathFingerprint() {
-    var acos = M$2.acos || fallbackFn;
-    var acosh = M$2.acosh || fallbackFn;
-    var asin = M$2.asin || fallbackFn;
-    var asinh = M$2.asinh || fallbackFn;
-    var atanh = M$2.atanh || fallbackFn;
-    var atan = M$2.atan || fallbackFn;
-    var sin = M$2.sin || fallbackFn;
-    var sinh = M$2.sinh || fallbackFn;
-    var cos = M$2.cos || fallbackFn;
-    var cosh = M$2.cosh || fallbackFn;
-    var tan = M$2.tan || fallbackFn;
-    var tanh = M$2.tanh || fallbackFn;
-    var exp = M$2.exp || fallbackFn;
-    var expm1 = M$2.expm1 || fallbackFn;
-    var log1p = M$2.log1p || fallbackFn;
+    var acos = M.acos || fallbackFn;
+    var acosh = M.acosh || fallbackFn;
+    var asin = M.asin || fallbackFn;
+    var asinh = M.asinh || fallbackFn;
+    var atanh = M.atanh || fallbackFn;
+    var atan = M.atan || fallbackFn;
+    var sin = M.sin || fallbackFn;
+    var sinh = M.sinh || fallbackFn;
+    var cos = M.cos || fallbackFn;
+    var cosh = M.cosh || fallbackFn;
+    var tan = M.tan || fallbackFn;
+    var tanh = M.tanh || fallbackFn;
+    var exp = M.exp || fallbackFn;
+    var expm1 = M.expm1 || fallbackFn;
+    var log1p = M.log1p || fallbackFn;
     var powPI = function(value) {
-      return M$2.pow(M$2.PI, value);
+      return M.pow(M.PI, value);
     };
     var acoshPf = function(value) {
-      return M$2.log(value + M$2.sqrt(value * value - 1));
+      return M.log(value + M.sqrt(value * value - 1));
     };
     var asinhPf = function(value) {
-      return M$2.log(value + M$2.sqrt(value * value + 1));
+      return M.log(value + M.sqrt(value * value + 1));
     };
     var atanhPf = function(value) {
-      return M$2.log((1 + value) / (1 - value)) / 2;
+      return M.log((1 + value) / (1 - value)) / 2;
     };
     var sinhPf = function(value) {
-      return M$2.exp(value) - 1 / M$2.exp(value) / 2;
+      return M.exp(value) - 1 / M.exp(value) / 2;
     };
     var coshPf = function(value) {
-      return (M$2.exp(value) + 1 / M$2.exp(value)) / 2;
+      return (M.exp(value) + 1 / M.exp(value)) / 2;
     };
     var expm1Pf = function(value) {
-      return M$2.exp(value) - 1;
+      return M.exp(value) - 1;
     };
     var tanhPf = function(value) {
-      return (M$2.exp(2 * value) - 1) / (M$2.exp(2 * value) + 1);
+      return (M.exp(2 * value) - 1) / (M.exp(2 * value) + 1);
     };
     var log1pPf = function(value) {
-      return M$2.log(1 + value);
+      return M.log(1 + value);
     };
     return {
       acos: acos(0.12312423423423424),
@@ -26098,7 +27917,7 @@ ${i3}
     });
   }
   var index = { load, hashComponents, componentsToDebugString };
-  const _sfc_main$L = {
+  const _sfc_main$H = {
     __name: "manage",
     setup(__props) {
       const statusList = [
@@ -26199,8 +28018,8 @@ ${i3}
       return (_ctx, _cache) => {
         const _component_u_swipe_action_item = resolveEasycom(vue.resolveDynamicComponent("u-swipe-action-item"), __easycom_1$2);
         const _component_u_loading_icon = resolveEasycom(vue.resolveDynamicComponent("u-loading-icon"), __easycom_3$5);
-        const _component_u_empty = resolveEasycom(vue.resolveDynamicComponent("u-empty"), __easycom_4$1);
-        const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$7);
+        const _component_u_empty = resolveEasycom(vue.resolveDynamicComponent("u-empty"), __easycom_4$2);
+        const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$6);
         return vue.openBlock(), vue.createElementBlock("view", { class: "container" }, [
           vue.createCommentVNode(" 地址列表 "),
           vue.createCommentVNode(" 状态筛选标签 "),
@@ -26335,8 +28154,8 @@ ${i3}
       };
     }
   };
-  const PagesAddressManage = /* @__PURE__ */ _export_sfc(_sfc_main$L, [["__scopeId", "data-v-b666c29d"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/address/manage.vue"]]);
-  const props$c = defineMixin({
+  const PagesAddressManage = /* @__PURE__ */ _export_sfc(_sfc_main$H, [["__scopeId", "data-v-b666c29d"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/address/manage.vue"]]);
+  const props$9 = defineMixin({
     props: {
       // 列表锚点文本内容
       text: {
@@ -26365,9 +28184,9 @@ ${i3}
       }
     }
   });
-  const _sfc_main$K = {
+  const _sfc_main$G = {
     name: "u-index-anchor",
-    mixins: [mpMixin, mixin, props$c],
+    mixins: [mpMixin, mixin, props$9],
     data() {
       return {};
     },
@@ -26390,7 +28209,7 @@ ${i3}
       }
     }
   };
-  function _sfc_render$f(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$c(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -26420,8 +28239,8 @@ ${i3}
       /* STYLE */
     );
   }
-  const __easycom_3$3 = /* @__PURE__ */ _export_sfc(_sfc_main$K, [["render", _sfc_render$f], ["__scopeId", "data-v-e7d138dd"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/node_modules/uview-plus/components/u-index-anchor/u-index-anchor.vue"]]);
-  const _sfc_main$J = {
+  const __easycom_3$3 = /* @__PURE__ */ _export_sfc(_sfc_main$G, [["render", _sfc_render$c], ["__scopeId", "data-v-e7d138dd"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/node_modules/uview-plus/components/u-index-anchor/u-index-anchor.vue"]]);
+  const _sfc_main$F = {
     __name: "add",
     setup(__props) {
       const searchKeyword = vue.ref("");
@@ -26551,7 +28370,7 @@ ${i3}
         const _component_u_cell = resolveEasycom(vue.resolveDynamicComponent("u-cell"), __easycom_1$5);
         const _component_u_cell_group = resolveEasycom(vue.resolveDynamicComponent("u-cell-group"), __easycom_2$4);
         const _component_u_index_anchor = resolveEasycom(vue.resolveDynamicComponent("u-index-anchor"), __easycom_3$3);
-        const _component_u_popup = resolveEasycom(vue.resolveDynamicComponent("u-popup"), __easycom_4$2);
+        const _component_u_popup = resolveEasycom(vue.resolveDynamicComponent("u-popup"), __easycom_4$3);
         return vue.openBlock(), vue.createElementBlock("view", { class: "container" }, [
           vue.createElementVNode("view", { class: "form-section" }, [
             vue.createCommentVNode(" 联系人信息 "),
@@ -26894,8 +28713,8 @@ ${i3}
       };
     }
   };
-  const PagesAddressAdd = /* @__PURE__ */ _export_sfc(_sfc_main$J, [["__scopeId", "data-v-ef9226d4"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/address/add.vue"]]);
-  const props$b = defineMixin({
+  const PagesAddressAdd = /* @__PURE__ */ _export_sfc(_sfc_main$F, [["__scopeId", "data-v-ef9226d4"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/address/add.vue"]]);
+  const props$8 = defineMixin({
     props: {
       // 绑定的值
       modelValue: {
@@ -27098,9 +28917,9 @@ ${i3}
       }, wait2);
     }
   }
-  const _sfc_main$I = {
+  const _sfc_main$E = {
     name: "u-input",
-    mixins: [mpMixin, mixin, props$b],
+    mixins: [mpMixin, mixin, props$8],
     data() {
       return {
         // 清除操作
@@ -27268,8 +29087,8 @@ ${i3}
       }
     }
   };
-  function _sfc_render$e(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$7);
+  function _sfc_render$b(_ctx, _cache, $props, $setup, $data, $options) {
+    const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$6);
     return vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -27356,15 +29175,15 @@ ${i3}
       /* CLASS, STYLE */
     );
   }
-  const uvInput = /* @__PURE__ */ _export_sfc(_sfc_main$I, [["render", _sfc_render$e], ["__scopeId", "data-v-5904192e"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/node_modules/uview-plus/components/u-input/u-input.vue"]]);
-  const _sfc_main$H = {
+  const uvInput = /* @__PURE__ */ _export_sfc(_sfc_main$E, [["render", _sfc_render$b], ["__scopeId", "data-v-5904192e"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/node_modules/uview-plus/components/u-input/u-input.vue"]]);
+  const _sfc_main$D = {
     name: "u--input",
-    mixins: [mpMixin, props$b, mixin],
+    mixins: [mpMixin, props$8, mixin],
     components: {
       uvInput
     }
   };
-  function _sfc_render$d(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$a(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_uvInput = vue.resolveComponent("uvInput");
     return vue.openBlock(), vue.createBlock(_component_uvInput, {
       modelValue: _ctx.modelValue,
@@ -27413,8 +29232,8 @@ ${i3}
       /* FORWARDED */
     }, 8, ["modelValue", "type", "fixed", "disabled", "disabledColor", "clearable", "password", "maxlength", "placeholder", "placeholderClass", "placeholderStyle", "showWordLimit", "confirmType", "confirmHold", "holdKeyboard", "focus", "autoBlur", "disableDefaultPadding", "cursor", "cursorSpacing", "selectionStart", "selectionEnd", "adjustPosition", "inputAlign", "fontSize", "color", "prefixIcon", "suffixIcon", "suffixIconStyle", "prefixIconStyle", "border", "readonly", "shape", "customStyle", "formatter", "ignoreCompositionEvent"]);
   }
-  const __easycom_1$1 = /* @__PURE__ */ _export_sfc(_sfc_main$H, [["render", _sfc_render$d], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/node_modules/uview-plus/components/u--input/u--input.vue"]]);
-  const props$a = defineMixin({
+  const __easycom_1$1 = /* @__PURE__ */ _export_sfc(_sfc_main$D, [["render", _sfc_render$a], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/node_modules/uview-plus/components/u--input/u--input.vue"]]);
+  const props$7 = defineMixin({
     props: {
       // input的label提示语
       label: {
@@ -27467,9 +29286,9 @@ ${i3}
       }
     }
   });
-  const _sfc_main$G = {
+  const _sfc_main$C = {
     name: "u-form-item",
-    mixins: [mpMixin, mixin, props$a],
+    mixins: [mpMixin, mixin, props$7],
     data() {
       return {
         // 错误提示语
@@ -27546,8 +29365,8 @@ ${i3}
       }
     }
   };
-  function _sfc_render$c(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$7);
+  function _sfc_render$9(_ctx, _cache, $props, $setup, $data, $options) {
+    const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$6);
     const _component_u_line = resolveEasycom(vue.resolveDynamicComponent("u-line"), __easycom_1$6);
     return vue.openBlock(), vue.createElementBlock(
       "view",
@@ -27655,8 +29474,8 @@ ${i3}
       /* CLASS */
     );
   }
-  const __easycom_2$3 = /* @__PURE__ */ _export_sfc(_sfc_main$G, [["render", _sfc_render$c], ["__scopeId", "data-v-b4fd400b"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/node_modules/uview-plus/components/u-form-item/u-form-item.vue"]]);
-  const props$9 = defineMixin({
+  const __easycom_2$2 = /* @__PURE__ */ _export_sfc(_sfc_main$C, [["render", _sfc_render$9], ["__scopeId", "data-v-b4fd400b"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/node_modules/uview-plus/components/u-form-item/u-form-item.vue"]]);
+  const props$6 = defineMixin({
     props: {
       // 输入框的内容
       value: {
@@ -27780,9 +29599,9 @@ ${i3}
       }
     }
   });
-  const _sfc_main$F = {
+  const _sfc_main$B = {
     name: "u-textarea",
-    mixins: [mpMixin, mixin, props$9],
+    mixins: [mpMixin, mixin, props$6],
     data() {
       return {
         // 输入框的值
@@ -27873,7 +29692,7 @@ ${i3}
       }
     }
   };
-  function _sfc_render$b(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$8(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -27928,15 +29747,15 @@ ${i3}
       /* CLASS, STYLE */
     );
   }
-  const __easycom_3$2 = /* @__PURE__ */ _export_sfc(_sfc_main$F, [["render", _sfc_render$b], ["__scopeId", "data-v-31706dd7"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/node_modules/uview-plus/components/u-textarea/u-textarea.vue"]]);
-  const _sfc_main$E = {
+  const __easycom_3$2 = /* @__PURE__ */ _export_sfc(_sfc_main$B, [["render", _sfc_render$8], ["__scopeId", "data-v-31706dd7"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/node_modules/uview-plus/components/u-textarea/u-textarea.vue"]]);
+  const _sfc_main$A = {
     name: "u--textarea",
-    mixins: [mpMixin, props$9, mixin],
+    mixins: [mpMixin, props$6, mixin],
     components: {
       uvTextarea: __easycom_3$2
     }
   };
-  function _sfc_render$a(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$7(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_uvTextarea = vue.resolveComponent("uvTextarea");
     return vue.openBlock(), vue.createBlock(_component_uvTextarea, {
       value: _ctx.value,
@@ -27966,8 +29785,8 @@ ${i3}
       "onUpdate:modelValue": _cache[1] || (_cache[1] = (e2) => _ctx.$emit("update:modelValue", e2))
     }, null, 8, ["value", "modelValue", "placeholder", "height", "confirmType", "disabled", "count", "focus", "autoHeight", "fixed", "cursorSpacing", "cursor", "showConfirmBar", "selectionStart", "selectionEnd", "adjustPosition", "disableDefaultPadding", "holdKeyboard", "maxlength", "border", "customStyle", "formatter", "ignoreCompositionEvent"]);
   }
-  const __easycom_2$2 = /* @__PURE__ */ _export_sfc(_sfc_main$E, [["render", _sfc_render$a], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/node_modules/uview-plus/components/u--textarea/u--textarea.vue"]]);
-  const props$8 = defineMixin({
+  const __easycom_2$1 = /* @__PURE__ */ _export_sfc(_sfc_main$A, [["render", _sfc_render$7], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/node_modules/uview-plus/components/u--textarea/u--textarea.vue"]]);
+  const props$5 = defineMixin({
     props: {
       // 当前form的需要验证字段的集合
       model: {
@@ -28906,9 +30725,9 @@ ${i3}
   Schema.messages = messages;
   Schema.warning = function() {
   };
-  const _sfc_main$D = {
+  const _sfc_main$z = {
     name: "u-form",
-    mixins: [mpMixin, mixin, props$8],
+    mixins: [mpMixin, mixin, props$5],
     provide() {
       return {
         uForm: this
@@ -29093,15 +30912,15 @@ ${i3}
       }
     }
   };
-  function _sfc_render$9(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$6(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", { class: "u-form" }, [
       vue.renderSlot(_ctx.$slots, "default")
     ]);
   }
-  const __easycom_4 = /* @__PURE__ */ _export_sfc(_sfc_main$D, [["render", _sfc_render$9], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/node_modules/uview-plus/components/u-form/u-form.vue"]]);
-  const _sfc_main$C = {
+  const __easycom_4 = /* @__PURE__ */ _export_sfc(_sfc_main$z, [["render", _sfc_render$6], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/node_modules/uview-plus/components/u-form/u-form.vue"]]);
+  const _sfc_main$y = {
     name: "u--form",
-    mixins: [mpMixin, props$8, mixin],
+    mixins: [mpMixin, props$5, mixin],
     components: {
       uvForm: __easycom_4
     },
@@ -29130,7 +30949,7 @@ ${i3}
       }
     }
   };
-  function _sfc_render$8(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$5(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_uvForm = vue.resolveComponent("uvForm");
     return vue.openBlock(), vue.createBlock(_component_uvForm, {
       ref: "uForm",
@@ -29151,518 +30970,7 @@ ${i3}
       /* FORWARDED */
     }, 8, ["model", "rules", "errorType", "borderBottom", "labelPosition", "labelWidth", "labelAlign", "labelStyle", "customStyle"]);
   }
-  const __easycom_3$1 = /* @__PURE__ */ _export_sfc(_sfc_main$C, [["render", _sfc_render$8], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/node_modules/uview-plus/components/u--form/u--form.vue"]]);
-  const props$7 = defineMixin({
-    props: {
-      // 是否展示工具条
-      show: {
-        type: Boolean,
-        default: () => props$r.toolbar.show
-      },
-      // 取消按钮的文字
-      cancelText: {
-        type: String,
-        default: () => props$r.toolbar.cancelText
-      },
-      // 确认按钮的文字
-      confirmText: {
-        type: String,
-        default: () => props$r.toolbar.confirmText
-      },
-      // 取消按钮的颜色
-      cancelColor: {
-        type: String,
-        default: () => props$r.toolbar.cancelColor
-      },
-      // 确认按钮的颜色
-      confirmColor: {
-        type: String,
-        default: () => props$r.toolbar.confirmColor
-      },
-      // 标题文字
-      title: {
-        type: String,
-        default: () => props$r.toolbar.title
-      },
-      // 开启右侧插槽
-      rightSlot: {
-        type: Boolean,
-        default: false
-      }
-    }
-  });
-  const _sfc_main$B = {
-    name: "u-toolbar",
-    mixins: [mpMixin, mixin, props$7],
-    emits: ["confirm", "cancel"],
-    created() {
-    },
-    methods: {
-      // 点击取消按钮
-      cancel() {
-        this.$emit("cancel");
-      },
-      // 点击确定按钮
-      confirm() {
-        this.$emit("confirm");
-      }
-    }
-  };
-  function _sfc_render$7(_ctx, _cache, $props, $setup, $data, $options) {
-    return _ctx.show ? (vue.openBlock(), vue.createElementBlock(
-      "view",
-      {
-        key: 0,
-        class: "u-toolbar",
-        onTouchmove: _cache[2] || (_cache[2] = vue.withModifiers((...args) => _ctx.noop && _ctx.noop(...args), ["stop", "prevent"]))
-      },
-      [
-        vue.createElementVNode("view", { class: "u-toolbar__left" }, [
-          vue.createElementVNode("view", {
-            class: "u-toolbar__cancel__wrapper",
-            "hover-class": "u-hover-class"
-          }, [
-            vue.createElementVNode(
-              "text",
-              {
-                class: "u-toolbar__wrapper__cancel",
-                onClick: _cache[0] || (_cache[0] = (...args) => $options.cancel && $options.cancel(...args)),
-                style: vue.normalizeStyle({
-                  color: _ctx.cancelColor
-                })
-              },
-              vue.toDisplayString(_ctx.cancelText),
-              5
-              /* TEXT, STYLE */
-            )
-          ])
-        ]),
-        _ctx.title ? (vue.openBlock(), vue.createElementBlock(
-          "text",
-          {
-            key: 0,
-            class: "u-toolbar__title u-line-1"
-          },
-          vue.toDisplayString(_ctx.title),
-          1
-          /* TEXT */
-        )) : vue.createCommentVNode("v-if", true),
-        vue.createElementVNode("view", { class: "u-toolbar__right" }, [
-          !_ctx.rightSlot ? (vue.openBlock(), vue.createElementBlock("view", {
-            key: 0,
-            class: "u-toolbar__confirm__wrapper",
-            "hover-class": "u-hover-class"
-          }, [
-            vue.createElementVNode(
-              "text",
-              {
-                class: "u-toolbar__wrapper__confirm",
-                onClick: _cache[1] || (_cache[1] = (...args) => $options.confirm && $options.confirm(...args)),
-                style: vue.normalizeStyle({
-                  color: _ctx.confirmColor
-                })
-              },
-              vue.toDisplayString(_ctx.confirmText),
-              5
-              /* TEXT, STYLE */
-            )
-          ])) : vue.renderSlot(_ctx.$slots, "right", { key: 1 }, void 0, true)
-        ])
-      ],
-      32
-      /* NEED_HYDRATION */
-    )) : vue.createCommentVNode("v-if", true);
-  }
-  const __easycom_0$3 = /* @__PURE__ */ _export_sfc(_sfc_main$B, [["render", _sfc_render$7], ["__scopeId", "data-v-3fd495d6"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/node_modules/uview-plus/components/u-toolbar/u-toolbar.vue"]]);
-  const props$6 = defineMixin({
-    props: {
-      modelValue: {
-        type: Array,
-        default: () => []
-      },
-      hasInput: {
-        type: Boolean,
-        default: false
-      },
-      placeholder: {
-        type: String,
-        default: () => "请选择"
-      },
-      // 是否展示picker弹窗
-      show: {
-        type: Boolean,
-        default: () => props$r.picker.show
-      },
-      // 弹出的方向，可选值为 top bottom right left center
-      popupMode: {
-        type: String,
-        default: () => props$r.picker.popupMode
-      },
-      // 是否展示顶部的操作栏
-      showToolbar: {
-        type: Boolean,
-        default: () => props$r.picker.showToolbar
-      },
-      // 顶部标题
-      title: {
-        type: String,
-        default: () => props$r.picker.title
-      },
-      // 对象数组，设置每一列的数据
-      columns: {
-        type: Array,
-        default: () => props$r.picker.columns
-      },
-      // 是否显示加载中状态
-      loading: {
-        type: Boolean,
-        default: () => props$r.picker.loading
-      },
-      // 各列中，单个选项的高度
-      itemHeight: {
-        type: [String, Number],
-        default: () => props$r.picker.itemHeight
-      },
-      // 取消按钮的文字
-      cancelText: {
-        type: String,
-        default: () => props$r.picker.cancelText
-      },
-      // 确认按钮的文字
-      confirmText: {
-        type: String,
-        default: () => props$r.picker.confirmText
-      },
-      // 取消按钮的颜色
-      cancelColor: {
-        type: String,
-        default: () => props$r.picker.cancelColor
-      },
-      // 确认按钮的颜色
-      confirmColor: {
-        type: String,
-        default: () => props$r.picker.confirmColor
-      },
-      // 每列中可见选项的数量
-      visibleItemCount: {
-        type: [String, Number],
-        default: () => props$r.picker.visibleItemCount
-      },
-      // 选项对象中，需要展示的属性键名
-      keyName: {
-        type: String,
-        default: () => props$r.picker.keyName
-      },
-      // 是否允许点击遮罩关闭选择器
-      closeOnClickOverlay: {
-        type: Boolean,
-        default: () => props$r.picker.closeOnClickOverlay
-      },
-      // 各列的默认索引
-      defaultIndex: {
-        type: Array,
-        default: () => props$r.picker.defaultIndex
-      },
-      // 是否在手指松开时立即触发 change 事件。若不开启则会在滚动动画结束后触发 change 事件，只在微信2.21.1及以上有效
-      immediateChange: {
-        type: Boolean,
-        default: () => props$r.picker.immediateChange
-      },
-      // 工具栏右侧插槽是否开启
-      toolbarRightSlot: {
-        type: Boolean,
-        default: false
-      },
-      // 层级
-      zIndex: {
-        type: [String, Number],
-        default: () => props$r.picker.zIndex
-      }
-    }
-  });
-  const _sfc_main$A = {
-    name: "u-picker",
-    mixins: [mpMixin, mixin, props$6],
-    data() {
-      return {
-        // 上一次选择的列索引
-        lastIndex: [],
-        // 索引值 ，对应picker-view的value
-        innerIndex: [],
-        // 各列的值
-        innerColumns: [],
-        // 上一次的变化列索引
-        columnIndex: 0,
-        showByClickInput: false
-      };
-    },
-    watch: {
-      // 监听默认索引的变化，重新设置对应的值
-      defaultIndex: {
-        immediate: true,
-        deep: true,
-        handler(n2) {
-          this.setIndexs(n2, true);
-        }
-      },
-      // 监听columns参数的变化
-      columns: {
-        immediate: true,
-        deep: true,
-        handler(n2) {
-          this.setColumns(n2);
-        }
-      }
-    },
-    emits: ["close", "cancel", "confirm", "change", "update:modelValue", "update:show"],
-    computed: {
-      inputLabel() {
-        let items = this.innerColumns.map((item, index2) => item[this.innerIndex[index2]]);
-        let res = [];
-        items.forEach((element) => {
-          res.push(element[this.keyName]);
-        });
-        return res;
-      },
-      inputValue() {
-        let items = this.innerColumns.map((item, index2) => item[this.innerIndex[index2]]);
-        let res = [];
-        items.forEach((element) => {
-          res.push(element["id"]);
-        });
-        return res;
-      }
-    },
-    methods: {
-      addUnit,
-      testArray: test.array,
-      // 获取item需要显示的文字，判别为对象还是文本
-      getItemText(item) {
-        if (test.object(item)) {
-          return item[this.keyName];
-        } else {
-          return item;
-        }
-      },
-      // 关闭选择器
-      closeHandler() {
-        if (this.closeOnClickOverlay) {
-          if (this.hasInput) {
-            this.showByClickInput = false;
-          }
-          this.$emit("update:show", false);
-          this.$emit("close");
-        }
-      },
-      // 点击工具栏的取消按钮
-      cancel() {
-        if (this.hasInput) {
-          this.showByClickInput = false;
-        }
-        this.$emit("update:show", false);
-        this.$emit("cancel");
-      },
-      // 点击工具栏的确定按钮
-      confirm() {
-        this.$emit("update:modelValue", this.inputValue);
-        if (this.hasInput) {
-          this.showByClickInput = false;
-        }
-        this.$emit("update:show", false);
-        this.$emit("confirm", {
-          indexs: this.innerIndex,
-          value: this.innerColumns.map((item, index2) => item[this.innerIndex[index2]]),
-          values: this.innerColumns
-        });
-      },
-      // 选择器某一列的数据发生变化时触发
-      changeHandler(e2) {
-        const {
-          value
-        } = e2.detail;
-        let index2 = 0, columnIndex = 0;
-        for (let i2 = 0; i2 < value.length; i2++) {
-          let item = value[i2];
-          if (item !== (this.lastIndex[i2] || 0)) {
-            columnIndex = i2;
-            index2 = item;
-            break;
-          }
-        }
-        this.columnIndex = columnIndex;
-        const values = this.innerColumns;
-        this.setLastIndex(value);
-        this.setIndexs(value);
-        this.$emit("update:modelValue", this.inputValue);
-        this.$emit("change", {
-          // 微信小程序不能传递this，会因为循环引用而报错
-          // picker: this,
-          value: this.innerColumns.map((item, index3) => item[value[index3]]),
-          index: index2,
-          indexs: value,
-          // values为当前变化列的数组内容
-          values,
-          columnIndex
-        });
-      },
-      // 设置index索引，此方法可被外部调用设置
-      setIndexs(index2, setLastIndex) {
-        this.innerIndex = deepClone(index2);
-        if (setLastIndex) {
-          this.setLastIndex(index2);
-        }
-      },
-      // 记录上一次的各列索引位置
-      setLastIndex(index2) {
-        this.lastIndex = deepClone(index2);
-      },
-      // 设置对应列选项的所有值
-      setColumnValues(columnIndex, values) {
-        this.innerColumns.splice(columnIndex, 1, values);
-        this.setLastIndex(this.innerIndex.slice(0, columnIndex));
-        let tmpIndex = deepClone(this.innerIndex);
-        for (let i2 = 0; i2 < this.innerColumns.length; i2++) {
-          if (i2 > this.columnIndex) {
-            tmpIndex[i2] = 0;
-          }
-        }
-        this.setIndexs(tmpIndex);
-      },
-      // 获取对应列的所有选项
-      getColumnValues(columnIndex) {
-        (async () => {
-          await sleep();
-        })();
-        return this.innerColumns[columnIndex];
-      },
-      // 设置整体各列的columns的值
-      setColumns(columns) {
-        this.innerColumns = deepClone(columns);
-        if (this.innerIndex.length === 0) {
-          this.innerIndex = new Array(columns.length).fill(0);
-        }
-      },
-      // 获取各列选中值对应的索引
-      getIndexs() {
-        return this.innerIndex;
-      },
-      // 获取各列选中的值
-      getValues() {
-        (async () => {
-          await sleep();
-        })();
-        return this.innerColumns.map((item, index2) => item[this.innerIndex[index2]]);
-      }
-    }
-  };
-  function _sfc_render$6(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_u_toolbar = resolveEasycom(vue.resolveDynamicComponent("u-toolbar"), __easycom_0$3);
-    const _component_u_loading_icon = resolveEasycom(vue.resolveDynamicComponent("u-loading-icon"), __easycom_3$5);
-    const _component_u_popup = resolveEasycom(vue.resolveDynamicComponent("u-popup"), __easycom_4$2);
-    return vue.openBlock(), vue.createElementBlock("view", { class: "u-picker-warrper" }, [
-      _ctx.hasInput ? (vue.openBlock(), vue.createElementBlock("view", {
-        key: 0,
-        class: "u-picker-input cursor-pointer",
-        onClick: _cache[0] || (_cache[0] = ($event) => $data.showByClickInput = !$data.showByClickInput)
-      }, [
-        vue.renderSlot(_ctx.$slots, "default", {}, () => [
-          vue.createElementVNode(
-            "view",
-            null,
-            vue.toDisplayString($options.inputLabel && $options.inputLabel.length ? $options.inputLabel.join("/") : _ctx.placeholder),
-            1
-            /* TEXT */
-          )
-        ], true)
-      ])) : vue.createCommentVNode("v-if", true),
-      vue.createVNode(_component_u_popup, {
-        show: _ctx.show || _ctx.hasInput && $data.showByClickInput,
-        mode: _ctx.popupMode,
-        zIndex: _ctx.zIndex,
-        onClose: $options.closeHandler
-      }, {
-        default: vue.withCtx(() => [
-          vue.createElementVNode("view", { class: "u-picker" }, [
-            _ctx.showToolbar ? (vue.openBlock(), vue.createBlock(_component_u_toolbar, {
-              key: 0,
-              cancelColor: _ctx.cancelColor,
-              confirmColor: _ctx.confirmColor,
-              cancelText: _ctx.cancelText,
-              confirmText: _ctx.confirmText,
-              title: _ctx.title,
-              rightSlot: _ctx.toolbarRightSlot ? true : false,
-              onCancel: $options.cancel,
-              onConfirm: $options.confirm
-            }, {
-              right: vue.withCtx(() => [
-                vue.renderSlot(_ctx.$slots, "toolbar-right", {}, void 0, true)
-              ]),
-              _: 3
-              /* FORWARDED */
-            }, 8, ["cancelColor", "confirmColor", "cancelText", "confirmText", "title", "rightSlot", "onCancel", "onConfirm"])) : vue.createCommentVNode("v-if", true),
-            vue.renderSlot(_ctx.$slots, "toolbar-bottom", {}, void 0, true),
-            vue.createElementVNode("picker-view", {
-              class: "u-picker__view",
-              indicatorStyle: `height: ${$options.addUnit(_ctx.itemHeight)}`,
-              value: $data.innerIndex,
-              immediateChange: _ctx.immediateChange,
-              style: vue.normalizeStyle({
-                height: `${$options.addUnit(_ctx.visibleItemCount * _ctx.itemHeight)}`
-              }),
-              onChange: _cache[1] || (_cache[1] = (...args) => $options.changeHandler && $options.changeHandler(...args))
-            }, [
-              (vue.openBlock(true), vue.createElementBlock(
-                vue.Fragment,
-                null,
-                vue.renderList($data.innerColumns, (item, index2) => {
-                  return vue.openBlock(), vue.createElementBlock("picker-view-column", {
-                    key: index2,
-                    class: "u-picker__view__column"
-                  }, [
-                    $options.testArray(item) ? (vue.openBlock(true), vue.createElementBlock(
-                      vue.Fragment,
-                      { key: 0 },
-                      vue.renderList(item, (item1, index1) => {
-                        return vue.openBlock(), vue.createElementBlock(
-                          "view",
-                          {
-                            class: "u-picker__view__column__item u-line-1",
-                            key: index1,
-                            style: vue.normalizeStyle({
-                              height: $options.addUnit(_ctx.itemHeight),
-                              lineHeight: $options.addUnit(_ctx.itemHeight),
-                              fontWeight: index1 === $data.innerIndex[index2] ? "bold" : "normal",
-                              display: "block"
-                            })
-                          },
-                          vue.toDisplayString($options.getItemText(item1)),
-                          5
-                          /* TEXT, STYLE */
-                        );
-                      }),
-                      128
-                      /* KEYED_FRAGMENT */
-                    )) : vue.createCommentVNode("v-if", true)
-                  ]);
-                }),
-                128
-                /* KEYED_FRAGMENT */
-              ))
-            ], 44, ["indicatorStyle", "value", "immediateChange"]),
-            _ctx.loading ? (vue.openBlock(), vue.createElementBlock("view", {
-              key: 1,
-              class: "u-picker--loading"
-            }, [
-              vue.createVNode(_component_u_loading_icon, { mode: "circle" })
-            ])) : vue.createCommentVNode("v-if", true)
-          ])
-        ]),
-        _: 3
-        /* FORWARDED */
-      }, 8, ["show", "mode", "zIndex", "onClose"])
-    ]);
-  }
-  const __easycom_0$2 = /* @__PURE__ */ _export_sfc(_sfc_main$A, [["render", _sfc_render$6], ["__scopeId", "data-v-1500ce68"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/node_modules/uview-plus/components/u-picker/u-picker.vue"]]);
+  const __easycom_3$1 = /* @__PURE__ */ _export_sfc(_sfc_main$y, [["render", _sfc_render$5], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/node_modules/uview-plus/components/u--form/u--form.vue"]]);
   let hscodeArr = [
     {
       group: "食品、饮料",
@@ -31319,7 +32627,7 @@ ${i3}
       }
     }
   };
-  const props$5 = defineMixin({
+  const props$4 = defineMixin({
     props: {
       // 接受的文件类型, 可选值为all media image file video
       accept: {
@@ -31447,9 +32755,9 @@ ${i3}
       }
     }
   });
-  const _sfc_main$z = {
+  const _sfc_main$x = {
     name: "u-upload",
-    mixins: [mpMixin, mixin, mixinUpload, props$5],
+    mixins: [mpMixin, mixin, mixinUpload, props$4],
     data() {
       return {
         lists: [],
@@ -31654,8 +32962,8 @@ ${i3}
       }
     }
   };
-  function _sfc_render$5(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$7);
+  function _sfc_render$4(_ctx, _cache, $props, $setup, $data, $options) {
+    const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$6);
     const _component_u_loading_icon = resolveEasycom(vue.resolveDynamicComponent("u-loading-icon"), __easycom_3$5);
     return vue.openBlock(), vue.createElementBlock(
       "view",
@@ -31810,15 +33118,14 @@ ${i3}
       /* STYLE */
     );
   }
-  const __easycom_0$1 = /* @__PURE__ */ _export_sfc(_sfc_main$z, [["render", _sfc_render$5], ["__scopeId", "data-v-cafe0b2a"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/node_modules/uview-plus/components/u-upload/u-upload.vue"]]);
-  const _sfc_main$y = {
+  const __easycom_0$1 = /* @__PURE__ */ _export_sfc(_sfc_main$x, [["render", _sfc_render$4], ["__scopeId", "data-v-cafe0b2a"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/node_modules/uview-plus/components/u-upload/u-upload.vue"]]);
+  const _sfc_main$w = {
     __name: "JwUpload",
     props: {
       value: String
     },
     emits: ["update:value"],
     setup(__props, { emit: __emit }) {
-      const props2 = __props;
       const emit = __emit;
       const timestamp = vue.ref("");
       const ossUploadUrl = vue.ref("");
@@ -31830,7 +33137,7 @@ ${i3}
         dir: "",
         host: ""
       });
-      const fileList = vue.ref([{ url: props2.value }]);
+      const fileList = vue.ref([]);
       const handleAfterRead = async (event) => {
         const res = await beforeRead(event);
         if (res) {
@@ -31903,8 +33210,8 @@ ${i3}
       };
     }
   };
-  const JwUpload = /* @__PURE__ */ _export_sfc(_sfc_main$y, [["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/components/JwUpload.vue"]]);
-  const _sfc_main$x = {
+  const JwUpload = /* @__PURE__ */ _export_sfc(_sfc_main$w, [["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/components/JwUpload.vue"]]);
+  const _sfc_main$v = {
     __name: "add",
     setup(__props) {
       const uForm = vue.ref(null);
@@ -32015,10 +33322,10 @@ ${i3}
       };
       return (_ctx, _cache) => {
         const _component_u__input = resolveEasycom(vue.resolveDynamicComponent("u--input"), __easycom_1$1);
-        const _component_u_form_item = resolveEasycom(vue.resolveDynamicComponent("u-form-item"), __easycom_2$3);
-        const _component_u__textarea = resolveEasycom(vue.resolveDynamicComponent("u--textarea"), __easycom_2$2);
+        const _component_u_form_item = resolveEasycom(vue.resolveDynamicComponent("u-form-item"), __easycom_2$2);
+        const _component_u__textarea = resolveEasycom(vue.resolveDynamicComponent("u--textarea"), __easycom_2$1);
         const _component_u__form = resolveEasycom(vue.resolveDynamicComponent("u--form"), __easycom_3$1);
-        const _component_u_picker = resolveEasycom(vue.resolveDynamicComponent("u-picker"), __easycom_0$2);
+        const _component_u_picker = resolveEasycom(vue.resolveDynamicComponent("u-picker"), __easycom_4$1);
         const _component_u_button = resolveEasycom(vue.resolveDynamicComponent("u-button"), __easycom_5);
         return vue.openBlock(), vue.createElementBlock("view", { class: "container" }, [
           vue.createElementVNode("view", { class: "form-wrapper" }, [
@@ -32460,7 +33767,7 @@ ${i3}
       };
     }
   };
-  const PagesGoodsAdd = /* @__PURE__ */ _export_sfc(_sfc_main$x, [["__scopeId", "data-v-b94e5c26"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/goods/add.vue"]]);
+  const PagesGoodsAdd = /* @__PURE__ */ _export_sfc(_sfc_main$v, [["__scopeId", "data-v-b94e5c26"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/goods/add.vue"]]);
   var dayjs_min = { exports: {} };
   (function(module, exports) {
     !function(t2, e2) {
@@ -32752,8 +34059,8 @@ ${i3}
     });
   })(dayjs_min);
   var dayjs_minExports = dayjs_min.exports;
-  const dayjs$1 = /* @__PURE__ */ getDefaultExportFromCjs(dayjs_minExports);
-  const _sfc_main$w = {
+  const dayjs = /* @__PURE__ */ getDefaultExportFromCjs(dayjs_minExports);
+  const _sfc_main$u = {
     __name: "list",
     setup(__props) {
       const statusList = [
@@ -32843,7 +34150,7 @@ ${i3}
         });
       };
       const formatTime = (time) => {
-        return dayjs$1(time).format("YYYY-MM-DD HH:mm");
+        return dayjs(time).format("YYYY-MM-DD HH:mm");
       };
       const getStatusClass = (status) => {
         const statusMap = {
@@ -32861,7 +34168,7 @@ ${i3}
       });
       return (_ctx, _cache) => {
         const _component_u_search = resolveEasycom(vue.resolveDynamicComponent("u-search"), __easycom_1$7);
-        const _component_u_empty = resolveEasycom(vue.resolveDynamicComponent("u-empty"), __easycom_4$1);
+        const _component_u_empty = resolveEasycom(vue.resolveDynamicComponent("u-empty"), __easycom_4$2);
         return vue.openBlock(), vue.createElementBlock("view", { class: "container" }, [
           vue.createCommentVNode(" 顶部搜索和筛选 "),
           vue.createElementVNode("view", { class: "header" }, [
@@ -33055,8 +34362,8 @@ ${i3}
       };
     }
   };
-  const PagesOrderList = /* @__PURE__ */ _export_sfc(_sfc_main$w, [["__scopeId", "data-v-456ecf67"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/order/list.vue"]]);
-  const _sfc_main$v = {
+  const PagesOrderList = /* @__PURE__ */ _export_sfc(_sfc_main$u, [["__scopeId", "data-v-456ecf67"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/order/list.vue"]]);
+  const _sfc_main$t = {
     __name: "edit",
     setup(__props) {
       const formData = vue.ref({
@@ -33215,180 +34522,8 @@ ${i3}
       };
     }
   };
-  const PagesProfileEdit = /* @__PURE__ */ _export_sfc(_sfc_main$v, [["__scopeId", "data-v-ead3e541"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/profile/edit.vue"]]);
-  const _sfc_main$u = {
-    __name: "account",
-    setup(__props) {
-      const userInfo = vue.ref({
-        phone: "138****8000"
-      });
-      const settings = vue.ref({
-        orderNotify: true,
-        messagePush: true
-      });
-      const cacheSize = vue.ref("2.5MB");
-      const version2 = vue.ref("1.0.0");
-      const modifyPassword = () => {
-        uni.navigateTo({
-          url: "/pages/settings/password"
-        });
-      };
-      const bindPhone = () => {
-        uni.navigateTo({
-          url: "/pages/settings/phone"
-        });
-      };
-      const toggleOrderNotify = (e2) => {
-        settings.value.orderNotify = e2.detail.value;
-      };
-      const toggleMessagePush = (e2) => {
-        settings.value.messagePush = e2.detail.value;
-      };
-      const clearCache = () => {
-        uni.showModal({
-          title: "提示",
-          content: "确定要清除缓存吗？",
-          success: (res) => {
-            if (res.confirm) {
-              uni.showLoading({
-                title: "清理中"
-              });
-              setTimeout(() => {
-                uni.hideLoading();
-                cacheSize.value = "0B";
-                uni.showToast({
-                  title: "清理成功",
-                  icon: "success"
-                });
-              }, 1e3);
-            }
-          }
-        });
-      };
-      const handleLogout = () => {
-        uni.showModal({
-          title: "提示",
-          content: "确定要退出登录吗？",
-          success: (res) => {
-            if (res.confirm) {
-              uni.reLaunch({
-                url: "/pages/login/index"
-              });
-            }
-          }
-        });
-      };
-      return (_ctx, _cache) => {
-        return vue.openBlock(), vue.createElementBlock("view", { class: "container" }, [
-          vue.createCommentVNode(" 账户安全 "),
-          vue.createElementVNode("view", { class: "section" }, [
-            vue.createElementVNode("view", { class: "section-title" }, "账户安全"),
-            vue.createElementVNode("view", { class: "menu-list" }, [
-              vue.createElementVNode("view", {
-                class: "menu-item",
-                onClick: modifyPassword
-              }, [
-                vue.createElementVNode("view", { class: "menu-left" }, [
-                  vue.createElementVNode("text", { class: "iconfont icon-lock" }),
-                  vue.createElementVNode("text", { class: "label" }, "修改密码")
-                ]),
-                vue.createElementVNode("text", { class: "iconfont icon-arrow-right" })
-              ]),
-              vue.createElementVNode("view", {
-                class: "menu-item",
-                onClick: bindPhone
-              }, [
-                vue.createElementVNode("view", { class: "menu-left" }, [
-                  vue.createElementVNode("text", { class: "iconfont icon-phone" }),
-                  vue.createElementVNode("text", { class: "label" }, "手机绑定")
-                ]),
-                vue.createElementVNode("view", { class: "menu-right" }, [
-                  vue.createElementVNode(
-                    "text",
-                    { class: "value" },
-                    vue.toDisplayString(userInfo.value.phone),
-                    1
-                    /* TEXT */
-                  ),
-                  vue.createElementVNode("text", { class: "iconfont icon-arrow-right" })
-                ])
-              ])
-            ])
-          ]),
-          vue.createCommentVNode(" 通知设置 "),
-          vue.createElementVNode("view", { class: "section" }, [
-            vue.createElementVNode("view", { class: "section-title" }, "通知设置"),
-            vue.createElementVNode("view", { class: "menu-list" }, [
-              vue.createElementVNode("view", { class: "menu-item" }, [
-                vue.createElementVNode("view", { class: "menu-left" }, [
-                  vue.createElementVNode("text", { class: "iconfont icon-notification" }),
-                  vue.createElementVNode("text", { class: "label" }, "订单通知")
-                ]),
-                vue.createElementVNode("switch", {
-                  checked: settings.value.orderNotify,
-                  onChange: toggleOrderNotify,
-                  color: "#007aff"
-                }, null, 40, ["checked"])
-              ]),
-              vue.createElementVNode("view", { class: "menu-item" }, [
-                vue.createElementVNode("view", { class: "menu-left" }, [
-                  vue.createElementVNode("text", { class: "iconfont icon-message" }),
-                  vue.createElementVNode("text", { class: "label" }, "消息推送")
-                ]),
-                vue.createElementVNode("switch", {
-                  checked: settings.value.messagePush,
-                  onChange: toggleMessagePush,
-                  color: "#007aff"
-                }, null, 40, ["checked"])
-              ])
-            ])
-          ]),
-          vue.createCommentVNode(" 其他设置 "),
-          vue.createElementVNode("view", { class: "section" }, [
-            vue.createElementVNode("view", { class: "section-title" }, "其他设置"),
-            vue.createElementVNode("view", { class: "menu-list" }, [
-              vue.createElementVNode("view", {
-                class: "menu-item",
-                onClick: clearCache
-              }, [
-                vue.createElementVNode("view", { class: "menu-left" }, [
-                  vue.createElementVNode("text", { class: "iconfont icon-clear" }),
-                  vue.createElementVNode("text", { class: "label" }, "清除缓存")
-                ]),
-                vue.createElementVNode(
-                  "text",
-                  { class: "value" },
-                  vue.toDisplayString(cacheSize.value),
-                  1
-                  /* TEXT */
-                )
-              ]),
-              vue.createElementVNode("view", { class: "menu-item" }, [
-                vue.createElementVNode("view", { class: "menu-left" }, [
-                  vue.createElementVNode("text", { class: "iconfont icon-version" }),
-                  vue.createElementVNode("text", { class: "label" }, "当前版本")
-                ]),
-                vue.createElementVNode(
-                  "text",
-                  { class: "value" },
-                  vue.toDisplayString(version2.value),
-                  1
-                  /* TEXT */
-                )
-              ])
-            ])
-          ]),
-          vue.createCommentVNode(" ���出登录 "),
-          vue.createElementVNode("view", {
-            class: "logout-btn",
-            onClick: handleLogout
-          }, "退出登录")
-        ]);
-      };
-    }
-  };
-  const PagesSettingsAccount = /* @__PURE__ */ _export_sfc(_sfc_main$u, [["__scopeId", "data-v-5ef85319"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/settings/account.vue"]]);
-  const _sfc_main$t = {
+  const PagesProfileEdit = /* @__PURE__ */ _export_sfc(_sfc_main$t, [["__scopeId", "data-v-ead3e541"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/profile/edit.vue"]]);
+  const _sfc_main$s = {
     __name: "index",
     setup(__props) {
       return (_ctx, _cache) => {
@@ -33401,7 +34536,7 @@ ${i3}
               })
             ]),
             vue.createElementVNode("view", { class: "app-info" }, [
-              vue.createElementVNode("text", { class: "name" }, "供应链服务平台"),
+              vue.createElementVNode("text", { class: "name" }, "赤道数智链"),
               vue.createElementVNode("text", { class: "version" }, "版本 1.0.0")
             ]),
             vue.createElementVNode("view", { class: "section" }, [
@@ -33422,6 +34557,14 @@ ${i3}
                 ])
               ])
             ]),
+            vue.createElementVNode("view", { class: "section" }, [
+              vue.createElementVNode("view", { class: "section-title" }, "隐私政策"),
+              vue.createElementVNode("view", { class: "paragraph" }, [
+                vue.createTextVNode("https://privacy.1ts.fun/product/"),
+                vue.createElementVNode("br"),
+                vue.createTextVNode("241229UZGvYt6IBzClHU")
+              ])
+            ]),
             vue.createElementVNode("view", { class: "copyright" }, [
               vue.createElementVNode("text", null, "Copyright © 2024 All Rights Reserved")
             ])
@@ -33430,8 +34573,8 @@ ${i3}
       };
     }
   };
-  const PagesAboutIndex = /* @__PURE__ */ _export_sfc(_sfc_main$t, [["__scopeId", "data-v-415a4f9d"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/about/index.vue"]]);
-  const _sfc_main$s = {
+  const PagesAboutIndex = /* @__PURE__ */ _export_sfc(_sfc_main$s, [["__scopeId", "data-v-415a4f9d"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/about/index.vue"]]);
+  const _sfc_main$r = {
     __name: "list",
     setup(__props) {
       const invoiceList = vue.ref([
@@ -33528,8 +34671,8 @@ ${i3}
       };
     }
   };
-  const PagesInvoiceList = /* @__PURE__ */ _export_sfc(_sfc_main$s, [["__scopeId", "data-v-54f613a7"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/invoice/list.vue"]]);
-  const _sfc_main$r = {
+  const PagesInvoiceList = /* @__PURE__ */ _export_sfc(_sfc_main$r, [["__scopeId", "data-v-54f613a7"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/invoice/list.vue"]]);
+  const _sfc_main$q = {
     __name: "list",
     setup(__props) {
       const tabs = [
@@ -33669,8 +34812,8 @@ ${i3}
       };
     }
   };
-  const PagesCouponList = /* @__PURE__ */ _export_sfc(_sfc_main$r, [["__scopeId", "data-v-019d569f"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/coupon/list.vue"]]);
-  const _sfc_main$q = {
+  const PagesCouponList = /* @__PURE__ */ _export_sfc(_sfc_main$q, [["__scopeId", "data-v-019d569f"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/coupon/list.vue"]]);
+  const _sfc_main$p = {
     __name: "index",
     setup(__props) {
       const faqList = vue.ref([
@@ -33802,7 +34945,7 @@ ${i3}
       };
     }
   };
-  const PagesServiceIndex = /* @__PURE__ */ _export_sfc(_sfc_main$q, [["__scopeId", "data-v-f6ccea2d"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/service/index.vue"]]);
+  const PagesServiceIndex = /* @__PURE__ */ _export_sfc(_sfc_main$p, [["__scopeId", "data-v-f6ccea2d"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/service/index.vue"]]);
   const Constant = {
     /**
      * AES 密码
@@ -34881,7 +36024,7 @@ ${i3}
     refreshToken,
     logoutUser
   };
-  const _sfc_main$p = {
+  const _sfc_main$o = {
     __name: "index",
     setup(__props) {
       const formData = vue.ref({
@@ -35065,7 +36208,7 @@ ${i3}
         refreshCaptcha();
       });
       return (_ctx, _cache) => {
-        const _component_u_picker = resolveEasycom(vue.resolveDynamicComponent("u-picker"), __easycom_0$2);
+        const _component_u_picker = resolveEasycom(vue.resolveDynamicComponent("u-picker"), __easycom_4$1);
         return vue.openBlock(), vue.createElementBlock("view", { class: "container" }, [
           vue.createCommentVNode(" 顶部背景 "),
           vue.createElementVNode("view", { class: "header" }, [
@@ -35301,8 +36444,8 @@ ${i3}
       };
     }
   };
-  const PagesLoginIndex = /* @__PURE__ */ _export_sfc(_sfc_main$p, [["__scopeId", "data-v-d08ef7d4"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/login/index.vue"]]);
-  const _sfc_main$o = {
+  const PagesLoginIndex = /* @__PURE__ */ _export_sfc(_sfc_main$o, [["__scopeId", "data-v-d08ef7d4"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/login/index.vue"]]);
+  const _sfc_main$n = {
     __name: "register",
     setup(__props) {
       const formData = vue.ref({
@@ -35415,7 +36558,7 @@ ${i3}
         refreshCaptcha();
       });
       return (_ctx, _cache) => {
-        const _component_u_picker = resolveEasycom(vue.resolveDynamicComponent("u-picker"), __easycom_0$2);
+        const _component_u_picker = resolveEasycom(vue.resolveDynamicComponent("u-picker"), __easycom_4$1);
         return vue.openBlock(), vue.createElementBlock("view", { class: "container" }, [
           vue.createCommentVNode(" 顶部背景 "),
           vue.createElementVNode("view", { class: "header" }, [
@@ -35562,8 +36705,8 @@ ${i3}
       };
     }
   };
-  const PagesLoginRegister = /* @__PURE__ */ _export_sfc(_sfc_main$o, [["__scopeId", "data-v-838b72c9"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/login/register.vue"]]);
-  const _sfc_main$n = {
+  const PagesLoginRegister = /* @__PURE__ */ _export_sfc(_sfc_main$n, [["__scopeId", "data-v-838b72c9"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/login/register.vue"]]);
+  const _sfc_main$m = {
     __name: "forgot",
     setup(__props) {
       const formData = vue.ref({
@@ -35738,8 +36881,8 @@ ${i3}
       };
     }
   };
-  const PagesLoginForgot = /* @__PURE__ */ _export_sfc(_sfc_main$n, [["__scopeId", "data-v-e5482ec7"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/login/forgot.vue"]]);
-  const _sfc_main$m = {
+  const PagesLoginForgot = /* @__PURE__ */ _export_sfc(_sfc_main$m, [["__scopeId", "data-v-e5482ec7"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/login/forgot.vue"]]);
+  const _sfc_main$l = {
     __name: "user",
     setup(__props) {
       return (_ctx, _cache) => {
@@ -35776,8 +36919,8 @@ ${i3}
       };
     }
   };
-  const PagesAgreementUser = /* @__PURE__ */ _export_sfc(_sfc_main$m, [["__scopeId", "data-v-ff1e87b4"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/agreement/user.vue"]]);
-  const _sfc_main$l = {
+  const PagesAgreementUser = /* @__PURE__ */ _export_sfc(_sfc_main$l, [["__scopeId", "data-v-ff1e87b4"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/agreement/user.vue"]]);
+  const _sfc_main$k = {
     __name: "privacy",
     setup(__props) {
       return (_ctx, _cache) => {
@@ -35796,7 +36939,7 @@ ${i3}
             ]),
             vue.createElementVNode("view", { class: "section" }, [
               vue.createElementVNode("view", { class: "section-title" }, "3. 信息保护"),
-              vue.createElementVNode("view", { class: "paragraph" }, " 3.1 我们采用业界标准的安全技术和程序来保��用户的个人信息。 "),
+              vue.createElementVNode("view", { class: "paragraph" }, " 3.1 我们采用业界标准的安全技术和程序来保护用户的个人信息。 "),
               vue.createElementVNode("view", { class: "paragraph" }, " 3.2 我们定期审查信息收集、存储和处理实践，以防止未经授权的访问。 ")
             ]),
             vue.createElementVNode("view", { class: "section" }, [
@@ -35814,8 +36957,8 @@ ${i3}
       };
     }
   };
-  const PagesAgreementPrivacy = /* @__PURE__ */ _export_sfc(_sfc_main$l, [["__scopeId", "data-v-d015f332"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/agreement/privacy.vue"]]);
-  const props$4 = defineMixin({
+  const PagesAgreementPrivacy = /* @__PURE__ */ _export_sfc(_sfc_main$k, [["__scopeId", "data-v-d015f332"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/agreement/privacy.vue"]]);
+  const props$3 = defineMixin({
     props: {
       // 步进器标识符，在change回调返回
       name: {
@@ -35924,9 +37067,9 @@ ${i3}
       }
     }
   });
-  const _sfc_main$k = {
+  const _sfc_main$j = {
     name: "u-number-box",
-    mixins: [mpMixin, mixin, props$4],
+    mixins: [mpMixin, mixin, props$3],
     data() {
       return {
         // 输入框实际操作的值
@@ -36141,8 +37284,8 @@ ${i3}
       }
     }
   };
-  function _sfc_render$4(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$7);
+  function _sfc_render$3(_ctx, _cache, $props, $setup, $data, $options) {
+    const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$6);
     return vue.openBlock(), vue.createElementBlock("view", { class: "u-number-box" }, [
       _ctx.showMinus && _ctx.$slots.minus ? (vue.openBlock(), vue.createElementBlock(
         "view",
@@ -36237,8 +37380,8 @@ ${i3}
       )) : vue.createCommentVNode("v-if", true)
     ]);
   }
-  const __easycom_3 = /* @__PURE__ */ _export_sfc(_sfc_main$k, [["render", _sfc_render$4], ["__scopeId", "data-v-a83780b3"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/node_modules/uview-plus/components/u-number-box/u-number-box.vue"]]);
-  const _sfc_main$j = {
+  const __easycom_3 = /* @__PURE__ */ _export_sfc(_sfc_main$j, [["render", _sfc_render$3], ["__scopeId", "data-v-a83780b3"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/node_modules/uview-plus/components/u-number-box/u-number-box.vue"]]);
+  const _sfc_main$i = {
     __name: "add",
     setup(__props) {
       const mode = vue.ref("add");
@@ -36333,7 +37476,7 @@ ${i3}
         }
       };
       return (_ctx, _cache) => {
-        const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$7);
+        const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$6);
         const _component_u_number_box = resolveEasycom(vue.resolveDynamicComponent("u-number-box"), __easycom_3);
         const _component_u_button = resolveEasycom(vue.resolveDynamicComponent("u-button"), __easycom_5);
         return vue.openBlock(), vue.createElementBlock("view", { class: "container" }, [
@@ -36552,8 +37695,8 @@ ${i3}
       };
     }
   };
-  const PagesCargoAdd = /* @__PURE__ */ _export_sfc(_sfc_main$j, [["__scopeId", "data-v-5f00962b"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/cargo/add.vue"]]);
-  const props$3 = defineMixin({
+  const PagesCargoAdd = /* @__PURE__ */ _export_sfc(_sfc_main$i, [["__scopeId", "data-v-5f00962b"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/cargo/add.vue"]]);
+  const props$2 = defineMixin({
     props: {
       // checkbox的名称
       name: {
@@ -36627,9 +37770,9 @@ ${i3}
       }
     }
   });
-  const _sfc_main$i = {
+  const _sfc_main$h = {
     name: "u-checkbox",
-    mixins: [mpMixin, mixin, props$3],
+    mixins: [mpMixin, mixin, props$2],
     data() {
       return {
         isChecked: false,
@@ -36811,8 +37954,8 @@ ${i3}
       }
     }
   };
-  function _sfc_render$3(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$7);
+  function _sfc_render$2(_ctx, _cache, $props, $setup, $data, $options) {
+    const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$6);
     return vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -36872,8 +38015,8 @@ ${i3}
       /* CLASS, STYLE */
     );
   }
-  const __easycom_1 = /* @__PURE__ */ _export_sfc(_sfc_main$i, [["render", _sfc_render$3], ["__scopeId", "data-v-abd63d8e"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/node_modules/uview-plus/components/u-checkbox/u-checkbox.vue"]]);
-  const props$2 = defineMixin({
+  const __easycom_1 = /* @__PURE__ */ _export_sfc(_sfc_main$h, [["render", _sfc_render$2], ["__scopeId", "data-v-abd63d8e"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/node_modules/uview-plus/components/u-checkbox/u-checkbox.vue"]]);
+  const props$1 = defineMixin({
     props: {
       // 标识符
       name: {
@@ -36952,9 +38095,9 @@ ${i3}
       }
     }
   });
-  const _sfc_main$h = {
+  const _sfc_main$g = {
     name: "u-checkbox-group",
-    mixins: [mpMixin, mixin, props$2],
+    mixins: [mpMixin, mixin, props$1],
     computed: {
       // 这里computed的变量，都是子组件u-checkbox需要用到的，由于头条小程序的兼容性差异，子组件无法实时监听父组件参数的变化
       // 所以需要手动通知子组件，这里返回一个parentData变量，供watch监听，在其中去通知每一个子组件重新从父组件(u-checkbox-group)
@@ -37011,7 +38154,7 @@ ${i3}
       }
     }
   };
-  function _sfc_render$2(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$1(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -37024,8 +38167,8 @@ ${i3}
       /* CLASS */
     );
   }
-  const __easycom_2$1 = /* @__PURE__ */ _export_sfc(_sfc_main$h, [["render", _sfc_render$2], ["__scopeId", "data-v-504cd728"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/node_modules/uview-plus/components/u-checkbox-group/u-checkbox-group.vue"]]);
-  const _sfc_main$g = {
+  const __easycom_2 = /* @__PURE__ */ _export_sfc(_sfc_main$g, [["render", _sfc_render$1], ["__scopeId", "data-v-504cd728"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/node_modules/uview-plus/components/u-checkbox-group/u-checkbox-group.vue"]]);
+  const _sfc_main$f = {
     __name: "list",
     setup(__props) {
       const pageNo = vue.ref(1);
@@ -37036,6 +38179,9 @@ ${i3}
       const goodsList = vue.ref([]);
       const searchKey = vue.ref("");
       const selectedGoods = vue.ref({});
+      onShow(() => {
+        getGoodsList(true);
+      });
       const getGoodsList = async (isRefresh = false) => {
         if (loading.value)
           return;
@@ -37056,9 +38202,14 @@ ${i3}
             goodsList.value = [...goodsList.value, ...records];
           }
           loading.value = false;
-          formatAppLog("log", "at pages/goods/list.vue:172", "商品列表", goodsList.value);
+          formatAppLog("log", "at pages/goods/list.vue:181", "商品列表", goodsList.value);
           hasMore.value = goodsList.value.length < total.value;
         }
+      };
+      const addGoods = () => {
+        uni.navigateTo({
+          url: "/pages/goods/add"
+        });
       };
       const refreshList = () => {
         pageNo.value = 1;
@@ -37122,9 +38273,9 @@ ${i3}
         }
       };
       return (_ctx, _cache) => {
-        const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$7);
+        const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$6);
         const _component_u_checkbox = resolveEasycom(vue.resolveDynamicComponent("u-checkbox"), __easycom_1);
-        const _component_u_checkbox_group = resolveEasycom(vue.resolveDynamicComponent("u-checkbox-group"), __easycom_2$1);
+        const _component_u_checkbox_group = resolveEasycom(vue.resolveDynamicComponent("u-checkbox-group"), __easycom_2);
         const _component_u_number_box = resolveEasycom(vue.resolveDynamicComponent("u-number-box"), __easycom_3);
         const _component_u_loading_icon = resolveEasycom(vue.resolveDynamicComponent("u-loading-icon"), __easycom_3$5);
         const _component_u_button = resolveEasycom(vue.resolveDynamicComponent("u-button"), __easycom_5);
@@ -37334,13 +38485,32 @@ ${i3}
                 backgroundColor: "#fbc02d"
               }
             })
-          ])) : vue.createCommentVNode("v-if", true)
+          ])) : (vue.openBlock(), vue.createElementBlock(
+            vue.Fragment,
+            { key: 4 },
+            [
+              vue.createCommentVNode(" 底部添加按钮 "),
+              vue.createElementVNode("view", {
+                class: "add-button",
+                onClick: addGoods
+              }, [
+                vue.createVNode(_component_u_icon, {
+                  name: "plus",
+                  color: "#fff",
+                  size: "24"
+                }),
+                vue.createElementVNode("text", null, "新增商品")
+              ])
+            ],
+            2112
+            /* STABLE_FRAGMENT, DEV_ROOT_FRAGMENT */
+          ))
         ]);
       };
     }
   };
-  const PagesGoodsList = /* @__PURE__ */ _export_sfc(_sfc_main$g, [["__scopeId", "data-v-7f2f18c6"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/goods/list.vue"]]);
-  const _sfc_main$f = {
+  const PagesGoodsList = /* @__PURE__ */ _export_sfc(_sfc_main$f, [["__scopeId", "data-v-7f2f18c6"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/goods/list.vue"]]);
+  const _sfc_main$e = {
     __name: "manage",
     setup(__props) {
       const searchKeyword = vue.ref("");
@@ -37453,7 +38623,7 @@ ${i3}
       return (_ctx, _cache) => {
         const _component_u_search = resolveEasycom(vue.resolveDynamicComponent("u-search"), __easycom_1$7);
         const _component_u_swipe_action_item = resolveEasycom(vue.resolveDynamicComponent("u-swipe-action-item"), __easycom_1$2);
-        const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$7);
+        const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$6);
         return vue.openBlock(), vue.createElementBlock("view", { class: "container" }, [
           vue.createCommentVNode(" 下拉刷新 "),
           vue.createElementVNode("scroll-view", {
@@ -37601,8 +38771,8 @@ ${i3}
       };
     }
   };
-  const PagesGoodsManage = /* @__PURE__ */ _export_sfc(_sfc_main$f, [["__scopeId", "data-v-5bc406bc"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/goods/manage.vue"]]);
-  const _sfc_main$e = {
+  const PagesGoodsManage = /* @__PURE__ */ _export_sfc(_sfc_main$e, [["__scopeId", "data-v-5bc406bc"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/goods/manage.vue"]]);
+  const _sfc_main$d = {
     __name: "edit",
     setup(__props) {
       const uPickerRef = vue.ref(null);
@@ -37685,10 +38855,10 @@ ${i3}
       };
       return (_ctx, _cache) => {
         const _component_u__input = resolveEasycom(vue.resolveDynamicComponent("u--input"), __easycom_1$1);
-        const _component_u_form_item = resolveEasycom(vue.resolveDynamicComponent("u-form-item"), __easycom_2$3);
-        const _component_u__textarea = resolveEasycom(vue.resolveDynamicComponent("u--textarea"), __easycom_2$2);
+        const _component_u_form_item = resolveEasycom(vue.resolveDynamicComponent("u-form-item"), __easycom_2$2);
+        const _component_u__textarea = resolveEasycom(vue.resolveDynamicComponent("u--textarea"), __easycom_2$1);
         const _component_u__form = resolveEasycom(vue.resolveDynamicComponent("u--form"), __easycom_3$1);
-        const _component_u_picker = resolveEasycom(vue.resolveDynamicComponent("u-picker"), __easycom_0$2);
+        const _component_u_picker = resolveEasycom(vue.resolveDynamicComponent("u-picker"), __easycom_4$1);
         const _component_u_button = resolveEasycom(vue.resolveDynamicComponent("u-button"), __easycom_5);
         return vue.openBlock(), vue.createElementBlock("view", { class: "container" }, [
           vue.createElementVNode("view", { class: "form-wrapper" }, [
@@ -38149,8 +39319,8 @@ ${i3}
       };
     }
   };
-  const PagesGoodsEdit = /* @__PURE__ */ _export_sfc(_sfc_main$e, [["__scopeId", "data-v-df33928b"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/goods/edit.vue"]]);
-  const props$1 = defineMixin({
+  const PagesGoodsEdit = /* @__PURE__ */ _export_sfc(_sfc_main$d, [["__scopeId", "data-v-df33928b"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/goods/edit.vue"]]);
+  const props = defineMixin({
     props: {
       // 排列方向
       direction: {
@@ -38189,9 +39359,9 @@ ${i3}
       }
     }
   });
-  const _sfc_main$d = {
+  const _sfc_main$c = {
     name: "u-steps",
-    mixins: [mpMixin, mixin, props$1],
+    mixins: [mpMixin, mixin, props],
     data() {
       return {};
     },
@@ -38228,7 +39398,7 @@ ${i3}
       virtualHost: false
     }
   };
-  function _sfc_render$1(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -38241,8 +39411,8 @@ ${i3}
       /* CLASS */
     );
   }
-  const __easycom_0 = /* @__PURE__ */ _export_sfc(_sfc_main$d, [["render", _sfc_render$1], ["__scopeId", "data-v-30d91cab"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/node_modules/uview-plus/components/u-steps/u-steps.vue"]]);
-  const _sfc_main$c = {
+  const __easycom_0 = /* @__PURE__ */ _export_sfc(_sfc_main$c, [["render", _sfc_render], ["__scopeId", "data-v-30d91cab"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/node_modules/uview-plus/components/u-steps/u-steps.vue"]]);
+  const _sfc_main$b = {
     __name: "apply",
     setup(__props) {
       const currentStep = vue.ref(0);
@@ -38281,7 +39451,7 @@ ${i3}
         dataSource.value = Object.values(formData.value.attachments).map((item) => {
           return item;
         });
-        formatAppLog("log", "at pages/finance/apply.vue:148", "dataSource", dataSource.value);
+        formatAppLog("log", "at pages/finance/apply.vue:149", "dataSource", dataSource.value);
         initSupplement();
       };
       const initSupplement = () => {
@@ -38389,7 +39559,7 @@ ${i3}
             key: index2 + 1
           };
         });
-        formatAppLog("log", "at pages/finance/apply.vue:256", "initSupplement", dataSource.value, formData.value);
+        formatAppLog("log", "at pages/finance/apply.vue:257", "initSupplement", dataSource.value, formData.value);
       };
       const nextStep = async () => {
         try {
@@ -38431,9 +39601,9 @@ ${i3}
           uni.showLoading({
             title: "提交中"
           });
-          formatAppLog("log", "at pages/finance/apply.vue:315", "提交", formData.value, dataSource.value);
+          formatAppLog("log", "at pages/finance/apply.vue:316", "提交", formData.value, dataSource.value);
           save().then((ID) => {
-            formatAppLog("log", "at pages/finance/apply.vue:317", "ID", ID);
+            formatAppLog("log", "at pages/finance/apply.vue:318", "ID", ID);
             postAction(`/fms/customerApply/apply?id=${ID}`).then((res) => {
               if (res.success) {
                 uni.showToast({
@@ -38480,7 +39650,7 @@ ${i3}
       return (_ctx, _cache) => {
         const _component_u_steps = resolveEasycom(vue.resolveDynamicComponent("u-steps"), __easycom_0);
         const _component_u__input = resolveEasycom(vue.resolveDynamicComponent("u--input"), __easycom_1$1);
-        const _component_u_form_item = resolveEasycom(vue.resolveDynamicComponent("u-form-item"), __easycom_2$3);
+        const _component_u_form_item = resolveEasycom(vue.resolveDynamicComponent("u-form-item"), __easycom_2$2);
         const _component_u_textarea = resolveEasycom(vue.resolveDynamicComponent("u-textarea"), __easycom_3$2);
         const _component_u_form = resolveEasycom(vue.resolveDynamicComponent("u-form"), __easycom_4);
         return vue.openBlock(), vue.createElementBlock("view", { class: "container" }, [
@@ -38648,7 +39818,8 @@ ${i3}
                         "onUpdate:modelValue": _cache[7] || (_cache[7] = ($event) => formData.value.applyReason = $event),
                         placeholder: "请详细说明申请原因",
                         maxlength: 200,
-                        border: "none"
+                        border: "none",
+                        style: { "width": "100%" }
                       }, null, 8, ["modelValue"])
                     ]),
                     _: 1
@@ -38723,8 +39894,8 @@ ${i3}
       };
     }
   };
-  const PagesFinanceApply = /* @__PURE__ */ _export_sfc(_sfc_main$c, [["__scopeId", "data-v-8a0d966c"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/finance/apply.vue"]]);
-  const _sfc_main$b = {
+  const PagesFinanceApply = /* @__PURE__ */ _export_sfc(_sfc_main$b, [["__scopeId", "data-v-8a0d966c"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/finance/apply.vue"]]);
+  const _sfc_main$a = {
     __name: "loan-detail",
     setup(__props) {
       const currentFilter = vue.ref("all");
@@ -38742,15 +39913,25 @@ ${i3}
       const loading = vue.ref(false);
       const searchKeyword = vue.ref("");
       const searchTimer = vue.ref(null);
+      const showDatePicker = vue.ref(false);
+      const selectedDate = vue.ref(Date.now());
+      const minDate = /* @__PURE__ */ new Date("2020-01-01");
+      const maxDate = /* @__PURE__ */ new Date();
       const getRecordList = async (type2) => {
         loading.value = true;
+        const date3 = new Date(selectedDate.value);
+        const year = date3.getFullYear();
+        const month = date3.getMonth() + 1;
+        const days = new Date(year, month, 0).getDate();
         try {
           const res = await getAction("/wms/creditRecord/list", {
             pageNo: pageNo.value,
             pageSize: pageSize.value,
             column: "createTime",
             order: "desc",
-            description: "*" + searchKeyword.value + "*"
+            description: "*" + searchKeyword.value + "*",
+            createTimeBegin: year + "-" + month + "-01",
+            createTimeEnd: year + "-" + month + "-" + days
           });
           if (res.success) {
             if (type2 === "refresh") {
@@ -38762,7 +39943,7 @@ ${i3}
             hasMore.value = recordsList.value.length < total.value;
           }
         } catch (error2) {
-          formatAppLog("error", "at pages/finance/loan-detail.vue:135", "加载订单列表失败:", error2);
+          formatAppLog("error", "at pages/finance/loan-detail.vue:161", "加载订单列表失败:", error2);
         } finally {
           loading.value = false;
           isRefreshing.value = false;
@@ -38770,6 +39951,36 @@ ${i3}
       };
       const handleFilterChange = (value) => {
         currentFilter.value = value;
+      };
+      const formatDate = (timestamp) => {
+        if (!timestamp) {
+          const now = /* @__PURE__ */ new Date();
+          return `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}`;
+        }
+        try {
+          const date3 = new Date(Number(timestamp));
+          if (isNaN(date3.getTime())) {
+            const now = /* @__PURE__ */ new Date();
+            return `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}`;
+          }
+          const year = date3.getFullYear();
+          const month = String(date3.getMonth() + 1).padStart(2, "0");
+          return `${year}-${month}`;
+        } catch (error2) {
+          formatAppLog("error", "at pages/finance/loan-detail.vue:188", "日期格式化错误:", error2);
+          const now = /* @__PURE__ */ new Date();
+          return `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}`;
+        }
+      };
+      const showCalendar = () => {
+        showDatePicker.value = true;
+      };
+      const onDateConfirm = (e2) => {
+        selectedDate.value = Number(e2.value);
+        formatAppLog("log", "at pages/finance/loan-detail.vue:201", "选择的时间戳:", selectedDate.value, e2, formatDate(selectedDate.value));
+        showDatePicker.value = false;
+        pageNo.value = 1;
+        getRecordList("refresh");
       };
       onReachBottom(() => {
         if (!hasMore.value || loading.value)
@@ -38813,10 +40024,31 @@ ${i3}
         }
       });
       return (_ctx, _cache) => {
-        const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$7);
+        const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$6);
         const _component_u_search = resolveEasycom(vue.resolveDynamicComponent("u-search"), __easycom_1$7);
-        const _component_u_empty = resolveEasycom(vue.resolveDynamicComponent("u-empty"), __easycom_4$1);
+        const _component_u_datetime_picker = resolveEasycom(vue.resolveDynamicComponent("u-datetime-picker"), __easycom_2$3);
+        const _component_u_empty = resolveEasycom(vue.resolveDynamicComponent("u-empty"), __easycom_4$2);
         return vue.openBlock(), vue.createElementBlock("view", { class: "container" }, [
+          vue.createCommentVNode(" 日期选择区域 "),
+          vue.createElementVNode("view", { class: "date-picker-section" }, [
+            vue.createElementVNode("view", {
+              class: "date-display",
+              onClick: showCalendar
+            }, [
+              vue.createElementVNode(
+                "text",
+                { class: "selected-date" },
+                vue.toDisplayString(formatDate(selectedDate.value)),
+                1
+                /* TEXT */
+              ),
+              vue.createVNode(_component_u_icon, {
+                name: "calendar",
+                size: "24",
+                color: "#666"
+              })
+            ])
+          ]),
           vue.createCommentVNode(" 添加搜索区域 "),
           vue.createElementVNode("view", { class: "search-section" }, [
             vue.createElementVNode("view", { class: "search-box" }, [
@@ -38843,6 +40075,17 @@ ${i3}
           ]),
           vue.createCommentVNode(" 统计卡片 "),
           vue.createCommentVNode(' <view class="stat-cards">\r\n      <view class="stat-card">\r\n        <text class="label">累计借款</text>\r\n        <text class="value">¥1,280,000</text>\r\n        <view class="trend up">\r\n          <u-icon name="arrow-up" size="12"></u-icon>\r\n          <text>12.5%</text>\r\n        </view>\r\n      </view>\r\n      <view class="stat-card">\r\n        <text class="label">待还金额</text>\r\n        <text class="value">¥356,000</text>\r\n        <view class="trend down">\r\n          <u-icon name="arrow-down" size="12"></u-icon>\r\n          <text>8.3%</text>\r\n        </view>\r\n      </view>\r\n    </view> '),
+          vue.createCommentVNode(" 日历选择弹窗 "),
+          vue.createVNode(_component_u_datetime_picker, {
+            show: showDatePicker.value,
+            modelValue: selectedDate.value,
+            "onUpdate:modelValue": _cache[1] || (_cache[1] = ($event) => selectedDate.value = $event),
+            mode: "year-month",
+            "min-date": vue.unref(minDate).getTime(),
+            "max-date": vue.unref(maxDate).getTime(),
+            onConfirm: onDateConfirm,
+            onCancel: _cache[2] || (_cache[2] = ($event) => showDatePicker.value = false)
+          }, null, 8, ["show", "modelValue", "min-date", "max-date"]),
           vue.createCommentVNode(" 流水记录 "),
           vue.createElementVNode("view", { class: "records-section" }, [
             vue.createElementVNode("view", { class: "section-header" }, [
@@ -38943,8 +40186,8 @@ ${i3}
       };
     }
   };
-  const PagesFinanceLoanDetail = /* @__PURE__ */ _export_sfc(_sfc_main$b, [["__scopeId", "data-v-a54e13d7"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/finance/loan-detail.vue"]]);
-  const _sfc_main$a = {
+  const PagesFinanceLoanDetail = /* @__PURE__ */ _export_sfc(_sfc_main$a, [["__scopeId", "data-v-a54e13d7"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/finance/loan-detail.vue"]]);
+  const _sfc_main$9 = {
     __name: "purchase-detail",
     setup(__props) {
       const tabList = vue.ref([
@@ -39020,7 +40263,7 @@ ${i3}
       });
       return (_ctx, _cache) => {
         const _component_u_loading_icon = resolveEasycom(vue.resolveDynamicComponent("u-loading-icon"), __easycom_3$5);
-        const _component_u_empty = resolveEasycom(vue.resolveDynamicComponent("u-empty"), __easycom_4$1);
+        const _component_u_empty = resolveEasycom(vue.resolveDynamicComponent("u-empty"), __easycom_4$2);
         return vue.openBlock(), vue.createElementBlock("view", { class: "container" }, [
           vue.createCommentVNode(" 状态筛选 "),
           vue.createElementVNode("view", { class: "filter-section" }, [
@@ -39173,8 +40416,8 @@ ${i3}
       };
     }
   };
-  const PagesFinancePurchaseDetail = /* @__PURE__ */ _export_sfc(_sfc_main$a, [["__scopeId", "data-v-46857259"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/finance/purchase-detail.vue"]]);
-  const _sfc_main$9 = {
+  const PagesFinancePurchaseDetail = /* @__PURE__ */ _export_sfc(_sfc_main$9, [["__scopeId", "data-v-46857259"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/finance/purchase-detail.vue"]]);
+  const _sfc_main$8 = {
     __name: "redeem-detail",
     setup(__props) {
       const tabList = vue.ref([
@@ -39248,7 +40491,7 @@ ${i3}
       });
       return (_ctx, _cache) => {
         const _component_u_loading_icon = resolveEasycom(vue.resolveDynamicComponent("u-loading-icon"), __easycom_3$5);
-        const _component_u_empty = resolveEasycom(vue.resolveDynamicComponent("u-empty"), __easycom_4$1);
+        const _component_u_empty = resolveEasycom(vue.resolveDynamicComponent("u-empty"), __easycom_4$2);
         return vue.openBlock(), vue.createElementBlock("view", { class: "container" }, [
           vue.createCommentVNode(" 状态筛选 "),
           vue.createElementVNode("view", { class: "filter-section" }, [
@@ -39401,8 +40644,8 @@ ${i3}
       };
     }
   };
-  const PagesFinanceRedeemDetail = /* @__PURE__ */ _export_sfc(_sfc_main$9, [["__scopeId", "data-v-439e385d"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/finance/redeem-detail.vue"]]);
-  const _sfc_main$8 = {
+  const PagesFinanceRedeemDetail = /* @__PURE__ */ _export_sfc(_sfc_main$8, [["__scopeId", "data-v-439e385d"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/finance/redeem-detail.vue"]]);
+  const _sfc_main$7 = {
     __name: "select",
     setup(__props) {
       const companyList = vue.ref([]);
@@ -39509,8 +40752,8 @@ ${i3}
       };
     }
   };
-  const PagesCompanySelect = /* @__PURE__ */ _export_sfc(_sfc_main$8, [["__scopeId", "data-v-8d555a29"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/company/select.vue"]]);
-  const _sfc_main$7 = {
+  const PagesCompanySelect = /* @__PURE__ */ _export_sfc(_sfc_main$7, [["__scopeId", "data-v-8d555a29"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/company/select.vue"]]);
+  const _sfc_main$6 = {
     __name: "edit",
     setup(__props) {
       const searchKeyword = vue.ref("");
@@ -39660,7 +40903,7 @@ ${i3}
         const _component_u_cell = resolveEasycom(vue.resolveDynamicComponent("u-cell"), __easycom_1$5);
         const _component_u_cell_group = resolveEasycom(vue.resolveDynamicComponent("u-cell-group"), __easycom_2$4);
         const _component_u_index_anchor = resolveEasycom(vue.resolveDynamicComponent("u-index-anchor"), __easycom_3$3);
-        const _component_u_popup = resolveEasycom(vue.resolveDynamicComponent("u-popup"), __easycom_4$2);
+        const _component_u_popup = resolveEasycom(vue.resolveDynamicComponent("u-popup"), __easycom_4$3);
         return vue.openBlock(), vue.createElementBlock("view", { class: "container" }, [
           vue.createElementVNode("view", { class: "form-section" }, [
             vue.createCommentVNode(" 联系人信息 "),
@@ -40003,8 +41246,8 @@ ${i3}
       };
     }
   };
-  const PagesAddressEdit = /* @__PURE__ */ _export_sfc(_sfc_main$7, [["__scopeId", "data-v-dcb1f0d8"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/address/edit.vue"]]);
-  const _sfc_main$6 = {
+  const PagesAddressEdit = /* @__PURE__ */ _export_sfc(_sfc_main$6, [["__scopeId", "data-v-dcb1f0d8"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/address/edit.vue"]]);
+  const _sfc_main$5 = {
     __name: "company-info",
     setup(__props) {
       const enterprise = vue.ref({});
@@ -40021,7 +41264,7 @@ ${i3}
         enterprise.value = uni.getStorageSync("enterprise");
       });
       return (_ctx, _cache) => {
-        const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$7);
+        const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$6);
         return vue.openBlock(), vue.createElementBlock("view", { class: "container" }, [
           vue.createCommentVNode(" 自定义导航栏 "),
           vue.createElementVNode("view", { class: "custom-navbar" }, [
@@ -40075,8 +41318,8 @@ ${i3}
       };
     }
   };
-  const PagesProfileCompanyInfo = /* @__PURE__ */ _export_sfc(_sfc_main$6, [["__scopeId", "data-v-f76a7136"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/profile/company-info.vue"]]);
-  const _sfc_main$5 = {
+  const PagesProfileCompanyInfo = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["__scopeId", "data-v-f76a7136"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/profile/company-info.vue"]]);
+  const _sfc_main$4 = {
     __name: "logistics",
     setup(__props) {
       const transNo = vue.ref("");
@@ -40240,8 +41483,8 @@ ${i3}
       };
     }
   };
-  const PagesOrderLogistics = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["__scopeId", "data-v-3afc20e7"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/order/logistics.vue"]]);
-  const _sfc_main$4 = {
+  const PagesOrderLogistics = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["__scopeId", "data-v-3afc20e7"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/order/logistics.vue"]]);
+  const _sfc_main$3 = {
     __name: "list",
     setup(__props) {
       const searchKeyword = vue.ref("");
@@ -40311,10 +41554,10 @@ ${i3}
         getInventoryList("refresh");
       });
       return (_ctx, _cache) => {
-        const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$7);
+        const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$6);
         const _component_u_search = resolveEasycom(vue.resolveDynamicComponent("u-search"), __easycom_1$7);
         const _component_u_loading_icon = resolveEasycom(vue.resolveDynamicComponent("u-loading-icon"), __easycom_3$5);
-        const _component_u_empty = resolveEasycom(vue.resolveDynamicComponent("u-empty"), __easycom_4$1);
+        const _component_u_empty = resolveEasycom(vue.resolveDynamicComponent("u-empty"), __easycom_4$2);
         return vue.openBlock(), vue.createElementBlock("view", { class: "container" }, [
           vue.createCommentVNode(" 搜索区域 "),
           vue.createElementVNode("view", { class: "search-section" }, [
@@ -40463,8 +41706,8 @@ ${i3}
       };
     }
   };
-  const PagesInventoryList = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["__scopeId", "data-v-5f517628"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/inventory/list.vue"]]);
-  const _sfc_main$3 = {
+  const PagesInventoryList = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["__scopeId", "data-v-5f517628"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/inventory/list.vue"]]);
+  const _sfc_main$2 = {
     __name: "detail",
     setup(__props) {
       const detail = vue.ref({});
@@ -40680,997 +41923,7 @@ ${i3}
       };
     }
   };
-  const PagesInventoryDetail = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["__scopeId", "data-v-43b88036"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/inventory/detail.vue"]]);
-  const props = defineMixin({
-    props: {
-      // 是否显示input
-      hasInput: {
-        type: Boolean,
-        default: () => false
-      },
-      placeholder: {
-        type: String,
-        default: () => "请选择"
-      },
-      format: {
-        type: String,
-        default: () => ""
-      },
-      // 是否打开组件
-      show: {
-        type: Boolean,
-        default: () => props$r.datetimePicker.show
-      },
-      // 弹出的方向，可选值为 top bottom right left center
-      popupMode: {
-        type: String,
-        default: () => props$r.picker.popupMode
-      },
-      // 是否展示顶部的操作栏
-      showToolbar: {
-        type: Boolean,
-        default: () => props$r.datetimePicker.showToolbar
-      },
-      // 工具栏右侧内容
-      toolbarRightSlot: {
-        type: Boolean,
-        default: false
-      },
-      // 绑定值
-      modelValue: {
-        type: [String, Number],
-        default: () => props$r.datetimePicker.value
-      },
-      // 顶部标题
-      title: {
-        type: String,
-        default: () => props$r.datetimePicker.title
-      },
-      // 展示格式，mode=date为日期选择，mode=time为时间选择，mode=year-month为年月选择，mode=datetime为日期时间选择
-      mode: {
-        type: String,
-        default: () => props$r.datetimePicker.mode
-      },
-      // 可选的最大时间
-      maxDate: {
-        type: Number,
-        // 最大默认值为后10年
-        default: () => props$r.datetimePicker.maxDate
-      },
-      // 可选的最小时间
-      minDate: {
-        type: Number,
-        // 最小默认值为前10年
-        default: () => props$r.datetimePicker.minDate
-      },
-      // 可选的最小小时，仅mode=time有效
-      minHour: {
-        type: Number,
-        default: () => props$r.datetimePicker.minHour
-      },
-      // 可选的最大小时，仅mode=time有效
-      maxHour: {
-        type: Number,
-        default: () => props$r.datetimePicker.maxHour
-      },
-      // 可选的最小分钟，仅mode=time有效
-      minMinute: {
-        type: Number,
-        default: () => props$r.datetimePicker.minMinute
-      },
-      // 可选的最大分钟，仅mode=time有效
-      maxMinute: {
-        type: Number,
-        default: () => props$r.datetimePicker.maxMinute
-      },
-      // 选项过滤函数
-      filter: {
-        type: [Function, null],
-        default: () => props$r.datetimePicker.filter
-      },
-      // 选项格式化函数
-      formatter: {
-        type: [Function, null],
-        default: () => props$r.datetimePicker.formatter
-      },
-      // 是否显示加载中状态
-      loading: {
-        type: Boolean,
-        default: () => props$r.datetimePicker.loading
-      },
-      // 各列中，单个选项的高度
-      itemHeight: {
-        type: [String, Number],
-        default: () => props$r.datetimePicker.itemHeight
-      },
-      // 取消按钮的文字
-      cancelText: {
-        type: String,
-        default: () => props$r.datetimePicker.cancelText
-      },
-      // 确认按钮的文字
-      confirmText: {
-        type: String,
-        default: () => props$r.datetimePicker.confirmText
-      },
-      // 取消按钮的颜色
-      cancelColor: {
-        type: String,
-        default: () => props$r.datetimePicker.cancelColor
-      },
-      // 确认按钮的颜色
-      confirmColor: {
-        type: String,
-        default: () => props$r.datetimePicker.confirmColor
-      },
-      // 每列中可见选项的数量
-      visibleItemCount: {
-        type: [String, Number],
-        default: () => props$r.datetimePicker.visibleItemCount
-      },
-      // 是否允许点击遮罩关闭选择器
-      closeOnClickOverlay: {
-        type: Boolean,
-        default: () => props$r.datetimePicker.closeOnClickOverlay
-      },
-      // 各列的默认索引
-      defaultIndex: {
-        type: Array,
-        default: () => props$r.datetimePicker.defaultIndex
-      }
-    }
-  });
-  var SECONDS_A_MINUTE = 60;
-  var SECONDS_A_HOUR = SECONDS_A_MINUTE * 60;
-  var SECONDS_A_DAY = SECONDS_A_HOUR * 24;
-  var SECONDS_A_WEEK = SECONDS_A_DAY * 7;
-  var MILLISECONDS_A_SECOND = 1e3;
-  var MILLISECONDS_A_MINUTE = SECONDS_A_MINUTE * MILLISECONDS_A_SECOND;
-  var MILLISECONDS_A_HOUR = SECONDS_A_HOUR * MILLISECONDS_A_SECOND;
-  var MILLISECONDS_A_DAY = SECONDS_A_DAY * MILLISECONDS_A_SECOND;
-  var MILLISECONDS_A_WEEK = SECONDS_A_WEEK * MILLISECONDS_A_SECOND;
-  var MS = "millisecond";
-  var S = "second";
-  var MIN = "minute";
-  var H = "hour";
-  var D = "day";
-  var W = "week";
-  var M = "month";
-  var Q = "quarter";
-  var Y = "year";
-  var DATE = "date";
-  var FORMAT_DEFAULT = "YYYY-MM-DDTHH:mm:ssZ";
-  var INVALID_DATE_STRING = "Invalid Date";
-  var REGEX_PARSE = /^(\d{4})[-/]?(\d{1,2})?[-/]?(\d{0,2})[Tt\s]*(\d{1,2})?:?(\d{1,2})?:?(\d{1,2})?[.:]?(\d+)?$/;
-  var REGEX_FORMAT = /\[([^\]]+)]|Y{1,4}|M{1,4}|D{1,2}|d{1,4}|H{1,2}|h{1,2}|a|A|m{1,2}|s{1,2}|Z{1,2}|SSS/g;
-  const en = {
-    name: "en",
-    weekdays: "Sunday_Monday_Tuesday_Wednesday_Thursday_Friday_Saturday".split("_"),
-    months: "January_February_March_April_May_June_July_August_September_October_November_December".split("_"),
-    ordinal: function ordinal(n2) {
-      var s2 = ["th", "st", "nd", "rd"];
-      var v2 = n2 % 100;
-      return "[" + n2 + (s2[(v2 - 20) % 10] || s2[v2] || s2[0]) + "]";
-    }
-  };
-  var padStart = function padStart2(string2, length, pad) {
-    var s2 = String(string2);
-    if (!s2 || s2.length >= length)
-      return string2;
-    return "" + Array(length + 1 - s2.length).join(pad) + string2;
-  };
-  var padZoneStr = function padZoneStr2(instance) {
-    var negMinutes = -instance.utcOffset();
-    var minutes = Math.abs(negMinutes);
-    var hourOffset = Math.floor(minutes / 60);
-    var minuteOffset = minutes % 60;
-    return (negMinutes <= 0 ? "+" : "-") + padStart(hourOffset, 2, "0") + ":" + padStart(minuteOffset, 2, "0");
-  };
-  var monthDiff = function monthDiff2(a2, b2) {
-    if (a2.date() < b2.date())
-      return -monthDiff2(b2, a2);
-    var wholeMonthDiff = (b2.year() - a2.year()) * 12 + (b2.month() - a2.month());
-    var anchor = a2.clone().add(wholeMonthDiff, M);
-    var c2 = b2 - anchor < 0;
-    var anchor2 = a2.clone().add(wholeMonthDiff + (c2 ? -1 : 1), M);
-    return +(-(wholeMonthDiff + (b2 - anchor) / (c2 ? anchor - anchor2 : anchor2 - anchor)) || 0);
-  };
-  var absFloor = function absFloor2(n2) {
-    return n2 < 0 ? Math.ceil(n2) || 0 : Math.floor(n2);
-  };
-  var prettyUnit = function prettyUnit2(u2) {
-    var special = {
-      M,
-      y: Y,
-      w: W,
-      d: D,
-      D: DATE,
-      h: H,
-      m: MIN,
-      s: S,
-      ms: MS,
-      Q
-    };
-    return special[u2] || String(u2 || "").toLowerCase().replace(/s$/, "");
-  };
-  var isUndefined$1 = function isUndefined2(s2) {
-    return s2 === void 0;
-  };
-  const U = {
-    s: padStart,
-    z: padZoneStr,
-    m: monthDiff,
-    a: absFloor,
-    p: prettyUnit,
-    u: isUndefined$1
-  };
-  var L = "en";
-  var Ls = {};
-  Ls[L] = en;
-  var IS_DAYJS = "$isDayjsObject";
-  var isDayjs = function isDayjs2(d2) {
-    return d2 instanceof Dayjs || !!(d2 && d2[IS_DAYJS]);
-  };
-  var parseLocale = function parseLocale2(preset, object3, isLocal) {
-    var l2;
-    if (!preset)
-      return L;
-    if (typeof preset === "string") {
-      var presetLower = preset.toLowerCase();
-      if (Ls[presetLower]) {
-        l2 = presetLower;
-      }
-      if (object3) {
-        Ls[presetLower] = object3;
-        l2 = presetLower;
-      }
-      var presetSplit = preset.split("-");
-      if (!l2 && presetSplit.length > 1) {
-        return parseLocale2(presetSplit[0]);
-      }
-    } else {
-      var name = preset.name;
-      Ls[name] = preset;
-      l2 = name;
-    }
-    if (!isLocal && l2)
-      L = l2;
-    return l2 || !isLocal && L;
-  };
-  var dayjs = function dayjs2(date3, c2) {
-    if (isDayjs(date3)) {
-      return date3.clone();
-    }
-    var cfg = typeof c2 === "object" ? c2 : {};
-    cfg.date = date3;
-    cfg.args = arguments;
-    return new Dayjs(cfg);
-  };
-  var wrapper = function wrapper2(date3, instance) {
-    return dayjs(date3, {
-      locale: instance.$L,
-      utc: instance.$u,
-      x: instance.$x,
-      $offset: instance.$offset
-      // todo: refactor; do not use this.$offset in you code
-    });
-  };
-  var Utils = U;
-  Utils.l = parseLocale;
-  Utils.i = isDayjs;
-  Utils.w = wrapper;
-  var parseDate = function parseDate2(cfg) {
-    var date3 = cfg.date, utc = cfg.utc;
-    if (date3 === null)
-      return /* @__PURE__ */ new Date(NaN);
-    if (Utils.u(date3))
-      return /* @__PURE__ */ new Date();
-    if (date3 instanceof Date)
-      return new Date(date3);
-    if (typeof date3 === "string" && !/Z$/i.test(date3)) {
-      var d2 = date3.match(REGEX_PARSE);
-      if (d2) {
-        var m2 = d2[2] - 1 || 0;
-        var ms2 = (d2[7] || "0").substring(0, 3);
-        if (utc) {
-          return new Date(Date.UTC(d2[1], m2, d2[3] || 1, d2[4] || 0, d2[5] || 0, d2[6] || 0, ms2));
-        }
-        return new Date(d2[1], m2, d2[3] || 1, d2[4] || 0, d2[5] || 0, d2[6] || 0, ms2);
-      }
-    }
-    return new Date(date3);
-  };
-  var Dayjs = /* @__PURE__ */ function() {
-    function Dayjs2(cfg) {
-      this.$L = parseLocale(cfg.locale, null, true);
-      this.parse(cfg);
-      this.$x = this.$x || cfg.x || {};
-      this[IS_DAYJS] = true;
-    }
-    var _proto = Dayjs2.prototype;
-    _proto.parse = function parse(cfg) {
-      this.$d = parseDate(cfg);
-      this.init();
-    };
-    _proto.init = function init2() {
-      var $d = this.$d;
-      this.$y = $d.getFullYear();
-      this.$M = $d.getMonth();
-      this.$D = $d.getDate();
-      this.$W = $d.getDay();
-      this.$H = $d.getHours();
-      this.$m = $d.getMinutes();
-      this.$s = $d.getSeconds();
-      this.$ms = $d.getMilliseconds();
-    };
-    _proto.$utils = function $utils() {
-      return Utils;
-    };
-    _proto.isValid = function isValid() {
-      return !(this.$d.toString() === INVALID_DATE_STRING);
-    };
-    _proto.isSame = function isSame(that2, units) {
-      var other = dayjs(that2);
-      return this.startOf(units) <= other && other <= this.endOf(units);
-    };
-    _proto.isAfter = function isAfter(that2, units) {
-      return dayjs(that2) < this.startOf(units);
-    };
-    _proto.isBefore = function isBefore(that2, units) {
-      return this.endOf(units) < dayjs(that2);
-    };
-    _proto.$g = function $g(input, get, set) {
-      if (Utils.u(input))
-        return this[get];
-      return this.set(set, input);
-    };
-    _proto.unix = function unix() {
-      return Math.floor(this.valueOf() / 1e3);
-    };
-    _proto.valueOf = function valueOf() {
-      return this.$d.getTime();
-    };
-    _proto.startOf = function startOf(units, _startOf) {
-      var _this = this;
-      var isStartOf = !Utils.u(_startOf) ? _startOf : true;
-      var unit = Utils.p(units);
-      var instanceFactory = function instanceFactory2(d2, m2) {
-        var ins = Utils.w(_this.$u ? Date.UTC(_this.$y, m2, d2) : new Date(_this.$y, m2, d2), _this);
-        return isStartOf ? ins : ins.endOf(D);
-      };
-      var instanceFactorySet = function instanceFactorySet2(method, slice) {
-        var argumentStart = [0, 0, 0, 0];
-        var argumentEnd = [23, 59, 59, 999];
-        return Utils.w(_this.toDate()[method].apply(
-          // eslint-disable-line prefer-spread
-          _this.toDate("s"),
-          (isStartOf ? argumentStart : argumentEnd).slice(slice)
-        ), _this);
-      };
-      var $W = this.$W, $M = this.$M, $D = this.$D;
-      var utcPad = "set" + (this.$u ? "UTC" : "");
-      switch (unit) {
-        case Y:
-          return isStartOf ? instanceFactory(1, 0) : instanceFactory(31, 11);
-        case M:
-          return isStartOf ? instanceFactory(1, $M) : instanceFactory(0, $M + 1);
-        case W: {
-          var weekStart = this.$locale().weekStart || 0;
-          var gap = ($W < weekStart ? $W + 7 : $W) - weekStart;
-          return instanceFactory(isStartOf ? $D - gap : $D + (6 - gap), $M);
-        }
-        case D:
-        case DATE:
-          return instanceFactorySet(utcPad + "Hours", 0);
-        case H:
-          return instanceFactorySet(utcPad + "Minutes", 1);
-        case MIN:
-          return instanceFactorySet(utcPad + "Seconds", 2);
-        case S:
-          return instanceFactorySet(utcPad + "Milliseconds", 3);
-        default:
-          return this.clone();
-      }
-    };
-    _proto.endOf = function endOf(arg) {
-      return this.startOf(arg, false);
-    };
-    _proto.$set = function $set(units, _int) {
-      var _C$D$C$DATE$C$M$C$Y$C;
-      var unit = Utils.p(units);
-      var utcPad = "set" + (this.$u ? "UTC" : "");
-      var name = (_C$D$C$DATE$C$M$C$Y$C = {}, _C$D$C$DATE$C$M$C$Y$C[D] = utcPad + "Date", _C$D$C$DATE$C$M$C$Y$C[DATE] = utcPad + "Date", _C$D$C$DATE$C$M$C$Y$C[M] = utcPad + "Month", _C$D$C$DATE$C$M$C$Y$C[Y] = utcPad + "FullYear", _C$D$C$DATE$C$M$C$Y$C[H] = utcPad + "Hours", _C$D$C$DATE$C$M$C$Y$C[MIN] = utcPad + "Minutes", _C$D$C$DATE$C$M$C$Y$C[S] = utcPad + "Seconds", _C$D$C$DATE$C$M$C$Y$C[MS] = utcPad + "Milliseconds", _C$D$C$DATE$C$M$C$Y$C)[unit];
-      var arg = unit === D ? this.$D + (_int - this.$W) : _int;
-      if (unit === M || unit === Y) {
-        var date3 = this.clone().set(DATE, 1);
-        date3.$d[name](arg);
-        date3.init();
-        this.$d = date3.set(DATE, Math.min(this.$D, date3.daysInMonth())).$d;
-      } else if (name)
-        this.$d[name](arg);
-      this.init();
-      return this;
-    };
-    _proto.set = function set(string2, _int2) {
-      return this.clone().$set(string2, _int2);
-    };
-    _proto.get = function get(unit) {
-      return this[Utils.p(unit)]();
-    };
-    _proto.add = function add(number3, units) {
-      var _this2 = this, _C$MIN$C$H$C$S$unit;
-      number3 = Number(number3);
-      var unit = Utils.p(units);
-      var instanceFactorySet = function instanceFactorySet2(n2) {
-        var d2 = dayjs(_this2);
-        return Utils.w(d2.date(d2.date() + Math.round(n2 * number3)), _this2);
-      };
-      if (unit === M) {
-        return this.set(M, this.$M + number3);
-      }
-      if (unit === Y) {
-        return this.set(Y, this.$y + number3);
-      }
-      if (unit === D) {
-        return instanceFactorySet(1);
-      }
-      if (unit === W) {
-        return instanceFactorySet(7);
-      }
-      var step = (_C$MIN$C$H$C$S$unit = {}, _C$MIN$C$H$C$S$unit[MIN] = MILLISECONDS_A_MINUTE, _C$MIN$C$H$C$S$unit[H] = MILLISECONDS_A_HOUR, _C$MIN$C$H$C$S$unit[S] = MILLISECONDS_A_SECOND, _C$MIN$C$H$C$S$unit)[unit] || 1;
-      var nextTimeStamp = this.$d.getTime() + number3 * step;
-      return Utils.w(nextTimeStamp, this);
-    };
-    _proto.subtract = function subtract(number3, string2) {
-      return this.add(number3 * -1, string2);
-    };
-    _proto.format = function format2(formatStr) {
-      var _this3 = this;
-      var locale = this.$locale();
-      if (!this.isValid())
-        return locale.invalidDate || INVALID_DATE_STRING;
-      var str = formatStr || FORMAT_DEFAULT;
-      var zoneStr = Utils.z(this);
-      var $H = this.$H, $m = this.$m, $M = this.$M;
-      var weekdays = locale.weekdays, months = locale.months, meridiem = locale.meridiem;
-      var getShort = function getShort2(arr, index2, full, length) {
-        return arr && (arr[index2] || arr(_this3, str)) || full[index2].slice(0, length);
-      };
-      var get$H = function get$H2(num) {
-        return Utils.s($H % 12 || 12, num, "0");
-      };
-      var meridiemFunc = meridiem || function(hour, minute, isLowercase) {
-        var m2 = hour < 12 ? "AM" : "PM";
-        return isLowercase ? m2.toLowerCase() : m2;
-      };
-      var matches = function matches2(match) {
-        switch (match) {
-          case "YY":
-            return String(_this3.$y).slice(-2);
-          case "YYYY":
-            return Utils.s(_this3.$y, 4, "0");
-          case "M":
-            return $M + 1;
-          case "MM":
-            return Utils.s($M + 1, 2, "0");
-          case "MMM":
-            return getShort(locale.monthsShort, $M, months, 3);
-          case "MMMM":
-            return getShort(months, $M);
-          case "D":
-            return _this3.$D;
-          case "DD":
-            return Utils.s(_this3.$D, 2, "0");
-          case "d":
-            return String(_this3.$W);
-          case "dd":
-            return getShort(locale.weekdaysMin, _this3.$W, weekdays, 2);
-          case "ddd":
-            return getShort(locale.weekdaysShort, _this3.$W, weekdays, 3);
-          case "dddd":
-            return weekdays[_this3.$W];
-          case "H":
-            return String($H);
-          case "HH":
-            return Utils.s($H, 2, "0");
-          case "h":
-            return get$H(1);
-          case "hh":
-            return get$H(2);
-          case "a":
-            return meridiemFunc($H, $m, true);
-          case "A":
-            return meridiemFunc($H, $m, false);
-          case "m":
-            return String($m);
-          case "mm":
-            return Utils.s($m, 2, "0");
-          case "s":
-            return String(_this3.$s);
-          case "ss":
-            return Utils.s(_this3.$s, 2, "0");
-          case "SSS":
-            return Utils.s(_this3.$ms, 3, "0");
-          case "Z":
-            return zoneStr;
-        }
-        return null;
-      };
-      return str.replace(REGEX_FORMAT, function(match, $1) {
-        return $1 || matches(match) || zoneStr.replace(":", "");
-      });
-    };
-    _proto.utcOffset = function utcOffset() {
-      return -Math.round(this.$d.getTimezoneOffset() / 15) * 15;
-    };
-    _proto.diff = function diff(input, units, _float) {
-      var _this4 = this;
-      var unit = Utils.p(units);
-      var that2 = dayjs(input);
-      var zoneDelta = (that2.utcOffset() - this.utcOffset()) * MILLISECONDS_A_MINUTE;
-      var diff2 = this - that2;
-      var getMonth = function getMonth2() {
-        return Utils.m(_this4, that2);
-      };
-      var result;
-      switch (unit) {
-        case Y:
-          result = getMonth() / 12;
-          break;
-        case M:
-          result = getMonth();
-          break;
-        case Q:
-          result = getMonth() / 3;
-          break;
-        case W:
-          result = (diff2 - zoneDelta) / MILLISECONDS_A_WEEK;
-          break;
-        case D:
-          result = (diff2 - zoneDelta) / MILLISECONDS_A_DAY;
-          break;
-        case H:
-          result = diff2 / MILLISECONDS_A_HOUR;
-          break;
-        case MIN:
-          result = diff2 / MILLISECONDS_A_MINUTE;
-          break;
-        case S:
-          result = diff2 / MILLISECONDS_A_SECOND;
-          break;
-        default:
-          result = diff2;
-          break;
-      }
-      return _float ? result : Utils.a(result);
-    };
-    _proto.daysInMonth = function daysInMonth() {
-      return this.endOf(M).$D;
-    };
-    _proto.$locale = function $locale() {
-      return Ls[this.$L];
-    };
-    _proto.locale = function locale(preset, object3) {
-      if (!preset)
-        return this.$L;
-      var that2 = this.clone();
-      var nextLocaleName = parseLocale(preset, object3, true);
-      if (nextLocaleName)
-        that2.$L = nextLocaleName;
-      return that2;
-    };
-    _proto.clone = function clone2() {
-      return Utils.w(this.$d, this);
-    };
-    _proto.toDate = function toDate() {
-      return new Date(this.valueOf());
-    };
-    _proto.toJSON = function toJSON() {
-      return this.isValid() ? this.toISOString() : null;
-    };
-    _proto.toISOString = function toISOString() {
-      return this.$d.toISOString();
-    };
-    _proto.toString = function toString2() {
-      return this.$d.toUTCString();
-    };
-    return Dayjs2;
-  }();
-  var proto = Dayjs.prototype;
-  dayjs.prototype = proto;
-  [["$ms", MS], ["$s", S], ["$m", MIN], ["$H", H], ["$W", D], ["$M", M], ["$y", Y], ["$D", DATE]].forEach(function(g2) {
-    proto[g2[1]] = function(input) {
-      return this.$g(input, g2[0], g2[1]);
-    };
-  });
-  dayjs.extend = function(plugin, option) {
-    if (!plugin.$i) {
-      plugin(option, Dayjs, dayjs);
-      plugin.$i = true;
-    }
-    return dayjs;
-  };
-  dayjs.locale = parseLocale;
-  dayjs.isDayjs = isDayjs;
-  dayjs.unix = function(timestamp) {
-    return dayjs(timestamp * 1e3);
-  };
-  dayjs.en = Ls[L];
-  dayjs.Ls = Ls;
-  dayjs.p = {};
-  function times(n2, iteratee) {
-    let index2 = -1;
-    const result = Array(n2 < 0 ? 0 : n2);
-    while (++index2 < n2) {
-      result[index2] = iteratee(index2);
-    }
-    return result;
-  }
-  const _sfc_main$2 = {
-    name: "up-datetime-picker",
-    mixins: [mpMixin, mixin, props],
-    data() {
-      return {
-        // 原来的日期选择器不方便，这里增加一个hasInput选项支持类似element的自带输入框的功能。
-        inputValue: "",
-        // 表单显示值
-        showByClickInput: false,
-        // 是否在hasInput模式下显示日期选择弹唱
-        columns: [],
-        innerDefaultIndex: [],
-        innerFormatter: (type2, value) => value
-      };
-    },
-    watch: {
-      show(newValue, oldValue) {
-        if (newValue) {
-          this.updateColumnValue(this.innerValue);
-        }
-      },
-      modelValue(newValue) {
-        this.init();
-      },
-      propsChange() {
-        this.init();
-      }
-    },
-    computed: {
-      // 如果以下这些变量发生了变化，意味着需要重新初始化各列的值
-      propsChange() {
-        return [this.mode, this.maxDate, this.minDate, this.minHour, this.maxHour, this.minMinute, this.maxMinute, this.filter];
-      }
-    },
-    mounted() {
-      this.init();
-    },
-    emits: ["close", "cancel", "confirm", "change", "update:modelValue"],
-    methods: {
-      getInputValue(newValue) {
-        if (newValue == "" || !newValue || newValue == void 0) {
-          this.inputValue = "";
-          return;
-        }
-        if (this.mode == "time") {
-          this.inputValue = newValue;
-        } else {
-          if (this.format) {
-            this.inputValue = dayjs(newValue).format(this.format);
-          } else {
-            let format2 = "";
-            switch (this.mode) {
-              case "date":
-                format2 = "YYYY-MM-DD";
-                break;
-              case "year-month":
-                format2 = "YYYY-MM";
-                break;
-              case "datetime":
-                format2 = "YYYY-MM-DD HH:mm";
-                break;
-              case "time":
-                format2 = "HH:mm";
-                break;
-            }
-            this.inputValue = dayjs(newValue).format(format2);
-          }
-        }
-      },
-      init() {
-        this.innerValue = this.correctValue(this.modelValue);
-        this.updateColumnValue(this.innerValue);
-        this.getInputValue(this.innerValue);
-      },
-      // 在微信小程序中，不支持将函数当做props参数，故只能通过ref形式调用
-      setFormatter(e2) {
-        this.innerFormatter = e2;
-      },
-      // 关闭选择器
-      close() {
-        if (this.closeOnClickOverlay) {
-          this.$emit("close");
-        }
-      },
-      // 点击工具栏的取消按钮
-      cancel() {
-        if (this.hasInput) {
-          this.showByClickInput = false;
-        }
-        this.$emit("cancel");
-      },
-      // 点击工具栏的确定按钮
-      confirm() {
-        this.$emit("update:modelValue", this.innerValue);
-        if (this.hasInput) {
-          this.getInputValue(this.innerValue);
-          this.showByClickInput = false;
-        }
-        this.$emit("confirm", {
-          value: this.innerValue,
-          mode: this.mode
-        });
-      },
-      //用正则截取输出值,当出现多组数字时,抛出错误
-      intercept(e2, type2) {
-        let judge = e2.match(/\d+/g);
-        if (judge.length > 1) {
-          error("请勿在过滤或格式化函数时添加数字");
-          return 0;
-        } else if (type2 && judge[0].length == 4) {
-          return judge[0];
-        } else if (judge[0].length > 2) {
-          error("请勿在过滤或格式化函数时添加数字");
-          return 0;
-        } else {
-          return judge[0];
-        }
-      },
-      // 列发生变化时触发
-      change(e2) {
-        const { indexs, values } = e2;
-        let selectValue = "";
-        if (this.mode === "time") {
-          selectValue = `${this.intercept(values[0][indexs[0]])}:${this.intercept(values[1][indexs[1]])}`;
-        } else {
-          const year = parseInt(this.intercept(values[0][indexs[0]], "year"));
-          const month = parseInt(this.intercept(values[1][indexs[1]]));
-          let date3 = parseInt(values[2] ? this.intercept(values[2][indexs[2]]) : 1);
-          let hour = 0, minute = 0;
-          const maxDate = dayjs(`${year}-${month}`).daysInMonth();
-          if (this.mode === "year-month") {
-            date3 = 1;
-          }
-          date3 = Math.min(maxDate, date3);
-          if (this.mode === "datetime") {
-            hour = parseInt(this.intercept(values[3][indexs[3]]));
-            minute = parseInt(this.intercept(values[4][indexs[4]]));
-          }
-          selectValue = Number(new Date(year, month - 1, date3, hour, minute));
-        }
-        selectValue = this.correctValue(selectValue);
-        this.innerValue = selectValue;
-        this.updateColumnValue(selectValue);
-        this.$emit("change", {
-          value: selectValue,
-          // 微信小程序不能传递this实例，会因为循环引用而报错
-          // picker: this.$refs.picker,
-          mode: this.mode
-        });
-      },
-      // 更新各列的值，进行补0、格式化等操作
-      updateColumnValue(value) {
-        this.innerValue = value;
-        this.updateColumns();
-        setTimeout(() => {
-          this.updateIndexs(value);
-        }, 0);
-      },
-      // 更新索引
-      updateIndexs(value) {
-        let values = [];
-        const formatter = this.formatter || this.innerFormatter;
-        if (this.mode === "time") {
-          const timeArr = value.split(":");
-          values = [formatter("hour", timeArr[0]), formatter("minute", timeArr[1])];
-        } else {
-          values = [
-            formatter("year", `${dayjs(value).year()}`),
-            // 月份补0
-            formatter("month", padZero(dayjs(value).month() + 1))
-          ];
-          if (this.mode === "date") {
-            values.push(formatter("day", padZero(dayjs(value).date())));
-          }
-          if (this.mode === "datetime") {
-            values.push(formatter("day", padZero(dayjs(value).date())), formatter("hour", padZero(dayjs(value).hour())), formatter("minute", padZero(dayjs(value).minute())));
-          }
-        }
-        const indexs = this.columns.map((column, index2) => {
-          return Math.max(0, column.findIndex((item) => item === values[index2]));
-        });
-        this.innerDefaultIndex = indexs;
-      },
-      // 更新各列的值
-      updateColumns() {
-        const formatter = this.formatter || this.innerFormatter;
-        const results = this.getOriginColumns().map((column) => column.values.map((value) => formatter(column.type, value)));
-        this.columns = results;
-      },
-      getOriginColumns() {
-        const results = this.getRanges().map(({ type: type2, range: range2 }) => {
-          let values = times(range2[1] - range2[0] + 1, (index2) => {
-            let value = range2[0] + index2;
-            value = type2 === "year" ? `${value}` : padZero(value);
-            return value;
-          });
-          if (this.filter) {
-            values = this.filter(type2, values);
-            if (!values || values && values.length == 0) {
-              formatAppLog("log", "at node_modules/uview-plus/components/u-datetime-picker/u-datetime-picker.vue:347", "日期filter结果不能为空");
-            }
-          }
-          return { type: type2, values };
-        });
-        return results;
-      },
-      // 通过最大值和最小值生成数组
-      generateArray(start, end) {
-        return Array.from(new Array(end + 1).keys()).slice(start);
-      },
-      // 得出合法的时间
-      correctValue(value) {
-        const isDateMode = this.mode !== "time";
-        if (isDateMode && !dayjs.unix(value).isValid()) {
-          value = this.minDate;
-        } else if (!isDateMode && !value) {
-          value = `${padZero(this.minHour)}:${padZero(this.minMinute)}`;
-        }
-        if (!isDateMode) {
-          if (String(value).indexOf(":") === -1)
-            return error("时间错误，请传递如12:24的格式");
-          let [hour, minute] = value.split(":");
-          hour = padZero(range$1(this.minHour, this.maxHour, Number(hour)));
-          minute = padZero(range$1(this.minMinute, this.maxMinute, Number(minute)));
-          return `${hour}:${minute}`;
-        } else {
-          value = dayjs(value).isBefore(dayjs(this.minDate)) ? this.minDate : value;
-          value = dayjs(value).isAfter(dayjs(this.maxDate)) ? this.maxDate : value;
-          return value;
-        }
-      },
-      // 获取每列的最大和最小值
-      getRanges() {
-        if (this.mode === "time") {
-          return [
-            {
-              type: "hour",
-              range: [this.minHour, this.maxHour]
-            },
-            {
-              type: "minute",
-              range: [this.minMinute, this.maxMinute]
-            }
-          ];
-        }
-        const { maxYear, maxDate, maxMonth, maxHour, maxMinute } = this.getBoundary("max", this.innerValue);
-        const { minYear, minDate, minMonth, minHour, minMinute } = this.getBoundary("min", this.innerValue);
-        const result = [
-          {
-            type: "year",
-            range: [minYear, maxYear]
-          },
-          {
-            type: "month",
-            range: [minMonth, maxMonth]
-          },
-          {
-            type: "day",
-            range: [minDate, maxDate]
-          },
-          {
-            type: "hour",
-            range: [minHour, maxHour]
-          },
-          {
-            type: "minute",
-            range: [minMinute, maxMinute]
-          }
-        ];
-        if (this.mode === "date")
-          result.splice(3, 2);
-        if (this.mode === "year-month")
-          result.splice(2, 3);
-        return result;
-      },
-      // 根据minDate、maxDate、minHour、maxHour等边界值，判断各列的开始和结束边界值
-      getBoundary(type2, innerValue) {
-        const value = new Date(innerValue);
-        const boundary = new Date(this[`${type2}Date`]);
-        const year = dayjs(boundary).year();
-        let month = 1;
-        let date3 = 1;
-        let hour = 0;
-        let minute = 0;
-        if (type2 === "max") {
-          month = 12;
-          date3 = dayjs(value).daysInMonth();
-          hour = 23;
-          minute = 59;
-        }
-        if (dayjs(value).year() === year) {
-          month = dayjs(boundary).month() + 1;
-          if (dayjs(value).month() + 1 === month) {
-            date3 = dayjs(boundary).date();
-            if (dayjs(value).date() === date3) {
-              hour = dayjs(boundary).hour();
-              if (dayjs(value).hour() === hour) {
-                minute = dayjs(boundary).minute();
-              }
-            }
-          }
-        }
-        return {
-          [`${type2}Year`]: year,
-          [`${type2}Month`]: month,
-          [`${type2}Date`]: date3,
-          [`${type2}Hour`]: hour,
-          [`${type2}Minute`]: minute
-        };
-      }
-    }
-  };
-  function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_up_input = vue.resolveComponent("up-input");
-    const _component_u_picker = resolveEasycom(vue.resolveDynamicComponent("u-picker"), __easycom_0$2);
-    return vue.openBlock(), vue.createElementBlock("view", { class: "u-datetime-picker" }, [
-      _ctx.hasInput ? (vue.openBlock(), vue.createElementBlock("view", {
-        key: 0,
-        class: "u-datetime-picker__has-input",
-        onClick: _cache[1] || (_cache[1] = ($event) => $data.showByClickInput = !$data.showByClickInput)
-      }, [
-        vue.renderSlot(_ctx.$slots, "trigger", { value: $data.inputValue }, () => [
-          vue.createVNode(_component_up_input, {
-            placeholder: _ctx.placeholder,
-            readonly: !!$data.showByClickInput,
-            border: "surround",
-            modelValue: $data.inputValue,
-            "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => $data.inputValue = $event)
-          }, null, 8, ["placeholder", "readonly", "modelValue"]),
-          vue.createElementVNode("div", { class: "input-cover" })
-        ], true)
-      ])) : vue.createCommentVNode("v-if", true),
-      vue.createVNode(_component_u_picker, {
-        ref: "picker",
-        show: _ctx.show || _ctx.hasInput && $data.showByClickInput,
-        popupMode: _ctx.popupMode,
-        closeOnClickOverlay: _ctx.closeOnClickOverlay,
-        columns: $data.columns,
-        title: _ctx.title,
-        itemHeight: _ctx.itemHeight,
-        showToolbar: _ctx.showToolbar,
-        visibleItemCount: _ctx.visibleItemCount,
-        defaultIndex: $data.innerDefaultIndex,
-        cancelText: _ctx.cancelText,
-        confirmText: _ctx.confirmText,
-        cancelColor: _ctx.cancelColor,
-        confirmColor: _ctx.confirmColor,
-        toolbarRightSlot: _ctx.toolbarRightSlot,
-        onClose: $options.close,
-        onCancel: $options.cancel,
-        onConfirm: $options.confirm,
-        onChange: $options.change
-      }, {
-        "toolbar-right": vue.withCtx(() => [
-          vue.renderSlot(_ctx.$slots, "toolbar-right", {}, void 0, true)
-        ]),
-        "toolbar-bottom": vue.withCtx(() => [
-          vue.renderSlot(_ctx.$slots, "toolbar-bottom", {}, void 0, true)
-        ]),
-        _: 3
-        /* FORWARDED */
-      }, 8, ["show", "popupMode", "closeOnClickOverlay", "columns", "title", "itemHeight", "showToolbar", "visibleItemCount", "defaultIndex", "cancelText", "confirmText", "cancelColor", "confirmColor", "toolbarRightSlot", "onClose", "onCancel", "onConfirm", "onChange"])
-    ]);
-  }
-  const __easycom_2 = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["render", _sfc_render], ["__scopeId", "data-v-e39cc2d0"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/node_modules/uview-plus/components/u-datetime-picker/u-datetime-picker.vue"]]);
+  const PagesInventoryDetail = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["__scopeId", "data-v-43b88036"], ["__file", "C:/Users/jw/Desktop/CHIDAO-UNIAPP/pages/inventory/detail.vue"]]);
   const _sfc_main$1 = {
     __name: "flow",
     setup(__props) {
@@ -41777,11 +42030,11 @@ ${i3}
         getRecordList("refresh");
       });
       return (_ctx, _cache) => {
-        const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$7);
+        const _component_u_icon = resolveEasycom(vue.resolveDynamicComponent("u-icon"), __easycom_0$6);
         const _component_u_search = resolveEasycom(vue.resolveDynamicComponent("u-search"), __easycom_1$7);
-        const _component_u_datetime_picker = resolveEasycom(vue.resolveDynamicComponent("u-datetime-picker"), __easycom_2);
+        const _component_u_datetime_picker = resolveEasycom(vue.resolveDynamicComponent("u-datetime-picker"), __easycom_2$3);
         const _component_u_loading_icon = resolveEasycom(vue.resolveDynamicComponent("u-loading-icon"), __easycom_3$5);
-        const _component_u_empty = resolveEasycom(vue.resolveDynamicComponent("u-empty"), __easycom_4$1);
+        const _component_u_empty = resolveEasycom(vue.resolveDynamicComponent("u-empty"), __easycom_4$2);
         return vue.openBlock(), vue.createElementBlock("view", { class: "container" }, [
           vue.createCommentVNode(" 日期选择区域 "),
           vue.createElementVNode("view", { class: "date-picker-section" }, [
@@ -41960,12 +42213,12 @@ ${i3}
   __definePage("pages/order/create", PagesOrderCreate);
   __definePage("pages/order/detail", PagesOrderDetail);
   __definePage("pages/address/list", PagesAddressList);
+  __definePage("pages/setting/account", PagesSettingAccount);
   __definePage("pages/address/manage", PagesAddressManage);
   __definePage("pages/address/add", PagesAddressAdd);
   __definePage("pages/goods/add", PagesGoodsAdd);
   __definePage("pages/order/list", PagesOrderList);
   __definePage("pages/profile/edit", PagesProfileEdit);
-  __definePage("pages/settings/account", PagesSettingsAccount);
   __definePage("pages/about/index", PagesAboutIndex);
   __definePage("pages/invoice/list", PagesInvoiceList);
   __definePage("pages/coupon/list", PagesCouponList);

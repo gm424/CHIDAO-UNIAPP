@@ -29,7 +29,7 @@ const dataObj = ref({
   host: '',
 })
 
-const fileList = ref([{ url: props.value }])
+const fileList = ref([])
 
 // 新增图片
 const handleAfterRead = async (event) => {

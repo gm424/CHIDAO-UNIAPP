@@ -1,92 +1,125 @@
 <template>
   <view class="container">
     <!-- 未申请状态 -->
-    <view v-if="financeStatus === 'none'" class="promo-section">
-      <view class="banner animate-fadeIn">
-        <image src="https://cdn-icons-png.flaticon.com/512/4021/4021708.png" mode="aspectFit" />
+    <view v-if="financeStatus === 'none' || financeStatus === '4'" class="promo-section">
+      <view class="banner">
         <view class="banner-text">
           <text class="title">供应链金融服务</text>
           <text class="subtitle">专业金融服务 · 助力企业腾飞</text>
           <view class="stats">
             <view class="stat-item">
-              <u-icon name="star-fill" color="#fff" size="28"></u-icon>
-              <text class="number">10000+</text>
+              <u-icon
+                name="http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/企业服务_1735549003704.png"
+                color="#fff"
+                size="20"
+              ></u-icon>
               <text class="label">服务企业</text>
+              <text class="number">10,000+</text>
             </view>
             <view class="stat-item">
-              <u-icon name="checkmark-circle-fill" color="#fff" size="28"></u-icon>
-              <text class="number">99%</text>
+              <u-icon
+                name="http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/审批_1735549017758.png"
+                color="#fff"
+                size="20"
+              ></u-icon>
+
               <text class="label">审批通过率</text>
+              <text class="number">99%</text>
             </view>
           </view>
         </view>
       </view>
-
-      <view class="feature-list">
-        <view class="feature-item animate-fadeInUp delay-200">
-          <view class="feature-icon">
-            <u-icon name="clock-fill" color="#ffb200" size="32"></u-icon>
-          </view>
-          <text class="feature-title">快速审批</text>
-          <text class="feature-desc">最快1个工作日完成审核</text>
-        </view>
-        <view class="feature-item animate-fadeInUp delay-400">
-          <view class="feature-icon">
-            <u-icon name="rmb-circle-fill" color="#ffb200" size="32"></u-icon>
-          </view>
-          <text class="feature-title">灵活额度</text>
-          <text class="feature-desc">最高可贷1000万</text>
-        </view>
-        <view class="feature-item animate-fadeInUp delay-600">
-          <view class="feature-icon">
-            <u-icon name="gift-fill" color="#ffb200" size="32"></u-icon>
-          </view>
-          <text class="feature-title">优惠利率</text>
-          <text class="feature-desc">年化利率低至4.35%</text>
-        </view>
-      </view>
-
-      <view class="process-section">
-        <text class="section-title">申请流程</text>
-        <view class="process-list">
-          <view class="process-item">
-            <view class="process-icon">
-              <u-icon name="edit-pen" size="24" color="#1677ff"></u-icon>
+      <view class="list">
+        <view class="feature-list">
+          <view class="feature-item">
+            <view class="feature-icon">
+              <u-icon
+                name="http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/快速审批_1735548910679.png"
+                color="#ffb200"
+                size="60"
+              ></u-icon>
             </view>
-            <text class="process-text">提交申请</text>
+            <text class="feature-title">快速审批</text>
+            <text class="feature-desc">最快1个工作日完成审核</text>
           </view>
-          <view class="process-arrow">
-            <u-icon name="arrow-right" size="20" color="#ddd"></u-icon>
-          </view>
-          <view class="process-item">
-            <view class="process-icon">
-              <u-icon name="file-text" size="24" color="#1677ff"></u-icon>
+          <view class="feature-item">
+            <view class="feature-icon">
+              <u-icon
+                name="http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/灵活额度_1735548929862.png"
+                color="#ffb200"
+                size="60"
+              ></u-icon>
             </view>
-            <text class="process-text">资料审核</text>
+            <text class="feature-title">灵活额度</text>
+            <text class="feature-desc">最高可贷<br />1,000万</text>
           </view>
-          <view class="process-arrow">
-            <u-icon name="arrow-right" size="20" color="#ddd"></u-icon>
-          </view>
-          <view class="process-item">
-            <view class="process-icon">
-              <u-icon name="star" size="24" color="#1677ff"></u-icon>
+          <view class="feature-item">
+            <view class="feature-icon">
+              <u-icon
+                name="http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/优惠利率_1735548945690.png"
+                color="#ffb200"
+                size="60"
+              ></u-icon>
             </view>
-            <text class="process-text">额度授信</text>
+            <text class="feature-title">优惠利率</text>
+            <text class="feature-desc">年化利率低至4.35%</text>
           </view>
         </view>
-      </view>
 
-      <view class="bottom-section animate-fadeInUp delay-800">
-        <button class="apply-btn" @tap="navigateToApply">
-          <text>立即申请</text>
-          <u-icon name="arrow-right" color="#fff" size="20"></u-icon>
-        </button>
-        <text class="apply-tips">预计2分钟完成申请</text>
+        <view class="process-section">
+          <text class="section-title">申请流程</text>
+          <view class="process-list">
+            <view class="process-item">
+              <view class="process-icon">
+                <u-icon
+                  name="http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/提交申请_1735548967727.png"
+                  size="80"
+                ></u-icon>
+              </view>
+              <text class="process-text">提交申请</text>
+            </view>
+            <view class="process-arrow">
+              <u-icon name="http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/箭头_1735548892503.png" size="30"></u-icon>
+            </view>
+            <view class="process-item">
+              <view class="process-icon">
+                <u-icon
+                  name="http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/资料审核_1735548979630.png"
+                  size="80"
+                ></u-icon>
+              </view>
+              <text class="process-text">资料审核</text>
+            </view>
+            <view class="process-arrow">
+              <u-icon name="http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/箭头_1735548892503.png" size="30"></u-icon>
+            </view>
+            <view class="process-item">
+              <view class="process-icon">
+                <u-icon
+                  name="http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/额度授信_1735548877057.png"
+                  size="80"
+                ></u-icon>
+              </view>
+              <text class="process-text">额度授信</text>
+            </view>
+          </view>
+        </view>
+
+        <view class="bottom-section">
+          <button class="apply-btn" @tap="navigateToApply">
+            <text>立即申请</text>
+          </button>
+          <text class="apply-tips">预计2分钟完成申请</text>
+        </view>
       </view>
     </view>
 
     <!-- 待审核状态 -->
-    <view v-else-if="financeStatus === '1' || financeStatus === '2'" class="pending-section animate-fadeIn">
+    <view
+      v-else-if="financeStatus === '1' || financeStatus === '2'"
+      class="pending-section animate-fadeIn"
+      style="margin-top: 50rpx"
+    >
       <!-- 审核进度卡片 -->
       <view class="progress-card">
         <view class="progress-header">
@@ -170,7 +203,7 @@
     </view>
 
     <!-- 审核未通过状态 -->
-    <view v-else-if="financeStatus === 'rejected'" class="rejected-section">
+    <view v-else-if="financeStatus === 'rejected'" class="rejected-section" style="margin-top: 50rpx">
       <view class="status-icon">
         <u-icon name="close-circle" color="#ff4d4f" size="80"></u-icon>
       </view>
@@ -180,8 +213,9 @@
     </view>
 
     <!-- 审核通过状态 -->
-    <view v-else-if="financeStatus === '5'" class="approved-section">
+    <view v-else-if="financeStatus === '5'" class="approved-section" style="margin-top: 50rpx">
       <!-- 授信卡片滑动区 -->
+      <view style="font-weight: 500; font-size: 46rpx; margin: 10rpx 5rpx">供应链金融</view>
       <scroll-view scroll-x class="credit-cards" :show-scrollbar="false">
         <view class="credit-card animate-slideIn" v-for="(item, index) in customerSupplierRelList" :key="index">
           <view class="credit-header">
@@ -223,6 +257,13 @@
       <view class="detail-section">
         <view class="section-header">
           <text class="title">授信明细</text>
+          <!-- 日期选择区域 -->
+          <view class="date-picker-section">
+            <view class="date-display" @tap="showCalendar">
+              <text class="selected-date">{{ formatDays(selectedDate) }}</text>
+              <u-icon name="calendar" size="24" color="#666"></u-icon>
+            </view>
+          </view>
         </view>
 
         <view class="credit-list">
@@ -255,6 +296,16 @@
         <view class="empty-state" v-if="creditList.length === 0">
           <u-empty mode="order" text="暂无订单数据"></u-empty>
         </view>
+        <!-- 日历选择弹窗 -->
+        <u-datetime-picker
+          :show="showDatePicker"
+          v-model="selectedDate"
+          mode="year-month"
+          :min-date="minDate.getTime()"
+          :max-date="maxDate.getTime()"
+          @confirm="onDateConfirm"
+          @cancel="showDatePicker = false"
+        ></u-datetime-picker>
       </view>
     </view>
   </view>
@@ -267,8 +318,10 @@ import { getAction } from '../../common/store/manage'
 import { onShow } from '@dcloudio/uni-app'
 const financeStatus = ref('none') // none, pending, rejected, approved
 const rejectReason = ref('')
-
+const selectedDate = ref(Date.now())
 const loading = ref(false)
+const minDate = new Date('2020-01-01')
+const maxDate = new Date()
 // 模拟数据
 const creditDetails = ref([])
 const loanRecords = ref([])
@@ -294,7 +347,29 @@ const contactService = () => {
     icon: 'none',
   })
 }
+// 格式化日期显示
+const formatDays = (timestamp) => {
+  if (!timestamp) {
+    const now = new Date()
+    return `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}`
+  }
 
+  try {
+    const date = new Date(Number(timestamp))
+    if (isNaN(date.getTime())) {
+      const now = new Date()
+      return `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}`
+    }
+    const year = date.getFullYear()
+    const month = String(date.getMonth() + 1).padStart(2, '0')
+    return `${year}-${month}`
+  } catch (error) {
+    console.error('日期格式化错误:', error)
+    const now = new Date()
+
+    return `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}`
+  }
+}
 onShow(() => {
   // 获取用户金融状态
   checkFinanceStatus()
@@ -330,7 +405,7 @@ const checkFinanceStatus = () => {
   getAction('/fms/customerApply/queryByRole', { businessType: 'LOAN' }).then((res) => {
     if (res.success) {
       financeStatus.value = res.result ? res.result.status : 'none'
-      if (financeStatus.value === '3' || financeStatus.value === '4') {
+      if (financeStatus.value === '3') {
         uni.navigateTo({
           url: '/pages/finance/apply',
         })
@@ -381,7 +456,7 @@ const functionList = ref([
   {
     title: '借贷流水',
     desc: '查看借贷记录',
-    icon: 'file-text',
+    icon: 'http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/借贷流水_1735543644762.png',
     type: 'loan',
     count: '12笔',
     bgColor: 'rgba(43, 92, 255, 0.1)',
@@ -390,7 +465,7 @@ const functionList = ref([
   {
     title: '我的采购',
     desc: '查看采购订单',
-    icon: 'shopping-cart',
+    icon: 'http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/采购_1735543594093.png',
     type: 'purchase',
     count: '8单',
     bgColor: 'rgba(54, 207, 201, 0.1)',
@@ -399,7 +474,7 @@ const functionList = ref([
   {
     title: '我的赎货',
     desc: '查看赎货记录',
-    icon: 'gift',
+    icon: 'http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/赎货_1735543520919.png',
     type: 'redeem',
     count: '5单',
     bgColor: 'rgba(255, 77, 79, 0.1)',
@@ -409,7 +484,7 @@ const functionList = ref([
 
 // 授信列表数据
 const creditList = ref([])
-
+const showDatePicker = ref(false)
 // 分页相关参数
 const pageNo = ref(1)
 const pageSize = ref(10)
@@ -421,11 +496,17 @@ const isRefreshing = ref(false)
 const getCreditList = async (type) => {
   loading.value = true
   try {
+    const date = new Date(selectedDate.value)
+    const year = date.getFullYear()
+    const month = date.getMonth() + 1
+    const days = new Date(year, month, 0).getDate()
     const res = await getAction('/fms/creditUsage/list', {
       pageNo: pageNo.value,
       pageSize: pageSize.value,
       column: 'createTime',
       order: 'desc',
+      createTimeBegin: year + '-' + month + '-' + '01',
+      createTimeEnd: year + '-' + month + '-' + days,
     })
 
     if (res.success) {
@@ -450,7 +531,14 @@ onReachBottom(() => {
   pageNo.value++
   getCreditList()
 })
-
+// 日期选择确认
+const onDateConfirm = (e) => {
+  selectedDate.value = Number(e.value)
+  console.log('选择的时间戳:', selectedDate.value, e, formatDays(selectedDate.value))
+  showDatePicker.value = false
+  pageNo.value = 1
+  getCreditList('refresh')
+}
 // 添加下拉刷新处理
 onPullDownRefresh(async () => {
   isRefreshing.value = true
@@ -458,7 +546,10 @@ onPullDownRefresh(async () => {
   await getCreditList('refresh')
   uni.stopPullDownRefresh()
 })
-
+// 显示日历选择器
+const showCalendar = () => {
+  showDatePicker.value = true
+}
 // 初始化
 onMounted(() => {
   getCreditList('refresh')
@@ -471,81 +562,102 @@ onMounted(() => {
 .container {
   min-height: 100vh;
   background: #fff;
-  padding: 20rpx;
+  position: relative;
 }
-
-.promo-section {
-  .banner {
-    background: linear-gradient(135deg, #ffb715, #f7c248);
-    border-radius: 20rpx;
-    padding: 40rpx;
+.date-picker-section {
+  padding: 4rpx 20rpx;
+  background: #fff;
+  border: 1rpx solid #ececec;
+  border-radius: 10rpx;
+  .date-display {
     display: flex;
     align-items: center;
-    margin-bottom: 40rpx;
-    box-shadow: 0 4rpx 24rpx rgba(255, 198, 43, 0.15);
-    transform: translateY(0);
-    transition: transform 0.3s ease;
+    justify-content: center;
+
+    // background: #f5f7fa;
+    border-radius: 12rpx;
+    gap: 12rpx;
+
+    .selected-date {
+      font-size: 28rpx;
+      color: #333;
+      font-weight: 500;
+    }
 
     &:active {
-      transform: translateY(2rpx);
+      opacity: 0.8;
     }
+  }
+}
+.promo-section {
+  .banner {
+    background-image: url('http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/Mocard_1735548862197.png');
+    padding: 40rpx;
+    background-size: cover; /* 背景图片填充整个容器，可能会裁剪部分内容 */
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
 
-    image {
-      width: 160rpx;
-      height: 160rpx;
-      animation: float 3s ease-in-out infinite;
-    }
-
+    margin-bottom: 40rpx;
+    height: 35vh;
     .banner-text {
       flex: 1;
       color: #fff;
-      padding-left: 40rpx;
-
+      padding-left: 20rpx;
+      margin-top: 5vh;
       .title {
         font-size: 40rpx;
         font-weight: bold;
-        margin-bottom: 20rpx;
+        margin-bottom: 10rpx;
         display: block;
       }
 
       .subtitle {
-        font-size: 28rpx;
+        font-size: 23rpx;
         opacity: 0.9;
-        margin-bottom: 30rpx;
+        margin-bottom: 20rpx;
       }
 
       .stats {
         display: flex;
-        gap: 40rpx;
         margin-top: 30rpx;
-
+        flex-direction: column;
         .stat-item {
           display: flex;
           flex-direction: column;
           align-items: center;
-
+          flex-direction: row;
+          border-radius: 30rpx;
+          border: 1rpx solid #fff;
+          padding: 3rpx;
+          width: 40%;
+          margin-top: 10rpx;
           .number {
-            font-size: 32rpx;
-            font-weight: bold;
+            font-size: 24rpx;
             display: block;
-            margin-bottom: 8rpx;
           }
-
           .label {
             font-size: 24rpx;
             opacity: 0.8;
+            margin-right: 5rpx;
           }
         }
       }
     }
   }
-
+  .list {
+    position: absolute;
+    top: 27vh;
+  }
   .feature-list {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 60rpx;
-    padding: 0 20rpx;
+    margin: 0 auto;
 
+    padding: 20rpx 20rpx;
+    width: 88%;
+    border-radius: 30rpx;
+    background-color: #fff;
     .feature-item {
       flex: 1;
       text-align: center;
@@ -553,8 +665,6 @@ onMounted(() => {
       background: #fff;
       border-radius: 16rpx;
       margin: 0 10rpx;
-      box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.05);
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       position: relative;
       overflow: hidden;
 
@@ -567,44 +677,25 @@ onMounted(() => {
         bottom: 0;
         background: radial-gradient(circle at center, rgba(43, 92, 255, 0.1) 0%, transparent 70%);
         opacity: 0;
-        transition: opacity 0.3s ease;
-      }
-
-      &:active {
-        transform: scale(0.98);
-        box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.05);
-
-        &::after {
-          opacity: 1;
-        }
       }
 
       .feature-icon {
-        background: rgba(255, 193, 22, 0.1);
-        width: 80rpx;
-        height: 80rpx;
-        border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
         margin: 0 auto 20rpx;
-        transition: transform 0.3s ease;
-      }
-
-      &:active .feature-icon {
-        transform: scale(0.9);
       }
 
       .feature-title {
-        font-size: 28rpx;
-        color: #333;
+        font-size: 24rpx;
+        color: #fcd36d;
         margin: 20rpx 0 10rpx;
         display: block;
         font-weight: 600;
       }
 
       .feature-desc {
-        font-size: 24rpx;
+        font-size: 22rpx;
         color: #666;
       }
     }
@@ -632,21 +723,9 @@ onMounted(() => {
         text-align: center;
 
         .process-icon {
-          width: 64rpx;
-          height: 64rpx;
-          background: #fff;
-          border-radius: 50%;
           display: flex;
           align-items: center;
           justify-content: center;
-          margin: 0 auto 16rpx;
-          box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.05);
-          transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-
-          &:active {
-            transform: scale(0.95);
-            background: rgba(43, 92, 255, 0.1);
-          }
         }
 
         .process-text {
@@ -656,10 +735,9 @@ onMounted(() => {
       }
 
       .process-arrow {
-        margin: 0 30rpx;
+        margin: 0 10rpx;
         margin-top: -30rpx;
         opacity: 0.6;
-        animation: arrowPulse 2s infinite;
       }
     }
   }
@@ -669,10 +747,11 @@ onMounted(() => {
     padding: 20rpx;
 
     .apply-btn {
-      background: linear-gradient(135deg, #ffb715, #f3bf47);
+      background: linear-gradient(90deg, #ffce5e 0%, #ffb200 100%);
+      border-radius: 40rpx;
       color: #fff;
       border-radius: 40rpx;
-      padding: 24rpx 40rpx;
+      padding: 2rpx 40rpx;
       font-size: 32rpx;
       display: flex;
       align-items: center;

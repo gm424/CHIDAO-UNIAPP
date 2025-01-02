@@ -99,6 +99,7 @@
     </view>
 
     <!-- 底部操作栏优化 -->
+
     <view class="bottom-bar" v-if="Object.keys(selectedGoods).length > 0">
       <view class="selected-info">
         <u-icon name="shopping-cart-fill" size="32" color="#fbc02d"></u-icon>
@@ -119,6 +120,12 @@
         }"
       ></u-button>
     </view>
+
+    <!-- 底部添加按钮 -->
+    <view class="add-button" @tap="addGoods" v-else>
+      <u-icon name="plus" color="#fff" size="24"></u-icon>
+      <text>新增商品</text>
+    </view>
   </view>
 </template>
 
@@ -126,7 +133,7 @@
 import { ref, computed, onMounted, watch } from 'vue'
 import { getAction } from '@/common/store/manage'
 import { onReachBottom, onPullDownRefresh } from '@dcloudio/uni-app'
-
+import { onShow } from '@dcloudio/uni-app'
 // 分页参数
 const pageNo = ref(1)
 const pageSize = ref(10)
@@ -138,7 +145,9 @@ const loading = ref(false)
 const goodsList = ref([])
 const searchKey = ref('')
 const selectedGoods = ref({})
-
+onShow(() => {
+  getGoodsList(true)
+})
 // 搜索过滤
 // const filteredGoods = computed(() => {
 //   getGoodsList()
@@ -174,7 +183,12 @@ const getGoodsList = async (isRefresh = false) => {
     hasMore.value = goodsList.value.length < total.value
   }
 }
-
+// 新增商品
+const addGoods = () => {
+  uni.navigateTo({
+    url: '/pages/goods/add',
+  })
+}
 // 刷新数据
 const refreshList = () => {
   pageNo.value = 1
@@ -270,7 +284,25 @@ const handleCardClick = (goods) => {
 
   padding-bottom: 120rpx;
 }
-
+.add-button {
+  position: fixed;
+  right: 40rpx;
+  bottom: 40rpx;
+  background: $theme-color;
+  color: #fff;
+  height: 96rpx;
+  padding: 0 40rpx;
+  border-radius: 48rpx;
+  display: flex;
+  align-items: center;
+  gap: 12rpx;
+  box-shadow: 0 4rpx 16rpx rgba(22, 119, 255, 0.2);
+  width: 80%;
+  justify-content: center;
+  text {
+    font-size: 28rpx;
+  }
+}
 .search-bar {
   background: #fff;
   padding: 20rpx;

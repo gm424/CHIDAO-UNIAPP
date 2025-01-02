@@ -7,8 +7,8 @@
   "id": "__UNI__B00B6F2",
   "name": "赤道数智链",
   "version": {
-    "name": "1.0.6",
-    "code": 1010
+    "name": "1.0.8",
+    "code": 1012
   },
   "description": "",
   "developer": {
@@ -90,12 +90,7 @@
           "<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>",
           "<uses-feature android:name=\"android.hardware.camera\"/>",
           "<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>"
-        ],
-        "abiFilters": [
-          "armeabi-v7a",
-          "arm64-v8a"
-        ],
-        "targetSdkVersion": 30
+        ]
       },
       "apple": {
         "dSYMs": false

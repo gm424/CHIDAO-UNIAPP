@@ -265,15 +265,17 @@ const calcAmount = () => {
     shipAddress.value = shipAddress.value ? shipAddress.value : {}
     receiveAddress.value = receiveAddress.value ? receiveAddress.value : {}
     dynamicValidateForm.value.dtdTransInfo = {
-      pickupCity: shipAddress.value.city,
-      pickupCompany: shipAddress.value.company,
-      pickupProvince: shipAddress.value.province,
-      pickupCountry: shipAddress.value.country,
-      pickupContactName: shipAddress.value.contactName,
-      pickupContactPhone: shipAddress.value.contactPhone,
-      pickupDetailAddr: shipAddress.value.detailAddr,
-      pickupDistrict: shipAddress.value.district,
-      pickupPostcode: shipAddress.value.postcode,
+      pickupInfo: {
+        pickupCity: shipAddress.value.city,
+        pickupCompany: shipAddress.value.company,
+        pickupProvince: shipAddress.value.province,
+        pickupCountry: shipAddress.value.country,
+        pickupContactName: shipAddress.value.contactName,
+        pickupContactPhone: shipAddress.value.contactPhone,
+        pickupDetailAddr: shipAddress.value.detailAddr,
+        pickupDistrict: shipAddress.value.district,
+        pickupPostcode: shipAddress.value.postcode,
+      },
       recvCity: receiveAddress.value.city,
       recvCompany: receiveAddress.value.company,
       recvProvince: receiveAddress.value.province,

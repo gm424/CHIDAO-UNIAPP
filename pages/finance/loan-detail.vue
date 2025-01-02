@@ -1,5 +1,12 @@
 <template>
   <view class="container">
+    <!-- 日期选择区域 -->
+    <view class="date-picker-section">
+      <view class="date-display" @tap="showCalendar">
+        <text class="selected-date">{{ formatDate(selectedDate) }}</text>
+        <u-icon name="calendar" size="24" color="#666"></u-icon>
+      </view>
+    </view>
     <!-- 添加搜索区域 -->
     <view class="search-section">
       <view class="search-box">
@@ -37,7 +44,16 @@
         </view>
       </view>
     </view> -->
-
+    <!-- 日历选择弹窗 -->
+    <u-datetime-picker
+      :show="showDatePicker"
+      v-model="selectedDate"
+      mode="year-month"
+      :min-date="minDate.getTime()"
+      :max-date="maxDate.getTime()"
+      @confirm="onDateConfirm"
+      @cancel="showDatePicker = false"
+    ></u-datetime-picker>
     <!-- 流水记录 -->
     <view class="records-section">
       <view class="section-header">
@@ -110,9 +126,17 @@ const isRefreshing = ref(false)
 const loading = ref(false)
 const searchKeyword = ref('')
 const searchTimer = ref(null)
-
+// 日期选择相关
+const showDatePicker = ref(false)
+const selectedDate = ref(Date.now())
+const minDate = new Date('2020-01-01')
+const maxDate = new Date()
 const getRecordList = async (type) => {
   loading.value = true
+  const date = new Date(selectedDate.value)
+  const year = date.getFullYear()
+  const month = date.getMonth() + 1
+  const days = new Date(year, month, 0).getDate()
   try {
     const res = await getAction('/wms/creditRecord/list', {
       pageNo: pageNo.value,
@@ -120,6 +144,8 @@ const getRecordList = async (type) => {
       column: 'createTime',
       order: 'desc',
       description: '*' + searchKeyword.value + '*',
+      createTimeBegin: year + '-' + month + '-' + '01',
+      createTimeEnd: year + '-' + month + '-' + days,
     })
 
     if (res.success) {
@@ -142,7 +168,41 @@ const handleFilterChange = (value) => {
   currentFilter.value = value
   // TODO: 根据筛选加载数据
 }
+// 格式化日期显示
+const formatDate = (timestamp) => {
+  if (!timestamp) {
+    const now = new Date()
+    return `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}`
+  }
 
+  try {
+    const date = new Date(Number(timestamp))
+    if (isNaN(date.getTime())) {
+      const now = new Date()
+      return `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}`
+    }
+    const year = date.getFullYear()
+    const month = String(date.getMonth() + 1).padStart(2, '0')
+    return `${year}-${month}`
+  } catch (error) {
+    console.error('日期格式化错误:', error)
+    const now = new Date()
+
+    return `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}`
+  }
+}
+// 显示日历选择器
+const showCalendar = () => {
+  showDatePicker.value = true
+}
+// 日期选择确认
+const onDateConfirm = (e) => {
+  selectedDate.value = Number(e.value)
+  console.log('选择的时间戳:', selectedDate.value, e, formatDate(selectedDate.value))
+  showDatePicker.value = false
+  pageNo.value = 1
+  getRecordList('refresh')
+}
 // 监听页面触底事件
 onReachBottom(() => {
   if (!hasMore.value || loading.value) return
@@ -203,6 +263,30 @@ onUnmounted(() => {
 @import '@/styles/theme.scss';
 .container {
   padding: 20rpx;
+}
+.date-picker-section {
+  padding: 20rpx;
+  background: #fff;
+
+  .date-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80rpx;
+    // background: #f5f7fa;
+    border-radius: 12rpx;
+    gap: 12rpx;
+
+    .selected-date {
+      font-size: 28rpx;
+      color: #333;
+      font-weight: 500;
+    }
+
+    &:active {
+      opacity: 0.8;
+    }
+  }
 }
 
 .stat-cards {
@@ -405,5 +489,12 @@ onUnmounted(() => {
 // 调整列表区域的上边距，为搜索框留出空间
 .order-list {
   margin-top: calc(88rpx + 120rpx);
+}
+.loading-more,
+.no-more {
+  text-align: center;
+  padding: 30rpx 0;
+  color: #999;
+  font-size: 24rpx;
 }
 </style>
