@@ -51,7 +51,8 @@
         </view>
         <view style="display: flex; align-items: end">
           <text class="price"
-            >¥{{ route.lowPrice }}<text style="font-size: 24rpx; color: rgba(0, 0, 0, 0.5)">/KG 起</text></text
+            >¥{{ route.lowPrice
+            }}<text style="font-size: 24rpx; color: rgba(0, 0, 0, 0.5)">/{{ showUnit }} 起</text></text
           >
         </view>
       </view>
@@ -80,31 +81,40 @@
             <view
               class="progress-fill"
               :style="{
-                width: `${route.remainingVolumeRate * 100}%`,
+                width: `${(1 - route.remainingVolumeRate) * 100}%`,
               }"
             >
               <view class="stripes"></view>
             </view>
           </view>
+
           <view
-            v-if="route.remainingVolumeRate * 100 >= 50"
+            v-if="(1 - route.remainingVolumeRate) * 100 > 50"
             class="progress-marker"
             :style="{
-              left: `${route.remainingVolumeRate * 100}%`,
+              left: `${(1 - route.remainingVolumeRate) * 100}%`,
             }"
           >
             <view class="marker-arrow"></view>
-            <text class="marker-text">{{ (route.remainingVolumeRate * 100).toFixed(0) }}%</text>
+            <text
+              class="marker-text"
+              :style="{
+                transform: `translateX(-${
+                  route.remainingVolumeRate < 0.1 ? 80 : route.remainingVolumeRate > 0.9 ? 0 : 50
+                }%)`,
+              }"
+              >剩余{{ (route.remainingVolumeRate * 100).toFixed(2) }}%</text
+            >
           </view>
 
           <view
             v-else
             class="progress-marker-small"
             :style="{
-              left: `${route.remainingVolumeRate * 100}%`,
+              left: `${(1 - route.remainingVolumeRate) * 100}%`,
             }"
           >
-            <text class="marker-text">{{ (route.remainingVolumeRate * 100).toFixed(0) }}%</text>
+            <text class="marker-text">剩余{{ (route.remainingVolumeRate * 100).toFixed(2) }}%</text>
           </view>
         </view>
       </view>
@@ -143,22 +153,18 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, onMounted, onUnmounted, computed } from 'vue'
 
 // 定义 updateTimer
 const updateTimer = ref(null)
 const scrollIndex = ref(null)
 // 定义 props
-defineProps({
+const props = defineProps({
   route: {
     type: Object,
     default: () => ({
       usagePercent: 20,
     }),
-  },
-  showActions: {
-    type: Boolean,
-    default: false,
   },
 })
 
@@ -168,6 +174,17 @@ const createOrder = () => {
     url: `/pages/order/create?routeId=${props.route.id}`,
   })
 }
+const showUnit = computed(() => {
+  if (props.route.routeInfo.chargingType === '1' || props.route.routeInfo.chargingType === '4') {
+    return 'KG'
+  } else if (props.route.routeInfo.chargingType === '2') {
+    return '柜'
+  } else if (props.route.routeInfo.chargingType === '3') {
+    return '车'
+  } else {
+    return 'CBM'
+  }
+})
 // 头像样式列表
 const avatarStyles = [
   'adventurer',
@@ -568,14 +585,14 @@ onMounted(() => {
         position: absolute;
         top: -65rpx;
         left: 50%;
-        transform: translateX(-50%);
+
         font-size: 20rpx;
         color: #fff;
-        background-image: url('http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/圆_1734424137913.png');
+        background-image: url('http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/标签_1738982459730.png');
         background-size: cover; /* 背景图片填充整个容器，可能会裁剪部分内容 */
         background-repeat: no-repeat;
         background-position: center;
-        width: 60rpx;
+        width: 150rpx;
         height: 60rpx;
         display: flex;
         justify-content: center;

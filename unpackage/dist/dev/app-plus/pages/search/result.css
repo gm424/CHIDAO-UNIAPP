@@ -1514,16 +1514,28 @@ to {
   position: absolute;
   top: -2.03125rem;
   left: 50%;
-  transform: translateX(-50%);
   font-size: 0.625rem;
   color: #fff;
-  background-image: url("http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/圆_1734424137913.png");
+  background-image: url("http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/标签_1738982459730.png");
   background-size: cover;
   /* 背景图片填充整个容器，可能会裁剪部分内容 */
   background-repeat: no-repeat;
   background-position: center;
-  width: 1.875rem;
+  width: 4.6875rem;
   height: 1.875rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.capacity-progress .progress-bar .progress-marker-small[data-v-89cfe9c9] {
+  position: absolute;
+  top: 0;
+  transform: translateX(60%);
+}
+.capacity-progress .progress-bar .progress-marker-small .marker-text[data-v-89cfe9c9] {
+  transform: translateX(-50%);
+  font-size: 0.625rem;
+  color: #ffb200;
   display: flex;
   justify-content: center;
   align-items: center;

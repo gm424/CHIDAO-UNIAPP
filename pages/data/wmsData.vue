@@ -52,8 +52,14 @@
           </view>
         </view>
         <view class="chart-content">
-          <view class="chart-wrapper">
-            <qiun-data-charts type="ring" :opts="valueDistOpts" :chartData="currentDistData" />
+          <view class="chart-wrapper" v-if="showCart">
+            <qiun-data-charts type="ring" :opts="valueDistOpts" :chartData="currentDistData" :animation="false"/>
+          </view>
+          <view class="chart-wrapper" v-else>
+            <img
+              src="http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/编组_1734944861936.png"
+              style="width: 400rpx; height: 400rpx"
+            />
           </view>
         </view>
       </view>
@@ -124,7 +130,7 @@
           </view>
         </view>
         <view class="chart-content">
-          <qiun-data-charts type="area" :opts="chartOpts" :chartData="currentWarehouseData" />
+          <qiun-data-charts type="area" :opts="chartOpts" :chartData="currentWarehouseData" :animation="false"/>
         </view>
       </view>
 
@@ -160,7 +166,7 @@
           </view>
         </view>
 
-        <view class="rank-list">
+        <view class="rank-list" v-if="showList">
           <!-- 表头 -->
           <view class="rank-header">
             <text class="col rank">排名</text>
@@ -185,6 +191,13 @@
             <text class="col value">${{ formatNumber(item.price) }}</text>
             <text class="col stock">{{ formatNumber(item.usableCount) }}</text>
           </view>
+        </view>
+
+        <view v-else style="display: flex; justify-content: center; margin-top: 20rpx">
+          <img
+            src="http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/编组_1734944861936.png"
+            style="width: 400rpx; height: 400rpx"
+          />
         </view>
       </view>
     </view>
@@ -243,6 +256,8 @@ const showSelect = () => {
   showWarehouseSelect.value = !showWarehouseSelect.value
   console.log('显示', showWarehouseSelect.value)
 }
+const showList = ref(true)
+const showCart = ref(true)
 const lockTotal = ref(0)
 const outboundTotal = ref(0)
 const transInTotal = ref(0)
@@ -303,6 +318,11 @@ const loadGoodsValueOrType = () => {
       : '/app/wms/statistics/inventoryTypeAnalysis'
   getAction(url).then((res) => {
     if (res.success) {
+      if (res.result && res.result.length > 0) {
+        showCart.value = true
+      } else {
+        showCart.value = false
+      }
       valueDistData.value = {
         series: [
           {
@@ -426,6 +446,11 @@ const getWarehouseStockData = () => {
     selectedWarehouse.value === 'all' ? {} : { warehouseId: selectedWarehouse.value }
   ).then((res) => {
     if (res.success) {
+      if (res.result && res.result.length > 0) {
+        showList.value = true
+      } else {
+        showList.value = false
+      }
       stockDataSource.value = res.result.map((item, index) => {
         return {
           key: index + 1,
@@ -443,7 +468,7 @@ const formatNumber = (num) => {
   } else if (num >= 100000000) {
     return (num / 100000000).toFixed(1) + '亿'
   }
-  return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+  return num ? num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') : 0
 }
 const imageList = ref([
   'http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/编组30_1734664613566.png',
@@ -652,7 +677,14 @@ onMounted(() => {
     transform: translateY(0);
   }
 }
-
+.chart-wrapper {
+  height: 500rpx;
+  width: 100%;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .card {
   background-color: #fff;
   border-radius: 20rpx;

@@ -69,7 +69,7 @@
         </view>
         <view class="chart-content-trend">
           <view style="height: 400rpx">
-            <qiun-data-charts type="area" :opts="chartOpts" :chartData="currentChartData" />
+            <qiun-data-charts type="area" :opts="chartOpts" :chartData="currentChartData" :animation="false" />
           </view>
         </view>
       </view>
@@ -100,8 +100,14 @@
           </view>
         </view>
         <view class="chart-content">
-          <view class="chart-wrapper">
-            <qiun-data-charts type="ring" :opts="valueDistOpts" :chartData="currentDistData" />
+          <view class="chart-wrapper" v-if="showCart">
+            <qiun-data-charts type="ring" :opts="valueDistOpts" :chartData="currentDistData" :animation="false" />
+          </view>
+          <view class="chart-wrapper" v-else>
+            <img
+              src="http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/编组_1734944861936.png"
+              style="width: 400rpx; height: 400rpx"
+            />
           </view>
         </view>
       </view>
@@ -138,41 +144,61 @@
           </view>
 
           <!-- 列表内容 -->
-          <view
-            class="rank-item"
-            v-for="(item, index) in allocationDataSource"
-            :key="index"
-            v-if="rankType === 'country'"
-          >
-            <text class="col rank">
-              <view class="rank-num" :class="{ 'top-3': index < 3 }">
-                <text>{{ item.rankNum }}</text>
-                <image v-if="index < 3" :src="imageList[index]" style="width: 70rpx; height: 40rpx"></image>
-              </view>
-            </text>
-            <text class="col name">{{ item.dstCountry }}</text>
-            <text class="col count">{{ item.orderCount }}</text>
+          <view v-if="showAllocationDataSource">
+            <view
+              class="rank-item"
+              v-for="(item, index) in allocationDataSource"
+              :key="index"
+              v-if="rankType === 'country'"
+            >
+              <text class="col rank">
+                <view class="rank-num" :class="{ 'top-3': index < 3 }">
+                  <text>{{ item.rankNum }}</text>
+                  <image v-if="index < 3" :src="imageList[index]" style="width: 70rpx; height: 40rpx"></image>
+                </view>
+              </text>
+              <text class="col name">{{ item.dstCountry }}</text>
+              <text class="col count">{{ item.orderCount }}</text>
 
-            <text class="col percent">
-              <text class="percent-value">{{ item.proportion }}</text>
-              <text class="percent-symbol">%</text>
-            </text>
+              <text class="col percent">
+                <text class="percent-value">{{ item.proportion }}</text>
+                <text class="percent-symbol">%</text>
+              </text>
+            </view>
           </view>
 
-          <view class="rank-item" v-for="(item, index) in stockDataSource" :key="item.id" v-else>
-            <text class="col rank">
-              <view class="rank-num" :class="{ 'top-3': index < 3 }">
-                <text>{{ item.rankNum }}</text>
-                <image v-if="index < 3" :src="imageList[index]" style="width: 70rpx; height: 40rpx"></image>
-              </view>
-            </text>
-            <text class="col name">{{ item.name }}</text>
-            <text class="col count">{{ item.totalValue }}</text>
+          <view v-if="showStockDataSource">
+            <view
+              class="rank-item"
+              v-for="(item, index) in stockDataSource"
+              :key="item.id"
+              v-if="rankType === 'product'"
+            >
+              <text class="col rank">
+                <view class="rank-num" :class="{ 'top-3': index < 3 }">
+                  <text>{{ item.rankNum }}</text>
+                  <image v-if="index < 3" :src="imageList[index]" style="width: 70rpx; height: 40rpx"></image>
+                </view>
+              </text>
+              <text class="col name">{{ item.name }}</text>
+              <text class="col count">{{ item.totalValue }}</text>
 
-            <text class="col percent">
-              <text class="percent-value">{{ item.proportion }}</text>
-              <text class="percent-symbol">%</text>
-            </text>
+              <text class="col percent">
+                <text class="percent-value">{{ item.proportion }}</text>
+                <text class="percent-symbol">%</text>
+              </text>
+            </view>
+          </view>
+          <view
+            v-if="
+              (!showAllocationDataSource && rankType === 'country') || (!showStockDataSource && rankType === 'product')
+            "
+            style="display: flex; justify-content: center; margin-top: 20rpx"
+          >
+            <img
+              src="http://jwerp.oss-cn-shenzhen.aliyuncs.com/upload/编组_1734944861936.png"
+              style="width: 400rpx; height: 400rpx"
+            />
           </view>
         </view>
       </view>
@@ -187,9 +213,11 @@ import { onReady } from '@dcloudio/uni-app'
 import _ from 'lodash'
 const chartDataWms = ref({})
 // 图表类型切换
-const chartType = ref('total')
 
+const chartType = ref('total')
+const showCart = ref(true)
 const chartOpts = ref({
+  animation: false,
   color: ['#ffb918', '#4cd575', '#FAC858', '#EE6666', '#73C0DE', '#3CA272'],
   padding: [15, 15, 15, -2],
   enableScroll: false,
@@ -220,10 +248,12 @@ const chartOpts = ref({
       width: 2,
       gradient: true,
       activeType: 'none',
+      animation: false,
     },
     line: {
       type: 'straight',
       width: 2,
+      animation: false,
     },
   },
   dataLabel: false,
@@ -234,10 +264,10 @@ const chartOpts = ref({
 const categories = ref([])
 const seriesData = ref([])
 const channelData = ref({})
-
+const showStockDataSource = ref(true)
+const showAllocationDataSource = ref(true)
 // 当前显示图表数据
 const currentChartData = computed(() => {
-  console.log('加载图表数据', categories.value, seriesData.value)
   return {
     categories: categories.value,
     series: seriesData.value,
@@ -261,7 +291,7 @@ const formatNumber = (num) => {
   } else if (num >= 100000000) {
     return (num / 100000000).toFixed(1) + '亿'
   }
-  return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+  return num ? num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') : 0
 }
 const seaCount = ref(0)
 const airCount = ref(0)
@@ -527,7 +557,7 @@ const loadTmsChannelChartData = () => {
           data: result.map((item) => item.headCount),
         },
       ]
-      console.log('categories.value', categories.value, seriesData.value)
+
       channelData.value.categories = categories.value
       channelData.value.seriesData = seriesData.value
     } else {
@@ -541,6 +571,11 @@ const loadGoodsValueOrType = () => {
   let url = distributionType.value === 'value' ? '/bi/tms/productValueAnalysis' : '/bi/tms/productTypeAnalysis'
   getAction(url, { dateRange: 'TY' }).then((res) => {
     if (res.success) {
+      if (res.result && res.result.length > 0) {
+        showCart.value = true
+      } else {
+        showCart.value = false
+      }
       valueDistData.value = {
         series: [
           {
@@ -556,7 +591,7 @@ const loadGoodsValueOrType = () => {
       valueDistOpts.value.subtitle.name = formatNumber(
         valueDistData.value.series[0].data.reduce((acc, item) => acc + item.value, 0)
       )
-      console.log('valueDistData', valueDistData.value)
+      console.log('valueDistData', valueDistData.value, valueDistOpts.value.subtitle.name)
     }
   })
 }
@@ -565,6 +600,11 @@ const loadGoodsValueOrType = () => {
 const getStockData = () => {
   getAction('/bi/tms/productRanking', { dateRange: 'TY' }).then((res) => {
     if (res.success) {
+      if (res.result && res.result.length > 0) {
+        showStockDataSource.value = true
+      } else {
+        showStockDataSource.value = false
+      }
       stockDataSource.value = res.result
     }
   })
@@ -574,31 +614,48 @@ const getStockData = () => {
 const getAllocation = () => {
   getAction('/bi/tms/orderAllocation', { dateRange: 'TY' }).then((res) => {
     if (res.success) {
+      if (res.result && res.result.length > 0) {
+        showAllocationDataSource.value = true
+      } else {
+        showAllocationDataSource.value = false
+      }
       allocationDataSource.value = res.result
     }
   })
 }
-
+const tmsSeriesData = ref(null)
+const tmsCategories = ref(null)
 const loadTmsTotalOrderData = () => {
-  getAction('/tms/statistics/transOrderStatisticsData', { dateRange: 'TY' }).then((res) => {
-    if (res.success) {
-      const grouped = _.groupBy(res.result, (item) => item.dateStr.slice(0, 7)) // 按年月分组
+  if (tmsSeriesData.value && tmsCategories.value) {
+    categories.value = tmsCategories.value
+    seriesData.value = tmsSeriesData.value
+  } else {
+    getAction('/tms/statistics/transOrderStatisticsData', { dateRange: 'TY' }).then((res) => {
+      if (res.success) {
+        const grouped = _.groupBy(res.result, (item) => item.dateStr.slice(0, 7)) // 按年月分组
 
-      const result = Object.keys(grouped).map((month) => {
-        const totalOrderCount = _.sumBy(grouped[month], 'orderCount')
+        const result = Object.keys(grouped).map((month) => {
+          const totalOrderCount = _.sumBy(grouped[month], 'orderCount')
 
-        return { date: month, orderCount: totalOrderCount }
-      })
-      categories.value = result.map((item) => item.date)
-
-      seriesData.value = [
-        {
-          name: '总单量',
-          data: result.map((item) => item.orderCount),
-        },
-      ]
-    }
-  })
+          return { date: month, orderCount: totalOrderCount }
+        })
+        tmsCategories.value = result.map((item) => item.date)
+        categories.value = result.map((item) => item.date)
+        tmsSeriesData.value = [
+          {
+            name: '总单量',
+            data: result.map((item) => item.orderCount),
+          },
+        ]
+        seriesData.value = [
+          {
+            name: '总单量',
+            data: result.map((item) => item.orderCount),
+          },
+        ]
+      }
+    })
+  }
 }
 onMounted(() => {
   loadData()

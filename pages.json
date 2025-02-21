@@ -15,6 +15,12 @@
       }
     },
     {
+      "path": "pages/about/webview",
+      "style": {
+        "navigationBarTitleText": "隐私政策"
+      }
+    },
+    {
       "path": "pages/finance/index",
       "style": {
         "navigationBarTitleText": "金融",

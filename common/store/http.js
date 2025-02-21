@@ -102,6 +102,8 @@ const request = (url, method, contentType, data, isBuffer) => {
           'Content-Type': contentType === 'json' ? 'application/json' : 'application/x-www-form-urlencoded',
           'Accept-Language': getApplicationLocale(),
           'X-TIMESTAMP': signMd5Utils.getDateTimeToString(),
+          'X-Tenant-Id': '5',
+          'X-Is-Enterprise': 'Y',
           currency: getCurrency(),
         },
         responseType: isBuffer ? 'arraybuffer' : 'text',

@@ -355,6 +355,7 @@ const nextMonth = () => {
 }
 
 const selectDate = (day) => {
+  console.log('tab', day.date)
   if (!day.otherMonth) {
     selectedDate.value = (() => {
       const date = day.date
@@ -381,9 +382,16 @@ const isToday = (date) => {
     date.getFullYear() === today.getFullYear()
   )
 }
-
+const formatDate = (date) => {
+  const year = date.getFullYear()
+  const month = String(date.getMonth() + 1).padStart(2, '0') // 月份从 0 开始，需要 +1
+  const day = String(date.getDate()).padStart(2, '0')
+  return `${year}-${month}-${day}`
+}
 const isSelectedDate = (date) => {
-  return date.toISOString().split('T')[0] === selectedDate.value
+  const localDate = formatDate(date)
+
+  return localDate === selectedDate.value
 }
 
 const handleSearch = () => {
@@ -555,23 +563,6 @@ watch([selectedOrigin, selectedDest], () => {
 // 显示日期选择器
 const showDateSelect = () => {
   showDatePopup.value = true
-}
-
-// 格式化日期，避免非法选择器
-const formatDate = (date) => {
-  if (typeof date === 'string') {
-    date = new Date(date)
-  }
-  return date.toISOString().split('T')[0]
-}
-
-// 使用时
-const scrollToDate = (date) => {
-  const formattedDate = formatDate(date)
-  uni.pageScrollTo({
-    selector: `#date-${formattedDate}`,
-    duration: 300,
-  })
 }
 </script>
 
@@ -995,7 +986,7 @@ const scrollToDate = (date) => {
         }
 
         &.selected {
-          background-color: #007aff;
+          background-color: $theme-color;
           color: #fff;
           .price {
             color: #fff;
@@ -1004,7 +995,7 @@ const scrollToDate = (date) => {
 
         &.today {
           .date {
-            color: #007aff;
+            color: #ff6b6b;
             font-weight: bold;
           }
         }

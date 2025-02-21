@@ -35,7 +35,9 @@
       </view>
       <view class="section">
         <view class="section-title">隐私政策</view>
-        <view class="paragraph">https://privacy.1ts.fun/product/<br />241229UZGvYt6IBzClHU</view>
+        <view class="paragraph" @tap="viewRouteWebview()"
+          >https://privacy.1ts.fun/product<br />/241229UZGvYt6IBzClHU</view
+        >
       </view>
       <view class="copyright">
         <text>Copyright © 2024 All Rights Reserved</text>
@@ -46,6 +48,11 @@
 
 <script setup>
 // 无需特殊逻辑
+const viewRouteWebview = () => {
+  uni.navigateTo({
+    url: `/pages/about/webview`,
+  })
+}
 </script>
 
 <style lang="scss" scoped>

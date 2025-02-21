@@ -99,7 +99,7 @@
     <u-popup :show="showCountryPopup" @close="closeCountrySelect" mode="bottom" round="10">
       <view class="country-popup">
         <view class="popup-header">
-          <text>选择国家</text>
+          <text>选择国家/地区</text>
           <text class="close-btn" @tap="closeCountrySelect">关闭</text>
         </view>
 

@@ -1150,6 +1150,14 @@ to {
     transform: translateY(0);
 }
 }
+.chart-wrapper[data-v-9a2d55c1] {
+  height: 15.625rem;
+  width: 100%;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .card[data-v-9a2d55c1] {
   background-color: #fff;
   border-radius: 0.625rem;

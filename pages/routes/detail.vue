@@ -100,7 +100,47 @@
     <!-- 阶梯报价 -->
     <view class="section">
       <view class="section-title">阶梯报价</view>
-      <view class="price-table" v-if="route.routeInfo.chargingType !== '4'">
+
+      <view class="price-table" v-if="route.routeInfo.chargingType === '2'">
+        <view class="table-header">
+          <view class="th">阶梯</view>
+          <view class="th">箱型柜量</view>
+          <view class="th">运费价格</view>
+        </view>
+        <view class="table-row" v-for="(item, index) in dataSource" :key="index">
+          <view class="td">{{ item._key }}</view>
+          <view class="td">{{ item.type }}</view>
+          <view class="td">{{ item.value }}</view>
+        </view>
+      </view>
+
+      <view class="price-table" v-else-if="route.routeInfo.chargingType === '3'">
+        <view class="table-header">
+          <view class="th">阶梯</view>
+          <view class="th">车型</view>
+          <view class="th">运费价格</view>
+        </view>
+        <view class="table-row" v-for="(item, index) in dataSource" :key="index">
+          <view class="td">{{ item._key }}</view>
+          <view class="td">{{ item.type }}</view>
+          <view class="td">{{ item.value }}</view>
+        </view>
+      </view>
+
+      <view class="price-table" v-else-if="route.routeInfo.chargingType === '4'">
+        <view class="table-header">
+          <view class="th" v-for="(it, index) in columns" :key="index">{{
+            it === 'weightMax' ? '重量上限(KG)/密度' : it
+          }}</view>
+        </view>
+        <view class="table-row" v-for="(item, index) in dataSource" :key="index">
+          <view class="td" v-for="(col, colIndex) in columns" :key="colIndex">
+            {{ item[col] }}
+          </view>
+        </view>
+      </view>
+
+      <view class="price-table" v-else>
         <view class="table-header">
           <view class="th">阶梯</view>
           <view class="th">重量上线(KG)</view>
@@ -110,19 +150,6 @@
           <view class="td">{{ item._key }}</view>
           <view class="td">{{ item.weightMax }}</view>
           <view class="td">{{ item.unitPrice }}</view>
-        </view>
-      </view>
-
-      <view class="price-table" v-else>
-        <view class="table-header">
-          <view class="th" v-for="(it, index) in cloumns" :key="index">{{
-            it === 'weightMax' ? '重量上限(KG)/密度' : it
-          }}</view>
-        </view>
-        <view class="table-row" v-for="(item, index) in dataSource" :key="index">
-          <view class="td" v-for="(col, colIndex) in cloumns" :key="colIndex">
-            {{ item[col.key] }}
-          </view>
         </view>
       </view>
     </view>
@@ -187,10 +214,11 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
 import { getAction } from '../../common/store/manage'
-
+import _ from 'lodash'
 const dataSource = ref([])
 const route = ref({
   routeInfo: {},
+  containerContext: {},
 })
 
 const priceInfo = ref([])
@@ -334,7 +362,7 @@ const getFeeData = () => {
   getAction('/oms/transQuoteScheme/queryAdditinalList', { schemeId: route.value.routeInfo.quoteSchemeId }).then(
     (res) => {
       if (res.success) {
-        priceInfo.value = res.result
+        priceInfo.value = res.result ? res.result : []
       }
     }
   )
@@ -374,7 +402,7 @@ onMounted(() => {
     if (route.value.routeInfo.quoteRangeInfo != null) {
       var quoteRangeInfo = JSON.parse(JSON.stringify(route.value.routeInfo.quoteRangeInfo))
       if (route.value.routeInfo.chargingType === '4') {
-        quoteRangeInfo.value.map((item) => {
+        quoteRangeInfo.map((item) => {
           const obj = { weightMax: item.maxRange === -1 ? '∞' : item.maxRange, _key: _.uniqueId('new_') }
           console.log('obj', obj)
           for (const subItem of item.densityRangeInfos) {
@@ -383,9 +411,32 @@ onMounted(() => {
           }
           console.log('return', obj)
           dataSource.value.push(obj)
-          console.log('dataSource', dataSource.value)
         })
         handleColumns()
+      } else if (route.value.routeInfo.chargingType === '2') {
+        quoteRangeInfo.forEach((item, index) => {
+          dataSource.value.push(
+            Object.assign(
+              { _key: index + 1 },
+              { type: item.type },
+              {
+                value: item.value,
+              }
+            )
+          )
+        })
+      } else if (route.value.routeInfo.chargingType === '3') {
+        quoteRangeInfo.forEach((item, index) => {
+          dataSource.value.push(
+            Object.assign(
+              { _key: index + 1 },
+              { type: item.type === 'tarpaulin' ? '篷布车' : '厢型车' },
+              {
+                value: item.value,
+              }
+            )
+          )
+        })
       } else {
         quoteRangeInfo.forEach((item, index) => {
           dataSource.value.push(
@@ -424,7 +475,8 @@ const handleColumns = () => {
     // 转换为数字比较
     return parseInt(a) - parseInt(b)
   })
-  console.log('columns', columns.value)
+
+  console.log('dataSource columns', dataSource.value, columns.value)
 }
 const createOrder = () => {
   uni.navigateTo({

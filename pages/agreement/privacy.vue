@@ -12,6 +12,10 @@
         <view class="section-title">2. 信息使用</view>
         <view class="paragraph"> 2.1 我们使用收集的信息用于：提供服务、改进产品、发送通知、防止欺诈等。 </view>
         <view class="paragraph"> 2.2 未经用户同意，我们不会将用户信息用于其他目的。 </view>
+        <view class="paragraph">
+          2.3
+          为识别您的设备ID并预防恶意程序及反作弊、提高服务安全性、保障运营质量及效率，我们会收集您的设备信息（包括IMEl、MEID、AndroidID、IMSI、GUID、MAC地址）、您安装的应用信息或运行中的进程信息。
+        </view>
       </view>
 
       <view class="section">
